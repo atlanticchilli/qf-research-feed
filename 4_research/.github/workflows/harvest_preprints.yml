@@ -41,6 +41,8 @@ jobs:
           ls -la tools/ || echo "tools directory not found"
           echo "Looking for harvest_arxiv.py:"
           find . -name "harvest_arxiv.py" -type f
+          echo "Running Python structure test:"
+          python test_structure.py
 
       - name: Run harvester
         run: python tools/harvest_arxiv.py
