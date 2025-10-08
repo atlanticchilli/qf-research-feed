@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements.txt || pip install requests feedparser beautifulsoup4 markdownify python-frontmatter
 
       - name: Run harvester
-        run: python tools/harvest_arxiv.py
+        run: python harvest_arxiv.py
 
       - name: Commit & push if changed
         run: |
