@@ -1,0 +1,17 @@
+{
+  "doc_id": "arxiv:2510.05710v1",
+  "family_id": "arxiv:2510.05710",
+  "title": "FinReflectKG - EvalBench: Benchmarking Financial KG with Multi-Dimensional Evaluation",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Fabrizio Dimino",
+    "Abhinav Arun",
+    "Bhaskarjit Sarmah",
+    "Stefano Pasquali"
+  ],
+  "url_abs": "http://arxiv.org/abs/2510.05710v1",
+  "url_html": "https://arxiv.org/html/2510.05710v1",
+  "is_current": true
+}

@@ -1,0 +1,17 @@
+{
+  "doc_id": "arxiv:2510.05428v1",
+  "family_id": "arxiv:2510.05428",
+  "title": "Concentrated N-dimensional AMM with Polar Coordinates in Rust",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Vasily Tolstikov",
+    "Marcus Wentz",
+    "Joseph Schiarizzi",
+    "Derek Ding"
+  ],
+  "url_abs": "http://arxiv.org/abs/2510.05428v1",
+  "url_html": "https://arxiv.org/html/2510.05428v1",
+  "is_current": true
+}
