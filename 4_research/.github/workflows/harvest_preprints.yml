@@ -35,4 +35,13 @@ jobs:
         run: python tools/harvest_arxiv.py
 
       - name: Commit & push if changed
-        run:
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-harvest preprints $(date '+%Y-%m-%d')"
+            git push
+          fi
