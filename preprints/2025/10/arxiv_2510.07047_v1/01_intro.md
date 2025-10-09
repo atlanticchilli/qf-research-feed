@@ -1,0 +1,39 @@
+---
+authors:
+- Ernest Górka
+- Dariusz Baran
+- Michał Ćwiąkała
+- Gabriela Wojak
+- Robert Marszczuk
+- Katarzyna Olszyńska
+- Piotr Mrzygłód
+- Maciej Frasunkiewicz
+- Piotr Ręczajski
+- Kamil Saługa
+- Maciej Ślusarczyk
+- Jan Piwnik
+doc_id: arxiv:2510.07047v1
+family_id: arxiv:2510.07047
+is_current: true
+taxonomy:
+  alpha_families: []
+  asset_classes: []
+  horizons: []
+  themes: []
+title: '[2510.07047v1] Analysis of managerial behaviors in business management'
+url_abs: http://arxiv.org/abs/2510.07047v1
+url_html: https://ar5iv.org/html/2510.07047v1
+venue: arXiv q-fin
+version: 1
+year: 2025
+---
+
+
+arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
+
+Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.
+
+Have an idea for a project that will add value for arXiv's community? [**Learn more about arXivLabs**](https://info.arxiv.org/labs/index.html).
+
+[Which authors of this paper are endorsers?](/auth/show-endorsers/2510.07047) |
+[Disable MathJax](javascript:setMathjaxCookie()) ([What is MathJax?](https://info.arxiv.org/help/mathjax.html))
