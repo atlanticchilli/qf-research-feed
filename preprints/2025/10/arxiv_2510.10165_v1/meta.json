@@ -1,0 +1,19 @@
+{
+  "doc_id": "arxiv:2510.10165v1",
+  "family_id": "arxiv:2510.10165",
+  "title": "1 The workflow of OSS projects. It comprises of a primary branch of a GitHub (project), which typically contains the main source code that serves as the foundation for new feature development, bug fixes, and updates. Changes to this branch are usually controlled through a structured review process conducted by maintainers to ensure code quality and prevent issues. To contribute to the project, a PR is submitted to propose changes to a project. It allows developers to submit modifications, request feedback, and merge updates into the main branch. The review and refinement process comprises of two activities that we measure in our study - pull request review (PR Review) and pull request rework (PR Rework). Eventually the reviewed and reworked changes will either be merged into the main branch or undergo additional rounds of review and rework.",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Feiyang",
+    "Xu",
+    "Poonacha K. Medappa",
+    "Murat M. Tunc",
+    "Martijn Vroegindeweij",
+    "Jan C. Fransoo"
+  ],
+  "url_abs": "http://arxiv.org/abs/2510.10165v1",
+  "url_html": "https://arxiv.org/html/2510.10165v1",
+  "is_current": true
+}
