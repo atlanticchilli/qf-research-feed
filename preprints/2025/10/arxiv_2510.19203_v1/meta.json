@@ -1,0 +1,20 @@
+{
+  "doc_id": "arxiv:2510.19203v1",
+  "family_id": "arxiv:2510.19203",
+  "title": "Aligning Multilingual News for Stock Return Prediction",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Yuntao Wu",
+    "Lynn Tao",
+    "Ing-Haw Cheng",
+    "Charles Martineau",
+    "Yoshio Nozawa",
+    "John Hull",
+    "Andreas Veneris"
+  ],
+  "url_abs": "http://arxiv.org/abs/2510.19203v1",
+  "url_html": "https://arxiv.org/html/2510.19203v1",
+  "is_current": true
+}

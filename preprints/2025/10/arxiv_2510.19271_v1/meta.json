@@ -1,0 +1,16 @@
+{
+  "doc_id": "arxiv:2510.19271v1",
+  "family_id": "arxiv:2510.19271",
+  "title": "Tailoring Portfolio Choice via Quantile-Targeted PoliciesWe are grateful to Li Xia, Balazs Szorenyi from Yahoo Research, and Alexander Remorov from BlackRock\u2019s Systematic Active Equities for valuable discussions and comments. We appreciate the insightful comments from numerous seminar presentations, CIML 2025, \u201cFrontiers of Causal Inference and Machine Learning\u201d, Hungarian Machine Learning Days 2025 , and FinEML 2025. The support of the Czech Science Foundation within the project 24-11555S as well as Charles University GAUK 394825 and Research Centre program No. 24/SSH/020 is gratefully acknowledged. The replication code in Python and setup for the paper is available at https://github.com/Attilasarkany/Q-A2C-Replication.",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Jozef Barunik",
+    "Lukas Janasek",
+    "Attila Sarkany"
+  ],
+  "url_abs": "http://arxiv.org/abs/2510.19271v1",
+  "url_html": "https://arxiv.org/html/2510.19271v1",
+  "is_current": true
+}
