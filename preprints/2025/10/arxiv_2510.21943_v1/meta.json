@@ -1,0 +1,20 @@
+{
+  "doc_id": "arxiv:2510.21943v1",
+  "family_id": "arxiv:2510.21943",
+  "title": "MacroEnergy.jl: A large-scale multi-sector energy system framework",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Ruaridh Macdonald",
+    "Filippo Pecci",
+    "Luca Bonaldo",
+    "Jun Wen Law",
+    "Yu Weng",
+    "Dharik Mallapragada",
+    "Jesse Jenkins"
+  ],
+  "url_abs": "http://arxiv.org/abs/2510.21943v1",
+  "url_html": "https://arxiv.org/html/2510.21943v1",
+  "is_current": true
+}

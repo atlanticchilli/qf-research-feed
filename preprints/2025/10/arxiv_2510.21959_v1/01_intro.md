@@ -1,0 +1,34 @@
+---
+authors:
+- Eduard Brüll
+- Samuel Mäurer
+- Davud Rostam-Afschar
+doc_id: arxiv:2510.21959v1
+family_id: arxiv:2510.21959
+is_current: true
+taxonomy:
+  alpha_families: []
+  asset_classes: []
+  horizons: []
+  themes: []
+title: 'Beliefs about Bots: How Employers Plan for AI in White-Collar WorkWe thank
+  Melanie Arntz, Efi Adamopoulou (discussant), Dietmar Fehr, Gabriel Leite Mariante
+  (discussant), Manuel Menkhoff, Henning Hermes, Cäcilia vom Baur, and the German
+  Federal Chamber of Tax Advisors for insightful comments and discussions, as well
+  as participants at various seminars and conferences for helpful comments. The study
+  was pre-registered in the AEA RCT registry (RCT ID: AEARCTR-0014788). This experiment
+  was reviewed by the Ethics Committee of the University of Mannheim (EC-8/2024).
+  We declare that we have no interests, financial or otherwise, that relate to the
+  research described in this paper. We are grateful to the Deutsche Forschungsgemeinschaft
+  (DFG, German Research Foundation) for financial support through CRC TRR 266 Accounting
+  for Transparency (Project-ID 403041268).'
+url_abs: http://arxiv.org/abs/2510.21959v1
+url_html: https://arxiv.org/html/2510.21959v1
+venue: arXiv q-fin
+version: 1
+year: 2025
+---
+
+\undefine@key
+
+newfloatplacement\undefine@keynewfloatname\undefine@keynewfloatfileext\undefine@keynewfloatwithin
