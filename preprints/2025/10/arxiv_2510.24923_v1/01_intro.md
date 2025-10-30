@@ -1,24 +1,23 @@
 ---
 authors:
-- Peeyush Agarwal
-- Harsh Agarwal
-- Akshat Ranaa
-doc_id: arxiv:2510.23669v1
-family_id: arxiv:2510.23669
-is_current: false
+- Seth Benzell
+- Kyle Myers
+doc_id: arxiv:2510.24923v1
+family_id: arxiv:2510.24923
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2510.23669v1] What Work is AI Actually Doing? Uncovering the Drivers of Generative
-  AI Adoption'
-url_abs: http://arxiv.org/abs/2510.23669v1
-url_html: https://ar5iv.org/html/2510.23669v1
+title: '[2510.24923v1] Automation Experiments and Inequality'
+url_abs: http://arxiv.org/abs/2510.24923v1
+url_html: https://ar5iv.org/html/2510.24923v1
 venue: arXiv q-fin
 version: 1
 year: 2025
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 
@@ -26,5 +25,5 @@ Both individuals and organizations that work with arXivLabs have embraced and ac
 
 Have an idea for a project that will add value for arXiv's community? [**Learn more about arXivLabs**](https://info.arxiv.org/labs/index.html).
 
-[Which authors of this paper are endorsers?](/auth/show-endorsers/2510.23669) |
+[Which authors of this paper are endorsers?](/auth/show-endorsers/2510.24923) |
 [Disable MathJax](javascript:setMathjaxCookie()) ([What is MathJax?](https://info.arxiv.org/help/mathjax.html))

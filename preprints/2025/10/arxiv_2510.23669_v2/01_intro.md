@@ -2,23 +2,24 @@
 authors:
 - Peeyush Agarwal
 - Harsh Agarwal
-- Akshat Ranaa
-doc_id: arxiv:2510.23669v1
+- Akshat Rana
+doc_id: arxiv:2510.23669v2
 family_id: arxiv:2510.23669
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2510.23669v1] What Work is AI Actually Doing? Uncovering the Drivers of Generative
+title: '[2510.23669v2] What Work is AI Actually Doing? Uncovering the Drivers of Generative
   AI Adoption'
-url_abs: http://arxiv.org/abs/2510.23669v1
-url_html: https://ar5iv.org/html/2510.23669v1
+url_abs: http://arxiv.org/abs/2510.23669v2
+url_html: https://ar5iv.org/html/2510.23669v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 
