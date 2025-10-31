@@ -1,9 +1,9 @@
 ---
 authors:
 - Yimeng Qiu
-doc_id: arxiv:2510.24607v1
+doc_id: arxiv:2510.24607v2
 family_id: arxiv:2510.24607
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -11,12 +11,13 @@ taxonomy:
   themes: []
 title: 'Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target
   Exposures'
-url_abs: http://arxiv.org/abs/2510.24607v1
-url_html: https://arxiv.org/html/2510.24607v1
+url_abs: http://arxiv.org/abs/2510.24607v2
+url_html: https://arxiv.org/html/2510.24607v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Yimeng Qiu
 
@@ -41,7 +42,7 @@ Rules-based multi-factor portfolios seek specified exposures (Value, Momentum, Q
 Heuristic sequential “tilts” lack a single global objective and are order-dependent.
 Quadratic exposure-matching solves a different closeness metric and often needs explicit regularization and a risk model.
 
-We pose *Entropy-Guided Multiplicative Updates* (EGMU): minimize DKL(𝐰∥𝐛)D\_{\mathrm{KL}}\!\left(\mathbf{w}\middle\|\mathbf{b}\right) over the simplex under linear exposure constraints. This information projection is classical and yields exponential-family solutions and convex duality structure [[6](https://arxiv.org/html/2510.24607v1#bib.bib6), [5](https://arxiv.org/html/2510.24607v1#bib.bib5)]. In portfolio engineering it parallels Entropy Pooling [[8](https://arxiv.org/html/2510.24607v1#bib.bib8)]. Our focus is to provide a rigorous, self-contained treatment tailored to target-exposure construction: feasibility/uniqueness, sensitivity, and provably convergent algorithms for equality and inequality constraints. We also give implementable pseudo-code with stability safeguards. Our generalized variants—elastic/robust targets and solution paths—remain within the same dual-moment framework.
+We pose *Entropy-Guided Multiplicative Updates* (EGMU): minimize DKL(𝐰∥𝐛)D\_{\mathrm{KL}}\!\left(\mathbf{w}\middle\|\mathbf{b}\right) over the simplex under linear exposure constraints. This information projection is classical and yields exponential-family solutions and convex duality structure [[6](https://arxiv.org/html/2510.24607v2#bib.bib6), [5](https://arxiv.org/html/2510.24607v2#bib.bib5)]. In portfolio engineering it parallels Entropy Pooling [[8](https://arxiv.org/html/2510.24607v2#bib.bib8)]. Our focus is to provide a rigorous, self-contained treatment tailored to target-exposure construction: feasibility/uniqueness, sensitivity, and provably convergent algorithms for equality and inequality constraints. We also give implementable pseudo-code with stability safeguards. Our generalized variants—elastic/robust targets and solution paths—remain within the same dual-moment framework.
 
 #### Notation.
 
@@ -126,7 +127,7 @@ with
 | --- | --- | --- |
 |  | ∇L​(θ)=t−𝔼w​(θ)​[𝐱],∇2L​(θ)=−Covw​(θ)​(𝐱).\nabla L(\theta)=t-\mathbb{E}\_{w(\theta)}[\mathbf{x}],\qquad\nabla^{2}L(\theta)=-\mathrm{Cov}\_{w(\theta)}(\mathbf{x}). |  |
 
-Strict concavity holds on the span where Covw​(θ)​(𝐱)≻0\mathrm{Cov}\_{w(\theta)}(\mathbf{x})\succ 0 [[9](https://arxiv.org/html/2510.24607v1#bib.bib9)].
+Strict concavity holds on the span where Covw​(θ)​(𝐱)≻0\mathrm{Cov}\_{w(\theta)}(\mathbf{x})\succ 0 [[9](https://arxiv.org/html/2510.24607v2#bib.bib9)].
 
 ### 3.2 Sensitivity to Targets
 
@@ -184,7 +185,7 @@ The primal optimizer keeps the exponential tilt wi∝bi​eθ⋆⊤​xiw\_{i}\p
 
 ### 4.1 EGMU-Newton: Damped Dual Newton Ascent (Equality Core)
 
-We solve ([3](https://arxiv.org/html/2510.24607v1#S3.E3 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) via Newton steps with backtracking. Each iteration forms μ=𝔼w​(θ)​[𝐱]\mu=\mathbb{E}\_{w(\theta)}[\mathbf{x}] and Σ=Covw​(θ)​(𝐱)\Sigma=\mathrm{Cov}\_{w(\theta)}(\mathbf{x}) in O​(N​K)O(NK) and O​(N​K2)O(NK^{2}), and solves Σ​Δ=g\Sigma\,\Delta=g with g=t−μg=t-\mu.
+We solve ([3](https://arxiv.org/html/2510.24607v2#S3.E3 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) via Newton steps with backtracking. Each iteration forms μ=𝔼w​(θ)​[𝐱]\mu=\mathbb{E}\_{w(\theta)}[\mathbf{x}] and Σ=Covw​(θ)​(𝐱)\Sigma=\mathrm{Cov}\_{w(\theta)}(\mathbf{x}) in O​(N​K)O(NK) and O​(N​K2)O(NK^{2}), and solves Σ​Δ=g\Sigma\,\Delta=g with g=t−μg=t-\mu.
 
 Algorithm 1  EGMU-Newton (Equality Case, LogSumExp-stable)
 
@@ -212,7 +213,7 @@ Algorithm 1  EGMU-Newton (Equality Case, LogSumExp-stable)
 
 12:end while
 
-13:Return w​(θ)w(\theta) via ([2](https://arxiv.org/html/2510.24607v1#S3.E2 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
+13:Return w​(θ)w(\theta) via ([2](https://arxiv.org/html/2510.24607v2#S3.E2 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
 
 #### Line-search parameters.
 
@@ -221,7 +222,7 @@ L​(θ+α​Δ)≥L​(θ)+c​α​g⊤​ΔL(\theta+\alpha\Delta)\geq L(\thet
 
 #### Elastic variant (R1).
 
-For Lel​(θ)L\_{\mathrm{el}}(\theta), reuse Algorithm [1](https://arxiv.org/html/2510.24607v1#alg1 "Algorithm 1 ‣ 4.1 EGMU-Newton: Damped Dual Newton Ascent (Equality Core) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") with
+For Lel​(θ)L\_{\mathrm{el}}(\theta), reuse Algorithm [1](https://arxiv.org/html/2510.24607v2#alg1 "Algorithm 1 ‣ 4.1 EGMU-Newton: Damped Dual Newton Ascent (Equality Core) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") with
 
 |  |  |  |
 | --- | --- | --- |
@@ -238,7 +239,7 @@ For a single equality a⊤​w=τa^{\top}w=\tau, the KL projection of uu onto th
 |  | w​(α)∝u⊙exp⁡(α​a),with ​ϕ​(α):=a⊤​w​(α)−τ=0,w(\alpha)\ \propto\ u\odot\exp(\alpha a),\quad\text{with }\ \phi(\alpha):=a^{\top}w(\alpha)-\tau=0, |  |
 
 where ϕ\phi is strictly monotone since ϕ′​(α)=Varw​(α)​(a)>0\phi^{\prime}(\alpha)=\mathrm{Var}\_{w(\alpha)}(a)>0 unless aa is degenerate. Root α\alpha is found by bisection/Brent in O​(N)O(N).
-Cycling over k=1,…,Kk=1,\dots,K yields IPF/GIS; it converges to the KL minimizer under feasibility [[6](https://arxiv.org/html/2510.24607v1#bib.bib6), [7](https://arxiv.org/html/2510.24607v1#bib.bib7)].
+Cycling over k=1,…,Kk=1,\dots,K yields IPF/GIS; it converges to the KL minimizer under feasibility [[6](https://arxiv.org/html/2510.24607v2#bib.bib6), [7](https://arxiv.org/html/2510.24607v2#bib.bib7)].
 
 Algorithm 2  EGMU-IPF (Equalities via KL One-Dimensional Projections)
 
@@ -263,7 +264,7 @@ Algorithm 2  EGMU-IPF (Equalities via KL One-Dimensional Projections)
 ### 4.3 KL-Projections for Inequalities: Bregman–Dykstra
 
 For a half-space ℋ={w:a⊤​w≤τ}\mathcal{H}=\{w:a^{\top}w\leq\tau\}, the KL projection of uu onto ℋ\mathcal{H} is either uu (if feasible) or w​(λ)∝u⊙e−λ​aw(\lambda)\propto u\odot e^{-\lambda a} with λ≥0\lambda\geq 0 chosen so that a⊤​w​(λ)=τa^{\top}w(\lambda)=\tau.
-Bregman–Dykstra cycles projections onto {𝒞j}\{\mathcal{C}\_{j}\} with correction terms {qj}\{q\_{j}\} and converges to the KL-projection onto ∩j𝒞j\cap\_{j}\mathcal{C}\_{j} [[3](https://arxiv.org/html/2510.24607v1#bib.bib3)].
+Bregman–Dykstra cycles projections onto {𝒞j}\{\mathcal{C}\_{j}\} with correction terms {qj}\{q\_{j}\} and converges to the KL-projection onto ∩j𝒞j\cap\_{j}\mathcal{C}\_{j} [[3](https://arxiv.org/html/2510.24607v2#bib.bib3)].
 Moreover, since dd​λ​a⊤​w​(λ)=−Varw​(λ)​(a)≤0\tfrac{d}{d\lambda}\,a^{\top}w(\lambda)=-\mathrm{Var}\_{w(\lambda)}(a)\leq 0, the residual a⊤​w​(λ)−τa^{\top}w(\lambda)-\tau is strictly decreasing in λ\lambda (unless aa is degenerate), so the one-dimensional root-finding is robust and unimodal.
 
 Algorithm 3  EGMU-Projection (Inequalities via KL Bregman–Dykstra)
@@ -298,7 +299,7 @@ For Lrob​(θ)=θ⊤​t0−log​∑ibi​eθ⊤​xi⏟smooth concave ​f�
 | --- | --- | --- |
 |  | θ+=proxη​σ𝒰​(θ+η​∇f​(θ)),with∇f​(θ)=t0−𝔼w​(θ)​[x].\theta^{+}\;=\;\mathrm{prox}\_{\eta\,\sigma\_{\mathcal{U}}}\big(\theta+\eta\,\nabla f(\theta)\big),\quad\text{with}\quad\nabla f(\theta)=t\_{0}-\mathbb{E}\_{w(\theta)}[x]. |  |
 
-By Moreau’s identity, proxη​σ𝒰​(z)=z−η​Π𝒰​(z/η)\mathrm{prox}\_{\eta\,\sigma\_{\mathcal{U}}}(z)=z-\eta\,\Pi\_{\mathcal{U}}(z/\eta) (see, e.g., [2](https://arxiv.org/html/2510.24607v1#bib.bib2)), where Π𝒰\Pi\_{\mathcal{U}} is the Euclidean projection onto 𝒰\mathcal{U} (closed forms: ℓ2\ell\_{2} ball ⇒\Rightarrow radial shrink; ℓ∞\ell\_{\infty} box ⇒\Rightarrow coordinatewise clip).
+By Moreau’s identity, proxη​σ𝒰​(z)=z−η​Π𝒰​(z/η)\mathrm{prox}\_{\eta\,\sigma\_{\mathcal{U}}}(z)=z-\eta\,\Pi\_{\mathcal{U}}(z/\eta) (see, e.g., [2](https://arxiv.org/html/2510.24607v2#bib.bib2)), where Π𝒰\Pi\_{\mathcal{U}} is the Euclidean projection onto 𝒰\mathcal{U} (closed forms: ℓ2\ell\_{2} ball ⇒\Rightarrow radial shrink; ℓ∞\ell\_{\infty} box ⇒\Rightarrow coordinatewise clip).
 
 Algorithm 4  EGMU-ProxGrad (Robust Dual with ℓ2/ℓ∞\ell\_{2}/\ell\_{\infty} target sets)
 
@@ -322,7 +323,7 @@ Algorithm 4  EGMU-ProxGrad (Robust Dual with ℓ2/ℓ∞\ell\_{2}/\ell\_{\infty}
 
 #### When to use which solver.
 
-Use Algorithm [1](https://arxiv.org/html/2510.24607v1#alg1 "Algorithm 1 ‣ 4.1 EGMU-Newton: Damped Dual Newton Ascent (Equality Core) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") for fast equality matching (small KK, large NN). Use the elastic variant in §[3.3](https://arxiv.org/html/2510.24607v1#S3.SS3 "3.3 Elastic Targets (Soft Penalty): Dual, Uniqueness, and Sensitivity ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") when exact feasibility is difficult or undesirable. Use Algorithm [4](https://arxiv.org/html/2510.24607v1#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") for robust target sets (ℓ2/ℓ∞\ell\_{2}/\ell\_{\infty}) or when you want feasibility-by-construction via projections.
+Use Algorithm [1](https://arxiv.org/html/2510.24607v2#alg1 "Algorithm 1 ‣ 4.1 EGMU-Newton: Damped Dual Newton Ascent (Equality Core) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") for fast equality matching (small KK, large NN). Use the elastic variant in §[3.3](https://arxiv.org/html/2510.24607v2#S3.SS3 "3.3 Elastic Targets (Soft Penalty): Dual, Uniqueness, and Sensitivity ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") when exact feasibility is difficult or undesirable. Use Algorithm [4](https://arxiv.org/html/2510.24607v2#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") for robust target sets (ℓ2/ℓ∞\ell\_{2}/\ell\_{\infty}) or when you want feasibility-by-construction via projections.
 
 ### 4.5 Path-Following via Sensitivity ODE (Module C)
 
@@ -358,11 +359,11 @@ Algorithm 5  EGMU-Path (Homotopy Integrator)
 
 ###### Theorem 2 (Existence and uniqueness).
 
-Under feasibility (Slater) and strictly positive bb, problem ([1](https://arxiv.org/html/2510.24607v1#S2.E1 "In 2.1 KL-Minimization with Linear Constraints ‣ 2 Problem, Feasibility, and Geometry ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) admits a unique optimizer. If t∈relint​conv​{𝐱i}t\in\mathrm{relint}\,\mathrm{conv}\{\mathbf{x}\_{i}\} and no inequality is active at the boundary, the optimizer is strictly positive.
+Under feasibility (Slater) and strictly positive bb, problem ([1](https://arxiv.org/html/2510.24607v2#S2.E1 "In 2.1 KL-Minimization with Linear Constraints ‣ 2 Problem, Feasibility, and Geometry ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) admits a unique optimizer. If t∈relint​conv​{𝐱i}t\in\mathrm{relint}\,\mathrm{conv}\{\mathbf{x}\_{i}\} and no inequality is active at the boundary, the optimizer is strictly positive.
 
 ###### Theorem 3 (Dual structure and strict concavity).
 
-L​(θ)L(\theta) in ([3](https://arxiv.org/html/2510.24607v1#S3.E3 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) is concave with ∇L​(θ)=t−𝔼w​(θ)​[𝐱]\nabla L(\theta)=t-\mathbb{E}\_{w(\theta)}[\mathbf{x}] and ∇2L​(θ)=−Covw​(θ)​(𝐱)\nabla^{2}L(\theta)=-\mathrm{Cov}\_{w(\theta)}(\mathbf{x}). On the subspace where Covw​(θ)​(𝐱)≻0\mathrm{Cov}\_{w(\theta)}(\mathbf{x})\succ 0, LL is strictly concave, hence θ⋆\theta^{\star} is unique and ([2](https://arxiv.org/html/2510.24607v1#S3.E2 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) yields the unique primal optimizer.
+L​(θ)L(\theta) in ([3](https://arxiv.org/html/2510.24607v2#S3.E3 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) is concave with ∇L​(θ)=t−𝔼w​(θ)​[𝐱]\nabla L(\theta)=t-\mathbb{E}\_{w(\theta)}[\mathbf{x}] and ∇2L​(θ)=−Covw​(θ)​(𝐱)\nabla^{2}L(\theta)=-\mathrm{Cov}\_{w(\theta)}(\mathbf{x}). On the subspace where Covw​(θ)​(𝐱)≻0\mathrm{Cov}\_{w(\theta)}(\mathbf{x})\succ 0, LL is strictly concave, hence θ⋆\theta^{\star} is unique and ([2](https://arxiv.org/html/2510.24607v2#S3.E2 "In 3.1 Exponential Tilt (Equality Case) ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")) yields the unique primal optimizer.
 
 ###### Theorem 4 (Sensitivity).
 
@@ -370,11 +371,11 @@ At the optimum, ∂θ⋆∂t=Covw⋆​(𝐱)−1\dfrac{\partial\theta^{\star}}{
 
 ###### Theorem 5 (Elastic dual: strong concavity and sensitivity).
 
-Lel​(θ)L\_{\mathrm{el}}(\theta) is strongly concave with parameter 1/λsoft1/\lambda\_{\mathrm{soft}}; the maximizer is unique and Theorem [1](https://arxiv.org/html/2510.24607v1#Thmtheorem1 "Theorem 1 (Elastic sensitivity). ‣ 3.3 Elastic Targets (Soft Penalty): Dual, Uniqueness, and Sensitivity ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") holds.
+Lel​(θ)L\_{\mathrm{el}}(\theta) is strongly concave with parameter 1/λsoft1/\lambda\_{\mathrm{soft}}; the maximizer is unique and Theorem [1](https://arxiv.org/html/2510.24607v2#Thmtheorem1 "Theorem 1 (Elastic sensitivity). ‣ 3.3 Elastic Targets (Soft Penalty): Dual, Uniqueness, and Sensitivity ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") holds.
 
 ###### Proposition 2 (Robust dual: concavity and optimality).
 
-Lrob​(θ)=σt0+𝒰​(θ)−log​∑ibi​eθ⊤​xiL\_{\mathrm{rob}}(\theta)=\sigma\_{t\_{0}+\mathcal{U}}(\theta)-\log\sum\_{i}b\_{i}e^{\theta^{\top}x\_{i}} is concave. Any maximizer θ⋆\theta^{\star} yields the exponential tilt wi⋆∝bi​eθ⋆⊤​xiw\_{i}^{\star}\propto b\_{i}e^{\theta^{\star\top}x\_{i}}. For 𝒰\mathcal{U} an ℓ2\ell\_{2} ball or ℓ∞\ell\_{\infty} box, Algorithm [4](https://arxiv.org/html/2510.24607v1#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") converges to a maximizer under standard step-size/backtracking rules (Lipschitz gradient of ff).
+Lrob​(θ)=σt0+𝒰​(θ)−log​∑ibi​eθ⊤​xiL\_{\mathrm{rob}}(\theta)=\sigma\_{t\_{0}+\mathcal{U}}(\theta)-\log\sum\_{i}b\_{i}e^{\theta^{\top}x\_{i}} is concave. Any maximizer θ⋆\theta^{\star} yields the exponential tilt wi⋆∝bi​eθ⋆⊤​xiw\_{i}^{\star}\propto b\_{i}e^{\theta^{\star\top}x\_{i}}. For 𝒰\mathcal{U} an ℓ2\ell\_{2} ball or ℓ∞\ell\_{\infty} box, Algorithm [4](https://arxiv.org/html/2510.24607v2#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures") converges to a maximizer under standard step-size/backtracking rules (Lipschitz gradient of ff).
 
 ###### Theorem 6 (Convergence of EGMU-Newton).
 
@@ -400,7 +401,7 @@ Each 1-D projection is O​(N)O(N) per function/derivative evaluation (bisection
   Elastic targets (R1): the I/λsoftI/\lambda\_{\mathrm{soft}} term improves conditioning and ensures strong concavity in the dual; recommended defaults λsoft∈[10,103]\lambda\_{\mathrm{soft}}\in[10,10^{3}] when feasibility is uncertain.
 * •
 
-  Robust sets (R2): for ℓ2/ℓ∞\ell\_{2}/\ell\_{\infty} sets, use Algorithm [4](https://arxiv.org/html/2510.24607v1#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"); for general 𝒰\mathcal{U}, combine projection oracles (or Bregman–Dykstra in tt-space) with Moreau identity.
+  Robust sets (R2): for ℓ2/ℓ∞\ell\_{2}/\ell\_{\infty} sets, use Algorithm [4](https://arxiv.org/html/2510.24607v2#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"); for general 𝒰\mathcal{U}, combine projection oracles (or Bregman–Dykstra in tt-space) with Moreau identity.
 * •
 
   Cap/box constraints in ww: half-space KL projections have 1-D solves with monotone residuals (dd​λ​a⊤​w​(λ)=−Varw​(λ)​(a)≤0\frac{d}{d\lambda}a^{\top}w(\lambda)=-\mathrm{Var}\_{w(\lambda)}(a)\leq 0), hence root-finding is unimodal/robust.
@@ -431,20 +432,20 @@ If an explicit turnover budget is desired, one may add linearized constraints or
 
 Our formulation is a classical II-projection (minimization of KL under linear moment constraints),
 which yields exponential-family solutions and a concave dual with covariance Hessian; see
-Csiszár [[6](https://arxiv.org/html/2510.24607v1#bib.bib6)] for the geometry of II-divergence, Cover and Thomas [[5](https://arxiv.org/html/2510.24607v1#bib.bib5)] for an information-theoretic treatment,
-and Wainwright and Jordan [[9](https://arxiv.org/html/2510.24607v1#bib.bib9)] for the exponential-family viewpoint connecting gradients/Hessians with moments/covariances.
+Csiszár [[6](https://arxiv.org/html/2510.24607v2#bib.bib6)] for the geometry of II-divergence, Cover and Thomas [[5](https://arxiv.org/html/2510.24607v2#bib.bib5)] for an information-theoretic treatment,
+and Wainwright and Jordan [[9](https://arxiv.org/html/2510.24607v2#bib.bib9)] for the exponential-family viewpoint connecting gradients/Hessians with moments/covariances.
 
 #### Iterative proportional fitting and Bregman projections.
 
 For equality constraints, iterative proportional fitting / generalized iterative scaling (IPF/GIS)
-provides a coordinate-wise Bregman projection method with convergence guarantees [[7](https://arxiv.org/html/2510.24607v1#bib.bib7), [6](https://arxiv.org/html/2510.24607v1#bib.bib6)].
+provides a coordinate-wise Bregman projection method with convergence guarantees [[7](https://arxiv.org/html/2510.24607v2#bib.bib7), [6](https://arxiv.org/html/2510.24607v2#bib.bib6)].
 For intersections of convex sets (equalities and half-spaces), Bregman–Dykstra cycles converge to the unique Bregman projection
-onto the intersection [[3](https://arxiv.org/html/2510.24607v1#bib.bib3)].
+onto the intersection [[3](https://arxiv.org/html/2510.24607v2#bib.bib3)].
 
 #### Entropy pooling and portfolio engineering.
 
 In portfolio applications, our setup parallels Entropy Pooling (EP), which applies cross-entropy
-updating to scenario probabilities under linear “views” [[8](https://arxiv.org/html/2510.24607v1#bib.bib8)]. EGMU adapts the same KL geometry to
+updating to scenario probabilities under linear “views” [[8](https://arxiv.org/html/2510.24607v2#bib.bib8)]. EGMU adapts the same KL geometry to
 *asset weights on the simplex* with *factor exposure* constraints, and makes the dual structure and sensitivity
 explicitly operational for target-exposure construction.
 
@@ -452,12 +453,12 @@ explicitly operational for target-exposure construction.
 
 The elastic and robust variants we study are standard Fenchel–Rockafellar constructs: adding a squared penalty in the primal corresponds to
 a Tikhonov (strongly concave) term in the dual; relaxing equalities to a convex target set yields a dual support function. These follow from
-textbook convex analysis and duality [[4](https://arxiv.org/html/2510.24607v1#bib.bib4), Ch. 3–5], and integrate seamlessly with the exponential-family moment
-structure reviewed by Wainwright and Jordan [[9](https://arxiv.org/html/2510.24607v1#bib.bib9)].
+textbook convex analysis and duality [[4](https://arxiv.org/html/2510.24607v2#bib.bib4), Ch. 3–5], and integrate seamlessly with the exponential-family moment
+structure reviewed by Wainwright and Jordan [[9](https://arxiv.org/html/2510.24607v2#bib.bib9)].
 
 #### Optimization and numerical stability.
 
-Our damped Newton method with backtracking and ridge regularization follows standard convex-optimization practice [[4](https://arxiv.org/html/2510.24607v1#bib.bib4)].
+Our damped Newton method with backtracking and ridge regularization follows standard convex-optimization practice [[4](https://arxiv.org/html/2510.24607v2#bib.bib4)].
 Implementation details (LogSumExp stabilization, covariance centering/ridge, and moment reuse) are tailored to large-NN, small-KK regimes
 typical in factor construction.
 
@@ -467,9 +468,9 @@ EGMU frames target-exposure construction as KL minimization on the simplex with 
 
 ## A Proofs and Technical Details
 
-### A.1 Proof of Proposition [1](https://arxiv.org/html/2510.24607v1#Thmproposition1 "Proposition 1 (Feasibility and strict positivity). ‣ 2.2 Feasibility and Strict Positivity ‣ 2 Problem, Feasibility, and Geometry ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")
+### A.1 Proof of Proposition [1](https://arxiv.org/html/2510.24607v2#Thmproposition1 "Proposition 1 (Feasibility and strict positivity). ‣ 2.2 Feasibility and Strict Positivity ‣ 2 Problem, Feasibility, and Geometry ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")
 
-Let 𝒳={𝐱i}i=1N\mathcal{X}=\{\mathbf{x}\_{i}\}\_{i=1}^{N}. Since w∈ΔNw\in\Delta^{N} implies X⊤​w=∑iwi​𝐱iX^{\top}w=\sum\_{i}w\_{i}\mathbf{x}\_{i}, feasibility of X⊤​w=tX^{\top}w=t is equivalent to t∈conv​(𝒳)t\in\mathrm{conv}(\mathcal{X}). If t∈relint​conv​(𝒳)t\in\mathrm{relint}\,\mathrm{conv}(\mathcal{X}) and bi>0b\_{i}>0, the KL objective is essentially smooth and strictly convex on the relative interior of the simplex, so the unique minimizer satisfies wi⋆>0w\_{i}^{\star}>0 by standard Lagrange multiplier/KKT arguments. With inequalities A​w≤cAw\leq c, feasibility is a convex polytope; infeasibility admits a Farkas certificate (see, e.g., [4](https://arxiv.org/html/2510.24607v1#bib.bib4), Ch. 5). □\square
+Let 𝒳={𝐱i}i=1N\mathcal{X}=\{\mathbf{x}\_{i}\}\_{i=1}^{N}. Since w∈ΔNw\in\Delta^{N} implies X⊤​w=∑iwi​𝐱iX^{\top}w=\sum\_{i}w\_{i}\mathbf{x}\_{i}, feasibility of X⊤​w=tX^{\top}w=t is equivalent to t∈conv​(𝒳)t\in\mathrm{conv}(\mathcal{X}). If t∈relint​conv​(𝒳)t\in\mathrm{relint}\,\mathrm{conv}(\mathcal{X}) and bi>0b\_{i}>0, the KL objective is essentially smooth and strictly convex on the relative interior of the simplex, so the unique minimizer satisfies wi⋆>0w\_{i}^{\star}>0 by standard Lagrange multiplier/KKT arguments. With inequalities A​w≤cAw\leq c, feasibility is a convex polytope; infeasibility admits a Farkas certificate (see, e.g., [4](https://arxiv.org/html/2510.24607v2#bib.bib4), Ch. 5). □\square
 
 ### A.2 Exponential Family and Dual Structure
 
@@ -491,13 +492,13 @@ Substituting into the Lagrangian yields the dual L​(θ)=θ⊤​t−log​∑i
 | --- | --- | --- |
 |  | ∇L​(θ)=t−∑iwi​(θ)​xi,∇2L​(θ)=−∑iwi​(θ)​(xi−μ)​(xi−μ)⊤=−Covw​(θ)​(x).\nabla L(\theta)=t-\sum\_{i}w\_{i}(\theta)x\_{i},\qquad\nabla^{2}L(\theta)=-\sum\_{i}w\_{i}(\theta)(x\_{i}-\mu)(x\_{i}-\mu)^{\top}=-\mathrm{Cov}\_{w(\theta)}(x). |  |
 
-Strict concavity holds where Covw​(θ)​(x)≻0\mathrm{Cov}\_{w(\theta)}(x)\succ 0 (see [9](https://arxiv.org/html/2510.24607v1#bib.bib9)). □\square
+Strict concavity holds where Covw​(θ)​(x)≻0\mathrm{Cov}\_{w(\theta)}(x)\succ 0 (see [9](https://arxiv.org/html/2510.24607v2#bib.bib9)). □\square
 
-### A.3 Proof of Theorem [2](https://arxiv.org/html/2510.24607v1#Thmtheorem2 "Theorem 2 (Existence and uniqueness). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")
+### A.3 Proof of Theorem [2](https://arxiv.org/html/2510.24607v2#Thmtheorem2 "Theorem 2 (Existence and uniqueness). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")
 
 DKL(⋅∥b)D\_{\mathrm{KL}}\!\left(\cdot\middle\|b\right) is strictly convex and lower semi-continuous on the simplex; the feasible set is convex and, under Slater, nonempty with nonempty relative interior. Hence a unique minimizer exists. Strict positivity follows from the fact that bi>0b\_{i}>0 and t∈relintt\in\mathrm{relint} enforce finite Lagrange multipliers and thus wi⋆∝bi​eθ⋆⊤​xi>0w\_{i}^{\star}\propto b\_{i}e^{\theta^{\star\top}x\_{i}}>0. □\square
 
-### A.4 Proof of Theorem [4](https://arxiv.org/html/2510.24607v1#Thmtheorem4 "Theorem 4 (Sensitivity). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")
+### A.4 Proof of Theorem [4](https://arxiv.org/html/2510.24607v2#Thmtheorem4 "Theorem 4 (Sensitivity). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures")
 
 At optimum, ∇L​(θ⋆)=0⇔𝔼w​(θ⋆)​[x]=t\nabla L(\theta^{\star})=0\iff\mathbb{E}\_{w(\theta^{\star})}[x]=t. Differentiate both sides w.r.t. tt:
 ∂∂t​𝔼w​(θ⋆)​[x]=I.\frac{\partial}{\partial t}\mathbb{E}\_{w(\theta^{\star})}[x]=I.
@@ -513,7 +514,7 @@ For wi⋆=bi​exp⁡(θ⋆⊤​xi−log⁡Z)w\_{i}^{\star}=b\_{i}\exp(\theta^{
 
 Thus ∂wi⋆∂t=wi⋆​(xi−μ)⊤​Covw⋆​(x)−1\dfrac{\partial w\_{i}^{\star}}{\partial t}=w\_{i}^{\star}(x\_{i}-\mu)^{\top}\mathrm{Cov}\_{w^{\star}}(x)^{-1}, yielding the matrix form in the main text. □\square
 
-### A.5 Elastic Dual and Sensitivity (Proof of Thm. [5](https://arxiv.org/html/2510.24607v1#Thmtheorem5 "Theorem 5 (Elastic dual: strong concavity and sensitivity). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
+### A.5 Elastic Dual and Sensitivity (Proof of Thm. [5](https://arxiv.org/html/2510.24607v2#Thmtheorem5 "Theorem 5 (Elastic dual: strong concavity and sensitivity). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
 
 The dual reads Lel​(θ)=L​(θ)−12​λsoft​‖θ‖2L\_{\mathrm{el}}(\theta)=L(\theta)-\tfrac{1}{2\lambda\_{\mathrm{soft}}}\|\theta\|^{2}. Hence ∇Lel=∇L−1λsoft​θ\nabla L\_{\mathrm{el}}=\nabla L-\tfrac{1}{\lambda\_{\mathrm{soft}}}\theta and ∇2Lel=∇2L−1λsoft​I\nabla^{2}L\_{\mathrm{el}}=\nabla^{2}L-\tfrac{1}{\lambda\_{\mathrm{soft}}}I, proving strong concavity. At the maximizer, t−𝔼w​(θ)​[x]−1λsoft​θ=0t-\mathbb{E}\_{w(\theta)}[x]-\tfrac{1}{\lambda\_{\mathrm{soft}}}\theta=0. Differentiating w.r.t. tt and using ∂𝔼w​(θ)​[x]/∂θ=Σ\partial\mathbb{E}\_{w(\theta)}[x]/\partial\theta=\Sigma gives (Σ+1λsoft​I)​∂θ/∂t=I(\Sigma+\tfrac{1}{\lambda\_{\mathrm{soft}}}I)\,\partial\theta/\partial t=I, establishing the stated sensitivities. □\square
 
@@ -525,27 +526,27 @@ Fix u∈ΔNu\in\Delta^{N} and the set ℋ={w:a⊤​w=τ}\mathcal{H}=\{w:a^{\top
 
 For ℋ={w:a⊤​w≤τ}\mathcal{H}=\{w:a^{\top}w\leq\tau\}, if uu is feasible, the projection is uu. Otherwise, the KKT conditions yield w​(λ)∝u⊙e−λ​aw(\lambda)\propto u\odot e^{-\lambda a} with λ≥0\lambda\geq 0 chosen so that a⊤​w​(λ)=τa^{\top}w(\lambda)=\tau. Monotonicity follows from dd​λ​a⊤​w​(λ)=−Varw​(λ)​(a)≤0\frac{d}{d\lambda}a^{\top}w(\lambda)=-\mathrm{Var}\_{w(\lambda)}(a)\leq 0. □\square
 
-### A.8 Convergence of EGMU-Newton (Refinement of Thm. [6](https://arxiv.org/html/2510.24607v1#Thmtheorem6 "Theorem 6 (Convergence of EGMU-Newton). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
+### A.8 Convergence of EGMU-Newton (Refinement of Thm. [6](https://arxiv.org/html/2510.24607v2#Thmtheorem6 "Theorem 6 (Convergence of EGMU-Newton). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
 
-The objective L​(θ)=θ⊤​t−log​∑ibi​eθ⊤​xiL(\theta)=\theta^{\top}t-\log\sum\_{i}b\_{i}e^{\theta^{\top}x\_{i}} is twice continuously differentiable and concave, with ∇L​(θ)=t−𝔼w​(θ)​[x]\nabla L(\theta)=t-\mathbb{E}\_{w(\theta)}[x] and ∇2L​(θ)=−Covw​(θ)​(x)\nabla^{2}L(\theta)=-\mathrm{Cov}\_{w(\theta)}(x). If ‖xi‖2≤R\|x\_{i}\|\_{2}\leq R for all ii, then ‖∇2L​(θ)‖≤R2\|\nabla^{2}L(\theta)\|\leq R^{2} for all θ\theta, and ∇2L\nabla^{2}L is locally Lipschitz (with constant depending on RR and the third centered moment). Under these mild smoothness conditions, damped Newton with Armijo backtracking is globally convergent and locally quadratically convergent in a neighborhood of θ⋆\theta^{\star} for strongly concave LL on the relevant subspace (see [4](https://arxiv.org/html/2510.24607v1#bib.bib4), Ch. 9). Ridge regularization (Σ+δ​I)(\Sigma+\delta I) stabilizes solves when Σ\Sigma is ill-conditioned; as δ↓0\delta\downarrow 0 the step approaches the exact Newton direction.
+The objective L​(θ)=θ⊤​t−log​∑ibi​eθ⊤​xiL(\theta)=\theta^{\top}t-\log\sum\_{i}b\_{i}e^{\theta^{\top}x\_{i}} is twice continuously differentiable and concave, with ∇L​(θ)=t−𝔼w​(θ)​[x]\nabla L(\theta)=t-\mathbb{E}\_{w(\theta)}[x] and ∇2L​(θ)=−Covw​(θ)​(x)\nabla^{2}L(\theta)=-\mathrm{Cov}\_{w(\theta)}(x). If ‖xi‖2≤R\|x\_{i}\|\_{2}\leq R for all ii, then ‖∇2L​(θ)‖≤R2\|\nabla^{2}L(\theta)\|\leq R^{2} for all θ\theta, and ∇2L\nabla^{2}L is locally Lipschitz (with constant depending on RR and the third centered moment). Under these mild smoothness conditions, damped Newton with Armijo backtracking is globally convergent and locally quadratically convergent in a neighborhood of θ⋆\theta^{\star} for strongly concave LL on the relevant subspace (see [4](https://arxiv.org/html/2510.24607v2#bib.bib4), Ch. 9). Ridge regularization (Σ+δ​I)(\Sigma+\delta I) stabilizes solves when Σ\Sigma is ill-conditioned; as δ↓0\delta\downarrow 0 the step approaches the exact Newton direction.
 
-### A.9 Convergence of IPF and Bregman–Dykstra (Proof of Thm. [7](https://arxiv.org/html/2510.24607v1#Thmtheorem7 "Theorem 7 (Convergence of projection schemes). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
+### A.9 Convergence of IPF and Bregman–Dykstra (Proof of Thm. [7](https://arxiv.org/html/2510.24607v2#Thmtheorem7 "Theorem 7 (Convergence of projection schemes). ‣ 5 Theoretical Guarantees ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"))
 
-Part (i) follows from Csiszár’s II-projection theory and the Darroch–Ratcliff analysis of generalized iterative scaling for log-linear models [[6](https://arxiv.org/html/2510.24607v1#bib.bib6), [7](https://arxiv.org/html/2510.24607v1#bib.bib7)]. Part (ii) is a special case of Dykstra’s algorithm with Bregman divergences: for finitely many closed convex sets and a Legendre-type Bregman generator (negative entropy here), the cyclic projections converge to the unique Bregman projection onto the intersection [[3](https://arxiv.org/html/2510.24607v1#bib.bib3)]. □\square
+Part (i) follows from Csiszár’s II-projection theory and the Darroch–Ratcliff analysis of generalized iterative scaling for log-linear models [[6](https://arxiv.org/html/2510.24607v2#bib.bib6), [7](https://arxiv.org/html/2510.24607v2#bib.bib7)]. Part (ii) is a special case of Dykstra’s algorithm with Bregman divergences: for finitely many closed convex sets and a Legendre-type Bregman generator (negative entropy here), the cyclic projections converge to the unique Bregman projection onto the intersection [[3](https://arxiv.org/html/2510.24607v2#bib.bib3)]. □\square
 
 ### A.10 Carathéodory support bound (remark)
 
-Any t∈conv​{𝐱i}t\in\mathrm{conv}\{\mathbf{x}\_{i}\} admits a representation using at most K+1K+1 points. See, e.g., Barvinok [[1](https://arxiv.org/html/2510.24607v1#bib.bib1)]. This yields a sparsity upper bound for exact feasibility, though KL minimization under strictly positive prior typically produces dense solutions unless boundary constraints are active.
+Any t∈conv​{𝐱i}t\in\mathrm{conv}\{\mathbf{x}\_{i}\} admits a representation using at most K+1K+1 points. See, e.g., Barvinok [[1](https://arxiv.org/html/2510.24607v2#bib.bib1)]. This yields a sparsity upper bound for exact feasibility, though KL minimization under strictly positive prior typically produces dense solutions unless boundary constraints are active.
 
 ### A.11 Robust dual and proximal map (details)
 
 Let g​(y)=ιt0+𝒰​(y)g(y)=\iota\_{\,t\_{0}+\mathcal{U}}(y). Its Fenchel conjugate is
 g∗​(θ)=supy{θ⊤​y−g​(y)}=supu∈𝒰θ⊤​(t0+u)=θ⊤​t0+σ𝒰​(θ)g^{\*}(\theta)=\sup\_{y}\{\theta^{\top}y-g(y)\}=\sup\_{u\in\mathcal{U}}\theta^{\top}(t\_{0}+u)=\theta^{\top}t\_{0}+\sigma\_{\mathcal{U}}(\theta),
-hence the robust dual in §[3.4](https://arxiv.org/html/2510.24607v1#S3.SS4 "3.4 Robust Target Sets via Support Functions ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"). For the proximal step, use Moreau’s identity for conjugates:
+hence the robust dual in §[3.4](https://arxiv.org/html/2510.24607v2#S3.SS4 "3.4 Robust Target Sets via Support Functions ‣ 3 Duality and Exponential-Family Form ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"). For the proximal step, use Moreau’s identity for conjugates:
 proxη​g∗​(z)=z−η​proxg/η​(z/η)\mathrm{prox}\_{\eta g^{\*}}(z)=z-\eta\,\mathrm{prox}\_{g/\eta}(z/\eta).
 Since g/ηg/\eta is the indicator of t0+𝒰t\_{0}+\mathcal{U}, proxg/η​(z/η)=Πt0+𝒰​(z/η)\mathrm{prox}\_{g/\eta}(z/\eta)=\Pi\_{\,t\_{0}+\mathcal{U}}(z/\eta).
 With the translation y↦y−t0y\mapsto y-t\_{0}, this yields
-proxη​σ𝒰​(z)=z−η​Π𝒰​(z/η)\mathrm{prox}\_{\eta\,\sigma\_{\mathcal{U}}}(z)=z-\eta\,\Pi\_{\mathcal{U}}(z/\eta) used in Algorithm [4](https://arxiv.org/html/2510.24607v1#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"). □\square
+proxη​σ𝒰​(z)=z−η​Π𝒰​(z/η)\mathrm{prox}\_{\eta\,\sigma\_{\mathcal{U}}}(z)=z-\eta\,\Pi\_{\mathcal{U}}(z/\eta) used in Algorithm [4](https://arxiv.org/html/2510.24607v2#alg4 "Algorithm 4 ‣ 4.4 EGMU-ProxGrad (Robust Dual, R2) ‣ 4 Algorithms ‣ Entropy-Guided Multiplicative Updates: KL Projections for Multi-Factor Target Exposures"). □\square
 
 ### A.12 Existence and uniqueness of the solution path ODE
 
