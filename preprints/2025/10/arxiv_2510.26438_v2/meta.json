@@ -1,9 +1,9 @@
 {
-  "doc_id": "arxiv:2510.26438v1",
+  "doc_id": "arxiv:2510.26438v2",
   "family_id": "arxiv:2510.26438",
   "title": "An Impulse Control Approach to Market Making in a Hawkes LOB Market",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Konark Jain",
@@ -11,7 +11,7 @@
     "Jonathan Kochems",
     "Philip Treleaven"
   ],
-  "url_abs": "http://arxiv.org/abs/2510.26438v1",
-  "url_html": "https://arxiv.org/html/2510.26438v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2510.26438v2",
+  "url_html": "https://arxiv.org/html/2510.26438v2",
+  "is_current": true
 }
