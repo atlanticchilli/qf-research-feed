@@ -1,0 +1,22 @@
+{
+  "doc_id": "arxiv:2511.02136v1",
+  "family_id": "arxiv:2511.02136",
+  "title": "JaxMARL-HFT: GPU-Accelerated Large-Scale Multi-Agent Reinforcement Learning for High-Frequency Trading",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Valentin Mohl",
+    "Sascha Frey",
+    "Reuben Leyland",
+    "Kang Li",
+    "George Nigmatulin",
+    "Mihai Cucuringu",
+    "Stefan Zohren",
+    "Jakob Foerster",
+    "Anisoara Calinescu"
+  ],
+  "url_abs": "http://arxiv.org/abs/2511.02136v1",
+  "url_html": "https://arxiv.org/html/2511.02136v1",
+  "is_current": true
+}
