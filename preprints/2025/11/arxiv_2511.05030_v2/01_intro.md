@@ -1,10 +1,10 @@
 ---
 authors:
-- Panagiotis Papaioannou
+- Panagiotis G. Papaioannou
 - Athanassios N. Yannacopoulos
-doc_id: arxiv:2511.05030v1
+doc_id: arxiv:2511.05030v2
 family_id: arxiv:2511.05030
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -12,14 +12,15 @@ taxonomy:
   themes: []
 title: 'The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold
   Geometries'
-url_abs: http://arxiv.org/abs/2511.05030v1
-url_html: https://arxiv.org/html/2511.05030v1
+url_abs: http://arxiv.org/abs/2511.05030v2
+url_html: https://arxiv.org/html/2511.05030v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
 
-Panagiotis Papaioannou
+
+Panagiotis G. Papaioannou
   
 Athanassios N. Yannacopoulos
 
@@ -27,7 +28,7 @@ Athanassios N. Yannacopoulos
 
 ###### Abstract
 
-We introduce a Geometry-Informed Model for financial forecasting by embedding high-dimensional market data onto constant-curvature 2-manifolds. Guided by the uniformization theorem,Thurston1997, we model market dynamics as Brownian motion on spherical (S2S^{2}), Euclidean (R2R^{2}), and hyperbolic (H2H^{2}) geometries. We further include the torus (T​²T\texttwosuperior), a compact, flat manifold admissible as a quotient space of the Euclidean plane-—anticipating its relevance for capturing cyclical dynamics,doCarmoCurves. Manifold learning techniques infer the latent curvature from financial data, revealing the torus as the best-performing geometry. We interpret this result through a macroeconomic lens: the torus’s circular dimensions align with endogenous cycles in output, interest rates, and inflation described by IS-LM theory,Hicks1937. Our findings demonstrate the value of integrating differential geometry with data-driven inference for financial modeling,LopezDePrado2018AFML; CapponiLehalle2023.
+We introduce a Geometry-Informed Model for financial forecasting by embedding high-dimensional market data onto constant-curvature 2-manifolds. Guided by the uniformization theorem,Thurston1997, we model market dynamics as Brownian motion on spherical (S2S^{2}), Euclidean (R2R^{2}), and hyperbolic (H2H^{2}) geometries. We further include the torus (T​²T\texttwosuperior), a compact, flat manifold admissible as a quotient space of the Euclidean plane-—anticipating its relevance for capturing cyclical dynamics,doCarmoCurves. Manifold learning techniques infer the latent curvature from financial data, revealing the torus as the best-performing geometry. We interpret this result through a macroeconomic lens: the torus’s circular dimensions align with endogenous cycles in output, interest rates, and inflation described by IS-LM theory Hicks1937. Our findings demonstrate the value of integrating differential geometry with data-driven inference for financial modeling,LopezDePrado2018AFML; CapponiLehalle2023.
 
 ## 1 Introduction
 
@@ -59,7 +60,7 @@ This study aims to demonstrate that the geometric classification of trajectories
 
 ##### Roadmap.
 
-We first formalize Brownian motion constrained to embedded surfaces and derive explicit SDEs for the three geometries we use (Euclidean, spherical, hyperbolic), plus the torus via an intrinsic chart (Sec. [3.2](https://arxiv.org/html/2511.05030v1#S3.SS2 "3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). We then specify the logarithmic/exponential maps that move between the manifold and its tangent space (Sec. [3.4](https://arxiv.org/html/2511.05030v1#S3.SS4 "3.4 Logarithmic and exponential mappings ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), followed by data-driven estimation of manifold parameters (sphere radius; torus radii; hyperboloid axes) directly from the observed 3D path (Sec. [3.5](https://arxiv.org/html/2511.05030v1#S3.SS5 "3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Next, we describe our curvature-based geometry inference with a torus topological check (Sec. [3.6](https://arxiv.org/html/2511.05030v1#S3.SS6 "3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), and the forecasting pipeline: chart →\to log map →\to tangent-space PCA & time-series forecast →\to exponential map (Sec. [3.7](https://arxiv.org/html/2511.05030v1#S3.SS7 "3.7 Forecasting in manifold space and baseline comparison ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). We close with the explicit native-space baseline comparator and the translation from forecasts to volatility-scaled Profit and Loss (PnL) and portfolio construction (Sec. [3.9](https://arxiv.org/html/2511.05030v1#S3.SS9 "3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Simulation scenarios and additional implementation details are summarized in the Appendix to keep the section compact.
+We first formalize Brownian motion constrained to embedded surfaces and derive explicit SDEs for the three geometries we use (Euclidean, spherical, hyperbolic), plus the torus via an intrinsic chart (Sec. [3.2](https://arxiv.org/html/2511.05030v2#S3.SS2 "3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). We then specify the logarithmic/exponential maps that move between the manifold and its tangent space (Sec. [3.4](https://arxiv.org/html/2511.05030v2#S3.SS4 "3.4 Logarithmic and exponential mappings ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), followed by data-driven estimation of manifold parameters (sphere radius; torus radii; hyperboloid axes) directly from the observed 3D path (Sec. [3.5](https://arxiv.org/html/2511.05030v2#S3.SS5 "3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Next, we describe our curvature-based geometry inference with a torus topological check (Sec. [3.6](https://arxiv.org/html/2511.05030v2#S3.SS6 "3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), and the forecasting pipeline: chart →\to log map →\to tangent-space PCA & time-series forecast →\to exponential map (Sec. [3.7](https://arxiv.org/html/2511.05030v2#S3.SS7 "3.7 Forecasting in manifold space and baseline comparison ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). We close with the explicit native-space baseline comparator and the translation from forecasts to volatility-scaled Profit and Loss (PnL) and portfolio construction (Sec. [3.9](https://arxiv.org/html/2511.05030v2#S3.SS9 "3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Simulation scenarios and additional implementation details are summarized in the Appendix to keep the section compact.
 
 ## 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms
 
@@ -89,7 +90,7 @@ where H​(x)H(x) is the *mean curvature vector*, normal to MM, that enforces th
 | --- | --- | --- |
 |  | n​(x)=∇ϕ​(x)‖∇ϕ​(x)‖,P​(x)=I−n​(x)​n​(x)⊤,n(x)\;=\;\frac{\nabla\phi(x)}{\|\nabla\phi(x)\|},\qquad P(x)\;=\;I-n(x)n(x)^{\top}, |  |
 
-and compute H​(x)H(x) either analytically (when available) or via the implementation used in our simulator (Appendix [B](https://arxiv.org/html/2511.05030v1#A2 "Appendix B Implementation details for SDEs and curvature terms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
+and compute H​(x)H(x) either analytically (when available) or via the implementation used in our simulator (Appendix [B](https://arxiv.org/html/2511.05030v2#A2 "Appendix B Implementation details for SDEs and curvature terms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
 
 ### 3.2 Explicit SDEs by geometry
 
@@ -129,7 +130,7 @@ We work both in implicit embedding and in intrinsic angles.
   | --- | --- | --- |
   |  | n​(x)=∇ϕ​(x)‖∇ϕ​(x)‖,P​(x)=I−n​(x)​n​(x)⊤,n(x)=\frac{\nabla\phi(x)}{\|\nabla\phi(x)\|},\qquad P(x)=I-n(x)n(x)^{\top}, |  |
 
-  and we evolve ([2](https://arxiv.org/html/2511.05030v1#S3.E2 "In 3.1 Ambient formulation and curvature drift ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) with this projector and the corresponding H​(x)H(x) (Appendix [B](https://arxiv.org/html/2511.05030v1#A2 "Appendix B Implementation details for SDEs and curvature terms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
+  and we evolve ([2](https://arxiv.org/html/2511.05030v2#S3.E2 "In 3.1 Ambient formulation and curvature drift ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) with this projector and the corresponding H​(x)H(x) (Appendix [B](https://arxiv.org/html/2511.05030v2#A2 "Appendix B Implementation details for SDEs and curvature terms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
 * •
 
   *Intrinsic chart (θ,φ)∈[0,2​π)2(\theta,\varphi)\in[0,2\pi)^{2}:*
@@ -171,7 +172,7 @@ Then gu​u=E​(u)=a2​sinh2⁡u+c2​cosh2⁡ug\_{uu}=E(u)=a^{2}\sinh^{2}u+c^
 
 with E′​(u)=2​(a2+c2)​sinh⁡u​cosh⁡uE^{\prime}(u)=2(a^{2}+c^{2})\sinh u\cosh u. Cartesian positions are Xt=Φ​(ut,vt)X\_{t}=\Phi(u\_{t},v\_{t}).
 
-Remark (ambient implementation). We also implement ([2](https://arxiv.org/html/2511.05030v1#S3.E2 "In 3.1 Ambient formulation and curvature drift ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) directly in ℝ3\mathbb{R}^{3} using P​(x)P(x) and a closed-form mean-curvature drift H​(x)H(x) for each implicit surface; formulas above and the implementation are equivalent modulo time discretization (Appendix [B](https://arxiv.org/html/2511.05030v1#A2 "Appendix B Implementation details for SDEs and curvature terms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
+Remark (ambient implementation). We also implement ([2](https://arxiv.org/html/2511.05030v2#S3.E2 "In 3.1 Ambient formulation and curvature drift ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) directly in ℝ3\mathbb{R}^{3} using P​(x)P(x) and a closed-form mean-curvature drift H​(x)H(x) for each implicit surface; formulas above and the implementation are equivalent modulo time discretization (Appendix [B](https://arxiv.org/html/2511.05030v2#A2 "Appendix B Implementation details for SDEs and curvature terms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
 
 ### 3.3 Nonlinear forecasting via machine learning regressors
 
@@ -186,7 +187,7 @@ At each step, the models are trained on 𝒟\mathcal{D} and used to predict y^T+
 
 ##### Random Forest regression.
 
-A Random Forest (Breiman2001) constructs an ensemble of BB regression trees {fb​(⋅)}b=1B\{f\_{b}(\cdot)\}\_{b=1}^{B}, each trained on a bootstrap resample of 𝒟\mathcal{D} and a random subset of predictors.
+A Random Forest (breiman2001random) constructs an ensemble of BB regression trees {fb​(⋅)}b=1B\{f\_{b}(\cdot)\}\_{b=1}^{B}, each trained on a bootstrap resample of 𝒟\mathcal{D} and a random subset of predictors.
 The forecast corresponds to the ensemble mean:
 
 |  |  |  |  |
@@ -290,7 +291,7 @@ A key ingredient of our pipeline is that the geometry is not treated as fixed; i
 
 ##### Notation.
 
-Let M​(ϑ)M(\vartheta) denote a parametric surface embedded in ℝ3\mathbb{R}^{3} with parameter vector ϑ\vartheta (e.g., radius RR on the sphere; major/minor radii (R,r)(R,r) on the torus; semi–axes (a,b,c)(a,b,c) on the hyperboloid). Given a stream {xt}\{x\_{t}\} up to time t⋆t^{\star}, we estimate ϑ^t⋆\widehat{\vartheta}\_{t^{\star}} and then work in the corresponding chart for mapping, forecasting and lifting. Throughout, angles are unwrapped *mod* 2​π2\pi using the shortest–-arc convention to preserve continuity in the tangent space (see ([23](https://arxiv.org/html/2511.05030v1#S3.E23 "In Torus 𝑇²⁢(𝑅,𝑟): method–-of-–moments from toroidal coordinates ‣ 3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) below).
+Let M​(ϑ)M(\vartheta) denote a parametric surface embedded in ℝ3\mathbb{R}^{3} with parameter vector ϑ\vartheta (e.g., radius RR on the sphere; major/minor radii (R,r)(R,r) on the torus; semi–axes (a,b,c)(a,b,c) on the hyperboloid). Given a stream {xt}\{x\_{t}\} up to time t⋆t^{\star}, we estimate ϑ^t⋆\widehat{\vartheta}\_{t^{\star}} and then work in the corresponding chart for mapping, forecasting and lifting. Throughout, angles are unwrapped *mod* 2​π2\pi using the shortest–-arc convention to preserve continuity in the tangent space (see ([23](https://arxiv.org/html/2511.05030v2#S3.E23 "In Torus 𝑇²⁢(𝑅,𝑟): method–-of-–moments from toroidal coordinates ‣ 3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) below).
 
 #### Sphere S2​(R)S^{2}(R): Karcher mean and radius
 
@@ -320,7 +321,7 @@ We adopt a simple method of moments on the *minor angle* and its cosine (normali
 | --- | --- | --- | --- |
 |  | R^=1t⋆​∑t≤t⋆cos⁡ϕt,r^=1t⋆​∑t≤t⋆(cos⁡ϕt−R^)2,\widehat{R}\;=\;\frac{1}{t^{\star}}\sum\_{t\leq t^{\star}}\cos\phi\_{t},\qquad\widehat{r}\;=\;\sqrt{\frac{1}{t^{\star}}\sum\_{t\leq t^{\star}}\big(\cos\phi\_{t}-\widehat{R}\big)^{2}}, |  | (22) |
 
-In practice, for stability we use R^\widehat{R} from ([22](https://arxiv.org/html/2511.05030v1#S3.E22 "In Torus 𝑇²⁢(𝑅,𝑟): method–-of-–moments from toroidal coordinates ‣ 3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) while the *instantaneous* tube radius is proxied by the latest ρt⋆\rho\_{t^{\star}}, which helps track slow deformations of the tube thickness in non–stationary segments. doCarmoCurves
+In practice, for stability we use R^\widehat{R} from ([22](https://arxiv.org/html/2511.05030v2#S3.E22 "In Torus 𝑇²⁢(𝑅,𝑟): method–-of-–moments from toroidal coordinates ‣ 3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) while the *instantaneous* tube radius is proxied by the latest ρt⋆\rho\_{t^{\star}}, which helps track slow deformations of the tube thickness in non–stationary segments. doCarmoCurves
 
 Tangent space steps use the 2​π2\pi wrapped *shortest arc* differences
 
@@ -373,7 +374,7 @@ By explicitly re–estimating (R^)(\widehat{R}) or (R^,r)(\widehat{R},r) or (a^,
 
 * •
 
-  Angle wrapping. All angular differences use the shortest–arc rule ([23](https://arxiv.org/html/2511.05030v1#S3.E23 "In Torus 𝑇²⁢(𝑅,𝑟): method–-of-–moments from toroidal coordinates ‣ 3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) to keep tangent vectors small and numerically stable on compact directions (torus S1×S1S^{1}{\times}S^{1} and the angular coordinate vv on the hyperboloid).
+  Angle wrapping. All angular differences use the shortest–arc rule ([23](https://arxiv.org/html/2511.05030v2#S3.E23 "In Torus 𝑇²⁢(𝑅,𝑟): method–-of-–moments from toroidal coordinates ‣ 3.5 Data-driven estimation of manifold parameters ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) to keep tangent vectors small and numerically stable on compact directions (torus S1×S1S^{1}{\times}S^{1} and the angular coordinate vv on the hyperboloid).
 * •
 
   Stability at small steps. Spherical log/exp guard against sin⁡θ≈0\sin\theta\!\approx\!0 and ‖v‖≈0\|v\|\!\approx\!0 (returning zeros or the base point), preventing blow–ups when points are nearly aligned.
@@ -384,7 +385,7 @@ By explicitly re–estimating (R^)(\widehat{R}) or (R^,r)(\widehat{R},r) or (a^,
 ### 3.6 Local Gaussian Curvature Based Geometry Inference
 
 We infer the latent geometry directly from the data via a *local differential–geometric fit* combined with *topological validation*. The pipeline operates on a 3D trajectory
-Xt=(xt,yt,zt)∈ℝ3X\_{t}=(x\_{t},y\_{t},z\_{t})\in\mathbb{R}^{3} obtained either from simulation or from real data after a 3D embedding (e.g., expanding-window PCA of returns). We show the dynamics of the simulations and from the real data in [1](https://arxiv.org/html/2511.05030v1#S3.F1 "Figure 1 ‣ 3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries").
+Xt=(xt,yt,zt)∈ℝ3X\_{t}=(x\_{t},y\_{t},z\_{t})\in\mathbb{R}^{3} obtained either from simulation or from real data after a 3D embedding (e.g., expanding-window PCA of returns). We show the dynamics of the simulations and from the real data in [1](https://arxiv.org/html/2511.05030v2#S3.F1 "Figure 1 ‣ 3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries").
 
 ![Refer to caption](images/CartesianPathDFMain_1.png)
 
@@ -443,7 +444,7 @@ Given a^t,b^t,c^t\hat{a}\_{t},\hat{b}\_{t},\hat{c}\_{t}, the *local Gaussian cur
 
 Operationally, we pre-smooth (x,y,z)(x,y,z) (short moving average) and compute KtK\_{t} on an expanding or rolling window with a minimal sample size m0m\_{0} (see Appendix for defaults).
 
-Towards validating that the method approximates satisfactorily the underlying Gaussian curvature, Fig. [2](https://arxiv.org/html/2511.05030v1#S3.F2 "Figure 2 ‣ 3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries") recovers the expected signatures on benchmarks—-K>0K>0 on S2S^{2}, mixed KK on T2T^{2}, and K<0K<0 on H2H^{2}—and yields plausible, intermittent curvature on the finance path; “uniformly sampled” means draws from each surface’s Riemannian (area) measure (density ∝d​A\propto dA).doCarmoRiemannian
+Towards validating that the method approximates satisfactorily the underlying Gaussian curvature, Fig. [2](https://arxiv.org/html/2511.05030v2#S3.F2 "Figure 2 ‣ 3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries") recovers the expected signatures on benchmarks—-K>0K>0 on S2S^{2}, mixed KK on T2T^{2}, and K<0K<0 on H2H^{2}—and yields plausible, intermittent curvature on the finance path; “uniformly sampled” means draws from each surface’s Riemannian (area) measure (density ∝d​A\propto dA).doCarmoRiemannian
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -558,7 +559,7 @@ Notes. 
 
 1. 1.
 
-   *Regime inference:* Infer geometry using local gaussian curvature information - section [3.6](https://arxiv.org/html/2511.05030v1#S3.SS6 "3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")
+   *Regime inference:* Infer geometry using local gaussian curvature information - section [3.6](https://arxiv.org/html/2511.05030v2#S3.SS6 "3.6 Local Gaussian Curvature Based Geometry Inference ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")
 2. 2.
 
    *Tangent velocities:* Compute vt=P​(Xt−1)​(Xt−Xt−1)v\_{t}=P(X\_{t-1})\,(X\_{t}-X\_{t-1}) to approximate intrinsic velocity.
@@ -672,7 +673,7 @@ On this 3D path we then compute:
 1. 1.
 
    Local Gaussian curvature KtK\_{t} via a weighted quadratic Monge patch fit
-   z=a​x2+b​x​y+c​y2+d​x+e​y+fz=ax^{2}+bxy+cy^{2}+dx+ey+f on rolling/expanding windows (Section [4.2](https://arxiv.org/html/2511.05030v1#S4.SS2 "4.2 Curvature statistics and regime assignment (finance path) ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
+   z=a​x2+b​x​y+c​y2+d​x+e​y+fz=ax^{2}+bxy+cy^{2}+dx+ey+f on rolling/expanding windows (Section [4.2](https://arxiv.org/html/2511.05030v2#S4.SS2 "4.2 Curvature statistics and regime assignment (finance path) ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
 2. 2.
 
    Topological torus test via Takens embedding and persistent homology
@@ -713,7 +714,7 @@ This Euclidean null control demonstrates that our procedure *does not* mistake P
 
 ### 3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting
 
-We apply our methodology to a broad multi-asset universe (equities, sectors, rates, credit, commodities, volatility indices; full tickers in Appendix [A](https://arxiv.org/html/2511.05030v1#A1 "Appendix A Data Universe and Pre-processing ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Raw daily prices (Yahoo Finance) ; log-returns are formed and basic long-only (LO) and risk-parity (RP) benchmark series are computed for reference. The LO and RP benchmarks (the latter built via inverse-volatility scaling) are saved alongside the panel of returns for later comparison.
+We apply our methodology to a broad multi-asset universe (equities, sectors, rates, credit, commodities, volatility indices; full tickers in Appendix [A](https://arxiv.org/html/2511.05030v2#A1 "Appendix A Data Universe and Pre-processing ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Raw daily prices (Yahoo Finance) ; log-returns are formed and basic long-only (LO) and risk-parity (RP) benchmark series are computed for reference. The LO and RP benchmarks (the latter built via inverse-volatility scaling) are saved alongside the panel of returns for later comparison.
 
 ##### Expanding-window PCA and 3D embedding (eigenportfolios).
 
@@ -729,7 +730,7 @@ so pi,tp\_{i,t} is the (out-of-sample) return of the iith eigenportfolio. Stacki
 | --- | --- | --- | --- |
 |  | Xt=(∑s≤tp1,s,∑s≤tp2,s,∑s≤tp3,s)⊤∈ℝ3,X\_{t}\;=\;\Big(\,\sum\_{s\leq t}p\_{1,s},\ \sum\_{s\leq t}p\_{2,s},\ \sum\_{s\leq t}p\_{3,s}\,\Big)^{\top}\in\mathbb{R}^{3}, |  | (33) |
 
-which serves as the input trajectory for our geometry-aware predictor. We display the expanding window curvature estimation for the PCA embedded financial dataset in Figure [8](https://arxiv.org/html/2511.05030v1#S3.F8 "Figure 8 ‣ Expanding-window PCA and 3D embedding (eigenportfolios). ‣ 3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")
+which serves as the input trajectory for our geometry-aware predictor. We display the expanding window curvature estimation for the PCA embedded financial dataset in Figure [8](https://arxiv.org/html/2511.05030v2#S3.F8 "Figure 8 ‣ Expanding-window PCA and 3D embedding (eigenportfolios). ‣ 3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")
 
 ![Refer to caption](images/PCA_3D_Plot_and_Curvature.png)
 
@@ -738,11 +739,11 @@ Figure 8: PCA projections evolution (Upper panel) and curvature estimation (Lowe
 
 ##### Geometry signal on finance: local curvature on the PCA path.
 
-On the 3D path XtX\_{t} we estimate the *local Gaussian curvature* KtK\_{t} by fitting quadratic Monge patches on rolling/expanding neighborhoods (Section [4.2](https://arxiv.org/html/2511.05030v1#S4.SS2 "4.2 Curvature statistics and regime assignment (finance path) ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). This series feeds the allocation rules and the curvature-aware benchmarks reported later.
+On the 3D path XtX\_{t} we estimate the *local Gaussian curvature* KtK\_{t} by fitting quadratic Monge patches on rolling/expanding neighborhoods (Section [4.2](https://arxiv.org/html/2511.05030v2#S4.SS2 "4.2 Curvature statistics and regime assignment (finance path) ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). This series feeds the allocation rules and the curvature-aware benchmarks reported later.
 
 ##### Forecasting on the embedded path.
 
-Given X1:tX\_{1:t}, we forecast the next embedded point X^t+1\widehat{X}\_{t+1} either (i) *natively in the 3D Euclidean path* or (ii) *geometry-aware* by choosing a geometry M∈{ℝ2,S2,T2,H2}M\in\{\mathbb{R}^{2},S^{2},T^{2},H^{2}\}, mapping to the tangent space via logμ\log\_{\mu}, forecasting principal tangent coefficients (VAR / GP / RF), and lifting back via expμ\exp\_{\mu} (Section [4.2](https://arxiv.org/html/2511.05030v1#S4.SS2 "4.2 Curvature statistics and regime assignment (finance path) ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
+Given X1:tX\_{1:t}, we forecast the next embedded point X^t+1\widehat{X}\_{t+1} either (i) *natively in the 3D Euclidean path* or (ii) *geometry-aware* by choosing a geometry M∈{ℝ2,S2,T2,H2}M\in\{\mathbb{R}^{2},S^{2},T^{2},H^{2}\}, mapping to the tangent space via logμ\log\_{\mu}, forecasting principal tangent coefficients (VAR / GP / RF), and lifting back via expμ\exp\_{\mu} (Section [4.2](https://arxiv.org/html/2511.05030v2#S4.SS2 "4.2 Curvature statistics and regime assignment (finance path) ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
 
 ##### Translating forecasts to trading signals and PnL.Maillard2010; Roncalli2013
 
@@ -768,7 +769,7 @@ Annualized Sharpe ratios, Sh​[]\mathrm{Sh}[], are reported as
 ### 3.10 Eigenvalue-Weighted Sleeves from *3D PCA Space* (Expanding SVD)
 
 In the finance application we first build the *embedded 3D PCA path* of eigenportfolios
-(Section [3.9](https://arxiv.org/html/2511.05030v1#S3.SS9 "3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")): for each date tt we have
+(Section [3.9](https://arxiv.org/html/2511.05030v2#S3.SS9 "3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")): for each date tt we have
 
 |  |  |  |
 | --- | --- | --- |
@@ -812,7 +813,7 @@ si,t+1=sign​(Δ​X^i,t+1)s\_{i,t+1}=\mathrm{sign}(\widehat{\Delta X}\_{i,t+1}
 | --- | --- | --- | --- |
 |  | rt+1(eig, 3​D)=∑i=13Ci,t​si,t+1​pi,t+1,pi,t+1​ the out-of-sample return of sleeve ​i.r^{(\mathrm{eig},\,3D)}\_{t+1}\;=\;\sum\_{i=1}^{3}C\_{i,t}\;s\_{i,t+1}\;p\_{i,t+1},\qquad p\_{i,t+1}\text{ the out-of-sample return of sleeve }i. |  | (38) |
 
-All evaluation metrics (MAE/RMSE/Sign, Sharpe, cumulative PnL) are computed identically across (i) and (ii) to ensure a fair comparison; results are reported in Section [4](https://arxiv.org/html/2511.05030v1#S4 "4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries").SimonianLopezdePradoFabozzi2024
+All evaluation metrics (MAE/RMSE/Sign, Sharpe, cumulative PnL) are computed identically across (i) and (ii) to ensure a fair comparison; results are reported in Section [4](https://arxiv.org/html/2511.05030v2#S4 "4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries").SimonianLopezdePradoFabozzi2024
 
 ##### Design intent.
 
@@ -834,7 +835,7 @@ This setup ensures the following:
 
 ### 4.1 ’Forecast to Trading’ Evaluation Design
 
-We assess the methodology on (i) *simulated* regimes and (ii) *real finance* data (Section [3.9](https://arxiv.org/html/2511.05030v1#S3.SS9 "3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Because trading payoff is highly sensitive to *direction*, we report both statistical errors (MAE/RMSE) and trading metrics (Sharpe/Sortino/Calmar, hit-rate). All comparisons are *like-for-like* between:
+We assess the methodology on (i) *simulated* regimes and (ii) *real finance* data (Section [3.9](https://arxiv.org/html/2511.05030v2#S3.SS9 "3.9 Real-Finance Data Pipeline: Expanding PCA, Eigenportfolios, and Forecasting ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")). Because trading payoff is highly sensitive to *direction*, we report both statistical errors (MAE/RMSE) and trading metrics (Sharpe/Sortino/Calmar, hit-rate). All comparisons are *like-for-like* between:
 
 * •
 
@@ -935,7 +936,7 @@ Figure 9: Persistent homology diagnostics on the real-data embedding. High *H1* 
 
 ##### Topological evidence for a torus-like manifold (real data).
 
-Visual inspection of the emerged torus-like shape is displayed in Figure [10](https://arxiv.org/html/2511.05030v1#S4.F10 "Figure 10 ‣ Topological evidence for a torus-like manifold (real data). ‣ 4.3 Topological validation via persistent homology ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"). The behavior directs us on thinking more heavily on the existence of multiple torii, with different radii ’stitched’ together in a ’smooth’ way – a statement which we try to quantify using the TDA analysis below.
+Visual inspection of the emerged torus-like shape is displayed in Figure [10](https://arxiv.org/html/2511.05030v2#S4.F10 "Figure 10 ‣ Topological evidence for a torus-like manifold (real data). ‣ 4.3 Topological validation via persistent homology ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"). The behavior directs us on thinking more heavily on the existence of multiple torii, with different radii ’stitched’ together in a ’smooth’ way – a statement which we try to quantify using the TDA analysis below.
 
 ![Refer to caption](images/takens_attractor.png)
 
@@ -981,7 +982,7 @@ The volatility scaled PnL of sleeve ii is
 |  | pnli,t+1=si,t+1σ^i,t(500)​Δ​Xi,t+1,pnlTot,t+1=13​∑i=13pnli,t+1,\mathrm{pnl}\_{i,t+1}=\frac{s\_{i,t+1}}{\widehat{\sigma}\_{i,t}^{(500)}}\,\Delta X\_{i,t+1},\qquad\mathrm{pnl}\_{\mathrm{Tot},t+1}=\tfrac{1}{3}\sum\_{i=1}^{3}\mathrm{pnl}\_{i,t+1}, |  |
 
 with annualized Sharpe Sh=252​pnl¯/stdev​(pnl)\mathrm{Sh}=\sqrt{252}\,\overline{\mathrm{pnl}}/\mathrm{stdev}(\mathrm{pnl}).
-For *eigenvalue weighted* sleeves (Section [3.10](https://arxiv.org/html/2511.05030v1#S3.SS10 "3.10 Eigenvalue-Weighted Sleeves from 3D PCA Space (Expanding SVD) ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), we also form
+For *eigenvalue weighted* sleeves (Section [3.10](https://arxiv.org/html/2511.05030v2#S3.SS10 "3.10 Eigenvalue-Weighted Sleeves from 3D PCA Space (Expanding SVD) ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), we also form
 
 |  |  |  |
 | --- | --- | --- |
@@ -1036,7 +1037,7 @@ To check that geometry performance is not a PCA artifact, we evaluate on equicor
 
 ##### Summary.
 
-On *flat* CBMs (ρ=0.9\rho{=}0.9), Euclidean dominates; with weaker correlation (ρ=0.6\rho{=}0.6) a toroidal slice can outperform, consistent with cyclical structure emerging after projection. Together with Section [3.8](https://arxiv.org/html/2511.05030v1#S3.SS8 "3.8 Euclidean Null Control: Correlated Brownian Motions ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"), these controls indicate that the gains reported earlier in the real financial data are associated with *intrinsic* curvature/cyclicity captured by the manifold step, not PCA alone.
+On *flat* CBMs (ρ=0.9\rho{=}0.9), Euclidean dominates; with weaker correlation (ρ=0.6\rho{=}0.6) a toroidal slice can outperform, consistent with cyclical structure emerging after projection. Together with Section [3.8](https://arxiv.org/html/2511.05030v2#S3.SS8 "3.8 Euclidean Null Control: Correlated Brownian Motions ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"), these controls indicate that the gains reported earlier in the real financial data are associated with *intrinsic* curvature/cyclicity captured by the manifold step, not PCA alone.
 
 ### 4.7 Financial Data: Coordinate Sharpe by Geometry,Maillard2010; Roncalli2013
 
@@ -1049,7 +1050,7 @@ Table 2: Sharpe ratios by geometry and coordinate (from prior version; reported 
 | Toroidal (T) | 0.161 | −0.252-0.252 | 0.721 | 0.274 |
 | Hyperbolic (H) | −0.094-0.094 | −0.284-0.284 | 0.357 | −0.065-0.065 |
 
-To put these results in context, we compare the geometry-informed strategies against conventional benchmark portfolios: the equally weighted long only (LO) portfolio of all assets, and a risk parity portfolio (RP) that balances contributions to volatility. Over the same 2005 to 2025 period, the equally weighted portfolio achieved a Sharpe ratio of roughly 0.39 and the RP portfolio about 0.44. The standout is the toroidal zz coordinate (Sharpe 0.7210.721), consistent with a latent *cyclic* component amplified by a T2T^{2} embedding. In other words, a trading strategy informed by the toroidal geometry signals would have outperformed a passive diversified portfolio, highlighting the practical value of the geometric approach. Notably, even the spherical model’s Sharpe (0.270.27) is on par with the benchmarks, while the Euclidean forecast model’s negative Sharpe is clearly inferior. These findings reinforce that embedding financial time series in an appropriate curved space can extract predictive signals that traditional methods overlook. (Summary table of best performing strategies vs benchmarks in Table [3](https://arxiv.org/html/2511.05030v1#S4.T3 "Table 3 ‣ 4.7 Financial Data: Coordinate Sharpe by Geometry,Maillard2010; Roncalli2013 ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"),Avellaneda2022)
+To put these results in context, we compare the geometry-informed strategies against conventional benchmark portfolios: the equally weighted long only (LO) portfolio of all assets, and a risk parity portfolio (RP) that balances contributions to volatility. Over the same 2005 to 2025 period, the equally weighted portfolio achieved a Sharpe ratio of roughly 0.39 and the RP portfolio about 0.44. The standout is the toroidal zz coordinate (Sharpe 0.7210.721), consistent with a latent *cyclic* component amplified by a T2T^{2} embedding. In other words, a trading strategy informed by the toroidal geometry signals would have outperformed a passive diversified portfolio, highlighting the practical value of the geometric approach. Notably, even the spherical model’s Sharpe (0.270.27) is on par with the benchmarks, while the Euclidean forecast model’s negative Sharpe is clearly inferior. These findings reinforce that embedding financial time series in an appropriate curved space can extract predictive signals that traditional methods overlook. (Summary table of best performing strategies vs benchmarks in Table [3](https://arxiv.org/html/2511.05030v2#S4.T3 "Table 3 ‣ 4.7 Financial Data: Coordinate Sharpe by Geometry,Maillard2010; Roncalli2013 ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"),Avellaneda2022)
 
 Table 3: Summary Table : Strategy-level Sharpe ratios (2005–-2025). Geometry-Informed Modeling (GIM) variants vs. benchmarks.
 
@@ -1074,7 +1075,7 @@ To test whether generic nonlinear learning methods can extract residual structur
 Specifically, each manifold coordinate (x,y,z)(x,y,z) was forecasted using VAR, RF, and GP individually, and their outputs were combined through a linear ensemble to assess whether local nonlinearities not captured by the linear VAR could improve out-of-sample predictive accuracy.
 
 While both RF and GP models offer flexible functional forms, their results show only marginal differences relative to the baseline VAR.
-Table [4](https://arxiv.org/html/2511.05030v1#S4.T4 "Table 4 ‣ 4.7.1 Augmenting VAR with machine-learning predictors ‣ 4.7 Financial Data: Coordinate Sharpe by Geometry,Maillard2010; Roncalli2013 ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries") summarizes their performance across geometries.
+Table [4](https://arxiv.org/html/2511.05030v2#S4.T4 "Table 4 ‣ 4.7.1 Augmenting VAR with machine-learning predictors ‣ 4.7 Financial Data: Coordinate Sharpe by Geometry,Maillard2010; Roncalli2013 ‣ 4 Results ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries") summarizes their performance across geometries.
 In both setups, the toroidal configuration continues to dominate with Sharpe ratios in the range 0.380.38–0.470.47, whereas Euclidean and spherical geometries remain negative, and hyperbolic slightly positive.
 This finding suggests that the core predictive information arises primarily from the manifold’s geometric organization rather than from generic nonlinear learners.
 
@@ -1147,7 +1148,7 @@ so for a *supercritical* Hopf (Rec>0\real c>0, μ>0\mu>0) a stable limit cycle a
 
 #### 2. Hopf reduction and phase dynamics (one torus)
 
-Near a (supercritical) Hopf set of ([40](https://arxiv.org/html/2511.05030v1#S5.E40 "In 1. IS–LM(+Phillips) linear core and oscillatory modes,Hicks1937 ‣ 5.1 IS–LM foundations for (multi-)torus dynamics: a mathematical sketch ‣ 5 Discussion and Future Research ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), the macro state admits a two-dimensional center manifold with normal form
+Near a (supercritical) Hopf set of ([40](https://arxiv.org/html/2511.05030v2#S5.E40 "In 1. IS–LM(+Phillips) linear core and oscillatory modes,Hicks1937 ‣ 5.1 IS–LM foundations for (multi-)torus dynamics: a mathematical sketch ‣ 5 Discussion and Future Research ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), the macro state admits a two-dimensional center manifold with normal form
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1210,10 +1211,10 @@ with slowly varying loadings Cm,n(s)C^{(s)}\_{m,n}. Under mild smoothness and ti
   Curvature. Mixtures of cycles produce *mixed* Gaussian curvature with a negative skew if trajectories frequent “saddle” corridors (amplification-dominant passages), interspersed with near-zero bands (slow transitions) and occasional positive patches (constraint-dominant).
 * •
 
-  Persistent homology. Windows with two *dominant* cycles exhibit two long H1H\_{1} features; when additional blocks become energetic, extra (weaker) H1H\_{1} loops may appear. The strength of the top two loops should co-move with cycle amplitudes ρs⋆​(t)\rho\_{s}^{\star}(t) in ([45](https://arxiv.org/html/2511.05030v1#S5.E45 "In Slowly varying cycle strengths (time-varying radii). ‣ 3. From one torus to several: a multi-block macro ‣ 5.1 IS–LM foundations for (multi-)torus dynamics: a mathematical sketch ‣ 5 Discussion and Future Research ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
+  Persistent homology. Windows with two *dominant* cycles exhibit two long H1H\_{1} features; when additional blocks become energetic, extra (weaker) H1H\_{1} loops may appear. The strength of the top two loops should co-move with cycle amplitudes ρs⋆​(t)\rho\_{s}^{\star}(t) in ([45](https://arxiv.org/html/2511.05030v2#S5.E45 "In Slowly varying cycle strengths (time-varying radii). ‣ 3. From one torus to several: a multi-block macro ‣ 5.1 IS–LM foundations for (multi-)torus dynamics: a mathematical sketch ‣ 5 Discussion and Future Research ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")).
 * •
 
-  Spectral content. The embedded coordinates should show peaks near the macro cycle frequencies {ωs}\{\omega\_{s}\} (possibly time-varying), with cross-modulation when couplings in ([44](https://arxiv.org/html/2511.05030v1#S5.E44 "In 3. From one torus to several: a multi-block macro ‣ 5.1 IS–LM foundations for (multi-)torus dynamics: a mathematical sketch ‣ 5 Discussion and Future Research ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) tighten.
+  Spectral content. The embedded coordinates should show peaks near the macro cycle frequencies {ωs}\{\omega\_{s}\} (possibly time-varying), with cross-modulation when couplings in ([44](https://arxiv.org/html/2511.05030v2#S5.E44 "In 3. From one torus to several: a multi-block macro ‣ 5.1 IS–LM foundations for (multi-)torus dynamics: a mathematical sketch ‣ 5 Discussion and Future Research ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) tighten.
 
 ##### Why this matters for our GIM.
 
@@ -1341,7 +1342,7 @@ This diverse dataset provides comprehensive coverage of global financial markets
 
 ##### Ambient Euler Maruyama.
 
-We discretize ([2](https://arxiv.org/html/2511.05030v1#S3.E2 "In 3.1 Ambient formulation and curvature drift ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) with step hh:
+We discretize ([2](https://arxiv.org/html/2511.05030v2#S3.E2 "In 3.1 Ambient formulation and curvature drift ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) with step hh:
 
 |  |  |  |
 | --- | --- | --- |
@@ -1351,7 +1352,7 @@ For M=S2M=S^{2} we use P​(x)=I−x​x⊤‖x‖2P(x)=I-\frac{xx^{\top}}{\|x\|
 
 ##### Intrinsic charts.
 
-For torus and hyperbolic we also implement the intrinsic SDEs ([5](https://arxiv.org/html/2511.05030v1#S3.E5 "In 2nd item ‣ Torus 𝑇²⁢(𝑅,𝑟) (major radius 𝑅, minor radius 𝑟). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"))–([6](https://arxiv.org/html/2511.05030v1#S3.E6 "In 2nd item ‣ Torus 𝑇²⁢(𝑅,𝑟) (major radius 𝑅, minor radius 𝑟). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) and ([7](https://arxiv.org/html/2511.05030v1#S3.E7 "In Hyperbolic 𝐻² (hyperboloid model). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"))–([8](https://arxiv.org/html/2511.05030v1#S3.E8 "In Hyperbolic 𝐻² (hyperboloid model). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), then map to ℝ3\mathbb{R}^{3} via Ψ\Psi and Φ\Phi respectively at output time.
+For torus and hyperbolic we also implement the intrinsic SDEs ([5](https://arxiv.org/html/2511.05030v2#S3.E5 "In 2nd item ‣ Torus 𝑇²⁢(𝑅,𝑟) (major radius 𝑅, minor radius 𝑟). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"))–([6](https://arxiv.org/html/2511.05030v2#S3.E6 "In 2nd item ‣ Torus 𝑇²⁢(𝑅,𝑟) (major radius 𝑅, minor radius 𝑟). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")) and ([7](https://arxiv.org/html/2511.05030v2#S3.E7 "In Hyperbolic 𝐻² (hyperboloid model). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries"))–([8](https://arxiv.org/html/2511.05030v2#S3.E8 "In Hyperbolic 𝐻² (hyperboloid model). ‣ 3.2 Explicit SDEs by geometry ‣ 3 Geometry-Constrained Stochastic Dynamics: Explicit Forms ‣ The Shape of Markets: Machine learning modeling and Prediction Using 2-Manifold Geometries")), then map to ℝ3\mathbb{R}^{3} via Ψ\Psi and Φ\Phi respectively at output time.
 
 ## Appendix C Scenario catalog
 
