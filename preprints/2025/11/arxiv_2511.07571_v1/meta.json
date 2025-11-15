@@ -1,0 +1,15 @@
+{
+  "doc_id": "arxiv:2511.07571v1",
+  "family_id": "arxiv:2511.07571",
+  "title": "Forecasting implied volatility surface with generative diffusion models1footnote 11footnote 1Full code available on https://github.com/Austinjinc/rep_volgan/tree/refactor/new-ddpm",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Chen Jin",
+    "Ankush Agarwal"
+  ],
+  "url_abs": "http://arxiv.org/abs/2511.07571v1",
+  "url_html": "https://arxiv.org/html/2511.07571v1",
+  "is_current": true
+}
