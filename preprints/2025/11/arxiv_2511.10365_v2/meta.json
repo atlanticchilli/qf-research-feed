@@ -1,19 +1,19 @@
 {
-  "doc_id": "arxiv:2511.10365v1",
+  "doc_id": "arxiv:2511.10365v2",
   "family_id": "arxiv:2511.10365",
   "title": "FCOC: A Fractal-Chaotic Co-driven Framework for Financial Volatility Forecasting",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
-    "Yilong Zenga",
-    "Boyan Tangc",
-    "Xuanhao Rena",
+    "Yilong Zeng",
+    "Boyan Tang",
+    "Xuanhao Ren",
     "Sherry Zhefang Zhou",
     "Jianghua Wu",
     "Raymond Lee"
   ],
-  "url_abs": "http://arxiv.org/abs/2511.10365v1",
-  "url_html": "https://arxiv.org/html/2511.10365v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2511.10365v2",
+  "url_html": "https://arxiv.org/html/2511.10365v2",
+  "is_current": true
 }
