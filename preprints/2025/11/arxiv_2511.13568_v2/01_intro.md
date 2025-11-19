@@ -2,22 +2,23 @@
 authors:
 - Daria Sakhanda
 - Joshué Helí Ricalde-Guerrero
-doc_id: arxiv:2511.13568v1
+doc_id: arxiv:2511.13568v2
 family_id: arxiv:2511.13568
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2511.13568v1] Infinite-Horizon Optimal Control of Jump-Diffusion Models for
+title: '[2511.13568v2] Infinite-Horizon Optimal Control of Jump-Diffusion Models for
   Pollution-Dependent Disasters'
-url_abs: http://arxiv.org/abs/2511.13568v1
-url_html: https://ar5iv.org/html/2511.13568v1
+url_abs: http://arxiv.org/abs/2511.13568v2
+url_html: https://ar5iv.org/html/2511.13568v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 

@@ -3,7 +3,7 @@ authors:
 - Catalin Dumitrescu
 doc_id: arxiv:2511.13384v1
 family_id: arxiv:2511.13384
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -16,7 +16,6 @@ venue: arXiv q-fin
 version: 1
 year: 2025
 ---
-
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 

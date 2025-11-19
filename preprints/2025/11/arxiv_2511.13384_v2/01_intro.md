@@ -1,23 +1,22 @@
 ---
 authors:
-- Daria Sakhanda
-- Joshué Helí Ricalde-Guerrero
-doc_id: arxiv:2511.13568v1
-family_id: arxiv:2511.13568
-is_current: false
+- Catalin Dumitrescu
+doc_id: arxiv:2511.13384v2
+family_id: arxiv:2511.13384
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2511.13568v1] Infinite-Horizon Optimal Control of Jump-Diffusion Models for
-  Pollution-Dependent Disasters'
-url_abs: http://arxiv.org/abs/2511.13568v1
-url_html: https://ar5iv.org/html/2511.13568v1
+title: '[2511.13384v2] CBDC Stress Test in a Dual-Currency Setting'
+url_abs: http://arxiv.org/abs/2511.13384v2
+url_html: https://ar5iv.org/html/2511.13384v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 
@@ -25,5 +24,5 @@ Both individuals and organizations that work with arXivLabs have embraced and ac
 
 Have an idea for a project that will add value for arXiv's community? [**Learn more about arXivLabs**](https://info.arxiv.org/labs/index.html).
 
-[Which authors of this paper are endorsers?](/auth/show-endorsers/2511.13568) |
+[Which authors of this paper are endorsers?](/auth/show-endorsers/2511.13384) |
 [Disable MathJax](javascript:setMathjaxCookie()) ([What is MathJax?](https://info.arxiv.org/help/mathjax.html))
