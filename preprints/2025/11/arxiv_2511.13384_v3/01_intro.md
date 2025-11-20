@@ -1,21 +1,22 @@
 ---
 authors:
 - Catalin Dumitrescu
-doc_id: arxiv:2511.13384v2
+doc_id: arxiv:2511.13384v3
 family_id: arxiv:2511.13384
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2511.13384v2] CBDC Stress Test in a Dual-Currency Setting'
-url_abs: http://arxiv.org/abs/2511.13384v2
-url_html: https://ar5iv.org/html/2511.13384v2
+title: '[2511.13384v3] CBDC Stress Test in a Dual-Currency Setting'
+url_abs: http://arxiv.org/abs/2511.13384v3
+url_html: https://ar5iv.org/html/2511.13384v3
 venue: arXiv q-fin
-version: 2
+version: 3
 year: 2025
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 

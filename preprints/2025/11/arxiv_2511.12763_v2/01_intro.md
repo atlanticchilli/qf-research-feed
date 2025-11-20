@@ -1,21 +1,22 @@
 ---
 authors:
 - Harrison Katz
-doc_id: arxiv:2511.12763v1
+doc_id: arxiv:2511.12763v2
 family_id: arxiv:2511.12763
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
 title: 'Impact by design: translating Lead times in flux into an R handbook with code'
-url_abs: http://arxiv.org/abs/2511.12763v1
-url_html: https://arxiv.org/html/2511.12763v1
+url_abs: http://arxiv.org/abs/2511.12763v2
+url_html: https://arxiv.org/html/2511.12763v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 pid <- dplyr::first(Lk\_pickup$property\_id)
 
@@ -39,14 +40,14 @@ All artifacts are produced by the script scripts/make\_paper\_artifacts.R and sa
 
 ### 5.1 Adjacent month divergence
 
-Figure [1](https://arxiv.org/html/2511.12763v1#S5.F1 "Figure 1 ‣ 5.1 Adjacent month divergence ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code") shows the adjacent month normalized L1 divergence D​(Lt,Lt−1)D(L\_{t},L\_{t-1}) by property over 2021 to 2022 with quarterly x axis ticks for readability.
+Figure [1](https://arxiv.org/html/2511.12763v2#S5.F1 "Figure 1 ‣ 5.1 Adjacent month divergence ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code") shows the adjacent month normalized L1 divergence D​(Lt,Lt−1)D(L\_{t},L\_{t-1}) by property over 2021 to 2022 with quarterly x axis ticks for readability.
 
 ![Refer to caption](fig1_divergence_adjacent.png)
 
 
 Figure 1: Adjacent month divergence D​(Lt,Lt−1)D(L\_{t},L\_{t-1}) by property. A value of 0.20 indicates that 20% of the mass in the lead time distribution moved relative to the prior month. Properties differ in both amplitude and pattern, which is expected under heterogeneous demand and policy environments.
 
-The series stay in a narrow band between roughly 0.12 and 0.20. Property P001 exhibits a late year rise, property P002 shows a dip followed by recovery, and property P003 trends downward into late 2022. These patterns are the distributional changes that a mean or a single percentile can fail to register. The 90th percentile and related summary statistics are reported in Table [1](https://arxiv.org/html/2511.12763v1#S5.T1 "Table 1 ‣ 5.1 Adjacent month divergence ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code"), pulled directly from the generated CSV.
+The series stay in a narrow band between roughly 0.12 and 0.20. Property P001 exhibits a late year rise, property P002 shows a dip followed by recovery, and property P003 trends downward into late 2022. These patterns are the distributional changes that a mean or a single percentile can fail to register. The 90th percentile and related summary statistics are reported in Table [1](https://arxiv.org/html/2511.12763v2#S5.T1 "Table 1 ‣ 5.1 Adjacent month divergence ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code"), pulled directly from the generated CSV.
 
 Table 1: Divergence summary by property (adjacent month). Values read from paper\_artifacts/tables/tbl3\_divergence\_summary.csv.
 
@@ -58,7 +59,7 @@ Table 1: Divergence summary by property (adjacent month). Values read from paper
 
 ### 5.2 Pickup and the risk bound
 
-Figure [2](https://arxiv.org/html/2511.12763v1#S5.F2 "Figure 2 ‣ 5.2 Pickup and the risk bound ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code") shows Chist​(Δ)C\_{\text{hist}}(\Delta) for the latest cohort of property P001. About half of total pickup occurs by two weeks before arrival, which is consistent with the heavy short horizon mass in the corresponding histogram in Figure [3](https://arxiv.org/html/2511.12763v1#S5.F3 "Figure 3 ‣ 5.2 Pickup and the risk bound ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code"). Combining a typical divergence in the upper teens with a 14 day horizon and Chist​(14)C\_{\text{hist}}(14) near one half yields a risk bound near one half by Equation ([2](https://arxiv.org/html/2511.12763v1#S1.E2 "In 1 What the original article established ‣ Impact by design: translating Lead times in flux into an R handbook with code")). The exact values used in the manuscript are read from the CSV in Table [2](https://arxiv.org/html/2511.12763v1#S5.T2 "Table 2 ‣ 5.2 Pickup and the risk bound ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code").
+Figure [2](https://arxiv.org/html/2511.12763v2#S5.F2 "Figure 2 ‣ 5.2 Pickup and the risk bound ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code") shows Chist​(Δ)C\_{\text{hist}}(\Delta) for the latest cohort of property P001. About half of total pickup occurs by two weeks before arrival, which is consistent with the heavy short horizon mass in the corresponding histogram in Figure [3](https://arxiv.org/html/2511.12763v2#S5.F3 "Figure 3 ‣ 5.2 Pickup and the risk bound ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code"). Combining a typical divergence in the upper teens with a 14 day horizon and Chist​(14)C\_{\text{hist}}(14) near one half yields a risk bound near one half by Equation ([2](https://arxiv.org/html/2511.12763v2#S1.E2 "In 1 What the original article established ‣ Impact by design: translating Lead times in flux into an R handbook with code")). The exact values used in the manuscript are read from the CSV in Table [2](https://arxiv.org/html/2511.12763v2#S5.T2 "Table 2 ‣ 5.2 Pickup and the risk bound ‣ 5 Results on synthetic data ‣ Impact by design: translating Lead times in flux into an R handbook with code").
 
 ![Refer to caption](fig2_pickup_curves_latest.png)
 
@@ -107,10 +108,10 @@ Effects can be estimated with standard designs that are robust to nonstationarit
 
 * •
 
-  Difference in differences. Compare units that adopt the monitoring and decision templates against matched units on a rolling basis, using horizon specific forecast metrics as outcomes (Callaway and Sant’Anna, [2021](https://arxiv.org/html/2511.12763v1#bib.bib8)).
+  Difference in differences. Compare units that adopt the monitoring and decision templates against matched units on a rolling basis, using horizon specific forecast metrics as outcomes (Callaway and Sant’Anna, [2021](https://arxiv.org/html/2511.12763v2#bib.bib8)).
 * •
 
-  Interrupted time series with synthetic control. When the number of units is small, construct a counterfactual series for a treated unit and evaluate level and variance changes after the intervention (Abadie et al., [2010](https://arxiv.org/html/2511.12763v1#bib.bib9)).
+  Interrupted time series with synthetic control. When the number of units is small, construct a counterfactual series for a treated unit and evaluate level and variance changes after the intervention (Abadie et al., [2010](https://arxiv.org/html/2511.12763v2#bib.bib9)).
 * •
 
   Experimentation when feasible. For pricing cadence or advance purchase rules, randomize policies at the unit level and analyze horizon specific metrics.
@@ -123,7 +124,7 @@ All analysis runs locally on booking event data. No external connections are req
 
 ## 9 Limits
 
-The divergence metric captures global shifts in the distribution shape. It does not attribute causes and it does not replace demand models. The pickup bound is conservative, especially when divergence is large and historical pickup is small at the chosen horizon. Users who require parametric forecasts of the full lead time vector can adopt B–DARMA or related compositional time series models while still benefiting from divergence monitoring and the risk index (Katz et al., [2024](https://arxiv.org/html/2511.12763v1#bib.bib2)). The decision templates are intentionally simple and are intended as safe defaults that can be tuned over time.
+The divergence metric captures global shifts in the distribution shape. It does not attribute causes and it does not replace demand models. The pickup bound is conservative, especially when divergence is large and historical pickup is small at the chosen horizon. Users who require parametric forecasts of the full lead time vector can adopt B–DARMA or related compositional time series models while still benefiting from divergence monitoring and the risk index (Katz et al., [2024](https://arxiv.org/html/2511.12763v2#bib.bib2)). The decision templates are intentionally simple and are intended as safe defaults that can be tuned over time.
 
 ## 10 Conclusion
 
