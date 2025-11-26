@@ -1,14 +1,14 @@
 {
-  "doc_id": "arxiv:2511.15214v1",
+  "doc_id": "arxiv:2511.15214v2",
   "family_id": "arxiv:2511.15214",
   "title": "Corporate Earnings Calls and Analyst Beliefs",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Giuseppe Matera"
   ],
-  "url_abs": "http://arxiv.org/abs/2511.15214v1",
-  "url_html": "https://arxiv.org/html/2511.15214v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2511.15214v2",
+  "url_html": "https://arxiv.org/html/2511.15214v2",
+  "is_current": true
 }
