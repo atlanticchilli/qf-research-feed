@@ -1,9 +1,9 @@
 ---
 authors:
 - Yao Wu
-doc_id: arxiv:2511.20606v1
+doc_id: arxiv:2511.20606v2
 family_id: arxiv:2511.20606
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -11,12 +11,13 @@ taxonomy:
   themes: []
 title: 'Limit Order Book Dynamics in Matching Markets: Microstructure, Spread, and
   Execution Slippage'
-url_abs: http://arxiv.org/abs/2511.20606v1
-url_html: https://arxiv.org/html/2511.20606v1
+url_abs: http://arxiv.org/abs/2511.20606v2
+url_html: https://arxiv.org/html/2511.20606v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 threshold\_t = 0.80
 
@@ -225,7 +226,7 @@ Thus even when θ<T\theta<T, the relationship persists due to lock-in stickiness
 
 ### D.9 Full Correspondence Table
 
-Table [4](https://arxiv.org/html/2511.20606v1#A4.T4 "Table 4 ‣ D.9 Full Correspondence Table ‣ Appendix D A Microstructure Interpretation of the 𝜃–𝑇 Marriage-Matching Model ‣ Limit Order Book Dynamics in Matching Markets: Microstructure, Spread, and Execution Slippage") demonstrates a clean structural isomorphism between the two systems.
+Table [4](https://arxiv.org/html/2511.20606v2#A4.T4 "Table 4 ‣ D.9 Full Correspondence Table ‣ Appendix D A Microstructure Interpretation of the 𝜃–𝑇 Marriage-Matching Model ‣ Limit Order Book Dynamics in Matching Markets: Microstructure, Spread, and Execution Slippage") demonstrates a clean structural isomorphism between the two systems.
 
 Table 4: Structural Isomorphism between Financial Microstructure and Marriage Matching.
 
