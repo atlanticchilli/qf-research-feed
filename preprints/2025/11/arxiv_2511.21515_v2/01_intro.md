@@ -1,11 +1,11 @@
 ---
 authors:
 - Hui Gong
-- Akash Sharma
+- Akash Sedai
 - Francesca Medda
-doc_id: arxiv:2511.21515v1
+doc_id: arxiv:2511.21515v2
 family_id: arxiv:2511.21515
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -13,23 +13,24 @@ taxonomy:
   themes: []
 title: 'The Quantum Network of Assets: A Non-Classical Framework for Market Correlation
   and Structural Risk'
-url_abs: http://arxiv.org/abs/2511.21515v1
-url_html: https://arxiv.org/html/2511.21515v1
+url_abs: http://arxiv.org/abs/2511.21515v2
+url_html: https://arxiv.org/html/2511.21515v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Hui Gong
 Institute of Finance and Technology, University College London
 
-Akash Sharma
+Akash Sedai
 Institute of Finance and Technology, University College London
 
 Francesca Medda
 Institute of Finance and Technology, University College London
 
-(November 26, 2025)
+(November 27, 2025)
 
 ###### Abstract
 
@@ -47,7 +48,7 @@ Keywords: quantum finance, entropy, entanglement, systemic risk, early-warning s
 
 The covariance matrix and its derived correlation coefficients form the backbone of modern portfolio theory, risk management, and network-based market analysis.
 Yet it is increasingly recognised that classical correlation captures only linear and pairwise co-movements, leaving a significant portion of market structure unexplained.
-Empirical evidence shows that financial systems exhibit non-linear amplification, clustering of volatility, and rapid regime transitions - behaviours reminiscent of complex, interacting systems rather than collections of independent assets [[9](https://arxiv.org/html/2511.21515v1#bib.bib9)].
+Empirical evidence shows that financial systems exhibit non-linear amplification, clustering of volatility, and rapid regime transitions - behaviours reminiscent of complex, interacting systems rather than collections of independent assets [[9](https://arxiv.org/html/2511.21515v2#bib.bib9)].
 During periods of uncertainty or stress, asset interactions become highly concentrated and non-separable in ways that classical statistics cannot fully characterise.
 
 These observations motivate the search for alternative representations of dependency.
@@ -154,7 +155,7 @@ In contrast, the density matrix ρ\rho contains:
 
   entropy-based structural complexity.
 
-Following [[10](https://arxiv.org/html/2511.21515v1#bib.bib10)], the density matrix representation gives access to:
+Following [[10](https://arxiv.org/html/2511.21515v2#bib.bib10)], the density matrix representation gives access to:
 
 * •
 
@@ -170,7 +171,7 @@ These quantities reveal collective behaviour—compression of degrees of freedom
 
 Relation to superposition and entanglement.
 
-The market state ([3](https://arxiv.org/html/2511.21515v1#S2.E3 "In 2.1 From Classical Correlation to Quantum States ‣ 2 Theoretical Foundations ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) is a quantum-like superposition:
+The market state ([3](https://arxiv.org/html/2511.21515v2#S2.E3 "In 2.1 From Classical Correlation to Quantum States ‣ 2 Theoretical Foundations ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) is a quantum-like superposition:
 
 |  |  |  |
 | --- | --- | --- |
@@ -251,7 +252,7 @@ dependencies, including:
   multi-scale synchronisation across partitions.
 
 When I(A:B)I(A\!:\!B) is large, the market exhibits strong non-separability-precisely the analogue of entanglement in quantum systems.
-Following the interpretation of Nielsen and Chuang [[10](https://arxiv.org/html/2511.21515v1#bib.bib10)], I(A:B)I(A\!:\!B) measures the *incompressible information* linking two subsystems.
+Following the interpretation of Nielsen and Chuang [[10](https://arxiv.org/html/2511.21515v2#bib.bib10)], I(A:B)I(A\!:\!B) measures the *incompressible information* linking two subsystems.
 In finance, this corresponds to the degree to which risks, expectations, or signals propagate jointly across groups of assets.
 
 Financial interpretation of entanglement-like behaviour.
@@ -306,7 +307,7 @@ that cannot be decomposed as
 |  | ρA​B≠∑kpk​ρA(k)⊗ρB(k).\rho\_{AB}\neq\sum\_{k}p\_{k}\;\rho\_{A}^{(k)}\otimes\rho\_{B}^{(k)}. |  | (11) |
 
 This *non-separability* is the defining feature of quantum entanglement
-[[10](https://arxiv.org/html/2511.21515v1#bib.bib10), [8](https://arxiv.org/html/2511.21515v1#bib.bib8)].
+[[10](https://arxiv.org/html/2511.21515v2#bib.bib10), [8](https://arxiv.org/html/2511.21515v2#bib.bib8)].
 In the QNA setting, non-separability signals that the risk structure of one
 subset of assets cannot be described without reference to the other—even after
 conditioning on classical factors such as volatility or sector exposures.
@@ -403,7 +404,7 @@ dependencies are measured. Classical correlation captures only linear
 co-movements and therefore represents the “local” limit of the quantum
 framework, whereas quantum structural measures such as entropy, mutual
 information, and ERI encode non-linear and non-separable dependencies.
-Table [1](https://arxiv.org/html/2511.21515v1#S2.T1 "Table 1 ‣ Classical versus quantum structural metrics. ‣ 2.3 Bell-Type Correlations (Formal Analogy) ‣ 2 Theoretical Foundations ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") summarises the contrast between
+Table [1](https://arxiv.org/html/2511.21515v2#S2.T1 "Table 1 ‣ Classical versus quantum structural metrics. ‣ 2.3 Bell-Type Correlations (Formal Analogy) ‣ 2 Theoretical Foundations ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") summarises the contrast between
 the two perspectives.
 
 Table 1: Classical Correlation vs Quantum Structural Measures
@@ -467,7 +468,7 @@ The announcement sharply reduces the set of plausible states, producing
 |  | ρ⟶M​ρ​M†Tr​(M​ρ​M†),\rho\;\longrightarrow\;\frac{M\rho M^{\dagger}}{\mathrm{Tr}(M\rho M^{\dagger})}, |  | (15) |
 
 formally mirroring the projection postulate of quantum mechanics
-(see [[10](https://arxiv.org/html/2511.21515v1#bib.bib10)]).
+(see [[10](https://arxiv.org/html/2511.21515v2#bib.bib10)]).
 
 This transition represents the market’s sudden selection of a specific outcome
 among previously latent possibilities.
@@ -540,7 +541,7 @@ and then suddenly resolved when new information becomes public.
 
 The preceding subsections outline the transition from classical correlation-based
 representations to quantum-information formulations. To consolidate these ideas,
-Table [2](https://arxiv.org/html/2511.21515v1#S2.T2 "Table 2 ‣ Conceptual summary. ‣ 2.4 Measurement, Collapse, and Market Information ‣ 2 Theoretical Foundations ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") summarises the conceptual differences
+Table [2](https://arxiv.org/html/2511.21515v2#S2.T2 "Table 2 ‣ Conceptual summary. ‣ 2.4 Measurement, Collapse, and Market Information ‣ 2 Theoretical Foundations ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") summarises the conceptual differences
 between traditional financial network models and the QNA framework.
 
 Table 2: Classical versus Quantum Representations of Financial Networks
@@ -578,7 +579,7 @@ Define the amplitude vector of asset ii as
 This ensures ⟨ψi|ψi⟩=1\braket{\psi\_{i}|\psi\_{i}}=1.
 
 The amplitude construction follows the standard normalization used in quantum
-state preparation (see [[10](https://arxiv.org/html/2511.21515v1#bib.bib10)]), and provides a unified
+state preparation (see [[10](https://arxiv.org/html/2511.21515v2#bib.bib10)]), and provides a unified
 representation for heterogeneous assets.
 
 ###### Definition 2 (Market Density Matrix).
@@ -597,7 +598,7 @@ statistical ensemble of market states.
 
 ###### Lemma 1 (Cross-Asset Coherence).
 
-Let ρ\rho be as in ([17](https://arxiv.org/html/2511.21515v1#S3.E17 "In Definition 2 (Market Density Matrix). ‣ 3.1 Market State as a Density Matrix ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")).
+Let ρ\rho be as in ([17](https://arxiv.org/html/2511.21515v2#S3.E17 "In Definition 2 (Market Density Matrix). ‣ 3.1 Market State as a Density Matrix ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")).
 Then its off-diagonal elements satisfy
 
 |  |  |  |  |
@@ -610,7 +611,7 @@ which encode higher-order dependence beyond classical covariance.
 
 Directly expanding |ψi⟩​⟨ψi|\ket{\psi\_{i}}\bra{\psi\_{i}} yields
 [|ψi⟩​⟨ψi|]j​k=ψi​(j)​ψi​(k)\left[\ket{\psi\_{i}}\bra{\psi\_{i}}\right]\_{jk}=\psi\_{i}(j)\,\psi\_{i}(k),
-and averaging over ii proves ([18](https://arxiv.org/html/2511.21515v1#S3.E18 "In Lemma 1 (Cross-Asset Coherence). ‣ 3.1 Market State as a Density Matrix ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")).
+and averaging over ii proves ([18](https://arxiv.org/html/2511.21515v2#S3.E18 "In Lemma 1 (Cross-Asset Coherence). ‣ 3.1 Market State as a Density Matrix ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")).
 ∎
 
 The coherence terms incorporate not only linear comovements, but all
@@ -628,7 +629,7 @@ where cross-asset coherence vanishes.
 ###### Proof.
 
 Orthogonality implies ⟨ψi|ψj⟩=0\braket{\psi\_{i}|\psi\_{j}}=0 for i≠ji\neq j.
-Then ([17](https://arxiv.org/html/2511.21515v1#S3.E17 "In Definition 2 (Market Density Matrix). ‣ 3.1 Market State as a Density Matrix ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) becomes diagonal in the basis
+Then ([17](https://arxiv.org/html/2511.21515v2#S3.E17 "In Definition 2 (Market Density Matrix). ‣ 3.1 Market State as a Density Matrix ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) becomes diagonal in the basis
 {|ψi⟩}\{\ket{\psi\_{i}}\}, and
 S​(ρ)S(\rho) collapses to the Shannon entropy of the eigenvalue distribution,
 matching the classical regime.
@@ -695,8 +696,8 @@ groups of assets, without assuming linearity or Gaussianity.
 
 Relation to Classical Measures.
 If all cross-asset coherence terms vanish, the density matrix becomes diagonal,
-and ([19](https://arxiv.org/html/2511.21515v1#S3.E19 "In Definition 3 (Von Neumann Entropy). ‣ 3.2 Entropy and Quantum Mutual Information ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) reduces to Shannon entropy while
-([20](https://arxiv.org/html/2511.21515v1#S3.E20 "In Definition 4 (Quantum Mutual Information). ‣ 3.2 Entropy and Quantum Mutual Information ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) collapses to classical mutual information.
+and ([19](https://arxiv.org/html/2511.21515v2#S3.E19 "In Definition 3 (Von Neumann Entropy). ‣ 3.2 Entropy and Quantum Mutual Information ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) reduces to Shannon entropy while
+([20](https://arxiv.org/html/2511.21515v2#S3.E20 "In Definition 4 (Quantum Mutual Information). ‣ 3.2 Entropy and Quantum Mutual Information ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")) collapses to classical mutual information.
 Thus, classical correlation emerges as a limiting case where market interactions
 are fully separable.
 
@@ -1141,7 +1142,7 @@ global configuration instead of noisy pairwise movements.
 
 ##### Summary interpretation.
 
-As shown in Table [3](https://arxiv.org/html/2511.21515v1#S5.T3 "Table 3 ‣ Summary interpretation. ‣ 5.1 Network Summary Metrics (Quantum–Financial Interpretation) ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"), the classical index is
+As shown in Table [3](https://arxiv.org/html/2511.21515v2#S5.T3 "Table 3 ‣ Summary interpretation. ‣ 5.1 Network Summary Metrics (Quantum–Financial Interpretation) ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"), the classical index is
 closely tied to realised volatility and responds only after price-based
 stress materialises, reflecting its reliance on linear co-movements.
 
@@ -1174,9 +1175,9 @@ analysis that follows.
 
 ##### Classical vs quantum structural properties.
 
-Before examining Figure [2](https://arxiv.org/html/2511.21515v1#S5.F2 "Figure 2 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"), it is useful to summarise the
+Before examining Figure [2](https://arxiv.org/html/2511.21515v2#S5.F2 "Figure 2 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"), it is useful to summarise the
 conceptual differences between classical correlation measures and the
-quantum structural metrics used in QNA. Table [4](https://arxiv.org/html/2511.21515v1#S5.T4 "Table 4 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")
+quantum structural metrics used in QNA. Table [4](https://arxiv.org/html/2511.21515v2#S5.T4 "Table 4 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk")
 highlights these contrasts.
 
 Table 4: Classical Correlation vs Quantum Structural Measures
@@ -1191,10 +1192,10 @@ Table 4: Classical Correlation vs Quantum Structural Measures
 | Systemic-risk indication | Volatility clustering | Entropy / ERI / QEWS tightening |
 
 This conceptual contrast frames the empirical behaviour observed in
-Figure [2](https://arxiv.org/html/2511.21515v1#S5.F2 "Figure 2 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"): quantum entropy reacts not to price
+Figure [2](https://arxiv.org/html/2511.21515v2#S5.F2 "Figure 2 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"): quantum entropy reacts not to price
 co-movements but to deeper structural tension in the market network.
 
-Figure [2](https://arxiv.org/html/2511.21515v1#S5.F2 "Figure 2 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") compares the evolution of classical entropy and quantum entropy
+Figure [2](https://arxiv.org/html/2511.21515v2#S5.F2 "Figure 2 ‣ Classical vs quantum structural properties. ‣ 5.2 Classical vs Quantum Entropy ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") compares the evolution of classical entropy and quantum entropy
 for the NASDAQ–100 network between 2024 and 2025. While both measures quantify
 structural complexity, quantum entropy exhibits substantially higher sensitivity,
 smoother dynamics, and clearer regime separation. These differences are essential
@@ -1207,7 +1208,7 @@ Figure 2: Classical vs Quantum Entropy (NASDAQ 100 Network)
 
 ##### Quantum-information interpretation.
 
-In the QNA framework, von Neumann entropy (Equation [19](https://arxiv.org/html/2511.21515v1#S3.E19 "In Definition 3 (Von Neumann Entropy). ‣ 3.2 Entropy and Quantum Mutual Information ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"))
+In the QNA framework, von Neumann entropy (Equation [19](https://arxiv.org/html/2511.21515v2#S3.E19 "In Definition 3 (Von Neumann Entropy). ‣ 3.2 Entropy and Quantum Mutual Information ‣ 3 The Quantum Network of Assets (QNA) ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"))
 measures the degree of *non-separability* of the market state. Higher quantum entropy
 indicates that the joint density matrix ρ\rho contains stronger coherence terms,
 representing richer higher-order interactions and multi-scale information sharing across assets.
@@ -1284,7 +1285,7 @@ reconfigurations triggered by major announcements or policy disclosures.
 
 Figure 3: QEWS vs Market Index around the Trump Tariff Shock
 
-Figure [3](https://arxiv.org/html/2511.21515v1#S5.F3 "Figure 3 ‣ 5.3 QEWS and Structural Transitions ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") illustrates how the Quantum Early-Warning Signal (QEWS) evolves
+Figure [3](https://arxiv.org/html/2511.21515v2#S5.F3 "Figure 3 ‣ 5.3 QEWS and Structural Transitions ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk") illustrates how the Quantum Early-Warning Signal (QEWS) evolves
 around the Trump tariff announcement on 18 February 2025.
 QEWS is defined as the standardized temporal derivative of the Entanglement Risk Index (ERI),
 capturing the *rate of change* of structural tightening or loosening in the market network.
@@ -1306,7 +1307,7 @@ collapse from an entangled pre-event state into a post-event classical state.
 ##### Financial-market interpretation.
 
 From a financial perspective, QEWS quantifies latent risk accumulation rather than
-short-term return dynamics. In Figure [3](https://arxiv.org/html/2511.21515v1#S5.F3 "Figure 3 ‣ 5.3 QEWS and Structural Transitions ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"), QEWS (red line) rises steadily throughout
+short-term return dynamics. In Figure [3](https://arxiv.org/html/2511.21515v2#S5.F3 "Figure 3 ‣ 5.3 QEWS and Structural Transitions ‣ 5 Empirical Results ‣ The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk"), QEWS (red line) rises steadily throughout
 January and early February 2025, even as the NASDAQ–100 index (blue line) continues
 to trend upward. This divergence reveals that:
 

@@ -1,16 +1,16 @@
 {
-  "doc_id": "arxiv:2511.21515v1",
+  "doc_id": "arxiv:2511.21515v2",
   "family_id": "arxiv:2511.21515",
   "title": "The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Hui Gong",
-    "Akash Sharma",
+    "Akash Sedai",
     "Francesca Medda"
   ],
-  "url_abs": "http://arxiv.org/abs/2511.21515v1",
-  "url_html": "https://arxiv.org/html/2511.21515v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2511.21515v2",
+  "url_html": "https://arxiv.org/html/2511.21515v2",
+  "is_current": true
 }
