@@ -1,9 +1,9 @@
 ---
 authors:
 - Zhongjie Jiang
-doc_id: arxiv:2512.01354v1
+doc_id: arxiv:2512.01354v2
 family_id: arxiv:2512.01354
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -11,12 +11,13 @@ taxonomy:
   themes: []
 title: 'The Necessity of Imperfection: Reversing Model Collapse via Simulating Cognitive
   Boundedness'
-url_abs: http://arxiv.org/abs/2512.01354v1
-url_html: https://arxiv.org/html/2512.01354v1
+url_abs: http://arxiv.org/abs/2512.01354v2
+url_html: https://arxiv.org/html/2512.01354v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Perturbed\_Content = Inject\_Human\_Flaw(Perturbed\_Content)
 
@@ -42,7 +43,7 @@ Employing a hybrid calibration strategy that merges empirical case studies with 
 
   Impulse Response Parameters: A synthesis of key case averaging (for empirical grounding) and Prospect Theory priors (for theoretical consistency) was employed to model transient sentiment dynamics.
 
-In pursuit of robustness—a foundational requirement for reproducible research—a calibration dataset spanning diverse market cycles was constructed (see Table [4](https://arxiv.org/html/2512.01354v1#A3.T4 "Table 4 ‣ C.1 Calibration Methodology & Data Inventory ‣ Appendix C Core Parameter Calibration Report ‣ The Necessity of Imperfection: Reversing Model Collapse via Simulating Cognitive Boundedness")). The dataset includes extreme volatility events (e.g., the 2015 stock crash), structural regime shifts (e.g., the 2021 “structural tear” period), and macroeconomic shocks (e.g., regulatory emergencies), ensuring coverage of both common and rare market conditions.
+In pursuit of robustness—a foundational requirement for reproducible research—a calibration dataset spanning diverse market cycles was constructed (see Table [4](https://arxiv.org/html/2512.01354v2#A3.T4 "Table 4 ‣ C.1 Calibration Methodology & Data Inventory ‣ Appendix C Core Parameter Calibration Report ‣ The Necessity of Imperfection: Reversing Model Collapse via Simulating Cognitive Boundedness")). The dataset includes extreme volatility events (e.g., the 2015 stock crash), structural regime shifts (e.g., the 2021 “structural tear” period), and macroeconomic shocks (e.g., regulatory emergencies), ensuring coverage of both common and rare market conditions.
 
 Table 4: Data Inventory for Calibration
 
@@ -56,7 +57,7 @@ Table 4: Data Inventory for Calibration
 
 ### C.2 GJR-GARCH Parameter Calibration for Core Dimensions
 
-Table [5](https://arxiv.org/html/2512.01354v1#A3.T5 "Table 5 ‣ C.2 GJR-GARCH Parameter Calibration for Core Dimensions ‣ Appendix C Core Parameter Calibration Report ‣ The Necessity of Imperfection: Reversing Model Collapse via Simulating Cognitive Boundedness") presents the estimated GJR-GARCH parameters for the Fear dimension across distinct market quadrants—parameters that were not only calibrated for typical quadrants (e.g., Full Bubble or Structural Tear) but also interpolated and theoretically derived for all six quadrants to enable all-weather market simulation. This approach ensures the framework can model both common and extreme sentiment states, a critical feature for avoiding the “statistical mode collapse” discussed in the main text.
+Table [5](https://arxiv.org/html/2512.01354v2#A3.T5 "Table 5 ‣ C.2 GJR-GARCH Parameter Calibration for Core Dimensions ‣ Appendix C Core Parameter Calibration Report ‣ The Necessity of Imperfection: Reversing Model Collapse via Simulating Cognitive Boundedness") presents the estimated GJR-GARCH parameters for the Fear dimension across distinct market quadrants—parameters that were not only calibrated for typical quadrants (e.g., Full Bubble or Structural Tear) but also interpolated and theoretically derived for all six quadrants to enable all-weather market simulation. This approach ensures the framework can model both common and extreme sentiment states, a critical feature for avoiding the “statistical mode collapse” discussed in the main text.
 
 Table 5: GJR-GARCH Parameter Calibration Results for Fear Dimension (Full Version)
 
@@ -214,7 +215,7 @@ Table 13: Edge Case Calibration (High Baseline Uncertainty)
 
 ##### 3. Asymmetry Factor λ\lambda:
 
-Theoretical anchoring draws on Kahneman & Tversky’s Prospect Theory [[11](https://arxiv.org/html/2512.01354v1#bib.bib11), [12](https://arxiv.org/html/2512.01354v1#bib.bib12)], particularly the empirical range of 1.5–2.5 for the loss aversion coefficient from their 1992 study. To replicate the phenomenon where negative news of equal intensity induces greater volatility than positive news during bear markets, a conservative amplification factor for negative shocks was set to λ=1.5\lambda=1.5 (within the Prospect Theory range).
+Theoretical anchoring draws on Kahneman & Tversky’s Prospect Theory [[11](https://arxiv.org/html/2512.01354v2#bib.bib11), [12](https://arxiv.org/html/2512.01354v2#bib.bib12)], particularly the empirical range of 1.5–2.5 for the loss aversion coefficient from their 1992 study. To replicate the phenomenon where negative news of equal intensity induces greater volatility than positive news during bear markets, a conservative amplification factor for negative shocks was set to λ=1.5\lambda=1.5 (within the Prospect Theory range).
 
 ## Appendix D Cross-Model Consistency Statistical Analysis (N=26 Key Nodes)
 
