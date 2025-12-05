@@ -3,7 +3,7 @@ authors:
 - Michał Sikorski
 doc_id: arxiv:2512.02352v1
 family_id: arxiv:2512.02352
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -16,7 +16,6 @@ venue: arXiv q-fin
 version: 1
 year: 2025
 ---
-
 
 [![[Uncaptioned image]](x1.png) Michał Sikorski](https://orcid.org/0009-0009-4253-9489)
   
