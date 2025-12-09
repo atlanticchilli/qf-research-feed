@@ -1,9 +1,9 @@
 ---
 authors:
 - Igor Halperin
-doc_id: arxiv:2512.05156v1
+doc_id: arxiv:2512.05156v2
 family_id: arxiv:2512.05156
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -11,12 +11,13 @@ taxonomy:
   themes: []
 title: Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons
   and Manage Hallucinations
-url_abs: http://arxiv.org/abs/2512.05156v1
-url_html: https://arxiv.org/html/2512.05156v1
+url_abs: http://arxiv.org/abs/2512.05156v2
+url_html: https://arxiv.org/html/2512.05156v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Igor Halperin
   
@@ -24,7 +25,7 @@ Fidelity Investments
 The author acknowledges the assistance of Claude Code and Claude Sonnet 4.5 in developing code, generating and analyzing data, and preparing this manuscript.
 All remaining errors are the author’s own. The views expressed herein are those of the author and do not necessarily reflect the views of his employer. Code and data available at: <https://github.com/ighalp/semantic-faithfulness-sdm>. Email for correspondence: ighalp@gmail.com.
 
-(December 4, 2025)
+(December 8, 2025)
 
 ###### Abstract
 
@@ -40,7 +41,7 @@ as faithfulness hallucinations, pose a major barrier to the deployment of LLMs i
 
 Current evaluation methods often rely on human annotators, which is expensive and not scalable, or on other LLMs for assessment, which can introduce its own biases and inaccuracies. There is a pressing need for automated, quantitative, and interpretable metrics that can reliably measure the faithfulness of an LLM’s response to a given context.
 
-In this paper, we introduce a novel approach to this problem using insights from information theory [[5](https://arxiv.org/html/2512.05156v1#bib.bib5), [6](https://arxiv.org/html/2512.05156v1#bib.bib6)] and thermodynamics [[14](https://arxiv.org/html/2512.05156v1#bib.bib14), [15](https://arxiv.org/html/2512.05156v1#bib.bib15)].
+In this paper, we introduce a novel approach to this problem using insights from information theory [[5](https://arxiv.org/html/2512.05156v2#bib.bib5), [6](https://arxiv.org/html/2512.05156v2#bib.bib6)] and thermodynamics [[14](https://arxiv.org/html/2512.05156v2#bib.bib14), [15](https://arxiv.org/html/2512.05156v2#bib.bib15)].
 First, we model a triplet (Q,C,A)(Q,C,A) of context CC, question QQ, and answer AA not as simple strings of text, but as distributions over a latent topic space. The process of transforming the initial text CC into the final LLM output AA can then be thought of as a transition between the initial topic distribution 𝐩c{\bf p}\_{c} of the context document into the final topic distribution 𝐩a{\bf p}\_{a}. We can write such relation as
 𝐩a=𝐩cT​𝐀{\bf p}\_{a}={\bf p}\_{c}^{T}{\bf A},
 where 𝐀{\bf A} is a N×NN\times N matrix (where NN is the number of topics) with all elements being non-negative and ∑j=1N𝐀i​j=1,∀i\sum\_{j=1}^{N}{\bf A}\_{ij}=1,\;\forall i.
@@ -51,20 +52,20 @@ We can now similarly introduce a ’goal interpretation’ matrix 𝐐{\bf Q} th
 
 The core idea of our approach is that a ”faithful” answer should transform the topics from the context in a way that is semantically similar to how the question ”queries” the topics from that same context. We formalize this intuition by defining two probabilistic transition matrices 𝐀{\bf A} and 𝐐{\bf Q} and propose minimizing their Kullback-Leibler (KL) divergence as an objective. The resulting minimal divergence value serves as our faithfulness score which we will call semantic faithfulness (SF) score. The SF metric is unsupervised, computable for a single (Question, Context, Answer) triplet, and provides a continuous measure of faithfulness, allowing for direct comparison between different LLM responses.
 
-While the SF metric is based on the information-theoretic analysis, in this paper we also pursue a view of LLMs as information engines, and address thermodynamics of such engines [[14](https://arxiv.org/html/2512.05156v1#bib.bib14), [15](https://arxiv.org/html/2512.05156v1#bib.bib15)].
+While the SF metric is based on the information-theoretic analysis, in this paper we also pursue a view of LLMs as information engines, and address thermodynamics of such engines [[14](https://arxiv.org/html/2512.05156v2#bib.bib14), [15](https://arxiv.org/html/2512.05156v2#bib.bib15)].
 We conceptualize a LLM as a bipartite information engine made of two sub-systems XX and YY. Only one of these sub-systems (XX) is partially observed to the user via LLM’s API, while the second, unobserved sub-system YY conceptualizes the computational engine of the LLM. In the physics literature, such unobserved sub-systems of information engines are often referred to as Maxwell’s demons, and we will follow this terminology in this paper.
 
-The thermodynamics-based analysis of the LLM as an information engine produces our second metric for evaluation of faithfulness and managing LLM hallucinations, which we call semantic entropy production (SEP). To the extend that LLM hallucinations can be thought of as noisy (i.e. entropy-increasing) distortions of information contained in context CC and user question QQ, the concept of entropy production as defined in physics [[14](https://arxiv.org/html/2512.05156v1#bib.bib14), [15](https://arxiv.org/html/2512.05156v1#bib.bib15)] offers a quantitative way to quantify such measure in the LLM answer generating process.
-We believe that searching for LLM hallucinations using the semantic entropy production metric is a more theoretically grounded and empirically attractive idea than looking only into the marginal semantic entropy of LLM answers, as is done in the Semantic Entropy method [[8](https://arxiv.org/html/2512.05156v1#bib.bib8)], see below in Sect. [4.2](https://arxiv.org/html/2512.05156v1#S4.SS2 "4.2 Semantic Entropy or Semantic Entropy Production? ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
+The thermodynamics-based analysis of the LLM as an information engine produces our second metric for evaluation of faithfulness and managing LLM hallucinations, which we call semantic entropy production (SEP). To the extend that LLM hallucinations can be thought of as noisy (i.e. entropy-increasing) distortions of information contained in context CC and user question QQ, the concept of entropy production as defined in physics [[14](https://arxiv.org/html/2512.05156v2#bib.bib14), [15](https://arxiv.org/html/2512.05156v2#bib.bib15)] offers a quantitative way to quantify such measure in the LLM answer generating process.
+We believe that searching for LLM hallucinations using the semantic entropy production metric is a more theoretically grounded and empirically attractive idea than looking only into the marginal semantic entropy of LLM answers, as is done in the Semantic Entropy method [[8](https://arxiv.org/html/2512.05156v2#bib.bib8)], see below in Sect. [4.2](https://arxiv.org/html/2512.05156v2#S4.SS2 "4.2 Semantic Entropy or Semantic Entropy Production? ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
 
 As we will show below, the SEP metric is easily computable using a part of our first algorithm for computing the SF metric. In certain cases discussed below, the SEP metric does not require any new optimization, and the SEP score can be computed directly off the SF score. Moreover, we will show that the SF and SEP scores are typically inversely related: a high SF score (high faithfulness) typically implies a low SEP score, and vice versa. This observation gives support to our SF metric, as well to the intuitive idea that faithfulness hallucinations can be thought of as LLM responses with extremely low semantic faithfulness.
 
-We validate our framework experimentally on 10 Question-Context-Answer triplets from NVIDIA’s fiscal 2024 10-K disclosure, organized into two groups testing different question structures: comprehensive multi-topic risk analysis versus focused competitive threats analysis. Our results demonstrate that the proposed metrics successfully capture meaningful differences in semantic faithfulness, with question structure, and not just entropy magnitude, emerging as the key driver of faithfulness variation. LLM-as-a-Judge evaluation [[18](https://arxiv.org/html/2512.05156v1#bib.bib18)] confirms that higher ℱS\mathcal{F}\_{S} scores correlate with superior structural alignment and contextual grounding.
+We validate our framework experimentally on 10 Question-Context-Answer triplets from NVIDIA’s fiscal 2024 10-K disclosure, organized into two groups testing different question structures: comprehensive multi-topic risk analysis versus focused competitive threats analysis. Our results demonstrate that the proposed metrics successfully capture meaningful differences in semantic faithfulness, with question structure, and not just entropy magnitude, emerging as the key driver of faithfulness variation. LLM-as-a-Judge evaluation [[18](https://arxiv.org/html/2512.05156v2#bib.bib18)] confirms that higher ℱS\mathcal{F}\_{S} scores correlate with superior structural alignment and contextual grounding.
 
 The paper is organized as follows.
-In Sect. [2](https://arxiv.org/html/2512.05156v1#S2 "2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") we present our problem formulation and modeling framework, and define the semantic faithfulness (SF) metric.
-In Sect. [3](https://arxiv.org/html/2512.05156v1#S3 "3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"), we present a lightweight numerical algorithm to compute the SF metric using the standard convex optimization software. In Sect. [4](https://arxiv.org/html/2512.05156v1#S4 "4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"), we model the LLM as a thermodynamics engine and compute the SEP metric.
-Sect. [5](https://arxiv.org/html/2512.05156v1#S5 "5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") presents our experiments, and the final Sect. [6](https://arxiv.org/html/2512.05156v1#S6 "6 Conclusions ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") concludes.
+In Sect. [2](https://arxiv.org/html/2512.05156v2#S2 "2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") we present our problem formulation and modeling framework, and define the semantic faithfulness (SF) metric.
+In Sect. [3](https://arxiv.org/html/2512.05156v2#S3 "3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"), we present a lightweight numerical algorithm to compute the SF metric using the standard convex optimization software. In Sect. [4](https://arxiv.org/html/2512.05156v2#S4 "4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"), we model the LLM as a thermodynamics engine and compute the SEP metric.
+Sect. [5](https://arxiv.org/html/2512.05156v2#S5 "5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") presents our experiments, and the final Sect. [6](https://arxiv.org/html/2512.05156v2#S6 "6 Conclusions ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") concludes.
 
 ## 2 Semantic Faithfulness
 
@@ -74,7 +75,7 @@ In this paper, we consider a user interaction with a LLM viewed as a black box, 
 The black-box setting of our formulation implies that we do not have access to additional information such as internal activations, log-probs etc.
 
 In practice, tasks such as a LLM-provided summarization are often ran a few (say, K=10K=10) times, and then the ’best’ answer is selected from KK candidate answers by analysing the resulting triplets (Qk,C,Ak)(Q\_{k},C,A\_{k}), with k=1,…,Kk=1,\ldots,K.
-Instead of running the same question (prompt) KK times, we assume a more general setting where all questions QkQ\_{k} are constructed as semantically equivalent paraphrases of a given initial question QQ. As discussed in [[9](https://arxiv.org/html/2512.05156v1#bib.bib9)], prompt paraphrasing is useful to enrich the data and extract
+Instead of running the same question (prompt) KK times, we assume a more general setting where all questions QkQ\_{k} are constructed as semantically equivalent paraphrases of a given initial question QQ. As discussed in [[9](https://arxiv.org/html/2512.05156v2#bib.bib9)], prompt paraphrasing is useful to enrich the data and extract
 more meaningful topic representations.
 In what follows, we assume that triplets (Qk,C,Ak)(Q\_{k},C,A\_{k}) constitute the only available data for our analysis.
 
@@ -85,12 +86,12 @@ The main question here is of course how to define what we mean by the ’best’
 We model an LLM as an information engine that consumes some input information (context CC and user question QQ), transforms it, and produces its output AA. Furthermore, this information engine has a bipartite structure: it is made of two interacting stochastic sub-systems XX and YY (thought of as a ’tape’ and ’controller’, respectively), that operate in consecutive steps. The first system XX (the ’tape’) is a part of the LLM exposed to the end user via a LLM user interface, roughly identified with the first and last layers of a neural network that implements the LLM. In particular, context CC and the LLM answer AA can be viewed as (noisy) observations of sub-system XX. This is achieved using a pre-trained sentence embedding model, and treating the sentence embedding vectors of CC and AA as noisy transforms of internal activations of the LLM in the process of answer generation.
 
 In contrast, the second sub-system YY (the controller) is not exposed to the user. This sub-system controls the transformation on the input context CC into answer AA, as specified by the user question (prompt) QQ.
-This sub-system conceptualizes the notion of Maxwell’s demon as an agent that converts information into work.111See e.g. [[14](https://arxiv.org/html/2512.05156v1#bib.bib14)] on the history of the concept of Maxwell demon since James Clerk Maxwell’s work to modern-day front lines of stochastic thermodynamics.
+This sub-system conceptualizes the notion of Maxwell’s demon as an agent that converts information into work.111See e.g. [[14](https://arxiv.org/html/2512.05156v2#bib.bib14)] on the history of the concept of Maxwell demon since James Clerk Maxwell’s work to modern-day front lines of stochastic thermodynamics.
 Sub-system YY is roughly identified with inner layers of the neural network.
 While we do not observe states of sub-system YY either directly or indirectly, they should depend on embeddings of context CC and question QQ, to the extend that the latter define the task for the LLM.
 
 The bipartite X​YXY-system proceeds in steps. First, the controller YY (the Maxwell demon) sets itself in a proper state by reading the user question QQ and the context documents CC. This informs the LLM about a transformation of CC needed to provide answer AA expected by the user. The controller then defines a policy for the text generation, which is further used as a control protocol for the evolution of sub-system XX from the initial state CC to the final state AA.
-Importantly, the two sub-systems XX and YY of a bipartite information engine do not operate concurrently, but rather sequentially. This feature of bipartite systems make them amenable to theoretical analyses, see e.g. [[7](https://arxiv.org/html/2512.05156v1#bib.bib7)] for a review.
+Importantly, the two sub-systems XX and YY of a bipartite information engine do not operate concurrently, but rather sequentially. This feature of bipartite systems make them amenable to theoretical analyses, see e.g. [[7](https://arxiv.org/html/2512.05156v2#bib.bib7)] for a review.
 
 The bipartite X​YXY-system representing the LLM can be analyzed using methods of both information theory and thermodynamics. We start with the information-theoretic analysis, and then present a complimentary view based on thermodynamics.
 
@@ -108,7 +109,7 @@ We view each of 𝒬\mathcal{Q}, 𝒞\mathcal{C}, and 𝒜\mathcal{A} as a colle
 
   p(a)=(p1(a),…,pN(a))p^{(a)}=(p\_{1}^{(a)},\dots,p\_{N}^{(a)}), the topic distribution of the answer.
 
-We assume that these marginal distributions can be empirically estimated from the text triplet. In particular, they can be easily computed using the Semantic Divergence Metrics (SDM) method recently developed in [[9](https://arxiv.org/html/2512.05156v1#bib.bib9), [10](https://arxiv.org/html/2512.05156v1#bib.bib10)]. The SDM approach performs a joint clustering of sentence embeddings for all sentences in Q​C​AQCA-triplets, and then identifies cluster topics by doing the term frequency analysis. Once clusters are found, all texts in the Q​C​AQCA triplet are converted into marginal probability distributions
+We assume that these marginal distributions can be empirically estimated from the text triplet. In particular, they can be easily computed using the Semantic Divergence Metrics (SDM) method recently developed in [[9](https://arxiv.org/html/2512.05156v2#bib.bib9), [10](https://arxiv.org/html/2512.05156v2#bib.bib10)]. The SDM approach performs a joint clustering of sentence embeddings for all sentences in Q​C​AQCA-triplets, and then identifies cluster topics by doing the term frequency analysis. Once clusters are found, all texts in the Q​C​AQCA triplet are converted into marginal probability distributions
 p(q),p(c),p(a)p^{(q)},p^{(c)},p^{(a)} by counting frequencies of cluster assignments of their sentences.
 
 We note here that while the SDM approach is assumed here as a practical and numerically inexpensive way to compute the marginal
@@ -141,7 +142,7 @@ Furthermore, these matrices must explain the observed marginal distributions. By
 |  | pj(q)\displaystyle p\_{j}^{(q)} | =∑i=1Npi(c)​Qi​j,∀j∈{1,…,N}\displaystyle=\sum\_{i=1}^{N}p\_{i}^{(c)}Q\_{ij},\quad\forall j\in\{1,\dots,N\} |  | (3) |
 
 Note that the first equation here can be interpreted as a (one-step) Markov chain process with transition matrix 𝐀{\bf A}, which describes the topic evolution from the context CC to the answer AA produced by the LLM. The transition process can be thought of as proceeding in a time step Δ​Ta\Delta T\_{a}.
-On the other hand, we can similarly interpret the second equation in ([3](https://arxiv.org/html/2512.05156v1#S2.E3 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) as
+On the other hand, we can similarly interpret the second equation in ([3](https://arxiv.org/html/2512.05156v2#S2.E3 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) as
 a dynamic transition of the initial topic distribution into a new distribution according to the prompt. This transition occurs in a shorter time step Δ​Tq≪Δ​Ta\Delta T\_{q}\ll\Delta T\_{a}. Information in the user question (prompt) defines the objective (the desired ’semantic drift’) for the task of transformation of the context text into the answer text by the LLM.
 Viewed from the point of view of the LLM as a bipartite X​YXY-system, the 𝐐{\bf Q}-dynamics are associated with an initial preparation of sub-system YY, while sub-system XX
 evolves according to the 𝐀{\bf A}-dynamics. When the condition Δ​Tq≪Δ​Ta\Delta T\_{q}\ll\Delta T\_{a} holds, it means that sub-system XX remains idle for
@@ -149,7 +150,7 @@ a very short time Δ​Tq\Delta T\_{q} at the start of its response time period 
 
 We can expect that
 matrices 𝐐{\bf Q} and 𝐀{\bf A} expressing, respectively, the ’objective’ and the ’result’ of the topic transformation of the initial context CC should be similar to each other.
-Now consider our setting described above in Sect. [2.1](https://arxiv.org/html/2512.05156v1#S2.SS1 "2.1 Problem formulation ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"),
+Now consider our setting described above in Sect. [2.1](https://arxiv.org/html/2512.05156v2#S2.SS1 "2.1 Problem formulation ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"),
 where we have a set of KK triplets
 (Qi,C,Ai)(Q\_{i},C,A\_{i}) with i=1,…,Ki=1,\ldots,K enumerating the number of semantically equivalent prompt paraphrases.
 If we had a metric (score) to compare these triplets, we would be able to pick a triplet with the highest score as the most faithful one.
@@ -157,35 +158,35 @@ As we will show in the next section, we can convert this idea into a lightweight
 
 ### 2.5 Semantic Faithfulness Score
 
-The constraints in Eqs.([1](https://arxiv.org/html/2512.05156v1#S2.E1 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))-([3](https://arxiv.org/html/2512.05156v1#S2.E3 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) do not uniquely determine the matrices 𝐀\mathbf{A} and 𝐐\mathbf{Q}. There can be many transition dynamics that satisfy the marginals. The key idea of our method is to choose the pair of matrices (𝐀,𝐐)(\mathbf{A},\mathbf{Q}) that are minimally divergent from each other, reflecting the most ”parsimonious” explanation for the transformations. We quantify this divergence using the conditional Kullback-Leibler (KL) divergence:
+The constraints in Eqs.([1](https://arxiv.org/html/2512.05156v2#S2.E1 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))-([3](https://arxiv.org/html/2512.05156v2#S2.E3 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) do not uniquely determine the matrices 𝐀\mathbf{A} and 𝐐\mathbf{Q}. There can be many transition dynamics that satisfy the marginals. The key idea of our method is to choose the pair of matrices (𝐀,𝐐)(\mathbf{A},\mathbf{Q}) that are minimally divergent from each other, reflecting the most ”parsimonious” explanation for the transformations. We quantify this divergence using the conditional Kullback-Leibler (KL) divergence:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 |  | D​(𝐀∥𝐐)=∑i=1Npi(c)​∑j=1NAi​j​log⁡Ai​jQi​j.D(\mathbf{A}\parallel\mathbf{Q})=\sum\_{i=1}^{N}p\_{i}^{(c)}\sum\_{j=1}^{N}A\_{ij}\log\frac{A\_{ij}}{Q\_{ij}}. |  | (4) |
 
 This objective measures the expected information-theoretic distance between the transition dynamics, where the expectation is taken over the starting topics as defined by the context distribution p(c)p^{(c)}.
-The KL divergence ([4](https://arxiv.org/html/2512.05156v1#S2.E4 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) quantifies the information cost of encoding the transition matrix 𝐀{\bf A} in terms of transition matrix 𝐐{\bf Q} [[6](https://arxiv.org/html/2512.05156v1#bib.bib6)]. As in our framework it is the Maxwell demon YY that eventually controls both matrices
+The KL divergence ([4](https://arxiv.org/html/2512.05156v2#S2.E4 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) quantifies the information cost of encoding the transition matrix 𝐀{\bf A} in terms of transition matrix 𝐐{\bf Q} [[6](https://arxiv.org/html/2512.05156v2#bib.bib6)]. As in our framework it is the Maxwell demon YY that eventually controls both matrices
 𝐐{\bf Q} and 𝐀{\bf A}, this information cost is carried by the Maxwell demon.
 
-Our proposed faithfulness metric, which we call the Semantic Faithfulness (SF) score and denote as ℱS\mathcal{F}\_{S}, is defined in terms of the minimal value of this KL divergence ([4](https://arxiv.org/html/2512.05156v1#S2.E4 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), obtained by jointly optimizing over 𝐀\mathbf{A} and 𝐐\mathbf{Q} subject to all constraints:
+Our proposed faithfulness metric, which we call the Semantic Faithfulness (SF) score and denote as ℱS\mathcal{F}\_{S}, is defined in terms of the minimal value of this KL divergence ([4](https://arxiv.org/html/2512.05156v2#S2.E4 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), obtained by jointly optimizing over 𝐀\mathbf{A} and 𝐐\mathbf{Q} subject to all constraints:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 |  | ℱS:=11+Dm​i​n.Dm​i​n:=min𝐀∈𝒞𝐀,𝐐∈𝒞𝐐⁡D​(𝐀∥𝐐)\mathcal{F}\_{S}:=\frac{1}{1+D\_{min}}.\;\;\;D\_{min}:=\min\_{\mathbf{A}\in\mathcal{C}\_{\mathbf{A}},\mathbf{Q}\in\mathcal{C}\_{\mathbf{Q}}}D(\mathbf{A}\parallel\mathbf{Q}) |  | (5) |
 
-Here 𝒞𝐀\mathcal{C}\_{\mathbf{A}} and 𝒞𝐐\mathcal{C}\_{\mathbf{Q}} denote constraint sets for transition matrices 𝐀{\bf A} and 𝐐{\bf{Q}}, respectively, according to Eqs.([1](https://arxiv.org/html/2512.05156v1#S2.E1 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))-([3](https://arxiv.org/html/2512.05156v1#S2.E3 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). As Dm​i​nD\_{min} can take values between zero and infinity, the
+Here 𝒞𝐀\mathcal{C}\_{\mathbf{A}} and 𝒞𝐐\mathcal{C}\_{\mathbf{Q}} denote constraint sets for transition matrices 𝐀{\bf A} and 𝐐{\bf{Q}}, respectively, according to Eqs.([1](https://arxiv.org/html/2512.05156v2#S2.E1 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))-([3](https://arxiv.org/html/2512.05156v2#S2.E3 "In 2.4 Information Flows as Topic Weights Transitions ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). As Dm​i​nD\_{min} can take values between zero and infinity, the
 SF score 𝒞𝐀\mathcal{C}\_{\mathbf{A}} ranges from zero to one. Values of one are attained when the
 two probability distributions 𝐀{\bf A} and 𝐐{\bf Q} coincide. This implies high faithfulness: the answer produces the same topical shifts that was implied by the question with respect to the context. Conversely, a small score suggests the answer’s topical focus diverges significantly from the question’s, indicating a potential lack of faithfulness.
 
 We hasten to stress here that the minimal KL divergence Dm​i​nD\_{min}
-defined in Eq.([5](https://arxiv.org/html/2512.05156v1#S2.E5 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is a well-defined and unique quantity.
+defined in Eq.([5](https://arxiv.org/html/2512.05156v2#S2.E5 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is a well-defined and unique quantity.
 This follows
-from the results of Csiszar and Tusnády [[4](https://arxiv.org/html/2512.05156v1#bib.bib4)], who showed that the problem of a joint minimization of KL divergence
+from the results of Csiszar and Tusnády [[4](https://arxiv.org/html/2512.05156v2#bib.bib4)], who showed that the problem of a joint minimization of KL divergence
 D​(𝐀∥𝐐)D(\mathbf{A}\parallel\mathbf{Q}) has a solution as long as sets
-𝒞𝐀\mathcal{C}\_{\mathbf{A}} and 𝒞𝐐\mathcal{C}\_{\mathbf{Q}} are convex, see also [[5](https://arxiv.org/html/2512.05156v1#bib.bib5)]. Furthermore, they also provided a constructive approach to find the solution by alternating minimization (AM) with respect to distributions
+𝒞𝐀\mathcal{C}\_{\mathbf{A}} and 𝒞𝐐\mathcal{C}\_{\mathbf{Q}} are convex, see also [[5](https://arxiv.org/html/2512.05156v2#bib.bib5)]. Furthermore, they also provided a constructive approach to find the solution by alternating minimization (AM) with respect to distributions
 𝐀{\bf A} and 𝐐{\bf Q}.
 When applied to the problem of joint minimization of D​(𝐀∥𝐐)D(\mathbf{A}\parallel\mathbf{Q}) under convex constraints, the AM method
-of Csiszar and Tusnády is known as the Blahut-Arimoto (BA) algorithm [[3](https://arxiv.org/html/2512.05156v1#bib.bib3), [2](https://arxiv.org/html/2512.05156v1#bib.bib2)]. Convergence of the BA algorithm to a global minimum follows from joint convexity of D​(𝐀∥𝐐)D(\mathbf{A}\parallel\mathbf{Q}) in both its arguments, see [[6](https://arxiv.org/html/2512.05156v1#bib.bib6)], p.30.
+of Csiszar and Tusnády is known as the Blahut-Arimoto (BA) algorithm [[3](https://arxiv.org/html/2512.05156v2#bib.bib3), [2](https://arxiv.org/html/2512.05156v2#bib.bib2)]. Convergence of the BA algorithm to a global minimum follows from joint convexity of D​(𝐀∥𝐐)D(\mathbf{A}\parallel\mathbf{Q}) in both its arguments, see [[6](https://arxiv.org/html/2512.05156v2#bib.bib6)], p.30.
 In the following section, we will present details of an AM scheme for our setting.
 
 ## 3 Computing Semantic Faithfulness (Think Like the Demon!)
@@ -199,7 +200,7 @@ As mentioned above, this problem is jointly convex in 𝐀\mathbf{A} and
 𝐐\mathbf{Q}, which provides convergence of the AM algorithm to a global minimum irrespective of a starting point.
 
 The Alternating Minimization (AM) algorithm
-[[4](https://arxiv.org/html/2512.05156v1#bib.bib4), [5](https://arxiv.org/html/2512.05156v1#bib.bib5), [6](https://arxiv.org/html/2512.05156v1#bib.bib6)] decomposes the joint optimization into a sequence of simpler sub-problems. Starting with an initial guess 𝐐(0)\mathbf{Q}^{(0)} for one matrix, the algorithm proceeds iteratively:
+[[4](https://arxiv.org/html/2512.05156v2#bib.bib4), [5](https://arxiv.org/html/2512.05156v2#bib.bib5), [6](https://arxiv.org/html/2512.05156v2#bib.bib6)] decomposes the joint optimization into a sequence of simpler sub-problems. Starting with an initial guess 𝐐(0)\mathbf{Q}^{(0)} for one matrix, the algorithm proceeds iteratively:
 
 1. 1.
 
@@ -241,7 +242,7 @@ Setting the partial derivative of the Lagrangian with respect to Ai​jA\_{ij} t
 Here at the last step we eliminated the normalization Lagrange
 multipliers μi\mu\_{i} by enforcing the normalization constraint
 ∑j𝐀i​j=1\sum\_{j}{\bf A}\_{ij}=1.
-To find the Lagrange multipliers λj\lambda\_{j}, we plug the solution back to Eq.([6](https://arxiv.org/html/2512.05156v1#S3.E6 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) to obtain the dual Lagrangian
+To find the Lagrange multipliers λj\lambda\_{j}, we plug the solution back to Eq.([6](https://arxiv.org/html/2512.05156v2#S3.E6 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) to obtain the dual Lagrangian
 that should be maximized with respect to λj\lambda\_{j}:
 
 |  |  |  |  |
@@ -262,7 +263,7 @@ uj:=e−λju\_{j}:=e^{-\lambda\_{j}}:
 |  | uj=pj(a)∑i=1Npi(c)​𝐐i​j∑j=1N𝐐i​j​uj,uj:=e−λju\_{j}=\frac{p\_{j}^{(a)}}{\sum\_{i=1}^{N}\frac{p\_{i}^{(c)}{\bf Q}\_{ij}}{\sum\_{j=1}^{N}{\bf Q}\_{ij}u\_{j}}},\;\;u\_{j}:=e^{-\lambda\_{j}} |  | (10) |
 
 and solving them by iterations. Once the fixed point 𝐮=𝐮⋆{\bf u}={\bf u}\_{\star} is found, we obtain matrix 𝐀{\bf A} using
-Eq.([7](https://arxiv.org/html/2512.05156v1#S3.E7 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) as follows:
+Eq.([7](https://arxiv.org/html/2512.05156v2#S3.E7 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) as follows:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -291,7 +292,7 @@ Solving for Qi​jQ\_{ij}, we obtain
 | --- | --- | --- | --- |
 |  | Qi​j=Ai​jνi+ξjQ\_{ij}=\frac{A\_{ij}}{\nu\_{i}+\xi\_{j}} |  | (13) |
 
-Plugging this solution back to Eq.([12](https://arxiv.org/html/2512.05156v1#S3.E12 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), we obtain
+Plugging this solution back to Eq.([12](https://arxiv.org/html/2512.05156v2#S3.E12 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), we obtain
 the dual Lagrangian that should be maximized with respect to Lagrange multipliers 𝝃,𝝂\text{$\xi$},\text{$\nu$}:
 
 |  |  |  |  |
@@ -300,7 +301,7 @@ the dual Lagrangian that should be maximized with respect to Lagrange multiplier
 
 It is easy to verify that thus Lagrangian is separately concave in 𝝂\nu when 𝝃\xi fixed, and in 𝝃\xi when 𝝂\nu is fixed. Therefore, it can be quickly maximized using alternating maximization with respect to 𝝂\nu and 𝝃\xi while keeping the other parameter fixed.
 
-The QQ-step and AA-step described here are iterated until convergence. The final Semantic Faithfulness calculation is summarized in Algorithm [1](https://arxiv.org/html/2512.05156v1#alg1 "Algorithm 1 ‣ 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
+The QQ-step and AA-step described here are iterated until convergence. The final Semantic Faithfulness calculation is summarized in Algorithm [1](https://arxiv.org/html/2512.05156v2#alg1 "Algorithm 1 ‣ 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
 
 Algorithm 1  The Semantic Faithfulness Algorithm
 
@@ -315,9 +316,9 @@ Algorithm 1  The Semantic Faithfulness Algorithm
 5:  Given 𝐐(k)\mathbf{Q}^{(k)}, find 𝐀(k+1)\mathbf{A}^{(k+1)} in two steps:
 
 6:  Find scaling factors uju\_{j} for all jj by solving
-Eq.([10](https://arxiv.org/html/2512.05156v1#S3.E10 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))
+Eq.([10](https://arxiv.org/html/2512.05156v2#S3.E10 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))
 
-7:  Compute matrix 𝐀(k+1)\mathbf{A}^{(k+1)} using Eq.([11](https://arxiv.org/html/2512.05156v1#S3.E11 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))
+7:  Compute matrix 𝐀(k+1)\mathbf{A}^{(k+1)} using Eq.([11](https://arxiv.org/html/2512.05156v2#S3.E11 "In 3.2 A-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"))
 
 8:// Q-Step (Projection onto 𝒞𝐐\mathcal{C}\_{\mathbf{Q}})
 
@@ -327,9 +328,9 @@ Eq.([10](https://arxiv.org/html/2512.05156v1#S3.E10 "In 3.2 A-update Step ‣ 3 
 
 11:  repeat
 
-12:   Maximize the Lagrangian ([14](https://arxiv.org/html/2512.05156v1#S3.E14 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) for 𝝂\nu with keeping 𝝃\xi fixed.
+12:   Maximize the Lagrangian ([14](https://arxiv.org/html/2512.05156v2#S3.E14 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) for 𝝂\nu with keeping 𝝃\xi fixed.
 
-13:   Maximize the Lagrangian ([14](https://arxiv.org/html/2512.05156v1#S3.E14 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) for 𝝃\xi with keeping 𝝂\nu fixed.
+13:   Maximize the Lagrangian ([14](https://arxiv.org/html/2512.05156v2#S3.E14 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) for 𝝃\xi with keeping 𝝂\nu fixed.
 
 14:  until changes in 𝝂,𝝃\text{$\nu$},\text{$\xi$} are less than ϵinner\epsilon\_{\text{inner}}
 
@@ -348,12 +349,12 @@ Eq.([10](https://arxiv.org/html/2512.05156v1#S3.E10 "In 3.2 A-update Step ‣ 3 
 So far we developed a semantic model for the process of text generation by a LLM as stochastic dynamics of transitions from the input context to the LLM answer, defined on a discrete-valued semantic (topic) space, and modulated by the user question that serves as a control variable.
 
 Our analysis so far was only based on information-theoretic methods. Here we present a complimentary view of the same dynamics of the LLM as a bipartite X​YXY-information engine, this time analyzed as a physical engine. More specifically, we want to address thermodynamics of our bipartite information engine.
-For a review of thermodynamics of information, see e.g. [[14](https://arxiv.org/html/2512.05156v1#bib.bib14)].
+For a review of thermodynamics of information, see e.g. [[14](https://arxiv.org/html/2512.05156v2#bib.bib14)].
 
 To recall the setting of our bipartite X​YXY model, both stochastic sub-systems XX and YY (the tape and controller, respectively) interact with each other and with their respective heat baths. We now want to explore transformations in sub-system XX, i.e. transitions from context CC to answer AA controlled by prompt QQ, from the point of view of thermodynamics.
 
 In general, such transitions proceed out of equilibrium, due to both a non-equilibrium starting point (the context) and applied control by the prompt. Such non-equilibrium transitions are accompanied by entropy production. Entropy production quantifies the amount of time non-reversibility in a
-given (non-equilibrium) process, and thus defines the direction of the arrow of time, see e.g. [[17](https://arxiv.org/html/2512.05156v1#bib.bib17)] for a review.
+given (non-equilibrium) process, and thus defines the direction of the arrow of time, see e.g. [[17](https://arxiv.org/html/2512.05156v2#bib.bib17)] for a review.
 
 A part of entropy produced during such transitions is dissipated as heat into the environment of the system. If the environment needs to be kept at a fixed temperature, this implies that larger entropy production generally increases costs of cooling the system to maintain a fixed bath temperature. In its turn, this means that an optimal control should minimize entropy production.
 
@@ -361,7 +362,7 @@ In classical statistical mechanics, the concept of entropy production is normall
 In contrast, the modern field of stochastic thermodynamics
 studies much smaller (’mesoscopic’) systems
 where systems and ensembles can be really small, with N∼10−103N\sim 10-10^{3}. Furthermore, in stochastic thermodynamics, the concept of entropy production is defined at the level of both individual trajectories and ensembles of trajectories
-[[15](https://arxiv.org/html/2512.05156v1#bib.bib15)].
+[[15](https://arxiv.org/html/2512.05156v2#bib.bib15)].
 The ability to compute entropy production in such mesoscopic systems at the level of single trajectories offers a possibility to monitor and control individual trajectories by choosing control protocols that minimize entropy production along these trajectories.
 
 In our setting of of a user-LLM interaction with a given context CC, a dataset of KK triplets (Qk,C,Ak)(Q\_{k},C,A\_{k}) with k=1,…,Kk=1,\ldots,K can be viewed as a set of
@@ -372,7 +373,7 @@ a small ensemble over topics contained in
 This view of the LLM enables employing methods of computing entropy production from stochastic thermodynamics in our problem of comparison of individual Q​C​AQCA-triplets.
 The prompt-answer pair that gives rise to the minimum entropy production may be suggested as the best (most efficient, least heat-dissipating) candidate in the set.
 
-As shown in [[16](https://arxiv.org/html/2512.05156v1#bib.bib16)], total entropy production for a stochastic system is given by the KL divergence between the probabilities of the forward and backward (time-reversed) paths.
+As shown in [[16](https://arxiv.org/html/2512.05156v2#bib.bib16)], total entropy production for a stochastic system is given by the KL divergence between the probabilities of the forward and backward (time-reversed) paths.
 In our one-step setting, this produces the following expression for the total entropy production S.t​o​t\overset{\bm{.}}{S}\_{tot}:
 
 |  |  |  |  |  |  |
@@ -380,12 +381,12 @@ In our one-step setting, this produces the following expression for the total en
 |  | S.t​o​t\displaystyle\overset{\bm{.}}{S}\_{tot} | =\displaystyle= | ∑i,j=1Npi(c)​Ai​j​log⁡pi(c)​Ai​jpj(a)​Aj​iR=∑i,j=1Npi(c)​Ai​j​log⁡Ai​jAj​iR+∑i,j=1Npi(c)​Ai​j​log⁡pi(c)pj(a)\displaystyle\sum\_{i,j=1}^{N}p\_{i}^{(c)}A\_{ij}\log\frac{p\_{i}^{(c)}A\_{ij}}{p\_{j}^{(a)}A\_{ji}^{R}}=\sum\_{i,j=1}^{N}p\_{i}^{(c)}A\_{ij}\log\frac{A\_{ij}}{A\_{ji}^{R}}+\sum\_{i,j=1}^{N}p\_{i}^{(c)}A\_{ij}\log\frac{p\_{i}^{(c)}}{p\_{j}^{(a)}} |  | (15) |
 |  |  | =\displaystyle= | ∑i,j=1Npi(c)​Ai​j​log⁡Ai​jAj​iR+H​[p(a)]−H​[p(c)]\displaystyle\sum\_{i,j=1}^{N}p\_{i}^{(c)}A\_{ij}\log\frac{A\_{ij}}{A\_{ji}^{R}}+H\left[p^{(a)}\right]-H\left[p^{(c)}\right] |  |
 
-Here 𝐀R{\bf A}^{R} stands for the transition matrix of the time-reversed process. As this quantity is not directly measured from our data, Eq.([15](https://arxiv.org/html/2512.05156v1#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is not sufficient on its own for computing entropy production without additional assumptions or approximations.
+Here 𝐀R{\bf A}^{R} stands for the transition matrix of the time-reversed process. As this quantity is not directly measured from our data, Eq.([15](https://arxiv.org/html/2512.05156v2#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is not sufficient on its own for computing entropy production without additional assumptions or approximations.
 Before we proceed with our estimation of this quantity, we pause to make a few remarks.
 
 ### 4.1 Decomposition of the Total Entropy Production
 
-As discussed in [[16](https://arxiv.org/html/2512.05156v1#bib.bib16)], the structure of Eq.([15](https://arxiv.org/html/2512.05156v1#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) suggests the following decomposition for the total entropy production:
+As discussed in [[16](https://arxiv.org/html/2512.05156v2#bib.bib16)], the structure of Eq.([15](https://arxiv.org/html/2512.05156v2#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) suggests the following decomposition for the total entropy production:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -407,27 +408,27 @@ is the entropy change of sub-system XX. We next separately discuss these two con
 
 ### 4.2 Semantic Entropy or Semantic Entropy Production?
 
-Let us consider first the sub-system XX entropy change term ([18](https://arxiv.org/html/2512.05156v1#S4.E18 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). It amounts to the difference H​[p(a)]−H​[p(c)]H\left[p^{(a)}\right]-H\left[p^{(c)}\right] of marginal final and initial entropies. The first term here is the semantic Shannon entropy of the LLM answer. This quantity was previously suggested on heuristic grounds in the Semantic Entropy (SE) method [[8](https://arxiv.org/html/2512.05156v1#bib.bib8)] as a metric for LLM hallucination control. As was noted in [[9](https://arxiv.org/html/2512.05156v1#bib.bib9)], one drawback of the SE method is that it does not account for complexity of the initial context (or prompt).
+Let us consider first the sub-system XX entropy change term ([18](https://arxiv.org/html/2512.05156v2#S4.E18 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). It amounts to the difference H​[p(a)]−H​[p(c)]H\left[p^{(a)}\right]-H\left[p^{(c)}\right] of marginal final and initial entropies. The first term here is the semantic Shannon entropy of the LLM answer. This quantity was previously suggested on heuristic grounds in the Semantic Entropy (SE) method [[8](https://arxiv.org/html/2512.05156v2#bib.bib8)] as a metric for LLM hallucination control. As was noted in [[9](https://arxiv.org/html/2512.05156v2#bib.bib9)], one drawback of the SE method is that it does not account for complexity of the initial context (or prompt).
 
 On the other hand, the present work suggests that it is entropy production, rather than the marginal entropy of the LLM answer, that may be a better metric for quantification of uncertainty and confidence of LLM answers. We see that the system entropy change
-([18](https://arxiv.org/html/2512.05156v1#S4.E18 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) appears a more meaningful way to quantify entropy of the LLM answer by computing its difference with entropy of the context. Furthermore, the concept of entropy production is intuitively related to the notion of LLM hallucinations as noisy (entropy-increasing) distortions of the input context and prompt data.
+([18](https://arxiv.org/html/2512.05156v2#S4.E18 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) appears a more meaningful way to quantify entropy of the LLM answer by computing its difference with entropy of the context. Furthermore, the concept of entropy production is intuitively related to the notion of LLM hallucinations as noisy (entropy-increasing) distortions of the input context and prompt data.
 
-Now, the sub-system XX entropy change ([18](https://arxiv.org/html/2512.05156v1#S4.E18 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) can be directly calculated from the marginal distribution, but it amounts only to one contribution into the total entropy production according to Eq.([16](https://arxiv.org/html/2512.05156v1#S4.E16 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). The other term S.m\overset{\bm{.}}{S}\_{m} defined
-in Eq.([17](https://arxiv.org/html/2512.05156v1#S4.E17 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) cannot be directly calculated as long as the reverse transition matrix 𝐀R{\bf A}^{R} is not known or estimated.
+Now, the sub-system XX entropy change ([18](https://arxiv.org/html/2512.05156v2#S4.E18 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) can be directly calculated from the marginal distribution, but it amounts only to one contribution into the total entropy production according to Eq.([16](https://arxiv.org/html/2512.05156v2#S4.E16 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). The other term S.m\overset{\bm{.}}{S}\_{m} defined
+in Eq.([17](https://arxiv.org/html/2512.05156v2#S4.E17 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) cannot be directly calculated as long as the reverse transition matrix 𝐀R{\bf A}^{R} is not known or estimated.
 We will next propose a method to estimate the dissipated entropy
 S.m\overset{\bm{.}}{S}\_{m} by computing its lower bound.
 
 ### 4.3 Lower Bound on Semantic Entropy Production
 
-As the reverse transition matrix 𝐀R{\bf A}^{R} is not directly measured, the exact amount of entropy production according to Eq.([15](https://arxiv.org/html/2512.05156v1#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is unknown.
-However, we can find a lower bound on entropy production in our process by minimizing the expression ([15](https://arxiv.org/html/2512.05156v1#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) with respect to all possible reverse transition matrices 𝐀R{\bf A}^{R}, subject to all constraints that should be imposed on these matrices [[11](https://arxiv.org/html/2512.05156v1#bib.bib11)].
+As the reverse transition matrix 𝐀R{\bf A}^{R} is not directly measured, the exact amount of entropy production according to Eq.([15](https://arxiv.org/html/2512.05156v2#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is unknown.
+However, we can find a lower bound on entropy production in our process by minimizing the expression ([15](https://arxiv.org/html/2512.05156v2#S4.E15 "In 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) with respect to all possible reverse transition matrices 𝐀R{\bf A}^{R}, subject to all constraints that should be imposed on these matrices [[11](https://arxiv.org/html/2512.05156v2#bib.bib11)].
 In our case, matrix 𝐀R{\bf A}^{R} should satisfy the marginal and normalization constraints
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 |  | ∑j=1Npj(a)​Aj​iR=pi(c),∑i=1NAj​iR=1\sum\_{j=1}^{N}p\_{j}^{(a)}A\_{ji}^{R}=p\_{i}^{(c)},\;\;\;\sum\_{i=1}^{N}A\_{ji}^{R}=1 |  | (19) |
 
-([19](https://arxiv.org/html/2512.05156v1#S4.E19 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). This produces the following Lagrangian function:
+([19](https://arxiv.org/html/2512.05156v2#S4.E19 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). This produces the following Lagrangian function:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -440,14 +441,14 @@ Minimization of this Lagrangian with respect to 𝐀R{\bf A}^{R} gives
 | --- | --- | --- | --- |
 |  | Aj​iR=pi(c)ξi​pj(a)+νj​pj(c)​Ai​jA\_{ji}^{R}=\frac{p\_{i}^{(c)}}{\xi\_{i}p\_{j}^{(a)}+\nu\_{j}p\_{j}^{(c)}}A\_{ij} |  | (21) |
 
-Plugging this back into ([20](https://arxiv.org/html/2512.05156v1#S4.E20 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), rescaling the optimization variables νj→νj​pj(c)/pj(a)\nu\_{j}\rightarrow\nu\_{j}p\_{j}^{(c)}/p\_{j}^{(a)} and simplifying the resulting expression, we obtain the dual Lagrangian that should be maximized with respect to the Lagrange multipliers:
+Plugging this back into ([20](https://arxiv.org/html/2512.05156v2#S4.E20 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), rescaling the optimization variables νj→νj​pj(c)/pj(a)\nu\_{j}\rightarrow\nu\_{j}p\_{j}^{(c)}/p\_{j}^{(a)} and simplifying the resulting expression, we obtain the dual Lagrangian that should be maximized with respect to the Lagrange multipliers:
 
 |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |
 |  | ℒS​(𝝃,𝝂)\displaystyle\mathcal{L}\_{S}(\text{$\xi$},\text{$\nu$}) | =\displaystyle= | ∑i,jpi(c)​Ai​j​log⁡(ξi+νj)−∑ipi(c)​ξi−∑jpj(a)​νj+1\displaystyle\sum\_{i,j}p\_{i}^{(c)}A\_{ij}\log\left(\xi\_{i}+\nu\_{j}\right)-\sum\_{i}p\_{i}^{(c)}\xi\_{i}-\sum\_{j}p\_{j}^{(a)}\nu\_{j}+1 |  | (22) |
 |  |  | =\displaystyle= | ℒ2​(𝝃,𝝂)+∑j=1Nνj​(pj(q)−pj(a))\displaystyle\mathcal{L}\_{2}(\text{$\xi$},\text{$\nu$})+\sum\_{j=1}^{N}\nu\_{j}\left(p\_{j}^{(q)}-p\_{j}^{(a)}\right) |  |
 
-where ℒ2​(𝝃,𝝂)\mathcal{L}\_{2}(\text{$\xi$},\text{$\nu$}) is the Lagrangian defined in Eq.([14](https://arxiv.org/html/2512.05156v1#S3.E14 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). Therefore, the remaining maximization in Eq.([22](https://arxiv.org/html/2512.05156v1#S4.E22 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) can be done using the same objective functions in in the QQ-step of our Semantic Faithfulness algorithm, upon the substitution 𝐩(q)→𝐩(a){\bf p}^{(q)}\rightarrow{\bf p}^{(a)}. Alternatively, if the second term in the last expression in Eq.([22](https://arxiv.org/html/2512.05156v1#S4.E22 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is much smaller than the first term, the optimal value of ℒS​(𝝃,𝝂)\mathcal{L}\_{S}(\text{$\xi$},\text{$\nu$})
+where ℒ2​(𝝃,𝝂)\mathcal{L}\_{2}(\text{$\xi$},\text{$\nu$}) is the Lagrangian defined in Eq.([14](https://arxiv.org/html/2512.05156v2#S3.E14 "In 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). Therefore, the remaining maximization in Eq.([22](https://arxiv.org/html/2512.05156v2#S4.E22 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) can be done using the same objective functions in in the QQ-step of our Semantic Faithfulness algorithm, upon the substitution 𝐩(q)→𝐩(a){\bf p}^{(q)}\rightarrow{\bf p}^{(a)}. Alternatively, if the second term in the last expression in Eq.([22](https://arxiv.org/html/2512.05156v2#S4.E22 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is much smaller than the first term, the optimal value of ℒS​(𝝃,𝝂)\mathcal{L}\_{S}(\text{$\xi$},\text{$\nu$})
 can be computed to the first order in the perturbation as follows:
 
 |  |  |  |  |
@@ -455,11 +456,11 @@ can be computed to the first order in the perturbation as follows:
 |  | ℒS​(𝝃⋆,𝝂⋆)≃ℒ2​(𝝃⋆,𝝂⋆)+∑j=1Nνj⋆​(pj(q)−pj(a))\mathcal{L}\_{S}(\text{$\xi$}^{\star},\text{$\nu$}^{\star})\simeq\mathcal{L}\_{2}(\text{$\xi$}^{\star},\text{$\nu$}^{\star})+\sum\_{j=1}^{N}\nu\_{j}^{\star}\left(p\_{j}^{(q)}-p\_{j}^{(a)}\right) |  | (23) |
 
 where 𝝃⋆,𝝂⋆\text{$\xi$}^{\star},\text{$\nu$}^{\star} are the optimal Lagrange multipliers for the Lagrangian ℒ2​(𝝃,𝝂)\mathcal{L}\_{2}(\text{$\xi$},\text{$\nu$}).
-The final scheme is presented in Algorithm [2](https://arxiv.org/html/2512.05156v1#alg2 "Algorithm 2 ‣ 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
+The final scheme is presented in Algorithm [2](https://arxiv.org/html/2512.05156v2#alg2 "Algorithm 2 ‣ 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
 
 Algorithm 2  Semantic Entropy Production (SEP)
 
-1:𝐀∗\mathbf{A}^{\*} (optimal transition matrix from Algorithm [1](https://arxiv.org/html/2512.05156v1#alg1 "Algorithm 1 ‣ 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), 𝐩(c)\mathbf{p}^{(c)}, 𝐩(a)\mathbf{p}^{(a)}
+1:𝐀∗\mathbf{A}^{\*} (optimal transition matrix from Algorithm [1](https://arxiv.org/html/2512.05156v2#alg1 "Algorithm 1 ‣ 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), 𝐩(c)\mathbf{p}^{(c)}, 𝐩(a)\mathbf{p}^{(a)}
 
 2:Initialize 𝝃,𝝂∈ℝ>0N\bm{\xi},\bm{\nu}\in\mathbb{R}^{N}\_{>0}
 
@@ -485,9 +486,9 @@ Algorithm 2  Semantic Entropy Production (SEP)
 
 ### 4.4 Relationship Between Faithfulness and Entropy Production
 
-The approximate expression ([23](https://arxiv.org/html/2512.05156v1#S4.E23 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) suggests
+The approximate expression ([23](https://arxiv.org/html/2512.05156v2#S4.E23 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) suggests
 a link between the (lower bound of) entropy production and
-the Faithfulness Score ([5](https://arxiv.org/html/2512.05156v1#S2.E5 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). As the first term in ([23](https://arxiv.org/html/2512.05156v1#S4.E23 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is exactly the quantity Dm​i​n=1/ℱS−1D\_{min}=1/\mathcal{F}\_{S}-1 (with added constraint penalties), Eq.([23](https://arxiv.org/html/2512.05156v1#S4.E23 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) can be written as follows:
+the Faithfulness Score ([5](https://arxiv.org/html/2512.05156v2#S2.E5 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). As the first term in ([23](https://arxiv.org/html/2512.05156v2#S4.E23 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) is exactly the quantity Dm​i​n=1/ℱS−1D\_{min}=1/\mathcal{F}\_{S}-1 (with added constraint penalties), Eq.([23](https://arxiv.org/html/2512.05156v2#S4.E23 "In 4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) can be written as follows:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -504,18 +505,18 @@ calibrated to match the sparsity patterns that we observe in real datasets: ques
 and answers show intermediate sparsity.
 We also preserved the empirical co-dependencies by sampling answer distributions conditionally on context distributions, reflecting the fact that LLM answers draw selectively from the provided context.
 For each synthetic triplet, we computed both the SF (ℱS\mathcal{F}\_{S}), and SEP metrics using, respectively, Algorithms 1 and 2.
-Figure [1](https://arxiv.org/html/2512.05156v1#S4.F1 "Figure 1 ‣ 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") presents a scatter plot of SF versus SEP, comparing the naive approximation ([27](https://arxiv.org/html/2512.05156v1#S4.E27 "In 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) with the exact calculation.
+Figure [1](https://arxiv.org/html/2512.05156v2#S4.F1 "Figure 1 ‣ 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") presents a scatter plot of SF versus SEP, comparing the naive approximation ([27](https://arxiv.org/html/2512.05156v2#S4.E27 "In 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) with the exact calculation.
 
 ![Refer to caption](figures/SF_SEP_scatter.png)
 
 
 Figure 1: Scatter plot of Semantic Faithfulness (ℱS\mathcal{F}\_{S}) versus Semantic Entropy Production (SEP) for n=100n=100 simulated QCA triplets. The solid red line shows the linear
-regression fit (SEP =−1.76⋅ℱS+2.02=-1.76\cdot\mathcal{F}\_{S}+2.02), while the dashed green line shows the naive approximation SEP =1/ℱS−1=1/\mathcal{F}\_{S}-1 from Eq. ([27](https://arxiv.org/html/2512.05156v1#S4.E27 "In 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")).
+regression fit (SEP =−1.76⋅ℱS+2.02=-1.76\cdot\mathcal{F}\_{S}+2.02), while the dashed green line shows the naive approximation SEP =1/ℱS−1=1/\mathcal{F}\_{S}-1 from Eq. ([27](https://arxiv.org/html/2512.05156v2#S4.E27 "In 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")).
 
 This analysis of simulated triplets reveals a moderate negative correlation between ℱS\mathcal{F}\_{S} and SEP (Pearson r=−0.61r=-0.61), confirming that higher semantic faithfulness generally corresponds to lower entropy production. However, the relationship is weaker than the naive approximation SEP ≈1/ℱS−1\approx 1/\mathcal{F}\_{S}-1 would
 suggest. A linear fit yields SEP =−1.76⋅ℱS+2.02=-1.76\cdot\mathcal{F}\_{S}+2.02, indicating that while the metrics are related, they capture distinct aspects of information flow in QCA triplets, and should therefore be
 computed independently, without reliance on the naive approximation
-([27](https://arxiv.org/html/2512.05156v1#S4.E27 "In 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")).
+([27](https://arxiv.org/html/2512.05156v2#S4.E27 "In 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")).
 
 ### 4.5 Final Metrics: Semantic Faithfulness and Semantic Entropy Production
 
@@ -523,19 +524,19 @@ Our framework provides two complementary metrics for LLM faithfulness evaluation
 
 1. 1.
 
-   Semantic Faithfulness (SF): The score ℱS=1/(1+Dm​i​n)\mathcal{F}\_{S}=1/(1+D\_{min}) defined in Eq. ([5](https://arxiv.org/html/2512.05156v1#S2.E5 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), computed via the alternating minimization
-   Algorithm [1](https://arxiv.org/html/2512.05156v1#alg1 "Algorithm 1 ‣ 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"). This metric quantifies the information-theoretic alignment between the question-induced and answer-induced topic transformations.
+   Semantic Faithfulness (SF): The score ℱS=1/(1+Dm​i​n)\mathcal{F}\_{S}=1/(1+D\_{min}) defined in Eq. ([5](https://arxiv.org/html/2512.05156v2#S2.E5 "In 2.5 Semantic Faithfulness Score ‣ 2 Semantic Faithfulness ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")), computed via the alternating minimization
+   Algorithm [1](https://arxiv.org/html/2512.05156v2#alg1 "Algorithm 1 ‣ 3.3 Q-update Step ‣ 3 Computing Semantic Faithfulness (Think Like the Demon!) ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"). This metric quantifies the information-theoretic alignment between the question-induced and answer-induced topic transformations.
 2. 2.
 
    Semantic Entropy Production (SEP): The lower bound on total entropy production S.t​o​t\overset{\bm{.}}{S}\_{tot} computed via a separate optimization as described in
-   Section [4.3](https://arxiv.org/html/2512.05156v1#S4.SS3 "4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"). This metric quantifies the thermodynamic irreversibility of the answer generation process.
+   Section [4.3](https://arxiv.org/html/2512.05156v2#S4.SS3 "4.3 Lower Bound on Semantic Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations"). This metric quantifies the thermodynamic irreversibility of the answer generation process.
 
-Our simulation results in Figure [1](https://arxiv.org/html/2512.05156v1#S4.F1 "Figure 1 ‣ 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") demonstrate
+Our simulation results in Figure [1](https://arxiv.org/html/2512.05156v2#S4.F1 "Figure 1 ‣ 4.4 Relationship Between Faithfulness and Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") demonstrate
 that SF and SEP are related but not redundant, as they capture distinct, though connected, aspects of QCA triplet quality.
 Indeed, SF is the information-theoretic metric that captures the *semantic alignment* between question intent and answer content. On the other hand,
 SEP captures the *thermodynamic efficiency* of the information transformation. We therefore recommend computing both metrics independently for comprehensive faithfulness evaluation. As a byproduct of the optimization algorithms, we also obtain the optimal
 transition matrices 𝐐⋆\mathbf{Q}^{\star} and 𝐀⋆\mathbf{A}^{\star} that achieve the minimal divergence, providing interpretable representations of topic flow from context to question
-and answer, see Figures [5](https://arxiv.org/html/2512.05156v1#S5.F5 "Figure 5 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") and [6](https://arxiv.org/html/2512.05156v1#S5.F6 "Figure 6 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") below for typical marginal distributions and optimal transition matrices, respectively, that are obtained with our datasets. Details of our datasets will be presented in the next section.
+and answer, see Figures [5](https://arxiv.org/html/2512.05156v2#S5.F5 "Figure 5 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") and [6](https://arxiv.org/html/2512.05156v2#S5.F6 "Figure 6 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") below for typical marginal distributions and optimal transition matrices, respectively, that are obtained with our datasets. Details of our datasets will be presented in the next section.
 
 ## 5 Experiments
 
@@ -585,7 +586,7 @@ For each QCA triplet, we computed semantic distributions over topics using the f
    Embedding: All text was decomposed into sentences (1,514 total sentences across prompts, context, and answers) and embedded using the Qwen3-Embedding-0.6B model in a *single* embedding pass, producing dense vector representations cached to disk.
 2. 2.
 
-   Clustering: The joint embedding space was clustered into N=23N=23 semantic topics using the Upper-Bounded Deterministic Information Bottleneck (UDIB) algorithm [[10](https://arxiv.org/html/2512.05156v1#bib.bib10)] in a *single* clustering pass. The UDIB method simultaneously performs clustering and determines the optimal number of clusters by maximizing the information bottleneck objective, discretizing the continuous semantic space into interpretable topic distributions.
+   Clustering: The joint embedding space was clustered into N=23N=23 semantic topics using the Upper-Bounded Deterministic Information Bottleneck (UDIB) algorithm [[10](https://arxiv.org/html/2512.05156v2#bib.bib10)] in a *single* clustering pass. The UDIB method simultaneously performs clustering and determines the optimal number of clusters by maximizing the information bottleneck objective, discretizing the continuous semantic space into interpretable topic distributions.
 3. 3.
 
    Distributions: For each triplet’s question QQ, context CC, and answer AA, we computed the probability distribution over topics by aggregating sentence cluster assignments and normalizing counts to obtain pqp\_{q}, pcp\_{c}, and pap\_{a}.
@@ -595,7 +596,7 @@ For each QCA triplet, we computed semantic distributions over topics using the f
 
 ### 5.2 Results
 
-Table [1](https://arxiv.org/html/2512.05156v1#S5.T1 "Table 1 ‣ 5.2 Results ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") presents the computed metrics for all 10 QCA triplets. Context entropy H​(C)=3.279H(C)=3.279 bits is constant across all triplets as they share the same source
+Table [1](https://arxiv.org/html/2512.05156v2#S5.T1 "Table 1 ‣ 5.2 Results ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") presents the computed metrics for all 10 QCA triplets. Context entropy H​(C)=3.279H(C)=3.279 bits is constant across all triplets as they share the same source
 document. All entropy values are reported in bits.
 
 Table 1: Entropy values and computed metrics for all QCA triplets.
@@ -632,7 +633,7 @@ exhibits broader variation (CV = 25.5%).
 Both groups exhibit similar mean Semantic Faithfulness (Group A: ℱS=0.509\mathcal{F}\_{S}=0.509, Group B: ℱS=0.503\mathcal{F}\_{S}=0.503), indicating that question type alone does not strongly
 determine faithfulness in this dataset. However, individual triplet variation within groups (overall ℱS\mathcal{F}\_{S} range: [0.472, 0.577]) suggests that specific question-context
 pairings matter more than broad question categories. We observe a positive correlation between H​(Q)H(Q) and ℱS\mathcal{F}\_{S} (Pearson r=0.695r=0.695, p=0.026p=0.026), see
-Fig. [2](https://arxiv.org/html/2512.05156v1#S5.F2 "Figure 2 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
+Fig. [2](https://arxiv.org/html/2512.05156v2#S5.F2 "Figure 2 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
 
 #### Positive System Entropy Change.
 
@@ -648,12 +649,12 @@ expansion), the SEP values show meaningful variation (mean = 0.287 bits, range: 
 bits), consistent with Group A’s higher system entropy change.
 
 Recall from stochastic thermodynamics that total entropy production decomposes as S˙tot=S.+S.m\dot{S}\_{\text{tot}}=\overset{\bm{.}}{S}+\overset{\bm{.}}{S}\_{m}, where S.m\overset{\bm{.}}{S}\_{m} represents dissipated heat from subsystem
-XX (question-answer channel) to subsystem YY (LLM’s internal knowledge base) plus the environment, see Eq.([16](https://arxiv.org/html/2512.05156v1#S4.E16 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). Notably, in all triplets except A0, we observe SEP <S.<\overset{\bm{.}}{S}, which implies S.m<0\overset{\bm{.}}{S}\_{m}<0: the dissipated heat is *negative*. The physical interpretation is that to generate answers with higher entropy than the provided context
+XX (question-answer channel) to subsystem YY (LLM’s internal knowledge base) plus the environment, see Eq.([16](https://arxiv.org/html/2512.05156v2#S4.E16 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")). Notably, in all triplets except A0, we observe SEP <S.<\overset{\bm{.}}{S}, which implies S.m<0\overset{\bm{.}}{S}\_{m}<0: the dissipated heat is *negative*. The physical interpretation is that to generate answers with higher entropy than the provided context
 (semantic expansion), the LLM must draw information from its internal knowledge base (subsystem YY), effectively importing semantic structure that reduces the net entropy production
 of the question-answering process. This negative heat flow indicates that subsystem XX *absorbs* rather than dissipates entropy.
 
 The coefficient of variation for SEP (73%) indicates meaningful variation across triplets, suggesting that entropy production provides discriminative signal for comparing answer
-quality beyond what ℱS\mathcal{F}\_{S} alone captures. The correlation between ℱS\mathcal{F}\_{S} and SEP is r=−0.612r=-0.612 (p=0.060p=0.060), see Fig. [3](https://arxiv.org/html/2512.05156v1#S5.F3 "Figure 3 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
+quality beyond what ℱS\mathcal{F}\_{S} alone captures. The correlation between ℱS\mathcal{F}\_{S} and SEP is r=−0.612r=-0.612 (p=0.060p=0.060), see Fig. [3](https://arxiv.org/html/2512.05156v2#S5.F3 "Figure 3 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations").
 
 #### Algorithm Convergence and Robustness.
 
@@ -662,9 +663,9 @@ the SEP algorithm employs L-BFGS-B optimization for dual Lagrangian maximization
 
 ### 5.4 Visualizations
 
-Figure [2](https://arxiv.org/html/2512.05156v1#S5.F2 "Figure 2 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") shows a scatter plot of QCA triplets in the question entropy-semantic faithfulness plane.
-Figure [3](https://arxiv.org/html/2512.05156v1#S5.F3 "Figure 3 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") shows the relationship between ℱS\mathcal{F}\_{S} and SEP with regression lines for each group.
-Figure [4](https://arxiv.org/html/2512.05156v1#S5.F4 "Figure 4 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") shows the thermodynamic decomposition of SEP into system entropy change and dissipated heat.
+Figure [2](https://arxiv.org/html/2512.05156v2#S5.F2 "Figure 2 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") shows a scatter plot of QCA triplets in the question entropy-semantic faithfulness plane.
+Figure [3](https://arxiv.org/html/2512.05156v2#S5.F3 "Figure 3 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") shows the relationship between ℱS\mathcal{F}\_{S} and SEP with regression lines for each group.
+Figure [4](https://arxiv.org/html/2512.05156v2#S5.F4 "Figure 4 ‣ 5.4 Visualizations ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") shows the thermodynamic decomposition of SEP into system entropy change and dissipated heat.
 
 ![Refer to caption](figures/fig1_hq_vs_fs.png)
 
@@ -703,27 +704,29 @@ these two matrices align.
 ### 5.5 Qualitative Evaluation with LLM-as-a-Judge
 
 A fundamental question for any faithfulness metric is whether it aligns with human judgment: do answers with higher ℱS\mathcal{F}\_{S} and lower SEP correspond to what human evaluators
-would reasonably identify as better responses? To investigate this hypothesis, we employ the LLM-as-a-Judge methodology [[18](https://arxiv.org/html/2512.05156v1#bib.bib18)], using Claude Sonnet 4.5 to simulate
-the human process of evaluating multiple LLM-generated answers and selecting the best one.
+would reasonably identify as better responses? To investigate this hypothesis, we employ the LLM-as-a-Judge methodology [[18](https://arxiv.org/html/2512.05156v2#bib.bib18)], using Claude Sonnet 4.5 to simulate the
+human process of evaluating multiple LLM-generated answers and selecting the best one.
 
 Our hypothesis is that the Semantic Faithfulness metric ℱS\mathcal{F}\_{S} and Semantic Entropy Production (SEP) provide effective guidance for answer selection, capturing dimensions of
-quality that human evaluators would recognize: structural alignment with question requirements, comprehensive coverage of requested topics, appropriate grounding in context, and
-absence of tangential or repetitive content.
+quality that human evaluators would recognize: structural alignment with question requirements, comprehensive coverage of requested topics, appropriate grounding in context, and absence
+of tangential or hallucinated content.
 
 We compare answers with the highest and lowest ℱS\mathcal{F}\_{S} scores from a separate experimental run using Group A comprehensive risk questions.444The ℱS\mathcal{F}\_{S} values
-reported in this section (0.872 and 0.250) differ from those in Table [1](https://arxiv.org/html/2512.05156v1#S5.T1 "Table 1 ‣ 5.2 Results ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") because they were computed in a different experimental session with different random
-initialization. This variability is expected and does not affect the qualitative conclusions. For each pair, we present both answers to the LLM with instructions to
-analyze faithfulness, completeness, coherence, and relevance. The qualitative analysis reported below is provided verbatim as generated by Claude Sonnet 4.5.
+reported in this section (0.324 and 0.250) differ from those in Table [1](https://arxiv.org/html/2512.05156v2#S5.T1 "Table 1 ‣ 5.2 Results ‣ 5 Experiments ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations") because they were computed in a different experimental session with different random
+initialization. This variability is expected and does not affect the qualitative conclusions. For each pair, we present both answers to the LLM judge with instructions to analyze
+faithfulness, completeness, coherence, and relevance. The qualitative analysis reported below is provided verbatim as generated by Claude Sonnet 4.5.
 
 #### Group A Analysis (Comprehensive Risk Questions).
 
-Answer A (ℱS=0.872\mathcal{F}\_{S}=0.872) produced a structured response organized around four numbered sections: (1) Supply Chain Dependencies and Demand Forecasting Challenges,
-(2) Competitive Risks and Operational Challenges, (3) Impact of External Factors: Export Controls and Macroeconomics, and (4) Financial Illustration and Customer Concentration. The
-answer maintains direct alignment with the question’s framework and concludes with a concise summary paragraph that ties all elements together.
+Answer A (ℱS=0.324\mathcal{F}\_{S}=0.324) produced a structured response organized around the question’s framework with sections on: Vulnerabilities in Manufacturing and Supply
+Networks, Competitive Threats to Market Leadership, Organizational Capacity for Navigating Technology Transitions, and Impact of Broader Forces on Operational Risks. The answer maintains
+direct alignment with the question’s structure, uses precise language from the source context, and correctly states that “three direct customers representing 12%, 11%, and 11% of
+total revenue in fiscal year 2025.”
 
-Answer B (ℱS=0.250\mathcal{F}\_{S}=0.250) produced a longer response with an executive summary, more detailed subsections, and extensive bullet points. While covering similar
-material, the answer includes additional elements such as cybersecurity threats and EU AI Act regulatory compliance, and provides a more extensive final section on “Implications for
-Financial Health and Long-Term Standing.”
+Answer B (ℱS=0.250\mathcal{F}\_{S}=0.250) produced a longer response with an executive summary, numbered sections, and extensive bullet points. While covering similar material, the
+answer includes additional elements such as cybersecurity threats and provides a more extensive final section on “Implications for Financial Health and Long-Term Standing.” Critically,
+Answer B contains a subtle hallucination: it states that “Customers A, B, and C represented 12%, 11%, and 11% of total revenue”. By this, it fabricates specific customer names that
+do not appear in the source context, which only mentions “three direct customers” without naming them.
 
 #### LLM Judge Evaluation.
 
@@ -737,49 +740,38 @@ The LLM judge scored both answers identically across all four evaluation criteri
 | Relevance | 9/10 | 9/10 | 0 | = |
 | Overall | 9/10 | 9/10 | 0 | TIE |
 
-The judge’s detailed explanation noted: “Both answers provide excellent, comprehensive assessments of NVIDIA’s vulnerabilities that are highly faithful to the context.” Key
-observations include:
+The judge’s detailed explanation noted: “Both answers provide comprehensive, well-structured analyses of NVIDIA’s risk landscape that are highly faithful to the context.” Remarkably,
+the LLM judge *identified* the phrase “Customers A, B, and C represented 12%, 11%, and 11% of total revenue” as a “distinctive phrase” in Answer B, yet *failed to
+recognize it as fabricated content*. The judge concluded that “Neither contains significant hallucinations or omissions. The differences are primarily stylistic rather than substantive,
+making this effectively a tie in quality.”
 
-* •
+#### The SF Score Disfavors Hallucinated Content.
 
-  Both answers accurately describe supply chain dependencies on third-party manufacturers in geopolitically sensitive regions (Taiwan, China)
-* •
+This example illustrates that the LLM judge may overlook (and even praise!) hallucinated content. The source document states only that NVIDIA has “three direct customers” representing
+the cited revenue percentages, but it never *names* these customers. Answer B invented “Customers A, B, and C” as placeholder names, a subtle but consequential hallucination that
+could mislead downstream systems or users into researching non-existent entities.
 
-  Both explain the long lead times (12+ months) and demand forecasting challenges
-* •
-
-  Both cite the same specific financial examples: inventory provisions for low-yielding Blackwell material (Q2 FY2025) and warranty liability from third-party component defects
-  (FY2023)
-* •
-
-  Both discuss competitive risks from rivals and customers developing their own solutions
-* •
-
-  Both address customer concentration and export controls comprehensively
-
-The judge characterized the differences as “stylistic rather than substantive”: Answer A is “slightly more focused and concise,” while Answer B is “slightly more comprehensive in
-scope” with additional analytical framing.
+On the other hand, the ℱS\mathcal{F}\_{S} metric correctly assigned a lower faithfulness score (0.250) to the hallucinating answer compared to the faithful answer (0.324), capturing
+semantic deviation that the LLM judge’s surface-level evaluation missed entirely.
 
 #### Implications for Semantic Faithfulness Validation.
 
-The LLM judge’s inability to distinguish between answers with substantially different ℱS\mathcal{F}\_{S} scores (0.872 vs 0.250) illustrates that these two evaluation approaches capture
-different aspects of answer quality. While this paper reports only one detailed example, additional experiments (not included here) show that LLM judges sometimes agree and sometimes
-disagree with ℱS\mathcal{F}\_{S}-based rankings. Notably, we observed cases where ℱS\mathcal{F}\_{S} correctly identified inferior answers that the LLM judge rated highly, while also failing to detect hallucinated content.
+The LLM judge’s inability to detect fabricated content that ℱS\mathcal{F}\_{S} correctly penalized demonstrates that these two evaluation approaches capture fundamentally different aspects
+of answer quality. While this paper reports one detailed example, additional experiments (not included here) show that LLM judges sometimes agree and sometimes disagree with
+ℱS\mathcal{F}\_{S}-based rankings.555Complete examples including question-answer pairs and precomputed distributions are available in the project repository’s data/cache/
+and docs/examples/ directories.
 
-Such absence of coherence between the two approaches is neither surprising nor problematic: ℱS\mathcal{F}\_{S} measures information-theoretic alignment between the answer’s semantic distribution and the optimal channel
-implied by the question-context pair, while LLM judges evaluate surface-level criteria such as coherence, completeness, and relevance. An answer can score well on traditional quality
-metrics while exhibiting suboptimal information-theoretic alignment—for instance, by including contextually accurate but tangential topics that dilute focus on the question’s core
-requirements.
+This divergence is neither surprising nor problematic: ℱS\mathcal{F}\_{S} measures information-theoretic alignment between the answer’s semantic distribution and the optimal channel implied
+by the question-context pair, while LLM judges evaluate surface-level criteria such as coherence, completeness, and relevance. An answer can score well on traditional quality metrics
+while containing hallucinated content that sounds plausible but deviates from the source material.
 
 We therefore recommend using ℱS\mathcal{F}\_{S} and LLM-based evaluation as *complementary* tools rather than expecting agreement. The Semantic Faithfulness metric provides a
-principled, quantitative measure of alignment with implicit information requirements that subjective evaluation may miss, particularly for subtle semantic drift or hallucination.
-Complete examples including question-answer pairs and precomputed distributions are available in the project repository’s data/cache/ directory.
-
-============================================================================
+principled, quantitative measure of alignment with implicit information requirements that subjective evaluation may miss, particularly for subtle semantic drift or hallucination such as
+fabricated entity names.
 
 ## 6 Conclusions
 
-This paper advances the Semantic Divergence Metrics (SDM) framework introduced in our previous work [[9](https://arxiv.org/html/2512.05156v1#bib.bib9), [10](https://arxiv.org/html/2512.05156v1#bib.bib10)] by developing principled information
+This paper advances the Semantic Divergence Metrics (SDM) framework introduced in our previous work [[9](https://arxiv.org/html/2512.05156v2#bib.bib9), [10](https://arxiv.org/html/2512.05156v2#bib.bib10)] by developing principled information
 theory-based metrics for LLM faithfulness evaluation. The original SDM framework proposed semantic uncertainty SHS\_{H} and semantic divergence KL[A||Q][A||Q] as heuristic measures of answer
 quality, requiring free parameters such as weights balancing the Jensen-Shannon divergence and Wasserstein distance. While these metrics demonstrated practical utility, their
 heuristic foundations and parameter sensitivity limit their theoretical guarantees and interpretability.
@@ -797,11 +789,11 @@ We replace the original heuristic metrics of the SDM method with two measures de
 
    Semantic Entropy Production (SEP): Grounded in stochastic thermodynamics, this metric quantifies entropy production in the LLM’s information processing by computing
    D​(A⋆∥A⋆R)D(A^{\star}\|A\_{\star}^{R})—the KL divergence between the optimal answer transition matrix 𝐀⋆{\bf A}\_{\star} and the optimal context-preserving matrix 𝐀⋆R{\bf A}\_{\star}^{R}. SEP decomposes according
-   to Eq.([16](https://arxiv.org/html/2512.05156v1#S4.E16 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) into the change of entropy of sub-system X (the context-anwer channel) and the dissipated entropy/heat produced by this channel, and quantifies the amount of irreversibility in text generation.
+   to Eq.([16](https://arxiv.org/html/2512.05156v2#S4.E16 "In 4.1 Decomposition of the Total Entropy Production ‣ 4 Semantic Entropy Production ‣ Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations")) into the change of entropy of sub-system X (the context-anwer channel) and the dissipated entropy/heat produced by this channel, and quantifies the amount of irreversibility in text generation.
 
 The computational framework requires only: (1) an LLM as black box for answer generation, (2) lightweight sentence transformers for embedding (e.g., Qwen3-Embedding-0.6B),
 and (3) standard Python scientific stack (scipy.optimize) for convex optimization. Importantly, both optimization problems are convex with guaranteed convergence to global
-optima, as established by the Csiszár-Tusnády alternating minimization framework [[4](https://arxiv.org/html/2512.05156v1#bib.bib4), [5](https://arxiv.org/html/2512.05156v1#bib.bib5)]. Our algorithms reliably converge in 12–69 iterations (median: 18)
+optima, as established by the Csiszár-Tusnády alternating minimization framework [[4](https://arxiv.org/html/2512.05156v2#bib.bib4), [5](https://arxiv.org/html/2512.05156v2#bib.bib5)]. Our algorithms reliably converge in 12–69 iterations (median: 18)
 with constraint satisfaction to ∼10−7\sim 10^{-7} precision across all experimental triplets.
 
 #### Experimental Validation.
@@ -817,12 +809,10 @@ Our empirical analysis demonstrates that ℱS\mathcal{F}\_{S} and SEP, while cor
 query-relevant information in the answer, whereas SEP measures the thermodynamic cost of the context-to-answer transformation. This complementarity suggests that both metrics should
 be reported together for comprehensive evaluation of LLM outputs.
 
-#### LLM-as-a-Judge Validation.
-
-Qualitative evaluation using Claude Sonnet 4.5 showed that LLM judges and ℱS\mathcal{F}\_{S} capture different aspects of answer quality. While judges evaluate surface-level criteria
-(coherence, completeness, relevance), ℱS\mathcal{F}\_{S} measures information-theoretic alignment. Additional experiments beyond those reported here revealed cases where the two
-approaches disagreed—including instances where ℱS\mathcal{F}\_{S} correctly identified inferior answers that the LLM judge rated highly due to missed hallucinations. We recommend using
-both as complementary evaluation tools.
+Qualitative evaluation demonstrated that LLM judges and ℱS\mathcal{F}\_{S} capture fundamentally different aspects of answer quality. In our detailed example, the LLM judge rated two answers identically (9/10 across all criteria) despite one containing fabricated customer names (a hallucination the judge explicitly identified as a “distinctive phrase”), yet failed to recognize as fabricated content. The ℱS\mathcal{F}\_{S} metric correctly assigned a lower score to the hallucinating answer (0.250 vs 0.324), capturing semantic
+deviation that surface-level evaluation missed. This divergence reflects the complementary nature of the two approaches: LLM judges evaluate coherence, completeness, and relevance, while
+ℱS\mathcal{F}\_{S} measures information-theoretic alignment with the source context. We recommend using both as complementary evaluation tools, with ℱS\mathcal{F}\_{S} providing particular
+value for detecting subtle hallucinations that sound plausible but deviate from source material.
 
 #### Practical Applications and Broader Impact.
 
@@ -838,7 +828,7 @@ The proposed metrics address several critical challenges in LLM deployment:
    warning signals for potential hallucinations.
 3. 3.
 
-   Reference-free evaluation: Traditional text evaluation metrics such as BLEU [[13](https://arxiv.org/html/2512.05156v1#bib.bib13)] and ROUGE [[12](https://arxiv.org/html/2512.05156v1#bib.bib12)] are *reference-based*: they measure n-gram overlap between a candidate text and one or more ground-truth references, requiring human-authored gold-standard answers for comparison. In contrast, the SF metric ℱS\mathcal{F}\_{S} is *reference-free*: it quantifies information-theoretic alignment between an answer and the implicit requirements defined by the question-context pair, without requiring any ground-truth reference.
+   Reference-free evaluation: Traditional text evaluation metrics such as BLEU [[13](https://arxiv.org/html/2512.05156v2#bib.bib13)] and ROUGE [[12](https://arxiv.org/html/2512.05156v2#bib.bib12)] are *reference-based*: they measure n-gram overlap between a candidate text and one or more ground-truth references, requiring human-authored gold-standard answers for comparison. In contrast, the SF metric ℱS\mathcal{F}\_{S} is *reference-free*: it quantifies information-theoretic alignment between an answer and the implicit requirements defined by the question-context pair, without requiring any ground-truth reference.
 4. 4.
 
    Model governance: Organizations deploying LLMs in high-stakes domains require quantitative assurance that outputs align with provided context. The SDM framework

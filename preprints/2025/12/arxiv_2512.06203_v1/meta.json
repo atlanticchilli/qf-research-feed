@@ -1,0 +1,15 @@
+{
+  "doc_id": "arxiv:2512.06203v1",
+  "family_id": "arxiv:2512.06203",
+  "title": "Formal State-Machine Models for Uniswap v3 Concentrated-Liquidity AMMs: Priced Timed Automata, Finite-State Transducers, and Provable Rounding Bounds",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Julius Tranquilli",
+    "Naman Gupta"
+  ],
+  "url_abs": "http://arxiv.org/abs/2512.06203v1",
+  "url_html": "https://arxiv.org/html/2512.06203v1",
+  "is_current": true
+}

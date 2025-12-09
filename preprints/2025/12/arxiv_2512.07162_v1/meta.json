@@ -1,0 +1,16 @@
+{
+  "doc_id": "arxiv:2512.07162v1",
+  "family_id": "arxiv:2512.07162",
+  "title": "DeepSVM: Learning Stochastic Volatility Models with Physics-Informed Deep Operator Networks",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Kieran A. Malandain",
+    "Selim Kalici",
+    "Hakob Chakhoyan"
+  ],
+  "url_abs": "http://arxiv.org/abs/2512.07162v1",
+  "url_html": "https://arxiv.org/html/2512.07162v1",
+  "is_current": true
+}
