@@ -1,14 +1,14 @@
 {
-  "doc_id": "arxiv:2512.07787v1",
+  "doc_id": "arxiv:2512.07787v2",
   "family_id": "arxiv:2512.07787",
   "title": "VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Nawaf Mohammed"
   ],
-  "url_abs": "http://arxiv.org/abs/2512.07787v1",
-  "url_html": "https://arxiv.org/html/2512.07787v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2512.07787v2",
+  "url_html": "https://arxiv.org/html/2512.07787v2",
+  "is_current": true
 }

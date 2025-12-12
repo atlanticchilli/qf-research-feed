@@ -1,21 +1,22 @@
 ---
 authors:
 - Nawaf Mohammed
-doc_id: arxiv:2512.07787v1
+doc_id: arxiv:2512.07787v2
 family_id: arxiv:2512.07787
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
 title: 'VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables'
-url_abs: http://arxiv.org/abs/2512.07787v1
-url_html: https://arxiv.org/html/2512.07787v1
+url_abs: http://arxiv.org/abs/2512.07787v2
+url_html: https://arxiv.org/html/2512.07787v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Nawaf Mohammed 
 <nawaf.mohammed.ac@gmail.com>
@@ -36,7 +37,7 @@ The study of quantiles has long been a cornerstone of mathematical and statistic
   
  
   
-A variety of risk measures have been developed to refine or extend VaR. Among them, the conditional tail expectation – also known as expected shortfall – [Acerbi.2002, Tasche2002] addresses several limitations of VaR, most notably the failure of sub-additivity. Nevertheless, interest in VaR has persisted, partly due to its ability to capture the opposite phenomenon of super-additivity, a feature that does not rely on the integrability requirements imposed by alternative risk measures. In this paper, we examine the extremal behaviors of VaR, focusing on the conditions under which it exhibits sub-additivity or super-additivity across all probability thresholds.
+A variety of risk measures have been developed to refine or extend VaR. Among them, the conditional tail expectation – also known as expected shortfall – [Acerbi.2002, Tasche2002] which addresses several limitations of VaR, most notably the failure of sub-additivity. Nevertheless, interest in VaR has persisted, partly due to its ability to capture the opposite phenomenon of super-additivity, a feature that does not rely on the integrability requirements imposed by alternative risk measures. In this paper, we examine the extremal behaviors of VaR, focusing on the conditions under which it exhibits sub-additivity or super-additivity across all probability thresholds.
   
  
   
@@ -49,13 +50,13 @@ To formalize our analysis, we consider random vectors 𝑿=(X1,…,Xn)\bm{X}=(X\
 For any random variable or random vector, we denote its probability density function, cumulative distribution function (CDF), and decumulative (survival) function (DDF) by ff, FF, and F¯\overline{F}, respectively, using subscripts to indicate the relevant variables. For example, F𝑿F\_{\bm{X}} denotes the joint CDF of the random vector 𝐗\mathbf{X}, while FXiF\_{X\_{i}} denotes the marginal CDF of XiX\_{i} for i∈{1,…,n}i\in\{1,\dots,n\}. Unless explicitly stated, we impose no integrability assumptions on the random variables.
   
   
-Throughout the remainder of the paper, we assume that each random variable XiX\_{i} has support with lower endpoint at zero, that is,
+Throughout Sections [2](https://arxiv.org/html/2512.07787v2#S2 "2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") and [3](https://arxiv.org/html/2512.07787v2#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") of the paper, we assume that each random variable XiX\_{i} has support with lower endpoint at zero, that is,
 
 |  |  |  |
 | --- | --- | --- |
 |  | ai=sup{x∈ℝ:FXi​(x)≤0}=0,∀i∈{1,…,n}.a\_{i}=\sup\{x\in\mathbb{R}:F\_{X\_{i}}(x)\leq 0\}=0,\qquad\forall i\in\{1,\dots,n\}. |  |
 
-In the final section, we show how this assumption can be relaxed. In particular, we extend all results to the setting where the lower endpoints aia\_{i} are arbitrary but finite, and also to the complementary case in which the random variables are instead bounded above.
+In the final section, Section [4](https://arxiv.org/html/2512.07787v2#S4 "4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we show how this assumption can be relaxed. In particular, we extend all results to the setting where the lower endpoints aia\_{i} are arbitrary but finite, and also to the complementary case in which the random variables are instead bounded above.
   
   
 Finally, for any random variable ZZ, we define its VaR at confidence level p∈(0,1)p\in(0,1) as the left-quantile (left-inverse) of its distribution:
@@ -80,7 +81,7 @@ VaR sub-additive (respectively, VaR super-additive) if
 
 In particular, 𝐗\bm{X} is called VaR additive if equality holds for all probability levels p∈(0,1)p\in(0,1).
 
-The remainder of the paper is organized as follows. Section [2](https://arxiv.org/html/2512.07787v1#S2 "2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") establishes an impossibility theorem for VaR sub-additivity, extending the recent findings of [Imamura2025] and showing that sub-additivity can occur only in the degenerate case of VaR additivity. Section [3](https://arxiv.org/html/2512.07787v1#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") develops a new and unified characterization of VaR super-additivity that encompasses most existing results in the literature while allowing for non-identically distributed margins and a wider range of dependence structures. In Section [4](https://arxiv.org/html/2512.07787v1#S4 "4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we generalize these results to random variables with arbitrary finite lower or upper endpoints. Section [5](https://arxiv.org/html/2512.07787v1#S5 "5 Conclusions ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") concludes the paper.
+The remainder of the paper is organized as follows. Section [2](https://arxiv.org/html/2512.07787v2#S2 "2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") establishes an impossibility theorem for VaR sub-additivity, extending the recent findings of [Imamura2025] and showing that sub-additivity can occur only in the degenerate case of VaR additivity. Section [3](https://arxiv.org/html/2512.07787v2#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") develops a new and unified characterization of VaR super-additivity that encompasses most existing results in the literature while allowing for non-identically distributed margins and a wider range of dependence structures. In Section [4](https://arxiv.org/html/2512.07787v2#S4 "4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we generalize these results to random variables with arbitrary finite lower or upper endpoints. Section [5](https://arxiv.org/html/2512.07787v2#S5 "5 Conclusions ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") concludes the paper.
 
 ## 2 VaR Sub-additivity
 
@@ -100,7 +101,7 @@ A random vector 𝐗\bm{X} is co-monotonic if its joint CDF F𝐗F\_{\bm{X}} is 
 
 ###### Proof.
 
-The reverse implication follows trivially from Definition  [1.1](https://arxiv.org/html/2512.07787v1#S1.Thmtheorem1 "Definition 1.1. ‣ 1 Introduction ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
+The reverse implication follows trivially from Definition  [1.1](https://arxiv.org/html/2512.07787v2#S1.Thmtheorem1 "Definition 1.1. ‣ 1 Introduction ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
 
 For the ’only if’ implication, suppose that 𝑿\bm{X} is VaR sub-additive.
 Fix any constant k>0k>0, and define the truncated random vector
@@ -119,12 +120,9 @@ The conditional variables Xi,kX\_{i,k} are well-defined since each XiX\_{i} has 
   
 The CDFs of Xi,kX\_{i,k} and SkS\_{k} can be written as
 
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  | FXi,k​(xi)\displaystyle F\_{X\_{i,k}}(x\_{i}) | ={ℙ​(Xi≤xi,S≤k)FS​(k),xi<k,1,xi≥k,\displaystyle=\begin{cases}\dfrac{\mathbb{P}(X\_{i}\leq x\_{i},\,S\leq k)}{F\_{S}(k)},&x\_{i}<k,\\[8.50012pt] 1,&x\_{i}\geq k,\end{cases} |  |
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  | FSk​(s)\displaystyle F\_{S\_{k}}(s) | ={FS​(s)FS​(k),s<k,1,s≥k.\displaystyle=\begin{cases}\dfrac{F\_{S}(s)}{F\_{S}(k)},&s<k,\\[4.25006pt] 1,&s\geq k.\end{cases} |  |
+|  |  |  |
+| --- | --- | --- |
+|  | FXi,k​(xi)={ℙ​(Xi≤xi,S≤k)FS​(k),xi<k,1,xi≥k,​and​FSk​(s)={FS​(s)FS​(k),s<k,1,s≥k.F\_{X\_{i,k}}(x\_{i})=\begin{cases}\dfrac{\mathbb{P}(X\_{i}\leq x\_{i},\,S\leq k)}{F\_{S}(k)},&x\_{i}<k,\\[8.50012pt] 1,&x\_{i}\geq k,\end{cases}\quad\mathrm{and}\quad F\_{S\_{k}}(s)=\begin{cases}\dfrac{F\_{S}(s)}{F\_{S}(k)},&s<k,\\[4.25006pt] 1,&s\geq k.\end{cases} |  |
 
 Next, define random variables (X~1,k,…,X~n,k)(\widetilde{X}\_{1,k},\dots,\widetilde{X}\_{n,k}) via
 
@@ -156,12 +154,9 @@ Similarly, by definition of FSkF\_{S\_{k}},
 
 Since 𝑿\bm{X} is VaR sub-additive,
 
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  | VaRp​[Sk]=VaRp​FS​(k)​[S]\displaystyle{\mathrm{VaR}}\_{p}[S\_{k}]={\mathrm{VaR}}\_{pF\_{S}(k)}[S] | ≤∑i=1nVaRp​FS​(k)​[Xi]\displaystyle\leq\sum\_{i=1}^{n}{\mathrm{VaR}}\_{pF\_{S}(k)}[X\_{i}] |  |
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  |  | ≤∑i=1nVaRp​[Xi,k],\displaystyle\leq\sum\_{i=1}^{n}{\mathrm{VaR}}\_{p}[X\_{i,k}], |  |
+|  |  |  |
+| --- | --- | --- |
+|  | VaRp​[Sk]=VaRp​FS​(k)​[S]≤∑i=1nVaRp​FS​(k)​[Xi]≤∑i=1nVaRp​[Xi,k],{\mathrm{VaR}}\_{p}[S\_{k}]={\mathrm{VaR}}\_{pF\_{S}(k)}[S]\leq\sum\_{i=1}^{n}{\mathrm{VaR}}\_{pF\_{S}(k)}[X\_{i}]\leq\sum\_{i=1}^{n}{\mathrm{VaR}}\_{p}[X\_{i,k}], |  |
 
 and therefore,
 
@@ -206,7 +201,7 @@ where
 Thus, 𝑿\bm{X} is co-monotonic and VaR additive.
 ∎
 
-Theorem [2.2](https://arxiv.org/html/2512.07787v1#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") extends and strengthens the main result of [Imamura2025], which relied on integrability assumptions. It reveals the rigid phenomenon of the impossibility of VaR sub-additivity for random variables supported on [0,∞)[0,\infty). The sub-additivity inequality is satisfied only in the degenerate case where VaR is exactly additive, and such additivity occurs exclusively under co-monotonicity.
+Theorem [2.2](https://arxiv.org/html/2512.07787v2#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") extends and strengthens the main result of [Imamura2025], which relied on integrability assumptions. It reveals the rigid phenomenon of the impossibility of VaR sub-additivity for random variables supported on [0,∞)[0,\infty). The sub-additivity inequality is satisfied only in the degenerate case where VaR is exactly additive, and such additivity occurs exclusively under co-monotonicity.
 
 ## 3 VaR super-additivity
 
@@ -334,7 +329,7 @@ Let 𝐗\bm{X} be a bivariate random vector.
 
   and super-additive for all remaining values of pp.
 
-Example [3.1](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem1 "Example 3.1. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") demonstrates that even in cases where we have
+Example [3.1](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem1 "Example 3.1. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") demonstrates that even in cases where we have
 (1) counter-monotonic dependence with one non-integrable margin, and
 (2) two non-counter-monotonic, non-integrable margins,
 the resulting dependence-margin combination may still exhibit intervals of VaR sub-additivity. Thus, neither a particular dependence structure nor the mere non-integrability of margins is sufficient on its own to guarantee VaR super-additivity. In fact, the negative dependence used in part (2) of the example is significantly weaker than full counter-monotonicity.
@@ -449,7 +444,7 @@ i.e.
 which is precisely VaR super-additivity. This completes the proof.
 ∎
 
-The strength of Theorem [3.4](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") lies in its ability to encompass a broad class of dependence structures while permitting considerable flexibility in the choice of marginal distributions, which need not be identical.
+The strength of Theorem [3.4](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") lies in its ability to encompass a broad class of dependence structures while permitting considerable flexibility in the choice of marginal distributions, which need not be identical.
   
 The following two propositions provide sufficient conditions for establishing the NSD and SD properties.
 
@@ -480,9 +475,9 @@ If Φ\Phi is non-increasing in the sense that
 
 |  |  |  |
 | --- | --- | --- |
-|  | Φ​(x1,…,xn)≥Φ​(y1,…,yn)​whenever ​xi<yi​ for all ​i∈{1,…,n},\Phi(x\_{1},\dots,x\_{n})\geq\Phi(y\_{1},\dots,y\_{n})\quad\text{whenever }x\_{i}<y\_{i}\text{ for all }i\in\{1,\dots,n\}, |  |
+|  | Φ​(x1,…,xn)≥Φ​(y1,…,yn)​whenever ​xi≤yi​ for all ​i∈{1,…,n},\Phi(x\_{1},\dots,x\_{n})\geq\Phi(y\_{1},\dots,y\_{n})\quad\text{whenever }x\_{i}\leq y\_{i}\text{ for all }i\in\{1,\dots,n\}, |  |
 
-then Φ\Phi is SD. Moreover, suppose each ϕi\phi\_{i} is continuous and
+then Φ\Phi is SD. In particular, if Φ\Phi can be written as
 
 |  |  |  |
 | --- | --- | --- |
@@ -498,7 +493,7 @@ First part. Fix (x1,…,xn)∈[0,∞)n(x\_{1},\dots,x\_{n})\in[0,\infty)^{n} and
 | --- | --- | --- |
 |  | y1=⋯=yn=s:=∑i=1nxi.y\_{1}=\dots=y\_{n}=s:=\sum\_{i=1}^{n}x\_{i}. |  |
 
-Since xi<sx\_{i}<s for all ii, the non-increasing property implies
+Since xi≤sx\_{i}\leq s for all ii, the non-increasing property implies
 
 |  |  |  |
 | --- | --- | --- |
@@ -510,36 +505,28 @@ Second part. Assume Φ\Phi can be written as
 
 |  |  |  |
 | --- | --- | --- |
-|  | Φ​(x1,…,xn)=∑i=1nϕi​(xi),\Phi(x\_{1},\dots,x\_{n})=\sum\_{i=1}^{n}\phi\_{i}(x\_{i}), |  |
+|  | Φ​(x1,…,xn)=∑i=1nϕi​(xi).\Phi(x\_{1},\dots,x\_{n})=\sum\_{i=1}^{n}\phi\_{i}(x\_{i}). |  |
 
-with each ϕi\phi\_{i} continuous. If every ϕ\phi is non-increasing then the sum of non-increasing functions is non-increasing i.e. Φ\Phi is non-increasing.
+If every ϕ\phi is non-increasing then the sum of non-increasing functions is non-increasing i.e. Φ\Phi is non-increasing.
   
-Conversely, suppose that Φ\Phi is non-increasing, but for contradiction, some coordinate function ϕj\phi\_{j} is not non-increasing i.e. there exists xj∗<yj∗x^{\*}\_{j}<y^{\*}\_{j} such that ϕj​(xj∗)<ϕj​(yj∗)\phi\_{j}(x^{\*}\_{j})<\phi\_{j}(y^{\*}\_{j}) for some j∈{1,…,n}j\in\{1,\dots,n\}. Set ϵ=ϕj​(yj∗)−ϕj​(xj∗)>0\epsilon=\phi\_{j}(y^{\*}\_{j})-\phi\_{j}(x^{\*}\_{j})>0 and by continuity of each ϕi\phi\_{i}, i≠ji\neq j, there exists δi\delta\_{i} such that |ϕi​(yi)−ϕi​(xi)|<ϵn|\phi\_{i}(y\_{i})-\phi\_{i}(x\_{i})|<\frac{\displaystyle\epsilon}{\displaystyle n} whenever |yi−xi|<δi|y\_{i}-x\_{i}|<\delta\_{i}. From the continuity domain of each ϕi\phi\_{i}, pick xi∗<yi∗x^{\*}\_{i}<y^{\*}\_{i} such that |yi∗−xi∗|<δi|y^{\*}\_{i}-x^{\*}\_{i}|<\delta\_{i}, then for all those xi∗<yi∗x^{\*}\_{i}<y^{\*}\_{i} together with xj∗<yj∗x^{\*}\_{j}<y^{\*}\_{j},
+Conversely, suppose that Φ\Phi is non-increasing. For each i∈{1,…,n}i\in\{1,\dots,n\}, take xi≤yix\_{i}\leq y\_{i} and set xj=yj=zx\_{j}=y\_{j}=z, ∀j≠i\forall j\neq i, then
 
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  | Φ​(y1∗,…,yn∗)−Φ​(x1∗,…,xn∗)\displaystyle\Phi(y^{\*}\_{1},\dots,y^{\*}\_{n})-\Phi(x^{\*}\_{1},\dots,x^{\*}\_{n}) | =∑i=1n(ϕi​(yi∗)−ϕi​(xi∗)),\displaystyle=\sum\_{i=1}^{n}\left(\phi\_{i}(y^{\*}\_{i})-\phi\_{i}(x^{\*}\_{i})\right), |  |
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  |  | =ϵ+∑i≠j(ϕi​(yi∗)−ϕi​(xi∗)),\displaystyle=\epsilon+\sum\_{i\neq j}\left(\phi\_{i}(y^{\*}\_{i})-\phi\_{i}(x^{\*}\_{i})\right), |  |
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  |  | >ϵ−∑i≠jϵn,\displaystyle>\epsilon-\sum\_{i\neq j}\frac{\displaystyle\epsilon}{\displaystyle n}, |  |
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  |  | =ϵn,\displaystyle=\frac{\displaystyle\epsilon}{\displaystyle n}, |  |
-|  |  |  |  |
-| --- | --- | --- | --- |
-|  |  | >0.\displaystyle>0. |  |
+|  |  |  |
+| --- | --- | --- |
+|  | Φ​(x1,…,xn)=ϕi​(xi)+∑j≠iϕi​(z)≥Φ​(y1,…,yn)=ϕi​(yi)+∑j≠iϕi​(z),\Phi(x\_{1},\dots,x\_{n})=\phi\_{i}(x\_{i})+\sum\_{j\neq i}\phi\_{i}(z)\geq\Phi(y\_{1},\dots,y\_{n})=\phi\_{i}(y\_{i})+\sum\_{j\neq i}\phi\_{i}(z), |  |
 
-i.e. Φ\Phi is not non-increasing, leading to a contradiction. Hence each ϕi\phi\_{i} must be non-increasing. Consequently, by the first part of the proof, Φ\Phi is SD whenever all ϕi\phi\_{i} are non-increasing.
+|  |  |  |
+| --- | --- | --- |
+|  | ⟹ϕi​(xi)≥ϕi​(yi),\implies\phi\_{i}(x\_{i})\geq\phi\_{i}(y\_{i}), |  |
+
+i.e. each ϕi\phi\_{i} is non-increasing. Consequently, by the first part of the proof, Φ\Phi is SD whenever all ϕi\phi\_{i} are non-increasing.
 ∎
 
 ###### Corollary 3.7.
 
-If 𝐗\bm{X} is NLOD with continuous FXiF\_{X\_{i}}, and each ϕi​(xi)=xi​log⁡FXi​(xi)\phi\_{i}(x\_{i})=x\_{i}\log F\_{X\_{i}}(x\_{i}) in Equation ([3.1](https://arxiv.org/html/2512.07787v1#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing, then 𝐗\bm{X} is VaR super-additive.
+If 𝐗\bm{X} is NLOD with continuous FXiF\_{X\_{i}}, and each ϕi​(xi)=xi​log⁡FXi​(xi)\phi\_{i}(x\_{i})=x\_{i}\log F\_{X\_{i}}(x\_{i}) in Equation ([3.1](https://arxiv.org/html/2512.07787v2#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing, then 𝐗\bm{X} is VaR super-additive.
 
-The NSD property captures the dependence requirement on the joint distribution of 𝑿\bm{X} that ensures VaR super-additivity. We note, in passing, that the dependence structure used in part (2) of Example [3.1](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem1 "Example 3.1. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") is weaker than NSD, specifically it fails the NSD property at t∈(710,1+2)t\in\left(\frac{\displaystyle 7}{\displaystyle\mathstrut 10},1+\sqrt{2}\right). This contributed, though was not strictly required, to the failure of VaR super-additivity in that example. Nonetheless, by definition, NSD is a relatively weak form of negative dependence and is strictly implied by NLOD.
+The NSD property captures the dependence requirement on the joint distribution of 𝑿\bm{X} that ensures VaR super-additivity. We note, in passing, that the dependence structure used in part (2) of Example [3.1](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem1 "Example 3.1. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") is weaker than NSD, specifically it fails the NSD property at t∈(710,1+2)t\in\left(\frac{\displaystyle 7}{\displaystyle\mathstrut 10},1+\sqrt{2}\right). This contributed, though was not strictly required, to the failure of VaR super-additivity in that example. Nonetheless, by definition, NSD is a relatively weak form of negative dependence and is strictly implied by NLOD.
   
 Below we provide an example of a VaR super-additive random vector 𝑿\bm{X} that satisfies NSD but not NLOD.
 
@@ -618,20 +605,20 @@ A direct algebraic comparison yields
 
 so 𝐗\bm{X} is VaR super-additive.
   
-This conclusion is an immediate consequence of Theorem [3.4](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"): we have already shown that 𝐗\bm{X} is NSD, and for the chosen unit-shape Pareto margins the functions ϕi​(xi)=xi​log⁡FXi​(xi)\phi\_{i}(x\_{i})=x\_{i}\log F\_{X\_{i}}(x\_{i}) in Equation ([3.1](https://arxiv.org/html/2512.07787v1#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) are non-increasing (as will be demonstrated in Example [3.9](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem9 "Example 3.9. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) and consequently SD by Proposition [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
+This conclusion is an immediate consequence of Theorem [3.4](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"): we have already shown that 𝐗\bm{X} is NSD, and for the chosen unit-shape Pareto margins the functions ϕi​(xi)=xi​log⁡FXi​(xi)\phi\_{i}(x\_{i})=x\_{i}\log F\_{X\_{i}}(x\_{i}) in Equation ([3.1](https://arxiv.org/html/2512.07787v2#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) are non-increasing (as will be demonstrated in Example [3.9](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem9 "Example 3.9. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) and consequently SD by Proposition [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
 
-The second part of Theorem [3.4](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") imposes structural conditions on the marginal distributions by specifying the behaviour of the function Φ\Phi in Equation ([3.1](https://arxiv.org/html/2512.07787v1#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")).
-In practice, the SD property may not be straightforward to verify, so it is useful to rely on the non-increasing criteria. Applying the condition of Proposition [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to the function Φ\Phi in Equation ([3.1](https://arxiv.org/html/2512.07787v1#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")), i.e.
+The second part of Theorem [3.4](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") imposes structural conditions on the marginal distributions by specifying the behaviour of the function Φ\Phi in Equation ([3.1](https://arxiv.org/html/2512.07787v2#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")).
+In practice, the SD property may not be straightforward to verify, so it is useful to rely on the non-increasing criteria. Applying the condition of Proposition [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to the function Φ\Phi in Equation ([3.1](https://arxiv.org/html/2512.07787v2#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")), i.e.
 
 |  |  |  |
 | --- | --- | --- |
 |  | Φ​(x1,…,xn)=∑i=1nϕi​(xi),where​ϕi​(xi)=xi​log⁡FXi​(xi),\Phi(x\_{1},\dots,x\_{n})=\sum\_{i=1}^{n}\phi\_{i}(x\_{i}),\quad\mathrm{where}\quad\phi\_{i}(x\_{i})=x\_{i}\log F\_{X\_{i}}(x\_{i}), |  |
 
-it suffices to verify that each ϕi​(xi)\phi\_{i}(x\_{i}) is non-increasing on [0,∞)[0,\infty). This is convenient, as it reduces the verification of SD to checking each margin separately. The following example gives instances of marginal distributions for which the non-increasing property holds.
+it suffices to verify that each ϕi​(xi)\phi\_{i}(x\_{i}) is non-increasing on [0,∞)[0,\infty). This is convenient, as it reduces the verification of SD to checking each margin separately. The next example lists several standard continuous marginal distributions FXiF\_{X\_{i}} for which the function ϕi\phi\_{i} indeed has the required monotonicity property.
 
 ###### Example 3.9.
 
-We present below several standard continuous distribution functions FXiF\_{X\_{i}} for which the non-increasing property of ϕi\phi\_{i} holds.
+We collect below several familiar continuous distributions whose associated functions ϕi\phi\_{i} are non-increasing.
 
 * (1)
 
@@ -758,7 +745,7 @@ We present below several standard continuous distribution functions FXiF\_{X\_{i
   |  | 2​t​exp⁡(−t2)π​(2​t2+1)≤erfc​(t),\frac{2t\exp(-t^{2})}{\sqrt{\pi}(2t^{2}+1)}\leq\mathrm{erfc}(t), |  |
 
   the classical Mills ratio bound [Mills1926].
-  Thus ϕi′​(xi)≤0\phi\_{i}^{\prime}(x\_{i})\leq 0 for all xi≥0x\_{i}\geq 0.
+  Thus ϕi′​(xi)≤0\phi\_{i}^{\prime}(x\_{i})\leq 0 for all xi≥0x\_{i}\geq 0 i.e. ϕi\phi\_{i} is non-increasing on [0,∞)[0,\infty).
 * (4)
 
   One-parameter Beta Prime distribution.
@@ -794,7 +781,7 @@ We present below several standard continuous distribution functions FXiF\_{X\_{i
 
   |  |  |  |
   | --- | --- | --- |
-  |  | FXi​(xi)=exp⁡{−log(1+xi)αixi},xi≥0,αi∈(−∞,1),F\_{X\_{i}}(x\_{i})=\exp\!\left\{-\frac{\displaystyle\log(1+x\_{i})^{\alpha\_{i}}}{\displaystyle x\_{i}}\right\},\qquad x\_{i}\geq 0,\ \alpha\_{i}\in(-\infty,1), |  |
+  |  | FXi​(xi)=exp⁡(−log(1+xi)αixi),xi≥0,αi∈(−∞,1),F\_{X\_{i}}(x\_{i})=\exp\!\left(-\frac{\displaystyle\log(1+x\_{i})^{\alpha\_{i}}}{\displaystyle x\_{i}}\right),\qquad x\_{i}\geq 0,\ \alpha\_{i}\in(-\infty,1), |  |
 
   then
 
@@ -841,6 +828,8 @@ We present below several standard continuous distribution functions FXiF\_{X\_{i
   |  |  |  |
   | --- | --- | --- |
   |  | 0<αi≤infu∈[0,1]−π​u​log⁡(u)sin2⁡(π​u)≈1.0568.0<\alpha\_{i}\leq\inf\_{u\in[0,1]}\frac{\displaystyle-\pi u\log(u)}{\displaystyle\sin^{2}(\pi u)}\approx 1.0568. |  |
+
+  Thus, ϕi\phi\_{i} is non-increasing on [0,∞)[0,\infty) if and only if 0<αi≤1.05680<\alpha\_{i}\leq 1.0568.
 * (7)
 
   Inverse-Gamma distribution.
@@ -958,7 +947,7 @@ We will prove each claim separately.
 
 ∎
 
-Although the non-increasing property is tractable, it is stronger than what is required for VaR super-additivity. The next example shows that Φ\Phi may be SD without being non-increasing.
+Although the non-increasing property is tractable, it is stronger than what is required for VaR super-additivity. The next example shows that Φ\Phi may be SD without, or equivalently without each ϕi\phi\_{i}, being non-increasing.
 
 ###### Example 3.11.
 
@@ -972,9 +961,9 @@ Explicitly,
 |  | FX1​(x)=FX2​(x)\displaystyle F\_{X\_{1}}(x)=F\_{X\_{2}}(x) | =exp⁡(−1x),\displaystyle=\exp\!\left(-\frac{1}{\sqrt{x}}\right), |  |
 |  |  |  |  |
 | --- | --- | --- | --- |
-|  | ,FX3(x3)\displaystyle,F\_{X\_{3}}(x\_{3}) | ={x32e,0≤x3≤1,exp⁡(−1x3),x3>1.\displaystyle=\begin{cases}\dfrac{x\_{3}^{2}}{e},&0\leq x\_{3}\leq 1,\\[5.69054pt] \exp\!\left(-\dfrac{1}{\sqrt{x\_{3}}}\right),&x\_{3}>1.\end{cases} |  |
+|  | FX3​(x3)\displaystyle F\_{X\_{3}}(x\_{3}) | ={x32e,0≤x3≤1,exp⁡(−1x3),x3>1.\displaystyle=\begin{cases}\dfrac{x\_{3}^{2}}{e},&0\leq x\_{3}\leq 1,\\[5.69054pt] \exp\!\left(-\dfrac{1}{\sqrt{x\_{3}}}\right),&x\_{3}>1.\end{cases} |  |
 
-The corresponding ϕi\phi\_{i}-functions (as defined in Theorem  [3.4](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) are
+The corresponding ϕi\phi\_{i}-functions (as defined in Theorem  [3.4](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) are
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -987,7 +976,7 @@ The corresponding ϕi\phi\_{i}-functions (as defined in Theorem  [3.4](https://
 |  | ϕ3​(x3)\displaystyle\phi\_{3}(x\_{3}) | ={x3​(2​log⁡x3−1),0≤x3≤1,−x3,x3>1.\displaystyle=\begin{cases}x\_{3}\!\left(2\log x\_{3}-1\right),&0\leq x\_{3}\leq 1,\\[4.2679pt] -\sqrt{x\_{3}},&x\_{3}>1.\end{cases} |  |
 
 It is clear that ϕ1\phi\_{1} and ϕ2\phi\_{2} are non-increasing, whereas ϕ3\phi\_{3} fails to be non-increasing on the interval x3∈[1e,1]x\_{3}\in\left[\frac{\displaystyle 1}{\displaystyle\sqrt{e}},1\right].
-Figure [2](https://arxiv.org/html/2512.07787v1#S3.F2 "Figure 2 ‣ Example 3.11. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") shows the graphs of these functions.
+Figure [2](https://arxiv.org/html/2512.07787v2#S3.F2 "Figure 2 ‣ Example 3.11. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") shows the graphs of these functions.
 
 ![Refer to caption](phi12nonSD.png)
 
@@ -1001,7 +990,7 @@ Figure [2](https://arxiv.org/html/2512.07787v1#S3.F2 "Figure 2 ‣ Example 3.11
 
 Figure 2: The marginal ϕi\phi\_{i} functions.
 
-By Proposition [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), this implies that Φ\Phi is not globally non-increasing.
+By Proposition [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), this implies that Φ\Phi is not globally non-increasing.
 Nevertheless, we now verify that the SD condition for
 
 |  |  |  |
@@ -1061,14 +1050,14 @@ and for X3X\_{3},
 | --- | --- | --- |
 |  | VaRp​[X3]={e​p,0<p≤1e,1log2⁡(1/p),1e<p<1.{\mathrm{VaR}}\_{p}[X\_{3}]=\begin{cases}\sqrt{e}\,\sqrt{p},&0<p\leq\frac{\displaystyle 1}{\displaystyle e},\\[5.69054pt] \dfrac{1}{\log^{2}(1/p)},&\frac{\displaystyle 1}{\displaystyle e}<p<1.\end{cases} |  |
 
-Figure [3](https://arxiv.org/html/2512.07787v1#S3.F3 "Figure 3 ‣ Example 3.11. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") compares VaRp​[S]{\mathrm{VaR}}\_{p}[S] with the sum of marginal VaRs.
+Figure [3](https://arxiv.org/html/2512.07787v2#S3.F3 "Figure 3 ‣ Example 3.11. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") compares VaRp​[S]{\mathrm{VaR}}\_{p}[S] with the sum of marginal VaRs.
 
 ![Refer to caption](VaRnonSD.png)
 
 
 Figure 3: Comparison of VaRp​[S]{\mathrm{VaR}}\_{p}[S] and VaRp​[X1]+VaRp​[X2]+VaRp​[X3]{\mathrm{VaR}}\_{p}[X\_{1}]+{\mathrm{VaR}}\_{p}[X\_{2}]+{\mathrm{VaR}}\_{p}[X\_{3}].
 
-Figure [3](https://arxiv.org/html/2512.07787v1#S3.F3 "Figure 3 ‣ Example 3.11. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") shows that 𝐗\bm{X} is VaR super-additive.
+Figure [3](https://arxiv.org/html/2512.07787v2#S3.F3 "Figure 3 ‣ Example 3.11. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") shows that 𝐗\bm{X} is VaR super-additive.
 This example illustrates that an NSD vector may have an SD aggregator Φ\Phi without Φ\Phi being globally non-increasing, while still exhibiting VaR super-additivity.
 
 A natural question that follows any characterization of a property for random vectors is: under what transformations does the property persist? In this spirit, we examine the conditions under which the transformed random vector
@@ -1081,7 +1070,7 @@ where each ξi:[0,∞)→[0,∞)\xi\_{i}:[0,\infty)\to[0,\infty) is measurable, 
 
 ###### Proposition 3.12.
 
-Let 𝐗\bm{X} be NLOD with continuous marginal distributions FXiF\_{X\_{i}}, and suppose each ϕi\phi\_{i} in Equation ([3.1](https://arxiv.org/html/2512.07787v1#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing. Define
+Let 𝐗\bm{X} be NLOD with continuous marginal distributions FXiF\_{X\_{i}}, and suppose each ϕi\phi\_{i} in Equation ([3.1](https://arxiv.org/html/2512.07787v2#S3.E1 "In Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing. Define
 
 |  |  |  |
 | --- | --- | --- |
@@ -1147,10 +1136,10 @@ Combining these results, and noting that log∘FXi\log\circ F\_{X\_{i}} is a neg
 
 so ϕ~i​(xi)\widetilde{\phi}\_{i}(x\_{i}) is non-increasing for all xi∈[0,∞)x\_{i}\in[0,\infty).
   
-Applying Corollary [3.7](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem7 "Corollary 3.7. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we conclude that 𝑿~\widetilde{\bm{X}} is VaR super-additive.
+Applying Corollary [3.7](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem7 "Corollary 3.7. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we conclude that 𝑿~\widetilde{\bm{X}} is VaR super-additive.
 ∎
 
-We conclude this section by noting that although the NSD and SD properties allow Theorem [3.4](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to characterize a broad class of random vectors for which super-additivity is guaranteed, they are not the only indicators of VaR super-additivity. The following example illustrates situations in which VaR is super-additive even when neither NSD nor SD is satisfied.
+We conclude this section by noting that although the NSD and SD properties allow Theorem [3.4](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to characterize a broad class of random vectors for which super-additivity is guaranteed, they are not the only indicators of VaR super-additivity. The following example illustrates situations in which VaR is super-additive even when neither NSD nor SD is satisfied.
 
 ###### Example 3.13.
 
@@ -1206,7 +1195,7 @@ Let 𝐗=(X1,X2)\bm{X}=(X\_{1},X\_{2}) be a bivariate random vector.
 
   Hence FS​(t)≥FX1​(t)​FX2​(t)F\_{S}(t)\geq F\_{X\_{1}}(t)F\_{X\_{2}}(t) for all t≥0t\geq 0, meaning that 𝑿\bm{X} is *not* NSD.
 
-  From Example [3.9](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem9 "Example 3.9. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), the functions ϕi\phi\_{i} are non-increasing for Pareto (II) marginals with 0<α≤10<\alpha\leq 1, and therefore Φ\Phi is SD.
+  From Example [3.9](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem9 "Example 3.9. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), the functions ϕi\phi\_{i} are non-increasing for Pareto (II) marginals with 0<α≤10<\alpha\leq 1, and therefore Φ\Phi is SD.
 
   To compute VaRs, set α=1\alpha=1 for simplicity. Then
 
@@ -1293,7 +1282,7 @@ Let 𝐗=(X1,X2)\bm{X}=(X\_{1},X\_{2}) be a bivariate random vector.
 
 ## 4 Further Generalizations and Remarks
 
-The results established in Sections [2](https://arxiv.org/html/2512.07787v1#S2 "2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") and [3](https://arxiv.org/html/2512.07787v1#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") extend naturally to random variables whose supports begin at arbitrary finite lower end-points
+The results established in Sections [2](https://arxiv.org/html/2512.07787v2#S2 "2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") and [3](https://arxiv.org/html/2512.07787v2#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") extend naturally to random variables whose supports begin at arbitrary finite lower end-points
 
 |  |  |  |
 | --- | --- | --- |
@@ -1366,7 +1355,7 @@ Using translation equivariance,
 | --- | --- | --- |
 |  | 𝑿𝒂​ is VaR sub-additive⇔𝑿​ is VaR sub-additive.\bm{X}^{\bm{a}}\text{ is VaR sub-additive}\iff\bm{X}\text{ is VaR sub-additive}. |  |
 
-By Theorem [2.2](https://arxiv.org/html/2512.07787v1#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"),
+By Theorem [2.2](https://arxiv.org/html/2512.07787v2#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"),
 
 |  |  |  |
 | --- | --- | --- |
@@ -1385,7 +1374,7 @@ Using both scale and translation equivariance,
 | --- | --- | --- |
 |  | 𝑿𝒃​ is VaR super-additive⇔𝑿​ is VaR sub-additive.\bm{X}^{\bm{b}}\text{ is VaR super-additive}\iff\bm{X}\text{ is VaR sub-additive}. |  |
 
-Applying Theorem [2.2](https://arxiv.org/html/2512.07787v1#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") again gives
+Applying Theorem [2.2](https://arxiv.org/html/2512.07787v2#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") again gives
 
 |  |  |  |
 | --- | --- | --- |
@@ -1397,7 +1386,7 @@ Repeating the equivariance arguments leads to
 | --- | --- | --- |
 |  | 𝑿𝒃​ is VaR super-additive⇔𝑿𝒃​ is VaR additive.\bm{X}^{\bm{b}}\text{ is VaR super-additive}\iff\bm{X}^{\bm{b}}\text{ is VaR additive}. |  |
 
-Finally, in both parts, co-monotonicity follows directly from Theorem [2.2](https://arxiv.org/html/2512.07787v1#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
+Finally, in both parts, co-monotonicity follows directly from Theorem [2.2](https://arxiv.org/html/2512.07787v2#S2.Thmtheorem2 "Theorem 2.2. ‣ 2 VaR Sub-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
 ∎
 
 The preceding proposition highlights an important structural limitation: VaR sub-additivity cannot occur for random variables with finite lower end-points, while VaR super-additivity cannot occur for random variables with finite upper end-points.
@@ -1406,7 +1395,7 @@ The preceding proposition highlights an important structural limitation: VaR sub
 
 For compactly supported random variables 𝐗𝐚,𝐛\bm{X}^{\bm{a},\bm{b}}, i.e. random variables possessing both finite lower and upper end-points, VaR sub-additivity and VaR super-additivity are each equivalent to VaR additivity. Consequently, such random variables can never exhibit strict VaR sub-additivity or strict VaR super-additivity.
 
-The limitations of VaR in the prior discussion motivates the search for conditions, analogous to those developed in Section [3](https://arxiv.org/html/2512.07787v1#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), that permit the analysis of VaR super- and sub-additivity in more flexible settings. That prompts us to extend the general results of Section [3](https://arxiv.org/html/2512.07787v1#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to these shifted and scaled settings.
+The limitations of VaR in the prior discussion motivates the search for conditions, analogous to those developed in Section [3](https://arxiv.org/html/2512.07787v2#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), that permit the analysis of VaR super- and sub-additivity in more flexible settings. That prompts us to extend the general results of Section [3](https://arxiv.org/html/2512.07787v2#S3 "3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to these shifted and scaled settings.
 In particular, the following proposition provides analogous conditions for VaR super-additivity of the shifted vector 𝑿𝒂\bm{X}^{\bm{a}} and VaR sub-additivity of the reflected and shifted vector 𝑿𝒃\bm{X}^{\bm{b}}.
 
 ###### Proposition 4.3.
@@ -1453,7 +1442,7 @@ Since 𝑿𝒂=𝒂+𝑿\bm{X}^{\bm{a}}=\bm{a}+\bm{X} and S𝒂=S+a+S^{\bm{a}}=S
 | --- | --- | --- |
 |  | FS𝒂​(t+a+)=FS​(t),FXiai​(xi+ai)=FXi​(xi).F\_{S^{\bm{a}}}(t+a\_{+})=F\_{S}(t),\qquad F\_{X\_{i}^{a\_{i}}}(x\_{i}+a\_{i})=F\_{X\_{i}}(x\_{i}). |  |
 
-Thus the condition in Equation ([4.1](https://arxiv.org/html/2512.07787v1#S4.E1 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) implies
+Thus the condition in Equation ([4.1](https://arxiv.org/html/2512.07787v2#S4.E1 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) implies
 
 |  |  |  |
 | --- | --- | --- |
@@ -1471,7 +1460,7 @@ is SD, then so is
 | --- | --- | --- |
 |  | Φ​(x1,…,xn)=∑i=1nxi​log⁡FXi​(xi).\Phi(x\_{1},\dots,x\_{n})=\sum\_{i=1}^{n}x\_{i}\log F\_{X\_{i}}(x\_{i}). |  |
 
-By Theorem [3.4](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), 𝑿\bm{X} is VaR super-additive.
+By Theorem [3.4](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem4 "Theorem 3.4. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), 𝑿\bm{X} is VaR super-additive.
 Translation equivariance then gives that 𝑿𝒂\bm{X}^{\bm{a}} is VaR super-additive.
 
 (ii)
@@ -1485,8 +1474,8 @@ Applying the same reasoning as in part (i), the given assumptions imply that �
 Using both scale and translation equivariance, we conclude that 𝑿𝒃\bm{X}^{\bm{b}} is VaR sub-additive.
 ∎
 
-Using the results we obtained in Proposition [4.3](https://arxiv.org/html/2512.07787v1#S4.Thmtheorem3 "Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we can now delineate the sufficient conditions that parallel those of
-Propositions [3.5](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem5 "Proposition 3.5. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") and [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
+Using the results we obtained in Proposition [4.3](https://arxiv.org/html/2512.07787v2#S4.Thmtheorem3 "Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we can now delineate the sufficient conditions that parallel those of
+Propositions [3.5](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem5 "Proposition 3.5. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") and [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
 These conditions are easily verifiable and ensure that 𝑿𝒂\bm{X}^{\bm{a}} (resp. 𝑿𝒃\bm{X}^{\bm{b}}) is VaR super-additive
 (resp. VaR sub-additive).
 
@@ -1495,7 +1484,7 @@ These conditions are easily verifiable and ensure that 𝑿𝒂\bm{X}^{\bm{a}} (
 * (i)
 
   If 𝑿𝒂\bm{X}^{\bm{a}} is NLOD with continuous FXiaiF\_{X\_{i}^{a\_{i}}}, and if each function appearing in
-  Equation ([4.2](https://arxiv.org/html/2512.07787v1#S4.E2 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")),
+  Equation ([4.2](https://arxiv.org/html/2512.07787v2#S4.E2 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")),
 
   |  |  |  |
   | --- | --- | --- |
@@ -1505,7 +1494,7 @@ These conditions are easily verifiable and ensure that 𝑿𝒂\bm{X}^{\bm{a}} (
 * (ii)
 
   If 𝑿𝒃\bm{X}^{\bm{b}} is NUOD (defined analogously to NLOD but with DDFs instead of CDFs) with
-  continuous F¯Xibi\overline{F}\_{X\_{i}^{b\_{i}}}, and if each function appearing in Equation ([4.4](https://arxiv.org/html/2512.07787v1#S4.E4 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")),
+  continuous F¯Xibi\overline{F}\_{X\_{i}^{b\_{i}}}, and if each function appearing in Equation ([4.4](https://arxiv.org/html/2512.07787v2#S4.E4 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")),
 
   |  |  |  |
   | --- | --- | --- |
@@ -1517,7 +1506,7 @@ These conditions are easily verifiable and ensure that 𝑿𝒂\bm{X}^{\bm{a}} (
 
 * (i)
 
-  We begin by verifying that the condition in Equation ([4.1](https://arxiv.org/html/2512.07787v1#S4.E1 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) holds.
+  We begin by verifying that the condition in Equation ([4.1](https://arxiv.org/html/2512.07787v2#S4.E1 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) holds.
   Since 𝑿𝒂\bm{X}^{\bm{a}} is NLOD, we have
 
   |  |  |  |
@@ -1542,15 +1531,15 @@ These conditions are easily verifiable and ensure that 𝑿𝒂\bm{X}^{\bm{a}} (
   | --- | --- | --- | --- |
   |  | ⟹FS𝒂​(t+a+)\displaystyle\implies\qquad F\_{S^{\bm{a}}}(t+a\_{+}) | ≤∏i=1nFXiai​(t+ai).\displaystyle\leq\prod\_{i=1}^{n}F\_{X\_{i}^{a\_{i}}}(t+a\_{i}). |  |
 
-  Hence the requirement in Equation ([4.1](https://arxiv.org/html/2512.07787v1#S4.E1 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is satisfied.
-  As in Proposition [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), note that it actually suffices for 𝑿𝒂\bm{X}^{\bm{a}} to be NLOD
+  Hence the requirement in Equation ([4.1](https://arxiv.org/html/2512.07787v2#S4.E1 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is satisfied.
+  As in Proposition [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), note that it actually suffices for 𝑿𝒂\bm{X}^{\bm{a}} to be NLOD
   only along the shifted diagonal (t+a1,…,t+an)(t+a\_{1},\dots,t+a\_{n}), since this is the only region relevant for the
   comparison with S𝒂S^{\bm{a}}.
 
   Next, if each function ϕiai\phi\_{i}^{a\_{i}} is non-increasing, then by
-  Proposition [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), the function Φ𝒂\Phi^{\bm{a}} is SD.
+  Proposition [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), the function Φ𝒂\Phi^{\bm{a}} is SD.
   Combining this property with the continuity of each FXiaiF\_{X\_{i}^{a\_{i}}}, we may invoke
-  Proposition [4.3](https://arxiv.org/html/2512.07787v1#S4.Thmtheorem3 "Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to conclude that 𝑿𝒂\bm{X}^{\bm{a}} is VaR super-additive.
+  Proposition [4.3](https://arxiv.org/html/2512.07787v2#S4.Thmtheorem3 "Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") to conclude that 𝑿𝒂\bm{X}^{\bm{a}} is VaR super-additive.
 * (ii)
 
   The proof mirrors that of part (i).
@@ -1576,24 +1565,24 @@ These conditions are easily verifiable and ensure that 𝑿𝒂\bm{X}^{\bm{a}} (
   | --- | --- | --- | --- |
   |  | ⟹F¯S𝒃​(b+−t)\displaystyle\implies\qquad\overline{F}\_{S^{\bm{b}}}(b\_{+}-t) | ≤∏i=1nF¯Xibi​(bi−t).\displaystyle\leq\prod\_{i=1}^{n}\overline{F}\_{X\_{i}^{b\_{i}}}(b\_{i}-t). |  |
 
-  Thus the condition in Equation ([4.3](https://arxiv.org/html/2512.07787v1#S4.E3 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) holds.
+  Thus the condition in Equation ([4.3](https://arxiv.org/html/2512.07787v2#S4.E3 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) holds.
   Again, as in part (i), it suffices that the NUOD property holds only along the shifted diagonal
   (b1−t,…,bn−t)(b\_{1}-t,\dots,b\_{n}-t).
 
-  Finally, if each ϕibi\phi\_{i}^{b\_{i}} is non-increasing, then Proposition [3.6](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") guarantees
+  Finally, if each ϕibi\phi\_{i}^{b\_{i}} is non-increasing, then Proposition [3.6](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem6 "Proposition 3.6. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") guarantees
   that Φ𝒃\Phi^{\bm{b}} is SD.
-  Together with continuity of each F¯Xibi\overline{F}\_{X\_{i}^{b\_{i}}}, Proposition [4.3](https://arxiv.org/html/2512.07787v1#S4.Thmtheorem3 "Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") implies that
+  Together with continuity of each F¯Xibi\overline{F}\_{X\_{i}^{b\_{i}}}, Proposition [4.3](https://arxiv.org/html/2512.07787v2#S4.Thmtheorem3 "Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables") implies that
   𝑿𝒃\bm{X}^{\bm{b}} is VaR sub-additive.
 
 ∎
 
-We end this section by investigating what happens if we take measurable functions of the components of 𝑿𝒂\bm{X}^{\bm{a}} (resp. 𝑿𝒃\bm{X}^{\bm{b}}) when VaR super-additivity (resp. VaR sub-additivity) holds. The results are direct extension of those in Proposition [3.12](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem12 "Proposition 3.12. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
+We end this section by investigating what happens if we take measurable functions of the components of 𝑿𝒂\bm{X}^{\bm{a}} (resp. 𝑿𝒃\bm{X}^{\bm{b}}) when VaR super-additivity (resp. VaR sub-additivity) holds. The results are direct extension of those in Proposition [3.12](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem12 "Proposition 3.12. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables").
 
 ###### Proposition 4.5.
 
 * (i)
 
-  Suppose 𝑿𝒂\bm{X}^{\bm{a}} is NLOD with continuous margins FXiaiF\_{X\_{i}^{a\_{i}}}, and assume that each ϕiai\phi\_{i}^{a\_{i}} in Equation ([4.2](https://arxiv.org/html/2512.07787v1#S4.E2 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing. Let
+  Suppose 𝑿𝒂\bm{X}^{\bm{a}} is NLOD with continuous margins FXiaiF\_{X\_{i}^{a\_{i}}}, and assume that each ϕiai\phi\_{i}^{a\_{i}} in Equation ([4.2](https://arxiv.org/html/2512.07787v2#S4.E2 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing. Let
 
   |  |  |  |
   | --- | --- | --- |
@@ -1602,7 +1591,7 @@ We end this section by investigating what happens if we take measurable function
   where X~iai=ξi​(Xiai)\widetilde{X}\_{i}^{a\_{i}}=\xi\_{i}(X\_{i}^{a\_{i}}) for ξi:[ai,∞)→[ai,∞)\xi\_{i}:[a\_{i},\infty)\to[a\_{i},\infty). If each ξi\xi\_{i} is strictly increasing, convex, and satisfies ξi​(ai)=ai\xi\_{i}(a\_{i})=a\_{i}, then 𝑿~𝒂\widetilde{\bm{X}}^{\bm{a}} is VaR super-additive.
 * (ii)
 
-  Assume 𝑿𝒃\bm{X}^{\bm{b}} is NUOD with continuous margins F¯Xibi\overline{F}\_{X\_{i}^{b\_{i}}}, and suppose that each ϕibi\phi\_{i}^{b\_{i}} in Equation ([4.4](https://arxiv.org/html/2512.07787v1#S4.E4 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing. Define
+  Assume 𝑿𝒃\bm{X}^{\bm{b}} is NUOD with continuous margins F¯Xibi\overline{F}\_{X\_{i}^{b\_{i}}}, and suppose that each ϕibi\phi\_{i}^{b\_{i}} in Equation ([4.4](https://arxiv.org/html/2512.07787v2#S4.E4 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing. Define
 
   |  |  |  |
   | --- | --- | --- |
@@ -1612,7 +1601,7 @@ We end this section by investigating what happens if we take measurable function
 
 ###### Proof.
 
-The argument follows the same structure as Proposition [3.12](https://arxiv.org/html/2512.07787v1#S3.Thmtheorem12 "Proposition 3.12. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"). Under the stated assumptions, two observations hold immediately:
+The argument follows the same structure as Proposition [3.12](https://arxiv.org/html/2512.07787v2#S3.Thmtheorem12 "Proposition 3.12. ‣ 3 VaR super-additivity ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"). Under the stated assumptions, two observations hold immediately:
 
 1. •
 
@@ -1674,8 +1663,8 @@ Thus, it remains to verify that ϕ~iai\widetilde{\phi}\_{i}^{a\_{i}} and ϕ~ibi\
   | --- | --- | --- | --- |
   |  |  | ≤xi​log⁡FXiai​(ξi−1​(xi+ai))=ϕ~iai​(xi).\displaystyle\leq x\_{i}\log F\_{X\_{i}^{a\_{i}}}(\xi\_{i}^{-1}(x\_{i}+a\_{i}))=\widetilde{\phi}\_{i}^{a\_{i}}(x\_{i}). |  |
 
-  Hence, ϕ~iai\widetilde{\phi}\_{i}^{a\_{i}} in ([4.2](https://arxiv.org/html/2512.07787v1#S4.E2 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing on [0,∞)[0,\infty).
-  By Proposition [4.4](https://arxiv.org/html/2512.07787v1#S4.Thmtheorem4 "Proposition 4.4. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we conclude that 𝑿~𝒂\widetilde{\bm{X}}^{\bm{a}} is VaR super-additive.
+  Hence, ϕ~iai\widetilde{\phi}\_{i}^{a\_{i}} in ([4.2](https://arxiv.org/html/2512.07787v2#S4.E2 "In item (i) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing on [0,∞)[0,\infty).
+  By Proposition [4.4](https://arxiv.org/html/2512.07787v2#S4.Thmtheorem4 "Proposition 4.4. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), we conclude that 𝑿~𝒂\widetilde{\bm{X}}^{\bm{a}} is VaR super-additive.
 * (ii)
 
   Case of ϕ~ibi\widetilde{\phi}\_{i}^{b\_{i}}: An analogous argument applies. Let xi<yix\_{i}<y\_{i}. Then
@@ -1726,7 +1715,7 @@ Thus, it remains to verify that ϕ~iai\widetilde{\phi}\_{i}^{a\_{i}} and ϕ~ibi\
   | --- | --- | --- | --- |
   |  |  | ≤xi​log⁡F¯Xibi​(ξi−1​(bi−xi))=ϕ~ibi​(xi).\displaystyle\leq x\_{i}\log\overline{F}\_{X\_{i}^{b\_{i}}}\bigl(\xi\_{i}^{-1}(b\_{i}-x\_{i})\bigr)=\widetilde{\phi}\_{i}^{b\_{i}}(x\_{i}). |  |
 
-  Thus ϕ~ibi\widetilde{\phi}\_{i}^{b\_{i}} in ([4.4](https://arxiv.org/html/2512.07787v1#S4.E4 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing on [0,∞)[0,\infty), and by Proposition [4.4](https://arxiv.org/html/2512.07787v1#S4.Thmtheorem4 "Proposition 4.4. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), 𝑿~𝒃\widetilde{\bm{X}}^{\bm{b}} is VaR sub-additive.
+  Thus ϕ~ibi\widetilde{\phi}\_{i}^{b\_{i}} in ([4.4](https://arxiv.org/html/2512.07787v2#S4.E4 "In item (ii) ‣ Proposition 4.3. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables")) is non-increasing on [0,∞)[0,\infty), and by Proposition [4.4](https://arxiv.org/html/2512.07787v2#S4.Thmtheorem4 "Proposition 4.4. ‣ 4 Further Generalizations and Remarks ‣ VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables"), 𝑿~𝒃\widetilde{\bm{X}}^{\bm{b}} is VaR sub-additive.
 
 ∎
 
