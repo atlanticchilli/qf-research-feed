@@ -1,9 +1,9 @@
 ---
 authors:
 - Graham L Giller
-doc_id: arxiv:2512.11666v1
+doc_id: arxiv:2512.11666v2
 family_id: arxiv:2512.11666
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -11,17 +11,18 @@ taxonomy:
   themes: []
 title: Risk Limited Asset Allocation with a Budget Threshold Utility Function and
   Leptokurtotic Distributions of Returns
-url_abs: http://arxiv.org/abs/2512.11666v1
-url_html: https://arxiv.org/html/2512.11666v1
+url_abs: http://arxiv.org/abs/2512.11666v2
+url_html: https://arxiv.org/html/2512.11666v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Graham L. Giller
 [graham@gillerinvestments.com](mailto:graham@gillerinvestments.com)
 
-(Date: December 12, 2025)
+(Date: December 16, 2025)
 
 ###### Abstract.
 
@@ -39,7 +40,7 @@ Influenced by the work of Nawrocki and Viole[viole2011utility], and the author�
 | --- | --- | --- | --- |
 | (1) |  | U​(W,β)={βW≥βWW<β,U(W,\beta)=\begin{cases}\beta&W\geq\beta\\ W&W<\beta\end{cases}, |  |
 
-and is illustrated, for several values of β\beta, in figure [1](https://arxiv.org/html/2512.11666v1#S2.F1 "Figure 1 ‣ 2. The Budget-Threshold Utility Function ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns"), below.
+and is illustrated, for several values of β\beta, in figure [1](https://arxiv.org/html/2512.11666v2#S2.F1 "Figure 1 ‣ 2. The Budget-Threshold Utility Function ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns"), below.
 
 ![Refer to caption](utility.png)
 
@@ -126,7 +127,7 @@ With asymptotically linear utility functions an obvious defect exists: there is 
 | --- | --- | --- | --- |
 | (8) |  | h^=arg​maxh⁡𝔼​[U]​(h|α,σ,κ)​becomes​h^=arg​maxh∈[−L,+L]⁡𝔼​[U]​(h|α,σ,κ).\hat{h}=\operatorname\*{arg~max}\_{h}\mathbb{E}[U](h|\alpha,\sigma,\kappa)\;\mathrm{becomes}\;\hat{h}=\operatorname\*{arg~max}\_{h\in[-L,+L]}\mathbb{E}[U](h|\alpha,\sigma,\kappa). |  |
 
-There is no practical loss of generality to this modification of the problem as all real investors face such constraints, whether they arise naturally from their finite wealth and credit prospects or from an institutional risk-management role. With this regularization step, the optimal position is readily obtained and is given in theorem [1](https://arxiv.org/html/2512.11666v1#Thmtheorem1 "Theorem 1. ‣ 5. Maximum Expected Utility Subject to an Exogenous Risk-Limit ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns").
+There is no practical loss of generality to this modification of the problem as all real investors face such constraints, whether they arise naturally from their finite wealth and credit prospects or from an institutional risk-management role. With this regularization step, the optimal position is readily obtained and is given in theorem [1](https://arxiv.org/html/2512.11666v2#Thmtheorem1 "Theorem 1. ‣ 5. Maximum Expected Utility Subject to an Exogenous Risk-Limit ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns").
 
 ###### Theorem 1.
 
@@ -138,7 +139,7 @@ The position for a risk-limited investor with a budget threshold utility functio
 
 ###### Proof.
 
-Consider h>0h>0: in this circumstance equation [6](https://arxiv.org/html/2512.11666v1#S4.E6 "In 4. Choice of Budget and Expected Utility ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns") becomes, simply,
+Consider h>0h>0: in this circumstance equation [6](https://arxiv.org/html/2512.11666v2#S4.E6 "In 4. Choice of Budget and Expected Utility ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns") becomes, simply,
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -151,33 +152,38 @@ Consider h<0h<0: complementary arguments clearly lead to the same conclusions fo
 Finally, consider α=0\alpha=0: for this case Ω​(h)<0​∀h≠0\Omega(h)<0\;\forall\;h\neq 0, therefore h^=0\hat{h}=0.
 ∎
 
-## 6. Interpretation of the Result
+## 6. Interpretation of the Result and a Practical Algorithm for Traders
 
-I believe that despite the apparent naïvety of the problem proposed the solution is, in fact, quite interesting. It is well known that a risk-limited gross-profit maximizing investor should obtain a position as large as possible in the direction of the alpha[giller2023essays]. The introduction of the budget threshold, as specified in this work, changes such a long-short, or “binary,” trading algorithm to a three state system that considers long, short, and flat positions only. The term σ​τ​(κ)\sigma\tau(\kappa) can be thought of as a “risk cost” that must be exceeded to make risk-taking worthwhile to the investor.
+I believe that, despite the apparent naïvety of the problem proposed, the solution is, in fact, quite interesting. It is well known that a risk-limited gross-profit maximizing investor should obtain a position as large as possible in the direction of the alpha[giller2023essays]. The introduction of the budget threshold, as specified in this work, changes such a long-short, or “binary,” trading algorithm to a three state system that considers long, short, and flat positions only. The term σ​τ​(κ)\sigma\tau(\kappa) can be thought of as a “risk cost” that must be exceeded to make risk-taking worthwhile to the investor.
 
-This risk cost is a function of the parameterization of the distribution of returns, albeit not a particularly strongly varying function. For returns described by equation [2](https://arxiv.org/html/2512.11666v1#S3.E2 "In 3. The Distribution of Returns ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns"), the variance of returns is given by
+This risk cost is a function of the parameterization of the distribution of returns, albeit not a particularly strongly varying function. For returns described by equation [2](https://arxiv.org/html/2512.11666v2#S3.E2 "In 3. The Distribution of Returns ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns"), the variance of returns is given by
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| (11) |  | s2=𝕍​[r]=σ2×22​κ​Γ​(3​κ)Γ​(κ).s^{2}=\mathbb{V}[r]=\sigma^{2}\times\frac{2^{2\kappa}\Gamma(3\kappa)}{\Gamma(\kappa)}. |  |
+| (11) |  | s2=𝕍​[r]=22​κ​Γ​(3​κ)Γ​(κ)×σ2.s^{2}=\mathbb{V}[r]=\frac{2^{2\kappa}\Gamma(3\kappa)}{\Gamma(\kappa)}\times\sigma^{2}. |  |
 
 Expressing the risk cost in terms of ss, the standard deviation of returns, gives
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| (12) |  | σ​τ​(κ)=14​Γ​(κ)Γ​(3​κ)​Γ(2κ+1Γ​(κ+1)×s.\sigma\tau(\kappa)=\frac{1}{4}\sqrt{\frac{\Gamma(\kappa)}{\Gamma(3\kappa)}}\frac{\Gamma(2\kappa+1}{\Gamma(\kappa+1)}\times s. |  |
+| (12) |  | σ​τ​(κ)=14​Γ​(κ)Γ​(3​κ)​Γ​(2​κ+1)Γ​(κ+1)×s.\sigma\tau(\kappa)=\frac{1}{4}\sqrt{\frac{\Gamma(\kappa)}{\Gamma(3\kappa)}}\frac{\Gamma(2\kappa+1)}{\Gamma(\kappa+1)}\times s. |  |
 
-It can clearly be seen from figure [3](https://arxiv.org/html/2512.11666v1#S6.F3 "Figure 3 ‣ 6. Interpretation of the Result ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns") that the leptokurtosis of the distribution of returns barely affects the scaling of the standard deviation, ss, in the formula for the size of the risk cost “barrier.” Thus this is a clear example of a circumstance in which assuming Normally distributed returns doesn’t actually damage the optimal policy framework.
+It can clearly be seen from figure [3](https://arxiv.org/html/2512.11666v2#S6.F3 "Figure 3 ‣ 6. Interpretation of the Result and a Practical Algorithm for Traders ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns") that the leptokurtosis of the distribution of returns barely affects the scaling of the standard deviation, ss, in the formula for the size of the risk cost “barrier.” Thus this is a clear example of a circumstance in which assuming Normally distributed returns doesn’t actually damage the optimal policy framework.
 
 ![Refer to caption](risk.png)
 
 
 Figure 3. Scaling of the risk cost factor with the kurtosis parameter of the distribution of returns over the region of interest. The “Normal distribution theory” value is represented by the dotted line.
 
-Nevertheless, given the commonly acknowledged non-stationarity of financial distributions and the simplicity of the approach, it seems well motivated to follow a “semi-empirical” approach, similar to that adopted in Nuclear Physics[bethe1936semf, weizsacker1935semf], and replace this parametric expression with a simple constant, KK, to be determined from empirical optimization (i.e. backtesting). A practical algorithm for traders is then
+Nevertheless, given the commonly acknowledged non-stationarity of financial distributions and the simplicity of the optimal algorithm, it seems well motivated to follow a “semi-empirical” approach, similar to that adopted in Nuclear Physics[bethe1936semf, weizsacker1935semf], and replace this parametric expression with a simple constant, KK, to be determined from empirical optimization (i.e. backtesting). A practical algorithm for traders is then
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 | (13) |  | h^={L​sgnα|α|>K​s0otherwise,\hat{h}=\begin{cases}L\operatorname\*{sgn}\alpha&|\alpha|>Ks\\ 0&\mathrm{otherwise}\end{cases}, |  |
 
-where α\alpha and ss are the mean and standard deviation of future returns under the conditional distribution used by a trader for a given asset.
+where α\alpha and ss are the mean and standard deviation of future returns under the conditional distribution used by a trader for a given asset, and K≈0.4K\approx 0.4. This trading algorithm, in the form of a “holding function,”888Literally a function that tells the trader want position to hold in response to their inputs. is illustrated in figure [4](https://arxiv.org/html/2512.11666v2#S6.F4 "Figure 4 ‣ 6. Interpretation of the Result and a Practical Algorithm for Traders ‣ Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns").
+
+![Refer to caption](algo.png)
+
+
+Figure 4. The “holding function” corresponding to the optimal strategy for a trader with a budget threshold utility function expressed as the relative position size as a function of the standardized alpha.
