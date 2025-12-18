@@ -1,14 +1,14 @@
 {
-  "doc_id": "arxiv:2512.14662v1",
+  "doc_id": "arxiv:2512.14662v2",
   "family_id": "arxiv:2512.14662",
   "title": "Fixed-Income Pricing and the Replication of Liabilities1footnote 11footnote 1This paper was written while the author was a guest of the FinsureTech Hub, Department of Mathematics, ETH Zurich.",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Damir Filipovi\u0107"
   ],
-  "url_abs": "http://arxiv.org/abs/2512.14662v1",
-  "url_html": "https://arxiv.org/html/2512.14662v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2512.14662v2",
+  "url_html": "https://arxiv.org/html/2512.14662v2",
+  "is_current": true
 }

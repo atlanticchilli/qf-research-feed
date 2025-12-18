@@ -3,7 +3,7 @@ authors:
 - Damir Filipović
 doc_id: arxiv:2512.14662v1
 family_id: arxiv:2512.14662
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -18,7 +18,6 @@ venue: arXiv q-fin
 version: 1
 year: 2025
 ---
-
 
 Damir Filipović222EPFL, Swiss Finance Institute, 1015 Lausanne, Switzerland. Email: damir.filipovic@epfl.ch
 
