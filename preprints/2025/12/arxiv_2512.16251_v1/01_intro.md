@@ -5,7 +5,7 @@ authors:
 - Changeun Kim
 doc_id: arxiv:2512.16251v1
 family_id: arxiv:2512.16251
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []

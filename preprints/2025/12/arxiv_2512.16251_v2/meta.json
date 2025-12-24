@@ -1,0 +1,16 @@
+{
+  "doc_id": "arxiv:2512.16251v2",
+  "family_id": "arxiv:2512.16251",
+  "title": "Interpretable Deep Learning for Stock Returns: A Consensus-Bottleneck Asset Pricing Model This paper is a revised version of Master\u2019s thesis by Changeun Kim titled \u201cA Consensus-Bottleneck Asset Pricing Model\u201d, submitted to the Department of Industrial and Management Engineering, POSTECH, Korea. We would like to thank Hyeng Keun Koo (Committee), Kwangmin Jung (Committee), Dojoon Park (discussant), JinGi Ha, Jeonggyu Huh, Kyoung-Kuk Kim (discussant), Thummim Cho, and seminar participants at the 2024 Spring Joint Conference of Korean Operations Research and Management Science Society and Korean Institute of Industrial Engineers, 2025 Asia-Pacific Association of Finance International Conference, 2025 Korean Finance Association Fall Conference, 2025 4th Workshop on Financial Mathematics and Engineering (Pusan National University), 2025 Korea Derivatives Association Fall Conference, 2025 Annual Conference on Asia-Pacific Financial Markets (CAFM), for helpful discussions and insightful comments. This work was supported by the Ministry of Education of the Republic of Korea and the National Research Foundation of Korea [NRF-2023R1A2C2003927]. Jang (E-mail: bonggyujang@postech.ac.kr) is at Department of Industrial and Management Engineering, POSTECH, Korea University Business School; Jeong (E-mail: younwoo48@postech.ac.kr) is at Graduate School of Artificial Intelligence, POSTECH; Kim (E-mail: changeun120@postech.ac.kr) is at Department of Industrial and Management Engineering, POSTECH. Correspondence concerning this article should be addressed to Changeun Kim, Department of Industrial and Management Engineering, POSTECH, Pohang 37673, Republic of Korea. E-mail: changeun120@postech.ac.kr.",
+  "venue": "arXiv q-fin",
+  "version": 2,
+  "year": 2025,
+  "authors": [
+    "Bong-Gyu Jang",
+    "Younwoo Jeong",
+    "Changeun Kim"
+  ],
+  "url_abs": "http://arxiv.org/abs/2512.16251v2",
+  "url_html": "https://arxiv.org/html/2512.16251v2",
+  "is_current": true
+}
