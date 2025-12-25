@@ -1,16 +1,16 @@
 {
-  "doc_id": "arxiv:2512.19838v1",
+  "doc_id": "arxiv:2512.19838v2",
   "family_id": "arxiv:2512.19838",
   "title": "Equilibrium Liquidity and Risk Offsetting in Decentralised Markets",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Fay\u00e7al Drissi",
     "Xuchen Wu",
     "Sebastian Jaimungal"
   ],
-  "url_abs": "http://arxiv.org/abs/2512.19838v1",
-  "url_html": "https://arxiv.org/html/2512.19838v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2512.19838v2",
+  "url_html": "https://arxiv.org/html/2512.19838v2",
+  "is_current": true
 }
