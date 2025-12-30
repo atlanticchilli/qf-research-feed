@@ -1,0 +1,22 @@
+{
+  "doc_id": "arxiv:2512.23515v1",
+  "family_id": "arxiv:2512.23515",
+  "title": "Alpha-R1: Alpha Screening with LLM Reasoning via Reinforcement Learning",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2025,
+  "authors": [
+    "Zuoyou Jiang",
+    "Li Zhao",
+    "Rui Sun",
+    "Ruohan Sun",
+    "Zhongjian Li",
+    "Jing Li",
+    "Daxin Jiang",
+    "Zuo Bai",
+    "Cheng Hua"
+  ],
+  "url_abs": "http://arxiv.org/abs/2512.23515v1",
+  "url_html": "https://arxiv.org/html/2512.23515v1",
+  "is_current": true
+}

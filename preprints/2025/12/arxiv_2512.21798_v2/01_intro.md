@@ -2,21 +2,23 @@
 authors:
 - Christophe D. Hounwanou
 - Yae Ulrich Gaba
-doc_id: arxiv:2512.21798v1
+doc_id: arxiv:2512.21798v2
 family_id: arxiv:2512.21798
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: Applications of synthetic financial data in portfolio and risk modeling
-url_abs: http://arxiv.org/abs/2512.21798v1
-url_html: https://arxiv.org/html/2512.21798v1
+title: 'Deep Generative Models for Synthetic Financial Data: Applications to Portfolio
+  and Risk Modeling'
+url_abs: http://arxiv.org/abs/2512.21798v2
+url_html: https://arxiv.org/html/2512.21798v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Christophe D. Hounwanou
   
@@ -40,7 +42,7 @@ yaeulrich.gaba@gmail.com
 
 ###### Abstract
 
-Synthetic financial data offers a practical way to address the privacy and accessibility challenges that limit research in quantitative finance. This paper examines the use of generative models, in particular TimeGAN and Variational Autoencoders (VAEs), for creating synthetic return series that support portfolio construction, trading analysis, and risk modeling. Using historical daily returns from the S&P 500 as a benchmark, we generate synthetic datasets under comparable market conditions and evaluate them using statistical similarity metrics, temporal structure tests, and downstream financial tasks. The study shows that TimeGAN produces synthetic data with distributional shapes, volatility patterns, and autocorrelation behaviour that are close to those observed in real returns. When applied to mean–variance portfolio optimization, the resulting synthetic datasets lead to portfolio weights, Sharpe ratios, and risk levels that remain close to those obtained from real data. The VAE provides more stable training but tends to smooth extreme market movements, which affects risk estimation. Finally, the analysis supports the use of synthetic datasets as substitutes for real financial data in portfolio analysis and risk simulation, particularly when models are able to capture temporal dynamics. Synthetic data therefore provides a privacy-preserving, cost-effective, and reproducible tool for financial experimentation and model development.
+Synthetic financial data provides a practical solution to the privacy, accessibility, and reproducibility challenges that often constrain empirical research in quantitative finance. This paper investigates the use of deep generative models, specifically Time-series Generative Adversarial Networks (TimeGAN) and Variational Autoencoders (VAEs) to generate realistic synthetic financial return series for portfolio construction and risk modeling applications. Using historical daily returns from the S&P 500 as a benchmark, we generate synthetic datasets under comparable market conditions and evaluate them using statistical similarity metrics, temporal structure tests, and downstream financial tasks. The study shows that TimeGAN produces synthetic data with distributional shapes, volatility patterns, and autocorrelation behaviour that are close to those observed in real returns. When applied to mean–variance portfolio optimization, the resulting synthetic datasets lead to portfolio weights, Sharpe ratios, and risk levels that remain close to those obtained from real data. The VAE provides more stable training but tends to smooth extreme market movements, which affects risk estimation. Finally, the analysis supports the use of synthetic datasets as substitutes for real financial data in portfolio analysis and risk simulation, particularly when models are able to capture temporal dynamics. Synthetic data therefore provides a privacy-preserving, cost-effective, and reproducible tool for financial experimentation and model development.
 
 ## 1 Introduction
 
@@ -54,7 +56,7 @@ Research Question: This study investigates whether synthetic financial time seri
 
 We focus on S&P 500 data as a benchmark, generating synthetic sequences using TimeGAN and VAEs, and evaluate their ability to reproduce key market patterns. The empirical results provide insight into the fidelity and practical utility of synthetic financial data, with implications for privacy-preserving and reproducible research in quantitative finance.
 
-The remainder of this paper is organized as follows. Section [2](https://arxiv.org/html/2512.21798v1#S2 "2 Preliminaries ‣ Applications of synthetic financial data in portfolio and risk modeling") introduces the theoretical background and fundamentals of synthetic data generation. Section [3](https://arxiv.org/html/2512.21798v1#S3 "3 Methodology ‣ Applications of synthetic financial data in portfolio and risk modeling") presents the methodology and experimental setup used for portfolio and risk modeling. Section [4](https://arxiv.org/html/2512.21798v1#S4 "4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") reports the empirical results. Section [5](https://arxiv.org/html/2512.21798v1#S5 "5 Discussion ‣ Applications of synthetic financial data in portfolio and risk modeling") discusses the main implications and limitations. Section [6](https://arxiv.org/html/2512.21798v1#S6 "6 Conclusion ‣ Applications of synthetic financial data in portfolio and risk modeling") concludes with perspectives for future research.
+The remainder of this paper is organized as follows. Section [2](https://arxiv.org/html/2512.21798v2#S2 "2 Preliminaries ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") introduces the theoretical background and fundamentals of synthetic data generation. Section [3](https://arxiv.org/html/2512.21798v2#S3 "3 Methodology ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") presents the methodology and experimental setup used for portfolio and risk modeling. Section [4](https://arxiv.org/html/2512.21798v2#S4 "4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") reports the empirical results. Section [5](https://arxiv.org/html/2512.21798v2#S5 "5 Discussion ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") discusses the main implications and limitations. Section [6](https://arxiv.org/html/2512.21798v2#S6 "6 Conclusion ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") concludes with perspectives for future research.
 
 ## 2 Preliminaries
 
@@ -215,7 +217,7 @@ Convergence was monitored through model-specific loss curves, and latent-space r
 
 #### 3.2.2 Pipeline overview
 
-Figure [1](https://arxiv.org/html/2512.21798v1#S3.F1 "Figure 1 ‣ 3.2.2 Pipeline overview ‣ 3.2 Synthetic data generation ‣ 3 Methodology ‣ Applications of synthetic financial data in portfolio and risk modeling") illustrates the end-to-end workflow for generating and evaluating synthetic financial datasets.
+Figure [1](https://arxiv.org/html/2512.21798v2#S3.F1 "Figure 1 ‣ 3.2.2 Pipeline overview ‣ 3.2 Synthetic data generation ‣ 3 Methodology ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") illustrates the end-to-end workflow for generating and evaluating synthetic financial datasets.
 
 Historical S&P 500 Returns
 (Preprocessing: log-returns, normalization)
@@ -279,7 +281,7 @@ Output: Optimal weights w*
 5. Return w*
 ```
 
-Table [6](https://arxiv.org/html/2512.21798v1#S4.T6 "Table 6 ‣ 4.4 Downstream utility: Portfolio optimization and risk evaluation ‣ 4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") compares portfolio weights derived from real versus synthetic data generated using TimeGAN, demonstrating the fidelity of synthetic-based allocations:
+Table [6](https://arxiv.org/html/2512.21798v2#S4.T6 "Table 6 ‣ 4.4 Downstream utility: Portfolio optimization and risk evaluation ‣ 4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") compares portfolio weights derived from real versus synthetic data generated using TimeGAN, demonstrating the fidelity of synthetic-based allocations:
 
 Table 2: Portfolio weights comparison: real vs synthetic S&P 500 multi-asset data. Synthetic weights are generated with TimeGAN.
 
@@ -292,7 +294,7 @@ Table 2: Portfolio weights comparison: real vs synthetic S&P 500 multi-asset dat
 | TSLA | 0.07 | 0.06 |
 | SPY (ETF) | 0.54 | 0.56 |
 
-To further illustrate model fidelity, Figure [2](https://arxiv.org/html/2512.21798v1#S3.F2 "Figure 2 ‣ 3.3.2 Implementation with synthetic data ‣ 3.3 Portfolio optimization framework ‣ 3 Methodology ‣ Applications of synthetic financial data in portfolio and risk modeling") presents a bar chart of real versus synthetic portfolio weights. Additional diagnostic plots (histograms of returns, covariance matrix comparisons) are provided in the Appendix.
+To further illustrate model fidelity, Figure [2](https://arxiv.org/html/2512.21798v2#S3.F2 "Figure 2 ‣ 3.3.2 Implementation with synthetic data ‣ 3.3 Portfolio optimization framework ‣ 3 Methodology ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") presents a bar chart of real versus synthetic portfolio weights. Additional diagnostic plots (histograms of returns, covariance matrix comparisons) are provided in the Appendix.
 
 ![Refer to caption](optimiz.png)
 
@@ -331,7 +333,7 @@ Table 3: Risk metric comparison between real and synthetic datasets
 | TimeGAN | 1.30 | -2.05 | -2.79 |
 | VAE | 1.19 | -1.92 | -2.63 |
 
-To visually complement the tabular comparison of risk metrics, Figure [3](https://arxiv.org/html/2512.21798v1#S3.F3 "Figure 3 ‣ 3.4 Risk modeling and stress testing ‣ 3 Methodology ‣ Applications of synthetic financial data in portfolio and risk modeling") depicts the volatility, Value-at-Risk (VaR0.95), and Expected Shortfall (ES0.95) across real and synthetic datasets. The synthetic data closely replicate the risk characteristics of the real market series, as also evaluated in [hounwanou2025evaluating].
+To visually complement the tabular comparison of risk metrics, Figure [3](https://arxiv.org/html/2512.21798v2#S3.F3 "Figure 3 ‣ 3.4 Risk modeling and stress testing ‣ 3 Methodology ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") depicts the volatility, Value-at-Risk (VaR0.95), and Expected Shortfall (ES0.95) across real and synthetic datasets. The synthetic data closely replicate the risk characteristics of the real market series, as also evaluated in [hounwanou2025evaluating].
 
 ![Refer to caption](metrics.png)
 
@@ -400,7 +402,7 @@ This structured setup allows for a coherent comparison of the strengths and limi
 
 ### 4.2 Distributional fidelity
 
-We first examine how well synthetic returns capture the distributional characteristics of the S&P 500. Table [5](https://arxiv.org/html/2512.21798v1#S4.T5 "Table 5 ‣ 4.2 Distributional fidelity ‣ 4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") reports Kolmogorov-Smirnov (KS) statistics and Wasserstein distances between real and synthetic returns.
+We first examine how well synthetic returns capture the distributional characteristics of the S&P 500. Table [5](https://arxiv.org/html/2512.21798v2#S4.T5 "Table 5 ‣ 4.2 Distributional fidelity ‣ 4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") reports Kolmogorov-Smirnov (KS) statistics and Wasserstein distances between real and synthetic returns.
 
 Table 5: Distributional similarity metrics between real and synthetic S&P 500 returns. Lower values indicate better fidelity.
 
@@ -412,7 +414,7 @@ Table 5: Distributional similarity metrics between real and synthetic S&P 500 re
 
 TimeGAN achieves the lowest KS and Wasserstein values, demonstrating that it best replicates the marginal distributions of the real S&P 500 series. VAE shows moderate fidelity, while ARIMA-GARCH is limited by its parametric assumptions.
 
-To assess whether synthetic generators reproduce the marginal distribution of financial returns, we compare kernel density estimates (KDE) of real versus synthetic log-returns. Figure [4](https://arxiv.org/html/2512.21798v1#S4.F4 "Figure 4 ‣ 4.2 Distributional fidelity ‣ 4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") shows that TimeGAN closely matches the heavy-tailed, leptokurtic shape of real S&P 500 returns. VAE produces smoother and more Gaussian like distributions, while ARIMA-GARCH captures skewness but underestimates tail risk.
+To assess whether synthetic generators reproduce the marginal distribution of financial returns, we compare kernel density estimates (KDE) of real versus synthetic log-returns. Figure [4](https://arxiv.org/html/2512.21798v2#S4.F4 "Figure 4 ‣ 4.2 Distributional fidelity ‣ 4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") shows that TimeGAN closely matches the heavy-tailed, leptokurtic shape of real S&P 500 returns. VAE produces smoother and more Gaussian like distributions, while ARIMA-GARCH captures skewness but underestimates tail risk.
 
 ![Refer to caption](dist_comparaison.png)
 
@@ -436,7 +438,7 @@ Figure 5: Autocorrelation and DTW comparisons for real and synthetic financial s
 
 ### 4.4 Downstream utility: Portfolio optimization and risk evaluation
 
-We assess the usability of synthetic data in practical financial tasks. Portfolio allocations are computed using the mean-variance framework (Section [3](https://arxiv.org/html/2512.21798v1#S3 "3 Methodology ‣ Applications of synthetic financial data in portfolio and risk modeling")) on real and synthetic datasets. Risk metrics such as Value-at-Risk (VaR) and Expected Shortfall (ES) are also evaluated. Table [6](https://arxiv.org/html/2512.21798v1#S4.T6 "Table 6 ‣ 4.4 Downstream utility: Portfolio optimization and risk evaluation ‣ 4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") illustrates example portfolio weights.
+We assess the usability of synthetic data in practical financial tasks. Portfolio allocations are computed using the mean-variance framework (Section [3](https://arxiv.org/html/2512.21798v2#S3 "3 Methodology ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling")) on real and synthetic datasets. Risk metrics such as Value-at-Risk (VaR) and Expected Shortfall (ES) are also evaluated. Table [6](https://arxiv.org/html/2512.21798v2#S4.T6 "Table 6 ‣ 4.4 Downstream utility: Portfolio optimization and risk evaluation ‣ 4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") illustrates example portfolio weights.
 
 Table 6: Portfolio weights computed from real and TimeGAN-generated synthetic data.
 
@@ -453,7 +455,7 @@ The results demonstrate that synthetic data, particularly from TimeGAN, produces
 
 ### 4.5 Visual comparison of synthetic series
 
-Visual inspection complements quantitative evaluation. Figure [6](https://arxiv.org/html/2512.21798v1#S4.F6 "Figure 6 ‣ 4.5 Visual comparison of synthetic series ‣ 4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") shows overlays of real versus synthetic log-return series. TimeGAN sequences retain volatility clustering and extreme events, whereas VAE is smoother, and ARIMA-GARCH captures linear trends but underestimates higher-order temporal structure.
+Visual inspection complements quantitative evaluation. Figure [6](https://arxiv.org/html/2512.21798v2#S4.F6 "Figure 6 ‣ 4.5 Visual comparison of synthetic series ‣ 4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") shows overlays of real versus synthetic log-return series. TimeGAN sequences retain volatility clustering and extreme events, whereas VAE is smoother, and ARIMA-GARCH captures linear trends but underestimates higher-order temporal structure.
 
 ![Refer to caption](visual_comp.png)
 
@@ -462,7 +464,7 @@ Figure 6: Overlay of real and synthetic S&P 500 returns.
 
 ## 5 Discussion
 
-The findings of this study show that deep generative models can produce synthetic financial time series that behave similarly to real market data across several evaluation dimensions. While the quantitative analyses in Section [4](https://arxiv.org/html/2512.21798v1#S4 "4 Results ‣ Applications of synthetic financial data in portfolio and risk modeling") highlighted model-specific differences, the broader implication is that synthetic data generation has reached a maturity level that allows its integration into practical financial workflows.
+The findings of this study show that deep generative models can produce synthetic financial time series that behave similarly to real market data across several evaluation dimensions. While the quantitative analyses in Section [4](https://arxiv.org/html/2512.21798v2#S4 "4 Results ‣ Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling") highlighted model-specific differences, the broader implication is that synthetic data generation has reached a maturity level that allows its integration into practical financial workflows.
 
 ### 5.1 Model performance and interpretability
 
