@@ -1,14 +1,14 @@
 {
-  "doc_id": "arxiv:2512.21823v1",
+  "doc_id": "arxiv:2512.21823v2",
   "family_id": "arxiv:2512.21823",
   "title": "Investigating Conditional Restricted Boltzmann Machines in Regime Detection",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2025,
   "authors": [
     "Siddhartha Srinivas Rentala"
   ],
-  "url_abs": "http://arxiv.org/abs/2512.21823v1",
-  "url_html": "https://arxiv.org/html/2512.21823v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2512.21823v2",
+  "url_html": "https://arxiv.org/html/2512.21823v2",
+  "is_current": true
 }

@@ -1,21 +1,22 @@
 ---
 authors:
 - Siddhartha Srinivas Rentala
-doc_id: arxiv:2512.21823v1
+doc_id: arxiv:2512.21823v2
 family_id: arxiv:2512.21823
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
 title: Investigating Conditional Restricted Boltzmann Machines in Regime Detection
-url_abs: http://arxiv.org/abs/2512.21823v1
-url_html: https://arxiv.org/html/2512.21823v1
+url_abs: http://arxiv.org/abs/2512.21823v2
+url_html: https://arxiv.org/html/2512.21823v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2025
 ---
+
 
 Siddhartha Srinivas Rentala
 Master of Science in Quantitative Finance 
@@ -23,7 +24,7 @@ Master of Science in Quantitative Finance
 Fordham University
 [sr131@fordham.edu](mailto:)
 
-(Date: December 26, 2025)
+(Date: December 29, 2025)
 
 ###### Abstract.
 
@@ -32,11 +33,11 @@ conditioning and utilizing Persistent Contrastive Divergence (PCD) to incorporat
 
 ## 1. Introduction
 
-This study investigates the efficacy of Conditional Restricted Boltzmann Machines (CRBMs) [[6](https://arxiv.org/html/2512.21823v1#bib.bib6)] for modeling high-dimensional financial time series. We extend the classical application of static RBMs [[1](https://arxiv.org/html/2512.21823v1#bib.bib1)] by incorporating auto-regressive conditioning and employing Persistent Contrastive Divergence (PCD) to capture complex dependency structures.
+This study investigates the efficacy of Conditional Restricted Boltzmann Machines (CRBMs) [[6](https://arxiv.org/html/2512.21823v2#bib.bib6)] for modeling high-dimensional financial time series. We extend the classical application of static RBMs [[1](https://arxiv.org/html/2512.21823v2#bib.bib1)] by incorporating auto-regressive conditioning and employing Persistent Contrastive Divergence (PCD) to capture complex dependency structures.
 
 Our research studies three challenges in Energy-Based Modeling for finance. First, we aim to overcome the memory limitations of static RBMs by explicitly modeling the transition kernel P​(vt∣v<t)P(v\_{t}\mid v\_{<t}), thereby testing the model’s ability to capture volatility clustering endogenously while preserving the bipartite graph structure of RBMs. Second, we evaluate the model’s capacity to preserve the static correlation structure observed in the market. Third, we investigate whether the free energy of the Boltzmann distribution serves as a robust, unsupervised proxy for systemic market risk and regime detection.
 
-While prior work [[2](https://arxiv.org/html/2512.21823v1#bib.bib2)] relies on thermalization heuristics, this paper provides a rigorous assessment of whether CRBMs can learn a conditional probability density function that respects the memory endemic to financial markets.
+While prior work [[2](https://arxiv.org/html/2512.21823v2#bib.bib2)] relies on thermalization heuristics, this paper provides a rigorous assessment of whether CRBMs can learn a conditional probability density function that respects the memory endemic to financial markets.
 
 ## 2. Theory
 
@@ -44,7 +45,7 @@ In this paper, we investigate two types of CRBMs: the first is the Bernoulli-Ber
 
 ### 2.1. Energy-Based Formulation
 
-The Restricted Boltzmann Machine (RBM) is a stochastic neural network rooted in statistical physics[[4](https://arxiv.org/html/2512.21823v1#bib.bib4)]. It defines a joint probability distribution over visible units 𝐯\mathbf{v} and hidden units 𝐡\mathbf{h} via the Boltzmann distribution:
+The Restricted Boltzmann Machine (RBM) is a stochastic neural network rooted in statistical physics[[4](https://arxiv.org/html/2512.21823v2#bib.bib4)]. It defines a joint probability distribution over visible units 𝐯\mathbf{v} and hidden units 𝐡\mathbf{h} via the Boltzmann distribution:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -56,7 +57,7 @@ where Z=∑𝐯,𝐡e−E​(𝐯,𝐡)Z=\sum\_{\mathbf{v},\mathbf{h}}e^{-E(\mat
 | --- | --- | --- | --- |
 |  | P​(𝐯)=1Z​∑𝐡e−E​(𝐯,𝐡)P(\mathbf{v})=\frac{1}{Z}\sum\_{\mathbf{h}}e^{-E(\mathbf{v},\mathbf{h})} |  | (2.2) |
 
-In this study, we assume the system temperature T=1T=1 [[5](https://arxiv.org/html/2512.21823v1#bib.bib5)], treating the model as a standard Energy-Based Model (EBM) where learning corresponds to minimizing the energy of observed data samples while maximizing the energy of unobserved configurations[[3](https://arxiv.org/html/2512.21823v1#bib.bib3)].
+In this study, we assume the system temperature T=1T=1 [[5](https://arxiv.org/html/2512.21823v2#bib.bib5)], treating the model as a standard Energy-Based Model (EBM) where learning corresponds to minimizing the energy of observed data samples while maximizing the energy of unobserved configurations[[3](https://arxiv.org/html/2512.21823v2#bib.bib3)].
 
 #### The Bernoulli-Bernoulli RBM
 
@@ -80,7 +81,7 @@ A critical distinction arises in the first term: (vi−ai)22​σi2\frac{(v\_{i}
 
 ### 2.2. Derivation of Free Energy
 
-The central challenge in evaluating the Restricted Boltzmann Machine is the efficient computation of the marginal probability P​(𝐯)P(\mathbf{v}). In a naive formulation, calculating P​(𝐯)P(\mathbf{v}) requires summing over all possible hidden configurations 𝐡\mathbf{h}. For HH hidden units, this space has size 2H2^{H}, rendering direct computation intractable[[3](https://arxiv.org/html/2512.21823v1#bib.bib3)]. However, due to the bipartite structure of the RBM (no intra-layer connections), this summation can be factorized into a linear number of terms.
+The central challenge in evaluating the Restricted Boltzmann Machine is the efficient computation of the marginal probability P​(𝐯)P(\mathbf{v}). In a naive formulation, calculating P​(𝐯)P(\mathbf{v}) requires summing over all possible hidden configurations 𝐡\mathbf{h}. For HH hidden units, this space has size 2H2^{H}, rendering direct computation intractable[[3](https://arxiv.org/html/2512.21823v2#bib.bib3)]. However, due to the bipartite structure of the RBM (no intra-layer connections), this summation can be factorized into a linear number of terms.
 
 We define the Free Energy F​(𝐯)F(\mathbf{v}) such that the marginal probability is given by:
 
@@ -152,7 +153,7 @@ Thus, the free energy serves as a regime-aware metric; it measures structural co
 
 ### 2.3. Dynamic Biases in Conditional RBMs
 
-The primary innovation introduced by the Conditional Restricted Boltzmann Machine (CRBM) [[6](https://arxiv.org/html/2512.21823v1#bib.bib6)] is the conditioning of hidden and visible variables on a fixed window of autoregressed visible nodes, denoted as v<tv\_{<t}. In this framework, the connections from the past to the current state are directed, ensuring that temporal information flows strictly from past to future (v<t→vt,htv\_{<t}\to v\_{t},h\_{t}).
+The primary innovation introduced by the Conditional Restricted Boltzmann Machine (CRBM) [[6](https://arxiv.org/html/2512.21823v2#bib.bib6)] is the conditioning of hidden and visible variables on a fixed window of autoregressed visible nodes, denoted as v<tv\_{<t}. In this framework, the connections from the past to the current state are directed, ensuring that temporal information flows strictly from past to future (v<t→vt,htv\_{<t}\to v\_{t},h\_{t}).
 
 While the autoregressive lag order can theoretically differ for visible and hidden connections, in this study we set a symmetric lag of N=5N=5. This configuration allows the model to capture short-term memory and autocorrelation structures while maintaining the tractability of standard RBM training algorithms. Crucially, by conditioning on the past, the CRBM treats the history as a fixed context, allowing the optimization at time tt to proceed as if it were a static RBM with shifted biases.
 
@@ -196,7 +197,7 @@ This formulation allows the CRBM to distinguish between structure that is predic
 
 ## 3. Data and Methodology
 
-This study utilizes a multi-asset dataset spanning from January 2013 to January 2025, curated to capture a diverse range of market factors including Equities, Rates, Volatility, and Credit spreads. The specific assets were chosen to ensure the model is exposed to both risk-on/risk-off dynamics and structural correlations across asset classes. The complete asset universe, detailed in Table [1](https://arxiv.org/html/2512.21823v1#S3.T1 "Table 1 ‣ 3. Data and Methodology ‣ Investigating Conditional Restricted Boltzmann Machines in Regime Detection"), includes key indicators such as the S&P 500 for equity distributions, the VIX for implied volatility, and the 10Y-2Y Treasury spread for recessionary signaling.
+This study utilizes a multi-asset dataset spanning from January 2013 to January 2025, curated to capture a diverse range of market factors including Equities, Rates, Volatility, and Credit spreads. The specific assets were chosen to ensure the model is exposed to both risk-on/risk-off dynamics and structural correlations across asset classes. The complete asset universe, detailed in Table [1](https://arxiv.org/html/2512.21823v2#S3.T1 "Table 1 ‣ 3. Data and Methodology ‣ Investigating Conditional Restricted Boltzmann Machines in Regime Detection"), includes key indicators such as the S&P 500 for equity distributions, the VIX for implied volatility, and the 10Y-2Y Treasury spread for recessionary signaling.
 
 | Ticker | Category | Descriptor |
 | --- | --- | --- |
@@ -222,13 +223,13 @@ This study utilizes a multi-asset dataset spanning from January 2013 to January 
 
 Table 1. Asset Universe and Descriptors
 
-To evaluate the efficacy of different CRBM architectures, we employ two distinct preprocessing pipelines. Method A (Discrete) follows the methodology of Kondratyev (2019)[[2](https://arxiv.org/html/2512.21823v1#bib.bib2)] with the added CRBM, where continuous returns are discretized into binary vectors using a 16-bit encoding scheme; this allows the Bernoulli-Bernoulli CRBM to process continuous market data while maintaining high granularity through 2162^{16} distinct bins. In contrast, Method B (Continuous) employs Z-Score Standardization for the Gaussian-Bernoulli CRBM, where data is normalized to zero mean and unit variance (vi,t=(xi,t−μi)/σiv\_{i,t}=(x\_{i,t}-\mu\_{i})/\sigma\_{i}). This normalization is critical for the Gaussian energy function, as the quadratic penalty assumes inputs fall within a standard range to ensure stable gradients[[6](https://arxiv.org/html/2512.21823v1#bib.bib6)].
+To evaluate the efficacy of different CRBM architectures, we employ two distinct preprocessing pipelines. Method A (Discrete) follows the methodology of Kondratyev (2019)[[2](https://arxiv.org/html/2512.21823v2#bib.bib2)] with the added CRBM, where continuous returns are discretized into binary vectors using a 16-bit encoding scheme; this allows the Bernoulli-Bernoulli CRBM to process continuous market data while maintaining high granularity through 2162^{16} distinct bins. In contrast, Method B (Continuous) employs Z-Score Standardization for the Gaussian-Bernoulli CRBM, where data is normalized to zero mean and unit variance (vi,t=(xi,t−μi)/σiv\_{i,t}=(x\_{i,t}-\mu\_{i})/\sigma\_{i}). This normalization is critical for the Gaussian energy function, as the quadratic penalty assumes inputs fall within a standard range to ensure stable gradients[[6](https://arxiv.org/html/2512.21823v2#bib.bib6)].
 
 The model’s generalization capability is assessed through a chronological split that separates distinct market regimes. The Training Set encompasses the period from 2013 to 2019, representing a relatively stable, low-volatility bull market that allows the model to learn baseline correlations. The Testing Set, covering 2020 to 2025, introduces extreme structural breaks, including the COVID-19 crash, the subsequent liquidity-fueled rally, and the 2022 inflation regime. This split specifically tests the Conditional RBM’s ability to utilize its dynamic bias mechanism to adapt to unseen high-volatility environments that differ fundamentally from the training distribution.
 
 ## 4. Results and Analysis
 
-The results and analysis section is divided into a shorter section on the Bernoulli-Bernoulli CRBM and a slightly more verbose analysis on the Gaussian-Bernoulli CRBM. Note that all analysis for model selection was done on the basis of mean squared error as suggested by Hinton [[1](https://arxiv.org/html/2512.21823v1#bib.bib1)].
+The results and analysis section is divided into a shorter section on the Bernoulli-Bernoulli CRBM and a slightly more verbose analysis on the Gaussian-Bernoulli CRBM. Note that all analysis for model selection was done on the basis of mean squared error as suggested by Hinton [[1](https://arxiv.org/html/2512.21823v2#bib.bib1)].
 
 ### 4.1. Bernoulli-Bernoulli CRBMs
 
@@ -266,7 +267,7 @@ Finally, we examine the trajectory of the free energy F​(𝐯)F(\mathbf{v}) ov
 
 Instead of clear, discernible shifts during stress periods (such as the COVID-19 crash in early 2020 or the 2022 inflation shock), the free energy exhibits mean-reverting oscillations. This instability is, once again, a direct artifact of the bit flipping we elucidated upon earlier. In a 16-bit binary space, minor fluctuations in continuous asset returns can trigger rapid ”bit-flipping”. These changes in the visible vector 𝐯\mathbf{v} create stochastic noise that drowns out the lower-frequency structural signal of the market. While the MSB priority should, in theory, rectify this by attributing the left-most bits as those that the model should pay more attention to, this doesn’t hold simply due to the amount of noise introduced in the remaining flipped 15 bits for every data point.
 
-Furthermore, the absolute magnitude of the free energy raises concerns regarding the model’s discriminative capability. The values consistently hover in the extreme range. Since P​(𝐯)∝e−F​(𝐯)P(\mathbf{v})\propto e^{-F(\mathbf{v})}, these deeply negative energies imply that the model assigns near-certain probabilities to effectively all observed states, something we are unable to fully rectify even with sparsity targets as suggested by Hinton [[1](https://arxiv.org/html/2512.21823v1#bib.bib1)]. The model fails to differentiate between high-probability normal market days and low-probability crisis days; instead, it collapses the probability landscape, treating every state as highly likely. Consequently, the Bernoulli formulation lacks both the smoothness and the contrast required to serve as a reliable market stability metric.
+Furthermore, the absolute magnitude of the free energy raises concerns regarding the model’s discriminative capability. The values consistently hover in the extreme range. Since P​(𝐯)∝e−F​(𝐯)P(\mathbf{v})\propto e^{-F(\mathbf{v})}, these deeply negative energies imply that the model assigns near-certain probabilities to effectively all observed states, something we are unable to fully rectify even with sparsity targets as suggested by Hinton [[1](https://arxiv.org/html/2512.21823v2#bib.bib1)]. The model fails to differentiate between high-probability normal market days and low-probability crisis days; instead, it collapses the probability landscape, treating every state as highly likely. Consequently, the Bernoulli formulation lacks both the smoothness and the contrast required to serve as a reliable market stability metric.
 
 ### 4.2. Gaussian-Bernoulli CRBM Results and Analysis
 
