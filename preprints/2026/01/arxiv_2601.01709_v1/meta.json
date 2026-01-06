@@ -1,0 +1,17 @@
+{
+  "doc_id": "arxiv:2601.01709v1",
+  "family_id": "arxiv:2601.01709",
+  "title": "Reinforcement Learning for Option Hedging: Static Implied-Volatility Fit versus Shortfall-Aware Performance",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Ziheng Chen",
+    "Minxuan Hu",
+    "Jiayu Yi",
+    "Wenxi Sun"
+  ],
+  "url_abs": "http://arxiv.org/abs/2601.01709v1",
+  "url_html": "https://arxiv.org/html/2601.01709v1",
+  "is_current": true
+}
