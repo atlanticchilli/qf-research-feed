@@ -1,17 +1,17 @@
 {
-  "doc_id": "arxiv:2601.04160v2",
+  "doc_id": "arxiv:2601.04160v3",
   "family_id": "arxiv:2601.04160",
-  "title": "[2601.04160v2] All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
+  "title": "[2601.04160v3] All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
   "venue": "arXiv q-fin",
-  "version": 2,
+  "version": 3,
   "year": 2026,
   "authors": [
     "Yuechen Jiang",
     "Zhiwei Liu",
     "Yupeng Cao",
     "Yueru He",
-    "Chen Xu",
     "Ziyang Xu",
+    "Chen Xu",
     "Zhiyang Deng",
     "Prayag Tiwari",
     "Xi Chen",
@@ -20,7 +20,7 @@
     "Junichi Tsujii",
     "Sophia Ananiadou"
   ],
-  "url_abs": "http://arxiv.org/abs/2601.04160v2",
-  "url_html": "https://ar5iv.org/html/2601.04160v2",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2601.04160v3",
+  "url_html": "https://ar5iv.org/html/2601.04160v3",
+  "is_current": true
 }

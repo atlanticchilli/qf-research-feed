@@ -4,8 +4,8 @@ authors:
 - Zhiwei Liu
 - Yupeng Cao
 - Yueru He
-- Chen Xu
 - Ziyang Xu
+- Chen Xu
 - Zhiyang Deng
 - Prayag Tiwari
 - Xi Chen
@@ -13,22 +13,23 @@ authors:
 - Jimin Huang
 - Junichi Tsujii
 - Sophia Ananiadou
-doc_id: arxiv:2601.04160v2
+doc_id: arxiv:2601.04160v3
 family_id: arxiv:2601.04160
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2601.04160v2] All That Glisters Is Not Gold: A Benchmark for Reference-Free
+title: '[2601.04160v3] All That Glisters Is Not Gold: A Benchmark for Reference-Free
   Counterfactual Financial Misinformation Detection'
-url_abs: http://arxiv.org/abs/2601.04160v2
-url_html: https://ar5iv.org/html/2601.04160v2
+url_abs: http://arxiv.org/abs/2601.04160v3
+url_html: https://ar5iv.org/html/2601.04160v3
 venue: arXiv q-fin
-version: 2
+version: 3
 year: 2026
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 
