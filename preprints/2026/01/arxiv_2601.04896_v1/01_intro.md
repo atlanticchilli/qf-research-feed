@@ -8,7 +8,7 @@ authors:
 - Dhagash Mehta
 doc_id: arxiv:2601.04896v1
 family_id: arxiv:2601.04896
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -22,7 +22,6 @@ venue: arXiv q-fin
 version: 1
 year: 2026
 ---
-
 
 Khabbab Zakaria
   
