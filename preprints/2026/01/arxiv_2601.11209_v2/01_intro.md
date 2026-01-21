@@ -5,22 +5,23 @@ authors:
 - Anastasis Kratsios
 - Yannick Limmer
 - Raeid Saqur
-doc_id: arxiv:2601.11209v1
+doc_id: arxiv:2601.11209v2
 family_id: arxiv:2601.11209
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2601.11209v1] SANOS -- Smooth strictly Arbitrage-free Non-parametric Option
+title: '[2601.11209v2] SANOS Smooth strictly Arbitrage-free Non-parametric Option
   Surfaces'
-url_abs: http://arxiv.org/abs/2601.11209v1
-url_html: https://ar5iv.org/html/2601.11209v1
+url_abs: http://arxiv.org/abs/2601.11209v2
+url_html: https://ar5iv.org/html/2601.11209v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2026
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 

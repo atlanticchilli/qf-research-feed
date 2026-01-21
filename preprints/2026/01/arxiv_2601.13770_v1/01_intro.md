@@ -1,26 +1,23 @@
 ---
 authors:
-- Hans Buehler
-- Blanka Horvath
-- Anastasis Kratsios
-- Yannick Limmer
-- Raeid Saqur
-doc_id: arxiv:2601.11209v1
-family_id: arxiv:2601.11209
-is_current: false
+- Mostapha Benhenda
+doc_id: arxiv:2601.13770v1
+family_id: arxiv:2601.13770
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2601.11209v1] SANOS -- Smooth strictly Arbitrage-free Non-parametric Option
-  Surfaces'
-url_abs: http://arxiv.org/abs/2601.11209v1
-url_html: https://ar5iv.org/html/2601.11209v1
+title: '[2601.13770v1] Look-Ahead-Bench: a Standardized Benchmark of Look-ahead Bias
+  in Point-in-Time LLMs for Finance'
+url_abs: http://arxiv.org/abs/2601.13770v1
+url_html: https://ar5iv.org/html/2601.13770v1
 venue: arXiv q-fin
 version: 1
 year: 2026
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 
@@ -28,5 +25,5 @@ Both individuals and organizations that work with arXivLabs have embraced and ac
 
 Have an idea for a project that will add value for arXiv's community? [**Learn more about arXivLabs**](https://info.arxiv.org/labs/index.html).
 
-[Which authors of this paper are endorsers?](/auth/show-endorsers/2601.11209) |
+[Which authors of this paper are endorsers?](/auth/show-endorsers/2601.13770) |
 [Disable MathJax](javascript:setMathjaxCookie()) ([What is MathJax?](https://info.arxiv.org/help/mathjax.html))
