@@ -3,21 +3,22 @@ authors:
 - Michail Anthropelos
 - Constantinos Kardaras
 - Constantinos Stefanakis
-doc_id: arxiv:2601.14139v1
+doc_id: arxiv:2601.14139v2
 family_id: arxiv:2601.14139
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
 title: Log-optimality with small liability stream
-url_abs: http://arxiv.org/abs/2601.14139v1
-url_html: https://arxiv.org/html/2601.14139v1
+url_abs: http://arxiv.org/abs/2601.14139v2
+url_html: https://arxiv.org/html/2601.14139v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2026
 ---
+
 
 Michail Anthropelos
 Department of Banking and Financial Management
@@ -51,13 +52,13 @@ October, 2025
 
 ### Discussion
 
-A central problem in financial economics involves an investor allocating initial wealth across an array of assets, with the goal of maximizing the expected utility of terminal wealth. This optimal investment problem in continuous-time settings was initially studied by Merton in [[32](https://arxiv.org/html/2601.14139v1#bib.bib46 "Lifetime portfolio selection under uncertainty: the continuous-time case"), [33](https://arxiv.org/html/2601.14139v1#bib.bib47 "Optimum consumption and prtfolio rules in a continuous-time model")], who used dynamic programming techniques to derive a non-linear partial differential equation characterizing the value function.
+A central problem in financial economics involves an investor allocating initial wealth across an array of assets, with the goal of maximizing the expected utility of terminal wealth. This optimal investment problem in continuous-time settings was initially studied by Merton in [[32](https://arxiv.org/html/2601.14139v2#bib.bib46 "Lifetime portfolio selection under uncertainty: the continuous-time case"), [33](https://arxiv.org/html/2601.14139v2#bib.bib47 "Optimum consumption and prtfolio rules in a continuous-time model")], who used dynamic programming techniques to derive a non-linear partial differential equation characterizing the value function.
 
-A major conceptual advancement came with the development of the theory of equivalent martingale measures by Ross [[46](https://arxiv.org/html/2601.14139v1#bib.bib50 "The arbitrage theory of capital asset pricing")], Harrison and Kreps [[10](https://arxiv.org/html/2601.14139v1#bib.bib48 "Martingales and arbitrage in multiperiod security markets")] and Harrison and Pliska [[11](https://arxiv.org/html/2601.14139v1#bib.bib49 "Martingales and stochastic integrals in the theory of continuous trading")], which enabled the application of martingale and duality methods to such optimization problems. Under the assumption of market completeness, this duality approach was further developed by Pliska [[45](https://arxiv.org/html/2601.14139v1#bib.bib51 "A stochastic calculus model of continuous trading: optimal portfolio")]; Karatzas, Lehoczky, and Shreve [[24](https://arxiv.org/html/2601.14139v1#bib.bib52 "Optimal portfolio and consumption decisions for a “small investor” on a finite horizon")]; and Cox and Huang [[2](https://arxiv.org/html/2601.14139v1#bib.bib53 "Optimal consumption and portfolio policies when asset prices follow a diffusion process"), [3](https://arxiv.org/html/2601.14139v1#bib.bib54 "A variational problem arising in financial economics")]. The more intricate case of incomplete markets was addressed in foundational works by He and Pearson [[12](https://arxiv.org/html/2601.14139v1#bib.bib55 "Consumption and portfolio policies with incomplete markets and short-sale constraints: the finite-dimensional case"), [13](https://arxiv.org/html/2601.14139v1#bib.bib56 "Consumption and portfolio policies with incomplete markets and short-sale constraints: the infinite-dimensional case")] and by Karatzas, Lehoczky, Shreve, and Xu [[23](https://arxiv.org/html/2601.14139v1#bib.bib57 "Martingale and duality methods for utility maximization in an incomplete market")]. Building on these contributions, Kramkov and Schachermayer [[26](https://arxiv.org/html/2601.14139v1#bib.bib3 "The asymptotic elasticity of utility functions and optimal investment in incomplete markets"), [27](https://arxiv.org/html/2601.14139v1#bib.bib58 "Necessary and sufficient conditions in the problem of optimal investment in incomplete markets")] established minimal conditions on both the utility function and the financial market under which the core results of the theory remain valid.
+A major conceptual advancement came with the development of the theory of equivalent martingale measures by Ross [[46](https://arxiv.org/html/2601.14139v2#bib.bib50 "The arbitrage theory of capital asset pricing")], Harrison and Kreps [[10](https://arxiv.org/html/2601.14139v2#bib.bib48 "Martingales and arbitrage in multiperiod security markets")] and Harrison and Pliska [[11](https://arxiv.org/html/2601.14139v2#bib.bib49 "Martingales and stochastic integrals in the theory of continuous trading")], which enabled the application of martingale and duality methods to such optimization problems. Under the assumption of market completeness, this duality approach was further developed by Pliska [[45](https://arxiv.org/html/2601.14139v2#bib.bib51 "A stochastic calculus model of continuous trading: optimal portfolio")]; Karatzas, Lehoczky, and Shreve [[24](https://arxiv.org/html/2601.14139v2#bib.bib52 "Optimal portfolio and consumption decisions for a “small investor” on a finite horizon")]; and Cox and Huang [[2](https://arxiv.org/html/2601.14139v2#bib.bib53 "Optimal consumption and portfolio policies when asset prices follow a diffusion process"), [3](https://arxiv.org/html/2601.14139v2#bib.bib54 "A variational problem arising in financial economics")]. The more intricate case of incomplete markets was addressed in foundational works by He and Pearson [[12](https://arxiv.org/html/2601.14139v2#bib.bib55 "Consumption and portfolio policies with incomplete markets and short-sale constraints: the finite-dimensional case"), [13](https://arxiv.org/html/2601.14139v2#bib.bib56 "Consumption and portfolio policies with incomplete markets and short-sale constraints: the infinite-dimensional case")] and by Karatzas, Lehoczky, Shreve, and Xu [[23](https://arxiv.org/html/2601.14139v2#bib.bib57 "Martingale and duality methods for utility maximization in an incomplete market")]. Building on these contributions, Kramkov and Schachermayer [[26](https://arxiv.org/html/2601.14139v2#bib.bib3 "The asymptotic elasticity of utility functions and optimal investment in incomplete markets"), [27](https://arxiv.org/html/2601.14139v2#bib.bib58 "Necessary and sufficient conditions in the problem of optimal investment in incomplete markets")] established minimal conditions on both the utility function and the financial market under which the core results of the theory remain valid.
 
-In the context of incomplete markets, a natural extension of the problem involves maximizing expected utility when the investor receives an additional exogenous random endowment. Typical examples of this being pension funds. In complete markets, endowments can be perfectly replicated using traded assets, effectively reducing the problem to one with augmented initial wealth and no random endowment. However, as noted among others in [[14](https://arxiv.org/html/2601.14139v1#bib.bib34 "Utility indifference pricing: an overview")], real-world markets are typically incomplete, with perfect replication impeded by frictions such as transaction costs, non-traded assets, and portfolio constraints. In such settings, assets are associated with a range of arbitrage-free prices, and the risk of holding them cannot be fully hedged through market trading alone.
+In the context of incomplete markets, a natural extension of the problem involves maximizing expected utility when the investor receives an additional exogenous random endowment. Typical examples of this being pension funds. In complete markets, endowments can be perfectly replicated using traded assets, effectively reducing the problem to one with augmented initial wealth and no random endowment. However, as noted among others in [[14](https://arxiv.org/html/2601.14139v2#bib.bib34 "Utility indifference pricing: an overview")], real-world markets are typically incomplete, with perfect replication impeded by frictions such as transaction costs, non-traded assets, and portfolio constraints. In such settings, assets are associated with a range of arbitrage-free prices, and the risk of holding them cannot be fully hedged through market trading alone.
 
-Consequently, analyzing the value function and its solution in an incomplete market setting is undeniably more challenging. Notable contributions addressing this challenge include Cvitanić, Schachermayer, and Wang [[4](https://arxiv.org/html/2601.14139v1#bib.bib59 "Utility maximization in incomplete markets with random endowment")], who characterized the optimal terminal wealth in a general semimartingale model via a dual formulation. [[25](https://arxiv.org/html/2601.14139v1#bib.bib60 "Optimal consumption from investment and random endowment in incomplete semimartingale markets")] extends this framework to account for intertemporal consumption. Hugonnier and Kramkov [[18](https://arxiv.org/html/2601.14139v1#bib.bib4 "Optimal investment with random endowments in incomplete markets")] treated both the initial capital and the units held in the endowment as optimization variables, hence not requiring the use of finitely additive measures. [[44](https://arxiv.org/html/2601.14139v1#bib.bib61 "Optimal investment with an unbounded random endowment and utility-based pricing")] studies the case of unbounded random endowments and utility functions defined over the entire real line, providing necessary and sufficient conditions for the existence of a solution to the primal problem. [[40](https://arxiv.org/html/2601.14139v1#bib.bib67 "Necessary and sufficient conditions in the problem of optimal investment with intermediate consumption")] obtains necessary and sufficient conditions in the general framework of an incomplete financial model with a stochastic field utility and intermediate consumption, occurring according to some stochastic clock, while [[41](https://arxiv.org/html/2601.14139v1#bib.bib68 "Optimal investment with intermediate consumption and random endowment")] generalizes the former by also incorporating a random endowment process into the model. Staying within the context of intermediate consumption, [[1](https://arxiv.org/html/2601.14139v1#bib.bib69 "Optimal investment with intermediate consumption under no unbounded profit with bounded risk")] show that the key conclusions of the utility maximization theory hold under the assumptions of No Unbounded Profit with Bounded Risk (NUPBR) and of the finiteness of both primal and dual functions.
+Consequently, analyzing the value function and its solution in an incomplete market setting is undeniably more challenging. Notable contributions addressing this challenge include Cvitanić, Schachermayer, and Wang [[4](https://arxiv.org/html/2601.14139v2#bib.bib59 "Utility maximization in incomplete markets with random endowment")], who characterized the optimal terminal wealth in a general semimartingale model via a dual formulation. [[25](https://arxiv.org/html/2601.14139v2#bib.bib60 "Optimal consumption from investment and random endowment in incomplete semimartingale markets")] extends this framework to account for intertemporal consumption. Hugonnier and Kramkov [[18](https://arxiv.org/html/2601.14139v2#bib.bib4 "Optimal investment with random endowments in incomplete markets")] treated both the initial capital and the units held in the endowment as optimization variables, hence not requiring the use of finitely additive measures. [[44](https://arxiv.org/html/2601.14139v2#bib.bib61 "Optimal investment with an unbounded random endowment and utility-based pricing")] studies the case of unbounded random endowments and utility functions defined over the entire real line, providing necessary and sufficient conditions for the existence of a solution to the primal problem. [[40](https://arxiv.org/html/2601.14139v2#bib.bib67 "Necessary and sufficient conditions in the problem of optimal investment with intermediate consumption")] obtains necessary and sufficient conditions in the general framework of an incomplete financial model with a stochastic field utility and intermediate consumption, occurring according to some stochastic clock, while [[41](https://arxiv.org/html/2601.14139v2#bib.bib68 "Optimal investment with intermediate consumption and random endowment")] generalizes the former by also incorporating a random endowment process into the model. Staying within the context of intermediate consumption, [[1](https://arxiv.org/html/2601.14139v2#bib.bib69 "Optimal investment with intermediate consumption under no unbounded profit with bounded risk")] show that the key conclusions of the utility maximization theory hold under the assumptions of No Unbounded Profit with Bounded Risk (NUPBR) and of the finiteness of both primal and dual functions.
 
 ### Contributions
 
@@ -66,7 +67,7 @@ In an incomplete financial market with general continuous semimartingale dynamic
 1. (1)
 
    Fourth-order expansion and nearly optimal strategies:
-   Using duality techniques, we derive the fourth-order expansion of the primal value function with respect to the number of units ϵ\epsilon, held in the non-traded endowment. In turn, this lays the foundation for expanding the optimal wealth process, in this context, up to second order w.r.t. ϵ\epsilon. To the best of our knowledge this is the first result in this direction, extending the work of [[28](https://arxiv.org/html/2601.14139v1#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes")], [[29](https://arxiv.org/html/2601.14139v1#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")] for the case of log-utility. Interestingly enough, the key processes underpinning the aforementioned results are given in terms of Kunita-Watanabe projections, mirroring the case of lower order expansions of similar nature.
+   Using duality techniques, we derive the fourth-order expansion of the primal value function with respect to the number of units ϵ\epsilon, held in the non-traded endowment. In turn, this lays the foundation for expanding the optimal wealth process, in this context, up to second order w.r.t. ϵ\epsilon. To the best of our knowledge this is the first result in this direction, extending the work of [[28](https://arxiv.org/html/2601.14139v2#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes")], [[29](https://arxiv.org/html/2601.14139v2#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")] for the case of log-utility. Interestingly enough, the key processes underpinning the aforementioned results are given in terms of Kunita-Watanabe projections, mirroring the case of lower order expansions of similar nature.
 2. (2)
 
    Long-horizon asymptotics:
@@ -78,21 +79,21 @@ These results have two key implications. First they allow for a better understan
 
 The existing literature on optimal investment is too vast in order to give a complete overview. Instead, we focus on the specific area of utility-based hedging and pricing, which is closely aligned to our work.
 
-An appealing choice of utility in this context is the exponential one, as it allows for closed-form results in various settings. This is due to its property of separating the value function into components associated with wealth and trading; simplifying the analysis considerably. Prominent works in this context include [[17](https://arxiv.org/html/2601.14139v1#bib.bib16 "Valuation of claims on nontraded assets using utility maximization")], [[43](https://arxiv.org/html/2601.14139v1#bib.bib21 "An example of indifference prices under exponential preferences")], [[9](https://arxiv.org/html/2601.14139v1#bib.bib31 "Indifference pricing and hedging for volatility derivatives")], and [[30](https://arxiv.org/html/2601.14139v1#bib.bib24 "Accounting for risk aversion in derivatives purchase timing")]. These studies leverage a linearization technique—commonly referred to as the Cole-Hopf transformation or distortion power—first introduced in claim valuation by [[48](https://arxiv.org/html/2601.14139v1#bib.bib25 "A solution approach to valuation with unhedgeable risks")], which reduces the resulting nonlinear HJB PDE to a linear form, solvable via standard methods. Further generalizations by [[7](https://arxiv.org/html/2601.14139v1#bib.bib29 "Exponential utility indifference valuation in two brownian settings with stochastic correlation")] and [[8](https://arxiv.org/html/2601.14139v1#bib.bib28 "Exponential utility indifference valuation in a general semimartingale model")] showed that, even in models with general asset dynamics, the exponential utility-based price admits an explicit expression; although these formulas are often less interpretable. Complementary to these results, [[5](https://arxiv.org/html/2601.14139v1#bib.bib13 "Optimal hedging with basis risk")] used duality techniques to derive an explicit form for the optimal hedging strategy; with related developments also appearing in [[37](https://arxiv.org/html/2601.14139v1#bib.bib33 "Malliavin calculus method for asymptotic expansion of dual control problems")].
+An appealing choice of utility in this context is the exponential one, as it allows for closed-form results in various settings. This is due to its property of separating the value function into components associated with wealth and trading; simplifying the analysis considerably. Prominent works in this context include [[17](https://arxiv.org/html/2601.14139v2#bib.bib16 "Valuation of claims on nontraded assets using utility maximization")], [[43](https://arxiv.org/html/2601.14139v2#bib.bib21 "An example of indifference prices under exponential preferences")], [[9](https://arxiv.org/html/2601.14139v2#bib.bib31 "Indifference pricing and hedging for volatility derivatives")], and [[30](https://arxiv.org/html/2601.14139v2#bib.bib24 "Accounting for risk aversion in derivatives purchase timing")]. These studies leverage a linearization technique—commonly referred to as the Cole-Hopf transformation or distortion power—first introduced in claim valuation by [[48](https://arxiv.org/html/2601.14139v2#bib.bib25 "A solution approach to valuation with unhedgeable risks")], which reduces the resulting nonlinear HJB PDE to a linear form, solvable via standard methods. Further generalizations by [[7](https://arxiv.org/html/2601.14139v2#bib.bib29 "Exponential utility indifference valuation in two brownian settings with stochastic correlation")] and [[8](https://arxiv.org/html/2601.14139v2#bib.bib28 "Exponential utility indifference valuation in a general semimartingale model")] showed that, even in models with general asset dynamics, the exponential utility-based price admits an explicit expression; although these formulas are often less interpretable. Complementary to these results, [[5](https://arxiv.org/html/2601.14139v2#bib.bib13 "Optimal hedging with basis risk")] used duality techniques to derive an explicit form for the optimal hedging strategy; with related developments also appearing in [[37](https://arxiv.org/html/2601.14139v2#bib.bib33 "Malliavin calculus method for asymptotic expansion of dual control problems")].
 
-Even within the relatively tractable exponential utility framework, explicit expressions are not always obtainable. For example, in models where the claim depends on the traded asset Sircar and Zariphopoulou [[47](https://arxiv.org/html/2601.14139v1#bib.bib36 "Bounds and asymptotic approximations for utility prices when volatility is random")] derive asymptotic expansions for the utility-indifference price in the context of fast mean-reverting volatility. Henderson and Liang [[16](https://arxiv.org/html/2601.14139v1#bib.bib37 "A multidimensional exponential utility indifference pricing model with applications to counterparty risk")] consider a multidimensional non-traded asset model subject to intertemporal default risk, and develop a semigroup approximation using splitting techniques.
+Even within the relatively tractable exponential utility framework, explicit expressions are not always obtainable. For example, in models where the claim depends on the traded asset Sircar and Zariphopoulou [[47](https://arxiv.org/html/2601.14139v2#bib.bib36 "Bounds and asymptotic approximations for utility prices when volatility is random")] derive asymptotic expansions for the utility-indifference price in the context of fast mean-reverting volatility. Henderson and Liang [[16](https://arxiv.org/html/2601.14139v2#bib.bib37 "A multidimensional exponential utility indifference pricing model with applications to counterparty risk")] consider a multidimensional non-traded asset model subject to intertemporal default risk, and develop a semigroup approximation using splitting techniques.
 
-Given the scarcity of explicit results, various asymptotic approaches have been proposed for pricing and hedging in incomplete markets. Monoyios [[34](https://arxiv.org/html/2601.14139v1#bib.bib14 "Performance of utility-based strategies for hedging basis risk"), [35](https://arxiv.org/html/2601.14139v1#bib.bib15 "Optimal hedging and parameter uncertainty")], for example, works within a Black-Scholes framework with basis risk and approximates the hedging strategy in powers of 1−ρ21-\rho^{2}, where ρ\rho denotes the correlation between traded and non-traded assets. In [[17](https://arxiv.org/html/2601.14139v1#bib.bib16 "Valuation of claims on nontraded assets using utility maximization")] and [[15](https://arxiv.org/html/2601.14139v1#bib.bib17 "Real options with constant relative risk aversion")] the authors consider the case of power utility and derive the second-order expansions of the investor’s value function with respect to a small position in the contingent claim, thereby approximating both the hedging strategy and reservation price.
+Given the scarcity of explicit results, various asymptotic approaches have been proposed for pricing and hedging in incomplete markets. Monoyios [[34](https://arxiv.org/html/2601.14139v2#bib.bib14 "Performance of utility-based strategies for hedging basis risk"), [35](https://arxiv.org/html/2601.14139v2#bib.bib15 "Optimal hedging and parameter uncertainty")], for example, works within a Black-Scholes framework with basis risk and approximates the hedging strategy in powers of 1−ρ21-\rho^{2}, where ρ\rho denotes the correlation between traded and non-traded assets. In [[17](https://arxiv.org/html/2601.14139v2#bib.bib16 "Valuation of claims on nontraded assets using utility maximization")] and [[15](https://arxiv.org/html/2601.14139v2#bib.bib17 "Real options with constant relative risk aversion")] the authors consider the case of power utility and derive the second-order expansions of the investor’s value function with respect to a small position in the contingent claim, thereby approximating both the hedging strategy and reservation price.
 
-These early results of Henderson and Hobson were significantly extended in [[28](https://arxiv.org/html/2601.14139v1#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes"), [29](https://arxiv.org/html/2601.14139v1#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")], where the authors study a general semimartingale framework; under a broad class of utility functions defined on the positive real line. Particularly in [[28](https://arxiv.org/html/2601.14139v1#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes")] they derive the second-order expansion of the value function which in turn is used to get a first order approximation for marginal (utility-based) indifference prices and study their qualitative features. A related analysis by Kallsen [[21](https://arxiv.org/html/2601.14139v1#bib.bib20 "Derivative pricing based on local utility maximization")] studies first order marginal price approximations under local utility maximization.
+These early results of Henderson and Hobson were significantly extended in [[28](https://arxiv.org/html/2601.14139v2#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes"), [29](https://arxiv.org/html/2601.14139v2#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")], where the authors study a general semimartingale framework; under a broad class of utility functions defined on the positive real line. Particularly in [[28](https://arxiv.org/html/2601.14139v2#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes")] they derive the second-order expansion of the value function which in turn is used to get a first order approximation for marginal (utility-based) indifference prices and study their qualitative features. A related analysis by Kallsen [[21](https://arxiv.org/html/2601.14139v2#bib.bib20 "Derivative pricing based on local utility maximization")] studies first order marginal price approximations under local utility maximization.
 
-In [[29](https://arxiv.org/html/2601.14139v1#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")], using techniques developed in their earlier work, the authors also provide a first-order approximation of the utility-based hedging strategy w.r.t. the units held in the non-traded endowment and demonstrate its relation to quadratic hedging. Similar asymptotic results are found in [[36](https://arxiv.org/html/2601.14139v1#bib.bib40 "Utility-based valuation and hedging of basis risk with partial information")], which considers valuation and hedging in the presence of parameter uncertainty under exponential utility and partial information. Therein, the indifference price is approximated up to linear order in the risk aversion parameter via PDE methods.
+In [[29](https://arxiv.org/html/2601.14139v2#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")], using techniques developed in their earlier work, the authors also provide a first-order approximation of the utility-based hedging strategy w.r.t. the units held in the non-traded endowment and demonstrate its relation to quadratic hedging. Similar asymptotic results are found in [[36](https://arxiv.org/html/2601.14139v2#bib.bib40 "Utility-based valuation and hedging of basis risk with partial information")], which considers valuation and hedging in the presence of parameter uncertainty under exponential utility and partial information. Therein, the indifference price is approximated up to linear order in the risk aversion parameter via PDE methods.
 
-In the same spirit, [[20](https://arxiv.org/html/2601.14139v1#bib.bib41 "Asymptotic utility-based pricing and hedging for exponential utility")] analyzes utility-based pricing and hedging under exponential utility for a vanishing risk aversion. [[19](https://arxiv.org/html/2601.14139v1#bib.bib44 "Asymptotic power utility-based pricing and hedging")], focusing on exponential Lévy models, presents alternative representations of the results in [[28](https://arxiv.org/html/2601.14139v1#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes"), [29](https://arxiv.org/html/2601.14139v1#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")] for power utility functions, that avoid the need for a change of numeraire.
+In the same spirit, [[20](https://arxiv.org/html/2601.14139v2#bib.bib41 "Asymptotic utility-based pricing and hedging for exponential utility")] analyzes utility-based pricing and hedging under exponential utility for a vanishing risk aversion. [[19](https://arxiv.org/html/2601.14139v2#bib.bib44 "Asymptotic power utility-based pricing and hedging")], focusing on exponential Lévy models, presents alternative representations of the results in [[28](https://arxiv.org/html/2601.14139v2#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes"), [29](https://arxiv.org/html/2601.14139v2#bib.bib19 "Asymptotic analysis of utility-based hedging strategies for small number of contingent claims")] for power utility functions, that avoid the need for a change of numeraire.
 
-Within the setting of exponential Lévy processes, [[31](https://arxiv.org/html/2601.14139v1#bib.bib45 "Asymptotic indifference pricing in exponential lévy models")] derives a non-asymptotic approximation for the exponential utility-based indifference price. The approach therein extends the earlier small risk-aversion asymptotics and yields a closed-form approximation by treating the Lévy model as a perturbation of the classical Black-Scholes framework.
+Within the setting of exponential Lévy processes, [[31](https://arxiv.org/html/2601.14139v2#bib.bib45 "Asymptotic indifference pricing in exponential lévy models")] derives a non-asymptotic approximation for the exponential utility-based indifference price. The approach therein extends the earlier small risk-aversion asymptotics and yields a closed-form approximation by treating the Lévy model as a perturbation of the classical Black-Scholes framework.
 
-There is also an associated strand of literature which conducts sensitivity analysis of the utility maximization problem w.r.t. other model perturbations. For example [[38](https://arxiv.org/html/2601.14139v1#bib.bib70 "Sensitivity analysis of the utility maximization problem with respect to model perturbations")] studies the sensitivity of the expected utility maximization problem in a continuous semimartingale market w.r.t. small changes in the market price of risk. [[42](https://arxiv.org/html/2601.14139v1#bib.bib71 "Asymptotic analysis of the expected utility maximization problem with respect to perturbations of the numeraire")] investigates the behavior of the expected utility maximization problem under small perturbations of the numeraire, while [[39](https://arxiv.org/html/2601.14139v1#bib.bib72 "Quadratic expansions in optimal investment with respect to perturbations of the semimartingale model")] study the response of the optimal investment problem to small changes of the stock price dynamics.
+There is also an associated strand of literature which conducts sensitivity analysis of the utility maximization problem w.r.t. other model perturbations. For example [[38](https://arxiv.org/html/2601.14139v2#bib.bib70 "Sensitivity analysis of the utility maximization problem with respect to model perturbations")] studies the sensitivity of the expected utility maximization problem in a continuous semimartingale market w.r.t. small changes in the market price of risk. [[42](https://arxiv.org/html/2601.14139v2#bib.bib71 "Asymptotic analysis of the expected utility maximization problem with respect to perturbations of the numeraire")] investigates the behavior of the expected utility maximization problem under small perturbations of the numeraire, while [[39](https://arxiv.org/html/2601.14139v2#bib.bib72 "Quadratic expansions in optimal investment with respect to perturbations of the semimartingale model")] study the response of the optimal investment problem to small changes of the stock price dynamics.
 
 ### Structure of the paper
 
@@ -152,13 +153,13 @@ X~>0\widetilde{X}>0.
 
 We denote this subset of wealth processes by 𝒳~​(x)\widetilde{\mathscr{X}}(x). The union ∪x>0𝒳~​(x)\cup\_{x>0}\widetilde{\mathscr{X}}(x) is denoted by 𝒳~\widetilde{\mathscr{X}}.
 
-The market’s viability is intimately connected to the following condition, as shown in [[22](https://arxiv.org/html/2601.14139v1#bib.bib6 "Portfolio theory and arbitrage: a course in mathematical finance"), Theorem 2.31]:
+The market’s viability is intimately connected to the following condition, as shown in [[22](https://arxiv.org/html/2601.14139v2#bib.bib6 "Portfolio theory and arbitrage: a course in mathematical finance"), Theorem 2.31]:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 | (A1) |  | cc is non-singular, (ℙ⊗O)(\mathbb{P}\otimes O)-a.e. and ∫0K(a​(t))′​(c​(t))−1​a​(t)​𝑑O​(t)<∞\int\_{0}^{K}(a(t))^{{}^{\prime}}(c(t))^{-1}a(t)dO(t)<\infty, ∀K>0\forall K>0. |  |
 
-In particular, the above condition implies the existence of the supermartingale numeraire; denote it by Xπ⋆:=ℰ​(Rπ⋆)X\_{\pi^{\star}}:=\mathscr{E}(R^{\pi^{\star}}), where Rπ⋆:=∫0⋅(π⋆​(t))′​𝑑R​(t)R^{\pi^{\star}}:=\int\_{0}^{\cdot}(\pi^{\star}(t))^{{}^{\prime}}dR(t) and π⋆:=c−1​a\pi^{\star}:=c^{-1}a (refer to §2 in [[22](https://arxiv.org/html/2601.14139v1#bib.bib6 "Portfolio theory and arbitrage: a course in mathematical finance")] for further details on this concept). Note that Xπ⋆X\_{\pi^{\star}} can be used as a new numeraire, under which each X~∈𝒳~\widetilde{X}\in\widetilde{\mathscr{X}} becomes a local martingale. In fact, by considering the auxiliary market:
+In particular, the above condition implies the existence of the supermartingale numeraire; denote it by Xπ⋆:=ℰ​(Rπ⋆)X\_{\pi^{\star}}:=\mathscr{E}(R^{\pi^{\star}}), where Rπ⋆:=∫0⋅(π⋆​(t))′​𝑑R​(t)R^{\pi^{\star}}:=\int\_{0}^{\cdot}(\pi^{\star}(t))^{{}^{\prime}}dR(t) and π⋆:=c−1​a\pi^{\star}:=c^{-1}a (refer to §2 in [[22](https://arxiv.org/html/2601.14139v2#bib.bib6 "Portfolio theory and arbitrage: a course in mathematical finance")] for further details on this concept). Note that Xπ⋆X\_{\pi^{\star}} can be used as a new numeraire, under which each X~∈𝒳~\widetilde{X}\in\widetilde{\mathscr{X}} becomes a local martingale. In fact, by considering the auxiliary market:
 
 |  |  |  |
 | --- | --- | --- |
@@ -202,7 +203,7 @@ F:=∫0⋅S0​(t)​𝑑Λ​(t)F:=\int\_{0}^{\cdot}S\_{0}(t)d\Lambda(t). In tu
 | --- | --- | --- |
 |  | X~/Xπ⋆−∫0⋅Λ​(t)​𝑑S0​(t),\widetilde{X}/X\_{\pi^{\star}}-\int\_{0}^{\cdot}\Lambda(t)dS\_{0}(t), |  |
 
-is simply ([1.2](https://arxiv.org/html/2601.14139v1#S1.E2 "In 1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream")) with a shifted position in S0S\_{0}. In other words, when considering the illiquid asset discounted by the supermartingale numeraire, the non-replicable part of LL comes solely from FF.
+is simply ([1.2](https://arxiv.org/html/2601.14139v2#S1.E2 "In 1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream")) with a shifted position in S0S\_{0}. In other words, when considering the illiquid asset discounted by the supermartingale numeraire, the non-replicable part of LL comes solely from FF.
 
 ### 1.4. Utility maximization problem
 
@@ -212,13 +213,13 @@ Fix any stopping time TT s.t. either T<∞T<\infty or T=∞T=\infty, that will s
 | --- | --- | --- | --- |
 | (1.4) |  | X​(⋅;x,θ):=x+∫0⋅θ​(t)​𝑑S​(t).X(\cdot;x,\theta):=x+\int\_{0}^{\cdot}\theta(t)dS(t). |  |
 
-Hence, all processes of the form shown in ([1.2](https://arxiv.org/html/2601.14139v1#S1.E2 "In 1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream")) are in fact wealth processes in SS. The subset of admissible processes will be characterized by:
+Hence, all processes of the form shown in ([1.2](https://arxiv.org/html/2601.14139v2#S1.E2 "In 1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream")) are in fact wealth processes in SS. The subset of admissible processes will be characterized by:
 
 |  |  |  |
 | --- | --- | --- |
 |  | X>0X>0 on ⟦0,T⟧:={(ω,t)∈Ω×ℝ≥0:t≤T​(ω)}\llbracket 0,T\rrbracket:=\{(\omega,t)\in\Omega\times\mathbb{R}\_{\geq 0}:t\leq T(\omega)\}, |  |
 
-which shall be denoted by 𝒳​(x)\mathscr{X}(x) and its union ∪x>0𝒳​(x)\cup\_{x>0}\mathscr{X}(x) by 𝒳\mathscr{X}. In this context, following [[6](https://arxiv.org/html/2601.14139v1#bib.bib1 "The banach space of workable contingent claims in arbitrage theory")], a process X∈𝒳X\in\mathscr{X} is called maximal if for each X′∈𝒳X^{{}^{\prime}}\in\mathscr{X} s.t. X′​(T)≥X​(T)X^{{}^{\prime}}(T)\geq X(T) and X′​(0)=X​(0)X^{{}^{\prime}}(0)=X(0), we necessarily have X′=XX^{{}^{\prime}}=X. Lastly, a wealth process in SS, XX is called acceptable if there exists a maximal process X′∈𝒳X^{{}^{\prime}}\in\mathscr{X} s.t. X+X′∈𝒳X+X^{{}^{\prime}}\in\mathscr{X}. Note that when the horizon is infinite, for each X∈𝒳X\in\mathscr{X} we have X​(∞):=limt→∞X​(t)X(\infty):=\lim\_{t\rightarrow\infty}X(t) a.s., by the fact that XX is a continuous positive local martingale. Hence for any acceptable process XX, limt→∞X​(t)\lim\_{t\rightarrow\infty}X(t) exists a.s. in that case since X=X′−X′′X=X^{{}^{\prime}}-X^{{}^{\prime\prime}}, where X′∈𝒳X^{{}^{\prime}}\in\mathscr{X} and X′′X^{{}^{\prime\prime}} is maximal.
+which shall be denoted by 𝒳​(x)\mathscr{X}(x) and its union ∪x>0𝒳​(x)\cup\_{x>0}\mathscr{X}(x) by 𝒳\mathscr{X}. In this context, following [[6](https://arxiv.org/html/2601.14139v2#bib.bib1 "The banach space of workable contingent claims in arbitrage theory")], a process X∈𝒳X\in\mathscr{X} is called maximal if for each X′∈𝒳X^{{}^{\prime}}\in\mathscr{X} s.t. X′​(T)≥X​(T)X^{{}^{\prime}}(T)\geq X(T) and X′​(0)=X​(0)X^{{}^{\prime}}(0)=X(0), we necessarily have X′=XX^{{}^{\prime}}=X. Lastly, a wealth process in SS, XX is called acceptable if there exists a maximal process X′∈𝒳X^{{}^{\prime}}\in\mathscr{X} s.t. X+X′∈𝒳X+X^{{}^{\prime}}\in\mathscr{X}. Note that when the horizon is infinite, for each X∈𝒳X\in\mathscr{X} we have X​(∞):=limt→∞X​(t)X(\infty):=\lim\_{t\rightarrow\infty}X(t) a.s., by the fact that XX is a continuous positive local martingale. Hence for any acceptable process XX, limt→∞X​(t)\lim\_{t\rightarrow\infty}X(t) exists a.s. in that case since X=X′−X′′X=X^{{}^{\prime}}-X^{{}^{\prime\prime}}, where X′∈𝒳X^{{}^{\prime}}\in\mathscr{X} and X′′X^{{}^{\prime\prime}} is maximal.
 
 Assuming:
 
@@ -239,7 +240,7 @@ From the definition of acceptable processes, we also deduce that:
 | --- | --- | --- |
 |  | 𝒳​(x,0)=𝒳​(x),x>0.\mathscr{X}(x,0)=\mathscr{X}(x),\qquad x>0. |  |
 
-The set of points (x,ϵ)(x,\epsilon) where 𝒳​(x,ϵ)\mathscr{X}(x,\epsilon) is not empty is a closed convex cone in ℝ2\mathbb{R}^{2}. Denote its interior by 𝒦:={(x,ϵ):𝒳​(x,ϵ)≠∅}o\mathscr{K}:=\{(x,\epsilon):\mathscr{X}(x,\epsilon)\neq\emptyset\}^{\mathrm{o}} and note, as shown in [[18](https://arxiv.org/html/2601.14139v1#bib.bib4 "Optimal investment with random endowments in incomplete markets")], that ([A3](https://arxiv.org/html/2601.14139v1#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")) implies (x,0)∈𝒦(x,0)\in\mathscr{K}, x>0x>0.
+The set of points (x,ϵ)(x,\epsilon) where 𝒳​(x,ϵ)\mathscr{X}(x,\epsilon) is not empty is a closed convex cone in ℝ2\mathbb{R}^{2}. Denote its interior by 𝒦:={(x,ϵ):𝒳​(x,ϵ)≠∅}o\mathscr{K}:=\{(x,\epsilon):\mathscr{X}(x,\epsilon)\neq\emptyset\}^{\mathrm{o}} and note, as shown in [[18](https://arxiv.org/html/2601.14139v2#bib.bib4 "Optimal investment with random endowments in incomplete markets")], that ([A3](https://arxiv.org/html/2601.14139v2#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")) implies (x,0)∈𝒦(x,0)\in\mathscr{K}, x>0x>0.
 In turn consider:
 
 |  |  |  |
@@ -252,9 +253,9 @@ i.e. the log-optimization problem in (S,F)(S,F). To avoid the trivial case we ne
 | --- | --- | --- |
 |  | We have u​(x,ϵ)<∞u(x,\epsilon)<\infty, for some (x,ϵ)∈𝒦(x,\epsilon)\in\mathscr{K}, |  |
 
-In fact the above should always hold for the case of log-utility in this context. To see that note (x,0)∈𝒦(x,0)\in\mathscr{K} for any x>0x>0 under ([A3](https://arxiv.org/html/2601.14139v1#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")), as shown in [[18](https://arxiv.org/html/2601.14139v1#bib.bib4 "Optimal investment with random endowments in incomplete markets")]. In particular for any such point we have 𝒳​(x,0)=𝒳​(x)\mathscr{X}(x,0)=\mathscr{X}(x). Using the inequality ln⁡(x)≤x−1,x>0\ln(x)\leq x-1,\ x>0 and the fact that 𝔼​[X​(T)]≤x\mathbb{E}[X(T)]\leq x for X∈𝒳​(x)X\in\mathscr{X}(x) shows the claim. The concavity of u​(x,ϵ)u(x,\epsilon) on the open set 𝒦\mathscr{K} finally gives that u​(x,ϵ)<∞u(x,\epsilon)<\infty for all (x,ϵ)∈𝒦(x,\epsilon)\in\mathscr{K}.
+In fact the above should always hold for the case of log-utility in this context. To see that note (x,0)∈𝒦(x,0)\in\mathscr{K} for any x>0x>0 under ([A3](https://arxiv.org/html/2601.14139v2#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")), as shown in [[18](https://arxiv.org/html/2601.14139v2#bib.bib4 "Optimal investment with random endowments in incomplete markets")]. In particular for any such point we have 𝒳​(x,0)=𝒳​(x)\mathscr{X}(x,0)=\mathscr{X}(x). Using the inequality ln⁡(x)≤x−1,x>0\ln(x)\leq x-1,\ x>0 and the fact that 𝔼​[X​(T)]≤x\mathbb{E}[X(T)]\leq x for X∈𝒳​(x)X\in\mathscr{X}(x) shows the claim. The concavity of u​(x,ϵ)u(x,\epsilon) on the open set 𝒦\mathscr{K} finally gives that u​(x,ϵ)<∞u(x,\epsilon)<\infty for all (x,ϵ)∈𝒦(x,\epsilon)\in\mathscr{K}.
 
-In turn, following [[18](https://arxiv.org/html/2601.14139v1#bib.bib4 "Optimal investment with random endowments in incomplete markets")], since the log-utility satisfies the asymptotic elasticity condition, i.e. for U​(x):=ln⁡(x)U(x):=\ln(x) we have lim¯x→∞⁡x​U′​(x)/U​(x)<1\operatorname\*{\overline{lim}}\_{x\rightarrow\infty}xU^{{}^{\prime}}(x)/U(x)<1, SS trivially satisfies the condition of NFLVR and we also have ([A3](https://arxiv.org/html/2601.14139v1#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")); the solution to u​(x,ϵ)u(x,\epsilon) exists and is unique. We focus on:
+In turn, following [[18](https://arxiv.org/html/2601.14139v2#bib.bib4 "Optimal investment with random endowments in incomplete markets")], since the log-utility satisfies the asymptotic elasticity condition, i.e. for U​(x):=ln⁡(x)U(x):=\ln(x) we have lim¯x→∞⁡x​U′​(x)/U​(x)<1\operatorname\*{\overline{lim}}\_{x\rightarrow\infty}xU^{{}^{\prime}}(x)/U(x)<1, SS trivially satisfies the condition of NFLVR and we also have ([A3](https://arxiv.org/html/2601.14139v2#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")); the solution to u​(x,ϵ)u(x,\epsilon) exists and is unique. We focus on:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -264,7 +265,7 @@ where Xϵ​(T)X^{\epsilon}(T) denotes the shifted counterpart of the solution o
 
 ###### Remark 1.2.
 
-Note that working with the optimization problem in (S,F)(S,F) doesn’t come with any loss of generality in this context, since by using the numeraire invariance of log-utility, along with (ln⁡(Xπ⋆​(T)))−∈ℒ1(\ln(X\_{\pi^{\star}}(T)))^{-}\in\mathscr{L}\_{1} as well as ([A2](https://arxiv.org/html/2601.14139v1#S1.Ex9 "In 1.3. Illiquid asset ‣ 1. Setup ‣ Log-optimality with small liability stream")) and ([A3](https://arxiv.org/html/2601.14139v1#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")) yields that the unique solution to the respective optimization problem of u​(ϵ)u(\epsilon) in (1,S~,Λ)(1,\widetilde{S},\Lambda), denoted by X~ϵ\widetilde{X}^{\epsilon}, is given as:
+Note that working with the optimization problem in (S,F)(S,F) doesn’t come with any loss of generality in this context, since by using the numeraire invariance of log-utility, along with (ln⁡(Xπ⋆​(T)))−∈ℒ1(\ln(X\_{\pi^{\star}}(T)))^{-}\in\mathscr{L}\_{1} as well as ([A2](https://arxiv.org/html/2601.14139v2#S1.Ex9 "In 1.3. Illiquid asset ‣ 1. Setup ‣ Log-optimality with small liability stream")) and ([A3](https://arxiv.org/html/2601.14139v2#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")) yields that the unique solution to the respective optimization problem of u​(ϵ)u(\epsilon) in (1,S~,Λ)(1,\widetilde{S},\Lambda), denoted by X~ϵ\widetilde{X}^{\epsilon}, is given as:
 
 |  |  |  |
 | --- | --- | --- |
@@ -280,7 +281,7 @@ For p≥1p\geq 1 denote the class of (local) martingales s.t. for each MM we hav
 | --- | --- | --- |
 |  | ℳp:={M∈ℋp:M​(0)=0 and M=∫0⋅θ​(t)​𝑑S​(t)}.\displaystyle\mathscr{M}\_{p}:=\left\{M\in\mathscr{H}\_{p}:\text{$M(0)=0$ and $M=\int\_{0}^{\cdot}\theta(t)dS(t)$}\right\}. |  |
 
-As it is discussed in [[28](https://arxiv.org/html/2601.14139v1#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes")] the following assumption is crucial in order to derive the second order expansion of the value function (with a non-traded endowment), and particularly its lower bound:
+As it is discussed in [[28](https://arxiv.org/html/2601.14139v2#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes")] the following assumption is crucial in order to derive the second order expansion of the value function (with a non-traded endowment), and particularly its lower bound:
 
 |  |  |  |
 | --- | --- | --- |
@@ -317,11 +318,11 @@ and applying similar reasoning to the above, we have:
 | --- | --- | --- |
 |  | 𝔼​[(N​(T))2|ℱ​(⋅)]=Γ+P,\mathbb{E}[(N(T))^{2}|\mathscr{F}(\cdot)]=\Gamma+P, |  |
 
-where PP is strongly orthogonal to Γ\Gamma, which is a stochastic integral w.r.t. SS, and P​(0)=𝔼​[(N​(T))2]P(0)=\mathbb{E}[(N(T))^{2}]. In fact, by ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) we have Δ,N∈ℋ4\Delta,N\in\mathscr{H}\_{4} and Γ,P∈ℋ2\Gamma,P\in\mathscr{H}\_{2}.
+where PP is strongly orthogonal to Γ\Gamma, which is a stochastic integral w.r.t. SS, and P​(0)=𝔼​[(N​(T))2]P(0)=\mathbb{E}[(N(T))^{2}]. In fact, by ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) we have Δ,N∈ℋ4\Delta,N\in\mathscr{H}\_{4} and Γ,P∈ℋ2\Gamma,P\in\mathscr{H}\_{2}.
 
 ###### Theorem 2.1.
 
-Assume ([A1](https://arxiv.org/html/2601.14139v1#S1.Ex6 "In 1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream")), ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")); then we have:
+Assume ([A1](https://arxiv.org/html/2601.14139v2#S1.Ex6 "In 1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream")), ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")); then we have:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -333,7 +334,7 @@ as ϵ→0+\epsilon\rightarrow 0+.
 
 We do some general setup that will be useful in deriving both bounds for the value function u​(ϵ)u(\epsilon).
 
-Let x+Mx+M be the martingale implied by ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")). Define:
+Let x+Mx+M be the martingale implied by ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")). Define:
 
 |  |  |  |
 | --- | --- | --- |
@@ -441,7 +442,7 @@ Hence:
 | --- | --- | --- | --- |
 |  | ϵ4​𝔼​[(Γτϵ​(T))4]\displaystyle\epsilon^{4}\mathbb{E}[(\Gamma^{\tau\_{\epsilon}}(T))^{4}] | ≤1(6​ϵ4)​ℙ​(τϵ≤T)+ϵ4​𝔼​[(Γ¯​(T))4​𝟏Γ¯​(T)≤1/6​ϵ2].\displaystyle\leq\frac{1}{(6\epsilon^{4})}\mathbb{P}(\tau\_{\epsilon}\leq T)+\epsilon^{4}\mathbb{E}\left[(\overline{\Gamma}(T))^{4}\mathbf{1}\_{\overline{\Gamma}(T)\leq 1/6\epsilon^{2}}\right]. |  |
 
-In turn, limϵ→0+ϵ4​𝔼​[(Γτϵ​(T))4]=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{4}\mathbb{E}[(\Gamma^{\tau\_{\epsilon}}(T))^{4}]=0 follows by ([2.2](https://arxiv.org/html/2601.14139v1#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), Γ∈ℳ2\Gamma\in\mathscr{M}\_{2} and ([2.3](https://arxiv.org/html/2601.14139v1#S2.E3 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) after a simple change of variables.
+In turn, limϵ→0+ϵ4​𝔼​[(Γτϵ​(T))4]=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{4}\mathbb{E}[(\Gamma^{\tau\_{\epsilon}}(T))^{4}]=0 follows by ([2.2](https://arxiv.org/html/2601.14139v2#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), Γ∈ℳ2\Gamma\in\mathscr{M}\_{2} and ([2.3](https://arxiv.org/html/2601.14139v2#S2.E3 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) after a simple change of variables.
 
 Seventh order term
 
@@ -451,7 +452,7 @@ Holder’s inequality gives:
 | --- | --- | --- | --- |
 |  | ϵ3​𝔼​[|Qϵ​(T)−F​(T)|​|Γτϵ​(T)|3]\displaystyle\epsilon^{3}\mathbb{E}[|Q^{\epsilon}(T)-F(T)||\Gamma^{\tau\_{\epsilon}}(T)|^{3}] | ≤(𝔼​[(|M​(T)−F​(T)|+supt∈[0,T]|Δ​(t)−M​(t)|)4])14​(𝔼​[(ϵ​Γτϵ​(T))4])34,\displaystyle\leq\bigg(\mathbb{E}\bigg[\bigg(\bigg|M(T)-F(T)\bigg|+\sup\_{t\in[0,T]}\bigg|\Delta(t)-M(t)\bigg|\bigg)^{4}\bigg]\bigg)^{\frac{1}{4}}\left(\mathbb{E}\left[(\epsilon\Gamma^{\tau\_{\epsilon}}(T))^{4}\right]\right)^{\frac{3}{4}}, |  |
 
-where the first expectation is finite by ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and:
+where the first expectation is finite by ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and:
 
 |  |  |  |
 | --- | --- | --- |
@@ -467,7 +468,7 @@ The first part follows similarly to the eight order term, since:
 | --- | --- | --- |
 |  | ϵ2​|Γτϵ​(T)|3≤163​ϵ4​𝟏τϵ≤T+ϵ2​(Γ¯​(T))3​𝟏Γ¯​(T)≤1/6​ϵ2.\epsilon^{2}|\Gamma^{\tau\_{\epsilon}}(T)|^{3}\leq\frac{1}{6^{3}\epsilon^{4}}\mathbf{1}\_{\tau\_{\epsilon}\leq T}+\epsilon^{2}(\overline{\Gamma}(T))^{3}\mathbf{1}\_{\overline{\Gamma}(T)\leq 1/6\epsilon^{2}}. |  |
 
-Hence, as before, limϵ→0+ϵ2​𝔼​[|Γτϵ​(T)|3]=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{2}\mathbb{E}[|\Gamma^{\tau\_{\epsilon}}(T)|^{3}]=0 follows by ([2.2](https://arxiv.org/html/2601.14139v1#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), Γ∈ℳ2\Gamma\in\mathscr{M}\_{2} and ([2.3](https://arxiv.org/html/2601.14139v1#S2.E3 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")).
+Hence, as before, limϵ→0+ϵ2​𝔼​[|Γτϵ​(T)|3]=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{2}\mathbb{E}[|\Gamma^{\tau\_{\epsilon}}(T)|^{3}]=0 follows by ([2.2](https://arxiv.org/html/2601.14139v2#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), Γ∈ℳ2\Gamma\in\mathscr{M}\_{2} and ([2.3](https://arxiv.org/html/2601.14139v2#S2.E3 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")).
 
 For the second part note that by Holder’s inequality we have:
 
@@ -478,7 +479,7 @@ For the second part note that by Holder’s inequality we have:
 | --- | --- | --- | --- |
 |  |  | +supt∈[0,T]|Δ(t)−M(t)|)4])12(𝔼[(ϵΓτϵ(T))4])12,\displaystyle+\sup\_{t\in[0,T]}\bigg|\Delta(t)-M(t)\bigg|\bigg)^{4}\bigg]\bigg)^{\frac{1}{2}}\left(\mathbb{E}\left[(\epsilon\Gamma^{\tau\_{\epsilon}}(T))^{4}\right]\right)^{\frac{1}{2}}, |  |
 
-where the first expectation is finite by ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and:
+where the first expectation is finite by ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and:
 
 |  |  |  |
 | --- | --- | --- |
@@ -531,7 +532,7 @@ We have:
 | --- | --- | --- | --- |
 |  | limϵ→0+𝔼​[(Qϵ​(T)−F​(T))4​ξϵL]\displaystyle\lim\_{\epsilon\rightarrow 0+}\mathbb{E}[(Q^{\epsilon}(T)-F(T))^{4}\xi\_{\epsilon}^{L}] | =𝔼​[(N​(T))4],\displaystyle=\mathbb{E}[(N(T))^{4}], |  |
 
-which all hold by dominated convergence, ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), 0<ξϵL≤240<\xi\_{\epsilon}^{L}\leq 2^{4} and limϵ→0+ξϵL=1\lim\_{\epsilon\rightarrow 0+}\xi\_{\epsilon}^{L}=1 a.s.
+which all hold by dominated convergence, ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), 0<ξϵL≤240<\xi\_{\epsilon}^{L}\leq 2^{4} and limϵ→0+ξϵL=1\lim\_{\epsilon\rightarrow 0+}\xi\_{\epsilon}^{L}=1 a.s.
 
 Third order terms
 
@@ -556,7 +557,7 @@ For the second part we have by Holder’s inequality:
 | --- | --- | --- | --- |
 |  |  | ⋅(1ϵ4​ℙ​(τϵ≤T))14,\displaystyle\cdot\left(\frac{1}{\epsilon^{4}}\mathbb{P}(\tau\_{\epsilon}\leq T)\right)^{\frac{1}{4}}, |  |
 
-where the expectation on the last inequality is finite by ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and limϵ→0+(ϵ4)−1​ℙ​(τϵ≤T)=0\lim\_{\epsilon\rightarrow 0+}(\epsilon^{4})^{-1}\mathbb{P}(\tau\_{\epsilon}\leq T)=0 by ([2.2](https://arxiv.org/html/2601.14139v1#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")). Hence the second part also tends to zero.
+where the expectation on the last inequality is finite by ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and limϵ→0+(ϵ4)−1​ℙ​(τϵ≤T)=0\lim\_{\epsilon\rightarrow 0+}(\epsilon^{4})^{-1}\mathbb{P}(\tau\_{\epsilon}\leq T)=0 by ([2.2](https://arxiv.org/html/2601.14139v2#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")). Hence the second part also tends to zero.
 
 Second order term
 
@@ -594,7 +595,7 @@ Now, denoting the probability measure induced by (1+ϵ​Nτϵ​(T)+ϵ2​Pτϵ
 | --- | --- | --- |
 |  | 𝔼ℚϵ​[1+Xϵ​(T)]≤1.\mathbb{E}^{\mathbb{Q}^{\epsilon}}[1+X^{\epsilon}(T)]\leq 1. |  |
 
-Indeed, we have 1+Xϵ​(T)−ϵ​F​(T)>01+X^{\epsilon}(T)-\epsilon F(T)>0 and in particular from ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) we get ϵ​|F​(T)|≤ϵ​(x+M​(T))\epsilon|F(T)|\leq\epsilon(x+M(T)). It follows that 1+Xϵ+ϵ​(x+M)1+X^{\epsilon}+\epsilon(x+M) is a positive stochastic integral w.r.t. SS. This, along with the fact that NN, PP are strongly orthogonal to SS yields that 1+Xϵ+ϵ​(x+M)1+X^{\epsilon}+\epsilon(x+M) is a supermartingale under ℚϵ\mathbb{Q}^{\epsilon}. The claim now follows from the fact that ϵ​(x+M)\epsilon(x+M) is a martingale under ℚϵ\mathbb{Q}^{\epsilon}. Hence we get:
+Indeed, we have 1+Xϵ​(T)−ϵ​F​(T)>01+X^{\epsilon}(T)-\epsilon F(T)>0 and in particular from ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) we get ϵ​|F​(T)|≤ϵ​(x+M​(T))\epsilon|F(T)|\leq\epsilon(x+M(T)). It follows that 1+Xϵ+ϵ​(x+M)1+X^{\epsilon}+\epsilon(x+M) is a positive stochastic integral w.r.t. SS. This, along with the fact that NN, PP are strongly orthogonal to SS yields that 1+Xϵ+ϵ​(x+M)1+X^{\epsilon}+\epsilon(x+M) is a supermartingale under ℚϵ\mathbb{Q}^{\epsilon}. The claim now follows from the fact that ϵ​(x+M)\epsilon(x+M) is a martingale under ℚϵ\mathbb{Q}^{\epsilon}. Hence we get:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -685,13 +686,13 @@ To see this note that since 4​ϵ2​|Pτϵ​(T)|≤14\epsilon^{2}|P^{\tau\_{\
 | --- | --- | --- |
 |  | ϵ4​(Pτϵ​(T))4≤1(4​ϵ)4​𝟏τϵ≤T+ϵ4​(P¯​(T))4​𝟏P¯​(T)≤(4​ϵ2)−1.\epsilon^{4}(P^{\tau\_{\epsilon}}(T))^{4}\leq\frac{1}{(4\epsilon)^{4}}\mathbf{1}\_{\tau\_{\epsilon}\leq T}+\epsilon^{4}(\overline{P}(T))^{4}\mathbf{1}\_{\overline{P}(T)\leq(4\epsilon^{2})^{-1}}. |  |
 
-Since limϵ→0+ϵ−4​ℙ​(τϵ<∞)=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{-4}\mathbb{P}(\tau\_{\epsilon}<\infty)=0 by ([2.2](https://arxiv.org/html/2601.14139v1#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), we only have to show:
+Since limϵ→0+ϵ−4​ℙ​(τϵ<∞)=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{-4}\mathbb{P}(\tau\_{\epsilon}<\infty)=0 by ([2.2](https://arxiv.org/html/2601.14139v2#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), we only have to show:
 
 |  |  |  |
 | --- | --- | --- |
 |  | limz→∞1z2​𝔼​[(P¯​(T))4​𝟏P¯​(T)≤z]=0,\lim\_{z\rightarrow\infty}\frac{1}{z^{2}}\mathbb{E}[(\overline{P}(T))^{4}\mathbf{1}\_{\overline{P}(T)\leq z}]=0, |  |
 
-which follows from ([2.3](https://arxiv.org/html/2601.14139v1#S2.E3 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), similarly to the way we handled the eighth order term in the lower bound of the value function.
+which follows from ([2.3](https://arxiv.org/html/2601.14139v2#S2.E3 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), similarly to the way we handled the eighth order term in the lower bound of the value function.
 
 Seventh order term
 
@@ -707,7 +708,7 @@ This follows from Holder’s inequality as:
 | --- | --- | --- |
 |  | ϵ3𝔼[|Nτϵ(T)||Pτϵ(T)|3]≤(𝔼[(N¯(T))4]14(𝔼[ϵ4(Pτϵ(T))4])34,\epsilon^{3}\mathbb{E}[|N^{\tau\_{\epsilon}}(T)||P^{\tau\_{\epsilon}}(T)|^{3}]\leq(\mathbb{E}[(\overline{N}(T))^{4}]^{\frac{1}{4}}(\mathbb{E}[\epsilon^{4}(P^{\tau\_{\epsilon}}(T))^{4}])^{\frac{3}{4}}, |  |
 
-and using ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) as well as limϵ→0+ϵ−4​ℙ​(τϵ<∞)=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{-4}\mathbb{P}(\tau\_{\epsilon}<\infty)=0.
+and using ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) as well as limϵ→0+ϵ−4​ℙ​(τϵ<∞)=0\lim\_{\epsilon\rightarrow 0+}\epsilon^{-4}\mathbb{P}(\tau\_{\epsilon}<\infty)=0.
 
 Sixth order terms
 
@@ -773,7 +774,7 @@ We have that:
 | --- | --- | --- |
 |  | limϵ→0+𝔼​[(Nτϵ​(T))2​Pτϵ​(T)]=𝔼​[(N​(T))2​P​(T)],\displaystyle\lim\_{\epsilon\rightarrow 0+}\mathbb{E}[(N^{\tau\_{\epsilon}}(T))^{2}P^{\tau\_{\epsilon}}(T)]=\mathbb{E}[(N(T))^{2}P(T)], |  |
 
-which all hold by dominated convergence, ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), 0<ξϵU≤240<\xi\_{\epsilon}^{U}\leq 2^{4} and limϵ→0+ξϵU=1\lim\_{\epsilon\rightarrow 0+}\xi\_{\epsilon}^{U}=1 a.s.
+which all hold by dominated convergence, ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), 0<ξϵU≤240<\xi\_{\epsilon}^{U}\leq 2^{4} and limϵ→0+ξϵU=1\lim\_{\epsilon\rightarrow 0+}\xi\_{\epsilon}^{U}=1 a.s.
 
 Third order term
 
@@ -783,7 +784,7 @@ Holder’s inequality gives:
 | --- | --- | --- |
 |  | 1ϵ​𝔼​[|(Nτϵ​(T))3−(N​(T))3|]≤2​(𝔼​[(N¯​(T))4])34​(1ϵ4​ℙ​(τϵ≤T))14,\frac{1}{\epsilon}\mathbb{E}[|(N^{\tau\_{\epsilon}}(T))^{3}-(N(T))^{3}|]\leq 2(\mathbb{E}[(\overline{N}(T))^{4}])^{\frac{3}{4}}\left(\frac{1}{\epsilon^{4}}\mathbb{P}(\tau\_{\epsilon}\leq T)\right)^{\frac{1}{4}}, |  |
 
-which goes to zero by ([2.2](https://arxiv.org/html/2601.14139v1#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")).
+which goes to zero by ([2.2](https://arxiv.org/html/2601.14139v2#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")).
 
 Second order term
 
@@ -804,14 +805,14 @@ Combining all the above and after some algebra we have
 | --- | --- | --- | --- |
 |  |  | +ϵ4𝔼[(Γ(T))2/2−(N(T))2Γ(T)])≤0.\displaystyle+\epsilon^{4}\mathbb{E}[(\Gamma(T))^{2}/2-(N(T))^{2}\Gamma(T)]\Big)\leq 0. |  |
 
-Lastly, noting that ([2.4](https://arxiv.org/html/2601.14139v1#S2.E4 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([2.5](https://arxiv.org/html/2601.14139v1#S2.E5 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) also hold for limit inferior as ϵ→0+\epsilon\rightarrow 0+ concludes the proof.
+Lastly, noting that ([2.4](https://arxiv.org/html/2601.14139v2#S2.E4 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([2.5](https://arxiv.org/html/2601.14139v2#S2.E5 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) also hold for limit inferior as ϵ→0+\epsilon\rightarrow 0+ concludes the proof.
 ∎
 
 ## 3. Second order expansion of optimal wealth w.r.t. ϵ\epsilon
 
 ###### Theorem 3.1.
 
-Assume the same conditions as in Theorem [2.1](https://arxiv.org/html/2601.14139v1#S2.Thmtheorem1 "Theorem 2.1. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream"); then:
+Assume the same conditions as in Theorem [2.1](https://arxiv.org/html/2601.14139v2#S2.Thmtheorem1 "Theorem 2.1. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream"); then:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -829,7 +830,7 @@ Take any sequence ϵn∈(0,ϵL)\epsilon\_{n}\in(0,\epsilon^{L}) s.t. limn→∞�
 |  |  | 11+Xϵn​(T)−ϵn​F​(T)​((1+ϵn​Qϵn​(T)+ϵn2​Γτϵn​(T)−ϵn​F​(T))−(1+XT,ϵn​(T)−ϵn​F​(T)))\displaystyle\frac{1}{1+X^{\epsilon\_{n}}(T)-\epsilon\_{n}F(T)}\left(\left(1+\epsilon\_{n}Q^{\epsilon\_{n}}(T)+\epsilon\_{n}^{2}\Gamma^{\tau\_{\epsilon\_{n}}}(T)-\epsilon\_{n}F(T)\right)-\left(1+X^{T,\epsilon\_{n}}(T)-\epsilon\_{n}F(T)\right)\right) |  |
 |  |  | −12​(1+ξn)2​(Xϵn​(T)−ϵn​Qϵn​(T)−ϵn2​Γτϵn​(T))2,\displaystyle-\frac{1}{2(1+\xi\_{n})^{2}}\left(X^{\epsilon\_{n}}(T)-\epsilon\_{n}Q^{\epsilon\_{n}}(T)-\epsilon\_{n}^{2}\Gamma^{\tau\_{\epsilon\_{n}}}(T)\right)^{2}, |  |
 
-where ξn\xi\_{n} is a r.v. between Xϵn​(T)−ϵn​F​(T)X^{\epsilon\_{n}}(T)-\epsilon\_{n}F(T) and ϵn​Qϵn​(T)+ϵn2​Γτϵn​(T)−ϵn​F​(T)\epsilon\_{n}Q^{\epsilon\_{n}}(T)+\epsilon\_{n}^{2}\Gamma^{\tau\_{\epsilon\_{n}}}(T)-\epsilon\_{n}F(T) s.t. limn→∞ξn=0\lim\_{n\rightarrow\infty}\xi\_{n}=0 in probability. This holds by the fact that limn→∞Xϵn​(T)=0\lim\_{n\rightarrow\infty}X^{\epsilon\_{n}}(T)=0 in probability (see [[26](https://arxiv.org/html/2601.14139v1#bib.bib3 "The asymptotic elasticity of utility functions and optimal investment in incomplete markets"), Lemma 3.6], [[28](https://arxiv.org/html/2601.14139v1#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes"), Theorem 1] for similar results that cover the case of log-utility). Passing to any subsequence of ϵn\epsilon\_{n} we can always find a further subsequence, denoted by ϵm\epsilon\_{m}, s.t. limm→∞Xϵm​(T)=0\lim\_{m\rightarrow\infty}X^{\epsilon\_{m}}(T)=0 a.s., which in turn implies that the r.v. supmXϵm​(T)\sup\_{m}X^{\epsilon\_{m}}(T) is well-defined a.s. 444In fact note that if ([3.1](https://arxiv.org/html/2601.14139v1#S3.E1 "In Theorem 3.1. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")) holds for the subsequence ϵm\epsilon\_{m}, then it also holds for the original (arbitrary) sequence ϵn\epsilon\_{n} by the double subsequence trick..
+where ξn\xi\_{n} is a r.v. between Xϵn​(T)−ϵn​F​(T)X^{\epsilon\_{n}}(T)-\epsilon\_{n}F(T) and ϵn​Qϵn​(T)+ϵn2​Γτϵn​(T)−ϵn​F​(T)\epsilon\_{n}Q^{\epsilon\_{n}}(T)+\epsilon\_{n}^{2}\Gamma^{\tau\_{\epsilon\_{n}}}(T)-\epsilon\_{n}F(T) s.t. limn→∞ξn=0\lim\_{n\rightarrow\infty}\xi\_{n}=0 in probability. This holds by the fact that limn→∞Xϵn​(T)=0\lim\_{n\rightarrow\infty}X^{\epsilon\_{n}}(T)=0 in probability (see [[26](https://arxiv.org/html/2601.14139v2#bib.bib3 "The asymptotic elasticity of utility functions and optimal investment in incomplete markets"), Lemma 3.6], [[28](https://arxiv.org/html/2601.14139v2#bib.bib18 "Sensitivity analysis of utility-based prices and risk-tolerance wealth processes"), Theorem 1] for similar results that cover the case of log-utility). Passing to any subsequence of ϵn\epsilon\_{n} we can always find a further subsequence, denoted by ϵm\epsilon\_{m}, s.t. limm→∞Xϵm​(T)=0\lim\_{m\rightarrow\infty}X^{\epsilon\_{m}}(T)=0 a.s., which in turn implies that the r.v. supmXϵm​(T)\sup\_{m}X^{\epsilon\_{m}}(T) is well-defined a.s. 444In fact note that if ([3.1](https://arxiv.org/html/2601.14139v2#S3.E1 "In Theorem 3.1. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")) holds for the subsequence ϵm\epsilon\_{m}, then it also holds for the original (arbitrary) sequence ϵn\epsilon\_{n} by the double subsequence trick..
 
 Now note that:
 
@@ -837,7 +838,7 @@ Now note that:
 | --- | --- | --- |
 |  | 0<1+ξm≤(2+supmXϵm(T)+|F(T)|)∨(2+Q¯ϵ(T)+Γ¯(T)+|F(T)|)=:B,0<1+\xi\_{m}\leq\left(2+\sup\_{m}X^{\epsilon\_{m}}(T)+|F(T)|\right)\lor\left(2+\overline{Q}^{\epsilon}(T)+\overline{\Gamma}(T)+|F(T)|\right)=:B, |  |
 
-which implies that −1/2​(1+ξm)2≤−1/2​B2-1/2(1+\xi\_{m})^{2}\leq-1/2B^{2} and in particular we have 1/B≤11/B\leq 1. Hence ([3.2](https://arxiv.org/html/2601.14139v1#S3.E2 "In Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")) becomes:
+which implies that −1/2​(1+ξm)2≤−1/2​B2-1/2(1+\xi\_{m})^{2}\leq-1/2B^{2} and in particular we have 1/B≤11/B\leq 1. Hence ([3.2](https://arxiv.org/html/2601.14139v2#S3.E2 "In Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")) becomes:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -867,7 +868,7 @@ Using Jensen’s inequality, the claim follows. In turn we have:
 | --- | --- | --- | --- |
 | (3.3) |  | u​(ϵm)−𝔼​[ln⁡(1+ϵm​Qϵm​(T)+ϵm2​Γτϵm​(T)−ϵm​F​(T))]ϵm4≥𝔼​[(Xϵm​(T)−ϵm​Qϵm​(T)−ϵm2​Γτϵm​(T))2/2​B2]ϵm4,\frac{u(\epsilon\_{m})-\mathbb{E}[\ln(1+\epsilon\_{m}Q^{\epsilon\_{m}}(T)+\epsilon\_{m}^{2}\Gamma^{\tau\_{\epsilon\_{m}}}(T)-\epsilon\_{m}F(T))]}{\epsilon\_{m}^{4}}\geq\frac{\mathbb{E}[(X^{\epsilon\_{m}}(T)-\epsilon\_{m}Q^{\epsilon\_{m}}(T)-\epsilon\_{m}^{2}\Gamma^{\tau\_{\epsilon\_{m}}}(T))^{2}/2B^{2}]}{\epsilon\_{m}^{4}}, |  |
 
-where by the fourth order expansion of the value function we have that the left-hand side of ([3.3](https://arxiv.org/html/2601.14139v1#S3.E3 "In Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")) tends to zero as m→∞m\rightarrow\infty. Furthermore, we have:
+where by the fourth order expansion of the value function we have that the left-hand side of ([3.3](https://arxiv.org/html/2601.14139v2#S3.E3 "In Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")) tends to zero as m→∞m\rightarrow\infty. Furthermore, we have:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -885,7 +886,7 @@ where by the fourth order expansion of the value function we have that the left-
 | --- | --- | --- | --- |
 |  |  | +C​(ℙ​(τϵm≤T)ϵm4)12,\displaystyle+C\left(\frac{\mathbb{P}(\tau\_{\epsilon\_{m}}\leq T)}{\epsilon\_{m}^{4}}\right)^{\frac{1}{2}}, |  |
 
-for C>0C>0. Now the above tends to zero as m→∞m\rightarrow\infty by ([3.3](https://arxiv.org/html/2601.14139v1#S3.E3 "In Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")), dominated convergence, ([A3II](https://arxiv.org/html/2601.14139v1#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v1#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([2.2](https://arxiv.org/html/2601.14139v1#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")). Lastly, Markov’s inequality applied on the increasing, positive non-negative function x↦x2/2​B2x\mapsto x^{2}/2B^{2} gives the desired result.
+for C>0C>0. Now the above tends to zero as m→∞m\rightarrow\infty by ([3.3](https://arxiv.org/html/2601.14139v2#S3.E3 "In Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream")), dominated convergence, ([A3II](https://arxiv.org/html/2601.14139v2#S2.Ex3 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")), ([A4](https://arxiv.org/html/2601.14139v2#S2.Ex6 "In 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) and ([2.2](https://arxiv.org/html/2601.14139v2#S2.E2 "In Proof. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")). Lastly, Markov’s inequality applied on the increasing, positive non-negative function x↦x2/2​B2x\mapsto x^{2}/2B^{2} gives the desired result.
 ∎
 
 ## 4. Discussion and an example
@@ -939,7 +940,7 @@ In turn, in the above model, the portfolio that gives rise to the supermartingal
 
 |  |  |  |
 | --- | --- | --- |
-|  | d​S0​(t)S0​(t)=−π⋆​σ​d​W1​(t),\displaystyle\frac{dS\_{0}(t)}{S\_{0}(t)}=-\pi^{\star}\sigma dW^{1}(t), |  |
+|  | d​S0​(t)S0​(t)=−π⋆​σ​d​W1​(t)⏞d​R0π⋆​(t),\displaystyle\frac{dS\_{0}(t)}{S\_{0}(t)}=\overbrace{-\pi^{\star}\sigma dW^{1}(t)}^{dR\_{0}^{\pi^{\star}}(t)}, |  |
 |  |  |  |
 | --- | --- | --- |
 |  | F=∫0⋅e−r​t​S0​(t)​Z​(t)​𝑑t.\displaystyle F=\int\_{0}^{\cdot}e^{-rt}S\_{0}(t)Z(t)dt. |  |
@@ -1059,13 +1060,13 @@ and assume:
 
 which in turn implies that v​(x)<∞v(x)<\infty, for all x>0x>0 by the concavity of the logarithm. In particular, the finiteness of v​(x)v(x) yields (ln⁡(X~​(T)))+∈ℒ1(\ln(\widetilde{X}(T)))^{+}\in\mathscr{L}\_{1}, for all X~∈𝒳~​(x)\widetilde{X}\in\widetilde{\mathscr{X}}(x). To see this, note that for δ∈(0,1)\delta\in(0,1), 𝒳~​(x)∋X~δ:=δ+(1−δ)​X~\widetilde{\mathscr{X}}(x)\ni\widetilde{X}\_{\delta}:=\delta+(1-\delta)\widetilde{X} is bounded away from zero. Hence 𝔼​[ln⁡(X~​(T))]\mathbb{E}[\ln(\widetilde{X}(T))] is well-defined with values in ℝ∪{−∞}\mathbb{R}\cup\{-\infty\}, since 𝔼​[(ln⁡(X~δ​(T)))+]≥(1−δ)​𝔼​[(ln⁡(X~​(T)))+]\mathbb{E}[(\ln(\widetilde{X}\_{\delta}(T)))^{+}]\geq(1-\delta)\mathbb{E}[(\ln(\widetilde{X}(T)))^{+}].
 
-In fact, (ln⁡(Xπ⋆​(T)))−∈ℒ1(\ln(X\_{\pi^{\star}}(T)))^{-}\in\mathscr{L}\_{1} along with (ln⁡(X~​(T)))+∈ℒ1(\ln(\widetilde{X}(T)))^{+}\in\mathscr{L}\_{1}, and [[22](https://arxiv.org/html/2601.14139v1#bib.bib6 "Portfolio theory and arbitrage: a course in mathematical finance"), Proposition 2.46] imply that the wealth process in (1,S~)(1,\widetilde{S}) with initial value x>0x>0, generated by θi⋆:=x​Xπ⋆​πi⋆/S~i\theta\_{i}^{\star}:=xX\_{\pi^{\star}}\pi^{\star}\_{i}/\widetilde{S}\_{i} for 1≤i≤d1\leq i\leq d, is the solution to to v​(x)v(x). Particularly, we get:
+In fact, (ln⁡(Xπ⋆​(T)))−∈ℒ1(\ln(X\_{\pi^{\star}}(T)))^{-}\in\mathscr{L}\_{1} along with (ln⁡(X~​(T)))+∈ℒ1(\ln(\widetilde{X}(T)))^{+}\in\mathscr{L}\_{1}, and [[22](https://arxiv.org/html/2601.14139v2#bib.bib6 "Portfolio theory and arbitrage: a course in mathematical finance"), Proposition 2.46] imply that the wealth process in (1,S~)(1,\widetilde{S}) with initial value x>0x>0, generated by θi⋆:=x​Xπ⋆​πi⋆/S~i\theta\_{i}^{\star}:=xX\_{\pi^{\star}}\pi^{\star}\_{i}/\widetilde{S}\_{i} for 1≤i≤d1\leq i\leq d, is the solution to to v​(x)v(x). Particularly, we get:
 
 |  |  |  |
 | --- | --- | --- |
 |  | v​(x)=𝔼​[ln⁡(x+∫0T(θ⋆​(t))′​𝑑S~​(t))]=𝔼​[ln⁡(x​Xπ⋆​(T))].v(x)=\mathbb{E}\left[\ln\left(x+\int\_{0}^{T}(\theta^{\star}(t))^{{}^{\prime}}d\widetilde{S}(t)\right)\right]=\mathbb{E}\left[\ln\left(xX\_{\pi^{\star}}(T)\right)\right]. |  |
 
-By the above, and after recalling the discussion in Remark in [1.2](https://arxiv.org/html/2601.14139v1#S1.Thmthm2 "Remark 1.2. ‣ 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"), we derive the log-based certainty equivalent c​(ϵ)c(\epsilon) of the position (1,ϵ)(1,\epsilon) as the solution to the following equation:
+By the above, and after recalling the discussion in Remark in [1.2](https://arxiv.org/html/2601.14139v2#S1.Thmthm2 "Remark 1.2. ‣ 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"), we derive the log-based certainty equivalent c​(ϵ)c(\epsilon) of the position (1,ϵ)(1,\epsilon) as the solution to the following equation:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1077,13 +1078,13 @@ Rearranging and using the fact that the logarithm turns multiplication into addi
 | --- | --- | --- | --- |
 | (CEII) |  | c​(ϵ)=eu​(ϵ)−1,c(\epsilon)=e^{u(\epsilon)}-1, |  |
 
-where u​(ϵ)u(\epsilon) is given in ([1.5](https://arxiv.org/html/2601.14139v1#S1.E5 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")). In fact, we may take ([CEII](https://arxiv.org/html/2601.14139v1#S5.Ex5 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) as an alternative characterization of the log-based certainty equivalent, and we shall do so henceforth. The advantage is that ([CEII](https://arxiv.org/html/2601.14139v1#S5.Ex5 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) remains valid on an infinite horizon setting, does not require ([A5](https://arxiv.org/html/2601.14139v1#S5.Ex2 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")), and reduces to ([CE](https://arxiv.org/html/2601.14139v1#S5.Ex4 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) whenever the more restrictive assumptions underlying it are in force.
+where u​(ϵ)u(\epsilon) is given in ([1.5](https://arxiv.org/html/2601.14139v2#S1.E5 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")). In fact, we may take ([CEII](https://arxiv.org/html/2601.14139v2#S5.Ex5 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) as an alternative characterization of the log-based certainty equivalent, and we shall do so henceforth. The advantage is that ([CEII](https://arxiv.org/html/2601.14139v2#S5.Ex5 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) remains valid on an infinite horizon setting, does not require ([A5](https://arxiv.org/html/2601.14139v2#S5.Ex2 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")), and reduces to ([CE](https://arxiv.org/html/2601.14139v2#S5.Ex4 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) whenever the more restrictive assumptions underlying it are in force.
 
 Putting all these together we get the following result.
 
 ###### Corollary 5.1.
 
-Assume the same conditions as in Theorem [2.1](https://arxiv.org/html/2601.14139v1#S2.Thmtheorem1 "Theorem 2.1. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream"); then:
+Assume the same conditions as in Theorem [2.1](https://arxiv.org/html/2601.14139v2#S2.Thmtheorem1 "Theorem 2.1. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream"); then:
 
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
@@ -1100,7 +1101,7 @@ as ϵ→0+\epsilon\rightarrow 0+; where:
 
 ###### Proof.
 
-Using ([2.1](https://arxiv.org/html/2601.14139v1#S2.E1 "In Theorem 2.1. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) write 555In §1 we’ve shown that u​(ϵ)<∞u(\epsilon)<\infty. In fact, recalling ([A3](https://arxiv.org/html/2601.14139v1#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")) it also holds that u​(ϵ)>−∞u(\epsilon)>-\infty, by potentially restricting ϵ\epsilon to a sub-interval of (0,ϵL)(0,\epsilon^{L}) s.t. ϵ​x<1\epsilon x<1. One way to see this is to take the positive wealth process in SS: Xx:=(1−ϵ​x)+ϵ​XX^{x}:=(1-\epsilon x)+\epsilon X with Xx​(0)=1X^{x}(0)=1, where XX is the process implied by ([A3](https://arxiv.org/html/2601.14139v1#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")), starting at xx. In particular, at maturity Xx​(T)−ϵ​F​(T)X^{x}(T)-\epsilon F(T) is bounded below by 1−ϵ​x>01-\epsilon x>0.:
+Using ([2.1](https://arxiv.org/html/2601.14139v2#S2.E1 "In Theorem 2.1. ‣ 2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream")) write 555In §1 we’ve shown that u​(ϵ)<∞u(\epsilon)<\infty. In fact, recalling ([A3](https://arxiv.org/html/2601.14139v2#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")) it also holds that u​(ϵ)>−∞u(\epsilon)>-\infty, by potentially restricting ϵ\epsilon to a sub-interval of (0,ϵL)(0,\epsilon^{L}) s.t. ϵ​x<1\epsilon x<1. One way to see this is to take the positive wealth process in SS: Xx:=(1−ϵ​x)+ϵ​XX^{x}:=(1-\epsilon x)+\epsilon X with Xx​(0)=1X^{x}(0)=1, where XX is the process implied by ([A3](https://arxiv.org/html/2601.14139v2#S1.Ex12 "In 1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream")), starting at xx. In particular, at maturity Xx​(T)−ϵ​F​(T)X^{x}(T)-\epsilon F(T) is bounded below by 1−ϵ​x>01-\epsilon x>0.:
 
 |  |  |  |
 | --- | --- | --- |
@@ -1112,7 +1113,7 @@ where:
 | --- | --- | --- |
 |  | u1:=−A1,u2:=−A22,u3:=−A33,u4:=−(A44+G).u\_{1}:=-A\_{1},\ \ u\_{2}:=-\frac{A\_{2}}{2},\ \ u\_{3}:=-\frac{A\_{3}}{3},\ \ u\_{4}:=-\left(\frac{A\_{4}}{4}+G\right). |  |
 
-Using ([CEII](https://arxiv.org/html/2601.14139v1#S5.Ex5 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) and expanding:
+Using ([CEII](https://arxiv.org/html/2601.14139v2#S5.Ex5 "In 5. Utility-based pricing ‣ Log-optimality with small liability stream")) and expanding:
 
 |  |  |  |
 | --- | --- | --- |
@@ -1135,7 +1136,7 @@ i.e. the quadratic variation of NN as well as Γ\Gamma vanish. In turn, in this 
 | --- | --- | --- |
 |  | A2=A12,A3=A13,A4=A14,G=0.A\_{2}=A\_{1}^{2},\ \ A\_{3}=A\_{1}^{3},\ \ A\_{4}=A\_{1}^{4},\ \ G=0. |  |
 
-Applying the above to ([5.1](https://arxiv.org/html/2601.14139v1#S5.E1 "In Corollary 5.1. ‣ 5. Utility-based pricing ‣ Log-optimality with small liability stream")) we have that its second, third, and fourth order terms vanish, and the log-based certainty equivalent reduces to −ϵ​𝔼​[F​(T)]-\epsilon\mathbb{E}[F(T)].
+Applying the above to ([5.1](https://arxiv.org/html/2601.14139v2#S5.E1 "In Corollary 5.1. ‣ 5. Utility-based pricing ‣ Log-optimality with small liability stream")) we have that its second, third, and fourth order terms vanish, and the log-based certainty equivalent reduces to −ϵ​𝔼​[F​(T)]-\epsilon\mathbb{E}[F(T)].
 
 ## References
 
@@ -1143,256 +1144,256 @@ Applying the above to ([5.1](https://arxiv.org/html/2601.14139v1#S5.E1 "In Corol
   H. Chau, A. Cosso, C. Fontana, and O. Mostovyi (2017)
   Optimal investment with intermediate consumption under no unbounded profit with bounded risk.
   Journal of Applied Probability (54),  pp. 710–719.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [2]
   J.C. Cox and C.F. Huang (1989)
   Optimal consumption and portfolio policies when asset prices follow a diffusion process.
   Journal of Mathematical Economics 49,  pp. 33–83.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [3]
   J.C. Cox and C.F. Huang (1991)
   A variational problem arising in financial economics.
   Journal of Mathematical Economics 20,  pp. 465–487.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [4]
   J. Cvitanic̀, W. Schachermayer, and H. Wang (2001)
   Utility maximization in incomplete markets with random endowment.
   Finance and Stochastics 5,  pp. 259–272.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [5]
   M.H.A. Davis (2006)
   Optimal hedging with basis risk.
   In From Stochastic Calculus to Mathematical Finance: The Shiryaev Festschrift,
    pp. 169–187.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [6]
   F. Delbaen and W. Schachermayer (1997)
   The banach space of workable contingent claims in arbitrage theory.
   Annales de l’Institut Henri Poincare (B) Probability and Statistics 33,  pp. 113–144.
-  Cited by: [§1.4](https://arxiv.org/html/2601.14139v1#S1.SS4.p1.29 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream").
+  Cited by: [§1.4](https://arxiv.org/html/2601.14139v2#S1.SS4.p1.29 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream").
 * [7]
   C. Frei and M. Schweizer (2008)
   Exponential utility indifference valuation in two brownian settings with stochastic correlation.
   Advances in Applied Probability 40,  pp. 401–423.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [8]
   C. Frei and M. Schweizer (2010)
   Exponential utility indifference valuation in a general semimartingale model.
   In Optimality and Risk - Modern Trends in Mathematical Finance: The Kabanov Festschrift,
    pp. 49–86.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [9]
   M. Grasselli and T.R. Hurd (2007)
   Indifference pricing and hedging for volatility derivatives.
   Applied Mathematical Finance 14,  pp. 303–317.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [10]
   J.M. Harrison and D. Kreps (1979)
   Martingales and arbitrage in multiperiod security markets.
   Journal of Economic Theory 20,  pp. 381–408.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [11]
   J.M. Harrison and S.R. Pliska (1981)
   Martingales and stochastic integrals in the theory of continuous trading.
   Stochastic Processes and their Applications 11,  pp. 215–260.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [12]
   H. He and N.D. Pearson (1991)
   Consumption and portfolio policies with incomplete markets and short-sale constraints: the finite-dimensional case.
   Mathematical Finance 1,  pp. 1–10.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [13]
   H. He and N.D. Pearson (1991)
   Consumption and portfolio policies with incomplete markets and short-sale constraints: the infinite-dimensional case.
   Journal of Economic Theory 54,  pp. 259–304.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [14]
   V. Henderson and D. Hobson (2007)
   Utility indifference pricing: an overview.
   In R. Carmona (Ed.) Volume on Indifference Pricing,
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p3.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p3.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [15]
   V. Henderson and D.G. Hobson (2002)
   Real options with constant relative risk aversion.
   Journal of Economic Dynamics & Control 27,  pp. 329–355.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [16]
   V. Henderson and G. Liang (2016)
   A multidimensional exponential utility indifference pricing model with applications to counterparty risk.
   SIAM Journal on Control and Optimization 54,  pp. 690–717.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p3.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p3.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [17]
   V. Henderson (2002)
   Valuation of claims on nontraded assets using utility maximization.
   Mathematical Finance 12,  pp. 351–373.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
-  [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
+  [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [18]
   J. Hugonnier and D. Kramkov (2004)
   Optimal investment with random endowments in incomplete markets.
   The Annals of Applied Probability 14,  pp. 845–864.
-  Cited by: [§1.4](https://arxiv.org/html/2601.14139v1#S1.SS4.p2.17 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"),
-  [§1.4](https://arxiv.org/html/2601.14139v1#S1.SS4.p2.6 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"),
-  [§1.4](https://arxiv.org/html/2601.14139v1#S1.SS4.p3.4 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"),
-  [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [§1.4](https://arxiv.org/html/2601.14139v2#S1.SS4.p2.17 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"),
+  [§1.4](https://arxiv.org/html/2601.14139v2#S1.SS4.p2.6 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"),
+  [§1.4](https://arxiv.org/html/2601.14139v2#S1.SS4.p3.4 "1.4. Utility maximization problem ‣ 1. Setup ‣ Log-optimality with small liability stream"),
+  [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [19]
   J. Kallsen, J. Muhle-Karbe, and R. Vierthauer (2014)
   Asymptotic power utility-based pricing and hedging.
   Mathematics and Financial Economics 8,  pp. 1–28.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [20]
   J. Kallsen and T. Rheinländer (2011)
   Asymptotic utility-based pricing and hedging for exponential utility.
   Statistics & Decisions 28,  pp. 17–36.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [21]
   J. Kallsen (2002)
   Derivative pricing based on local utility maximization.
   Finance and Stochastics 6,  pp. 115–140.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p5.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p5.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [22]
   I. Karatzas and C. Kardaras (2021)
   Portfolio theory and arbitrage: a course in mathematical finance.
   Graduate Studies in Mathematics, American Mathematical Society.
   External Links: ISBN 9781470465988
-  Cited by: [§1.2](https://arxiv.org/html/2601.14139v1#S1.SS2.p2.10 "1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream"),
-  [§1.2](https://arxiv.org/html/2601.14139v1#S1.SS2.p2.5 "1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream"),
-  [§5](https://arxiv.org/html/2601.14139v1#S5.p2.7 "5. Utility-based pricing ‣ Log-optimality with small liability stream").
+  Cited by: [§1.2](https://arxiv.org/html/2601.14139v2#S1.SS2.p2.10 "1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream"),
+  [§1.2](https://arxiv.org/html/2601.14139v2#S1.SS2.p2.5 "1.2. Investment opportunities ‣ 1. Setup ‣ Log-optimality with small liability stream"),
+  [§5](https://arxiv.org/html/2601.14139v2#S5.p2.7 "5. Utility-based pricing ‣ Log-optimality with small liability stream").
 * [23]
   I. Karatzas, J.P. Lehoczky, S.E. Shreve, and G.L. Xu (1991)
   Martingale and duality methods for utility maximization in an incomplete market.
   SIAM Journal of Control and Optimization 29,  pp. 702–730.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [24]
   I. Karatzas, J.P. Lehoczky, and S.E. Shreve (1987)
   Optimal portfolio and consumption decisions for a “small investor” on a finite horizon.
   SIAM Journal of Control and Optimization 25,  pp. 1557–1586.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [25]
   I. Karatzas and G. Žitković (2003)
   Optimal consumption from investment and random endowment in incomplete semimartingale markets.
   The Annals of Applied Probability 31,  pp. 1821–1858.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [26]
   D. Kramkov and W. Schachermayer (1999)
   The asymptotic elasticity of utility functions and optimal investment in incomplete markets.
   The Annals of Applied Probability 9,  pp. 904–950.
-  Cited by: [§3](https://arxiv.org/html/2601.14139v1#S3.3.p1.14 "Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream"),
-  [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [§3](https://arxiv.org/html/2601.14139v2#S3.3.p1.14 "Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream"),
+  [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [27]
   D. Kramkov and W. Schachermayer (2003)
   Necessary and sufficient conditions in the problem of optimal investment in incomplete markets.
   The Annals of Applied Probability 13,  pp. 1504–1516.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [28]
   D. Kramkov and M. Sîrbu (2006)
   Sensitivity analysis of utility-based prices and risk-tolerance wealth processes.
   Annals of Applied Probability 16,  pp. 2140–2194.
-  Cited by: [§2](https://arxiv.org/html/2601.14139v1#S2.p1.28 "2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream"),
-  [§3](https://arxiv.org/html/2601.14139v1#S3.3.p1.14 "Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream"),
-  [item 1](https://arxiv.org/html/2601.14139v1#Sx1.I1.i1.p1.2 "In Contributions ‣ Introduction ‣ Log-optimality with small liability stream"),
-  [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p5.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
-  [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [§2](https://arxiv.org/html/2601.14139v2#S2.p1.28 "2. Fourth order expansion of value function w.r.t. ϵ ‣ Log-optimality with small liability stream"),
+  [§3](https://arxiv.org/html/2601.14139v2#S3.3.p1.14 "Proof. ‣ 3. Second order expansion of optimal wealth w.r.t. ϵ ‣ Log-optimality with small liability stream"),
+  [item 1](https://arxiv.org/html/2601.14139v2#Sx1.I1.i1.p1.2 "In Contributions ‣ Introduction ‣ Log-optimality with small liability stream"),
+  [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p5.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
+  [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [29]
   D. Kramkov and M. Sîrbu (2007)
   Asymptotic analysis of utility-based hedging strategies for small number of contingent claims.
   Stochastic Processes and their Applications 117,  pp. 1606–1620.
-  Cited by: [item 1](https://arxiv.org/html/2601.14139v1#Sx1.I1.i1.p1.2 "In Contributions ‣ Introduction ‣ Log-optimality with small liability stream"),
-  [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p5.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
-  [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p6.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
-  [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [item 1](https://arxiv.org/html/2601.14139v2#Sx1.I1.i1.p1.2 "In Contributions ‣ Introduction ‣ Log-optimality with small liability stream"),
+  [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p5.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
+  [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p6.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream"),
+  [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p7.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [30]
   T. Leung and M. Ludkovski (2012)
   Accounting for risk aversion in derivatives purchase timing.
   Mathematics and Financial Economics 6,  pp. 363–386.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [31]
   C. Ménassé and P. Tankov (2016)
   Asymptotic indifference pricing in exponential lévy models.
   Applied Mathematical Finance 23,  pp. 197–235.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p8.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p8.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [32]
   R.C. Merton (1969)
   Lifetime portfolio selection under uncertainty: the continuous-time case.
   Rev. Econom. Statist. 51,  pp. 247–257.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p1.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p1.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [33]
   R.C. Merton (1971)
   Optimum consumption and prtfolio rules in a continuous-time model.
   Journal of Economic Theory 3,  pp. 373–413.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p1.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p1.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [34]
   M. Monoyios (2004)
   Performance of utility-based strategies for hedging basis risk.
   Quantitative Finance 4,  pp. 245–255.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [35]
   M. Monoyios (2007)
   Optimal hedging and parameter uncertainty.
   IMA Journal of Management Mathematics 18,  pp. 331–351.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p4.2 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [36]
   M. Monoyios (2010)
   Utility-based valuation and hedging of basis risk with partial information.
   Applied Mathematical Finance 17,  pp. 519–551.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p6.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p6.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [37]
   M. Monoyios (2013)
   Malliavin calculus method for asymptotic expansion of dual control problems.
   SIAM Journal of Financial Mathematics 4,  pp. 884–915.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [38]
   O. Mostovyi and M. Sirbu (2019)
   Sensitivity analysis of the utility maximization problem with respect to model perturbations.
   Finance and Stochastics (23),  pp. 595–640.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p9.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p9.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [39]
   O. Mostovyi and M. Sirbu (2024)
   Quadratic expansions in optimal investment with respect to perturbations of the semimartingale model.
   Finance and Stochastics (28),  pp. 553–613.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p9.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p9.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [40]
   O. Mostovyi (2015)
   Necessary and sufficient conditions in the problem of optimal investment with intermediate consumption.
   Finance and Stochastics (19),  pp. 135–159.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [41]
   O. Mostovyi (2017)
   Optimal investment with intermediate consumption and random endowment.
   Mathematical Finance (27),  pp. 96–114.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [42]
   O. Mostovyi (2020)
   Asymptotic analysis of the expected utility maximization problem with respect to perturbations of the numeraire.
   Stochastic Processes and their Applications (130),  pp. 4444–4469.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p9.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p9.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [43]
   M. Musiela and T. Zariphopoulou (2004)
   An example of indifference prices under exponential preferences.
   Finance and Stochastics 8,  pp. 229–239.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [44]
   M. Owen and G. Žitković (2009)
   Optimal investment with an unbounded random endowment and utility-based pricing.
   Mathematical Finance 19,  pp. 129–159.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p4.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [45]
   S.R. Pliska (1986)
   A stochastic calculus model of continuous trading: optimal portfolio.
   Mathematics of Operational Research 11,  pp. 371–382.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [46]
   S.A. Ross (1976)
   The arbitrage theory of capital asset pricing.
   Journal of Economic Theory 13,  pp. 341–360.
-  Cited by: [Discussion](https://arxiv.org/html/2601.14139v1#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Discussion](https://arxiv.org/html/2601.14139v2#Sx1.SSx1.p2.1 "Discussion ‣ Introduction ‣ Log-optimality with small liability stream").
 * [47]
   R. Sircar and T. Zariphopoulou (2005)
   Bounds and asymptotic approximations for utility prices when volatility is random.
   SIAM Journal on Control and Optimization 43,  pp. 1328–1353.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p3.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p3.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
 * [48]
   T. Zariphopoulou (2001)
   A solution approach to valuation with unhedgeable risks.
   Finance and Stochastics 5,  pp. 61–82.
-  Cited by: [Related literature](https://arxiv.org/html/2601.14139v1#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").
+  Cited by: [Related literature](https://arxiv.org/html/2601.14139v2#Sx1.SSx3.p2.1 "Related literature ‣ Introduction ‣ Log-optimality with small liability stream").

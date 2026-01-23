@@ -1,16 +1,16 @@
 {
-  "doc_id": "arxiv:2601.14139v1",
+  "doc_id": "arxiv:2601.14139v2",
   "family_id": "arxiv:2601.14139",
   "title": "Log-optimality with small liability stream",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2026,
   "authors": [
     "Michail Anthropelos",
     "Constantinos Kardaras",
     "Constantinos Stefanakis"
   ],
-  "url_abs": "http://arxiv.org/abs/2601.14139v1",
-  "url_html": "https://arxiv.org/html/2601.14139v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2601.14139v2",
+  "url_html": "https://arxiv.org/html/2601.14139v2",
+  "is_current": true
 }
