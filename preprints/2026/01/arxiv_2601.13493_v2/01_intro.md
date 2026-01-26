@@ -2,22 +2,23 @@
 authors:
 - Hanchao Liu
 - Dena Firoozi
-doc_id: arxiv:2601.13493v1
+doc_id: arxiv:2601.13493v2
 family_id: arxiv:2601.13493
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: '[2601.13493v1] LQ Mean Field Games with Common Noise in Hilbert Spaces: Small
-  and Arbitrary Finite Time Horizons'
-url_abs: http://arxiv.org/abs/2601.13493v1
-url_html: https://ar5iv.org/html/2601.13493v1
+title: '[2601.13493v2] Infinite-Dimensional LQ Mean Field Games with Common Noise:
+  Small and Arbitrary Finite Time Horizons'
+url_abs: http://arxiv.org/abs/2601.13493v2
+url_html: https://ar5iv.org/html/2601.13493v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2026
 ---
+
 
 arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
 
