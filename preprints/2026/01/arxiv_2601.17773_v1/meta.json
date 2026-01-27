@@ -1,0 +1,18 @@
+{
+  "doc_id": "arxiv:2601.17773v1",
+  "family_id": "arxiv:2601.17773",
+  "title": "MarketGANs: Multivariate financial time-series data augmentation using generative adversarial networks",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Jeonggyu Huh",
+    "Seungwon Jeong",
+    "Hyun-Gyoon Kim",
+    "Hyeng Keun Koo",
+    "Byung Hwa Lim"
+  ],
+  "url_abs": "http://arxiv.org/abs/2601.17773v1",
+  "url_html": "https://arxiv.org/html/2601.17773v1",
+  "is_current": true
+}
