@@ -2,21 +2,22 @@
 authors:
 - Robert de Witt
 - Mikko S. Pakkanen
-doc_id: arxiv:2601.22113v1
+doc_id: arxiv:2601.22113v2
 family_id: arxiv:2601.22113
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
 title: Diverse Approaches to Optimal Execution Schedule Generation
-url_abs: http://arxiv.org/abs/2601.22113v1
-url_html: https://arxiv.org/html/2601.22113v1
+url_abs: http://arxiv.org/abs/2601.22113v2
+url_html: https://arxiv.org/html/2601.22113v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2026
 ---
+
 
 Robert de Witt
   
@@ -38,16 +39,9 @@ Imperial College London
 London, United Kingdom
   
 m.pakkanen@imperial.ac.uk
-The views expressed in this paper are those of the author and do not necessarily reflect the views of the author’s employer or its affiliates. This work was conducted in a personal capacity and does not rely on proprietary or confidential information.
+The views, opinions and conclusions expressed here are solely those of the authors and do not necessarily reflect the views or policies of the Bank of America, or any other institution with which the authors are affiliated. No responsibility should be attributed to those institutions . This article has not been reviewed, approved, or endorsed by the authors’ employers or any affiliated organizations
 
 ###### Abstract
-
-Optimal execution—minimizing transaction costs when trading large orders—is
-a fundamental problem in quantitative finance, affecting approximately $1
-trillion in daily global equity and futures turnover. Despite decades of research from
-Almgren-Chriss frameworks to recent deep learning approaches, existing methods
-typically produce single-policy solutions that may underperform across varying
-market regimes.
 
 We present the first application of MAP-Elites, a quality-diversity algorithm,
 to trade execution. Rather than searching for a single optimal policy,
@@ -103,11 +97,11 @@ PPO, MAP-Elites, High-fidelity Gymnasium environment, calibrated transient impac
 
 Figure 1: Evolution of optimal execution approaches: from classical models to empirical impact models to reinforcement learning, with this work positioned at the intersection of empirically calibrated models and RL methods.
 
-Optimal execution (OE) is a central problem in algorithmic trading, influencing approximately a trillion dollars of daily turnover across global equities and futures markets. It concerns determining how to trade a given order over a predetermined or dynamic horizon while minimising transaction costs relative to a benchmark, typically the *arrival price*—the mid-quote at the time the order is initiated. This performance is often expressed as *implementation shortfall* (Perold,, [1988](https://arxiv.org/html/2601.22113v1#bib.bib21)), the difference between the value of an ideally priced portfolio and the actual cost of implementing it through trading. Transaction costs arise from explicit sources (e.g., commissions and fees) and implicit sources (e.g., market impact and slippage). The execution challenge is compounded by the stochastic nature of prices, variable liquidity conditions, and the trade-off between market impact and timing risk (Almgren and Chriss,, [2001](https://arxiv.org/html/2601.22113v1#bib.bib1)).
+Optimal execution (OE) is a central problem in algorithmic trading, influencing approximately a trillion dollars of daily turnover across global equities and futures markets. It concerns determining how to trade a given order over a predetermined or dynamic horizon while minimising transaction costs relative to a benchmark, typically the *arrival price*—the mid-quote at the time the order is initiated. This performance is often expressed as *implementation shortfall* (Perold,, [1988](https://arxiv.org/html/2601.22113v2#bib.bib21)), the difference between the value of an ideally priced portfolio and the actual cost of implementing it through trading. Transaction costs arise from explicit sources (e.g., commissions and fees) and implicit sources (e.g., market impact and slippage). The execution challenge is compounded by the stochastic nature of prices, variable liquidity conditions, and the trade-off between market impact and timing risk (Almgren and Chriss,, [2001](https://arxiv.org/html/2601.22113v2#bib.bib1)).
 
-The evolution of optimal execution approaches is outlined in Figure [1](https://arxiv.org/html/2601.22113v1#S1.F1 "Figure 1 ‣ 1 Introduction ‣ Diverse Approaches to Optimal Execution Schedule Generation"). Traditional approaches, such as the seminal Almgren-Chriss framework, cast the execution problem as a mean-variance optimisation in which market impact is modelled as an additive cost and risk is penalised via price variance. While yielding tractable closed-form schedules (e.g., linear, front-loaded, or back-loaded trajectories), these models assume constant volatility, stationary impact functions, and exogenous order flow (Almgren and Chriss,, [2001](https://arxiv.org/html/2601.22113v1#bib.bib1); Obizhaeva and Wang,, [2013](https://arxiv.org/html/2601.22113v1#bib.bib19)). Empirical studies show that market impact scales concavely with order size and decays transiently over time (Bouchaud,, [2010](https://arxiv.org/html/2601.22113v1#bib.bib3); Bouchaud et al.,, [2018](https://arxiv.org/html/2601.22113v1#bib.bib4)), motivating richer dynamic models.
+The evolution of optimal execution approaches is outlined in Figure [1](https://arxiv.org/html/2601.22113v2#S1.F1 "Figure 1 ‣ 1 Introduction ‣ Diverse Approaches to Optimal Execution Schedule Generation"). Traditional approaches, such as the seminal Almgren-Chriss framework, cast the execution problem as a mean-variance optimisation in which market impact is modelled as an additive cost and risk is penalised via price variance. While yielding tractable closed-form schedules (e.g., linear, front-loaded, or back-loaded trajectories), these models assume constant volatility, stationary impact functions, and exogenous order flow (Almgren and Chriss,, [2001](https://arxiv.org/html/2601.22113v2#bib.bib1); Obizhaeva and Wang,, [2013](https://arxiv.org/html/2601.22113v2#bib.bib19)). Empirical studies show that market impact scales concavely with order size and decays transiently over time (Bouchaud,, [2010](https://arxiv.org/html/2601.22113v2#bib.bib3); Bouchaud et al.,, [2018](https://arxiv.org/html/2601.22113v2#bib.bib4)), motivating richer dynamic models.
 
-In recent years, alongside other data-driven approaches, reinforcement learning (RL) has emerged as a promising alternative for OE (Nevmyvaka et al.,, [2006](https://arxiv.org/html/2601.22113v1#bib.bib18); Hendricks and Wilcox,, [2014](https://arxiv.org/html/2601.22113v1#bib.bib12)). RL agents can learn adaptive policies that respond to evolving market states without assuming explicit parametric forms for price dynamics or impact decay. The agent-environment loop in Gymnasium (Towers et al.,, [2024](https://arxiv.org/html/2601.22113v1#bib.bib27)) offers a natural abstraction: the agent observes the current market state (e.g., prices, volumes, volatility, time remaining, inventory) and outputs an action representing a trade size or participation rate. The environment then simulates execution, applies market impact, updates the state, and returns a reward signal tied to execution performance. This process enables the agent to learn policies through simulation without incurring the cost and risk of live experimentation; once deployed, such policies can be further adapted using live trading outcomes.
+In recent years, alongside other data-driven approaches, reinforcement learning (RL) has emerged as a promising alternative for OE (Nevmyvaka et al.,, [2006](https://arxiv.org/html/2601.22113v2#bib.bib18); Hendricks and Wilcox,, [2014](https://arxiv.org/html/2601.22113v2#bib.bib12)). RL agents can learn adaptive policies that respond to evolving market states without assuming explicit parametric forms for price dynamics or impact decay. The agent-environment loop in Gymnasium (Towers et al.,, [2024](https://arxiv.org/html/2601.22113v2#bib.bib27)) offers a natural abstraction: the agent observes the current market state (e.g., prices, volumes, volatility, time remaining, inventory) and outputs an action representing a trade size or participation rate. The environment then simulates execution, applies market impact, updates the state, and returns a reward signal tied to execution performance. This process enables the agent to learn policies through simulation without incurring the cost and risk of live experimentation; once deployed, such policies can be further adapted using live trading outcomes.
 
 However, much of the existing RL literature for OE suffers from limited realism in backtesting. Many implementations use oversimplified price dynamics (e.g., geometric Brownian motion) or neglect empirically calibrated market impact, while others focus on highly granular limit order book (LOB) simulations that require many structural assumptions and can diverge from practical execution workflows. This paper takes a middle path, avoiding both coarse-grained price-only models and overly complex LOB simulations. It builds a high-fidelity Gymnasium-based back-testing environment calibrated to one year of historical minute-bar data for hundreds of US equities. The environment integrates a transient market impact model fit via cross-validation, realistic order-arrival processes, and configurable state/reward designs, enabling a robust evaluation of RL and baseline strategies.
 
@@ -115,9 +109,9 @@ We utilise this environment to train RL policies designed to decide how much to 
 
 A key limitation of existing RL approaches to execution is that they optimise
 for a single policy maximizing average performance across all market conditions.
-Quality-diversity (QD) algorithms (Chatzilygeroudis et al.,, [2021](https://arxiv.org/html/2601.22113v1#bib.bib6)), developed originally for adaptive robotics,
+Quality-diversity (QD) algorithms (Chatzilygeroudis et al.,, [2021](https://arxiv.org/html/2601.22113v2#bib.bib6)), developed originally for adaptive robotics,
 offer an alternative paradigm. Rather than searching for a single optimum, QD
-methods such as MAP-Elites (Mouret and Clune,, [2015](https://arxiv.org/html/2601.22113v1#bib.bib17)) generate portfolios of
+methods such as MAP-Elites (Mouret and Clune,, [2015](https://arxiv.org/html/2601.22113v2#bib.bib17)) generate portfolios of
 high-performing policies, each specialised for different behavioural niches
 defined by descriptor features. In robotics, these descriptors might characterise
 terrain type or gait stability; in optimal execution, natural descriptors include
@@ -153,7 +147,7 @@ The contributions of this work are:
    infrastructure enables fair comparison of execution algorithms and supports
    future quality-diversity research.
 
-The remainder of this paper is structured as follows. Section [2](https://arxiv.org/html/2601.22113v1#S2 "2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation") introduces the problem formulation and proposed solutions. We begin with the optimal execution set-up, including the formal problem statement, the transient impact model with its calibration, and the construction of raw and derived features. We then introduce reinforcement learning, translating OE into the RL framework and outlining the order generation process. Next, we present the RL methods explored, covering architecture variations (MLP and CNN) of Proximal Policy Optimisation (PPO) and Quality-Diversity approaches (MAP-Elites) and industry-standard execution strategies. Finally, we describe how these components fit into the simulation environment design, including Gymnasium integration and the execution simulator with impact. Section [3](https://arxiv.org/html/2601.22113v1#S3 "3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") reports the impact model calibration results and compares the performance of the RL agents against standard benchmarks. Section [4](https://arxiv.org/html/2601.22113v1#S4 "4 Discussion ‣ Diverse Approaches to Optimal Execution Schedule Generation") concludes with implications of our findings, limitations of the framework, and potential directions for future research.
+The remainder of this paper is structured as follows. Section [2](https://arxiv.org/html/2601.22113v2#S2 "2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation") introduces the problem formulation and proposed solutions. We begin with the optimal execution set-up, including the formal problem statement, the transient impact model with its calibration, and the construction of raw and derived features. We then introduce reinforcement learning, translating OE into the RL framework and outlining the order generation process. Next, we present the RL methods explored, covering architecture variations (MLP and CNN) of Proximal Policy Optimisation (PPO) and Quality-Diversity approaches (MAP-Elites) and industry-standard execution strategies. Finally, we describe how these components fit into the simulation environment design, including Gymnasium integration and the execution simulator with impact. Section [3](https://arxiv.org/html/2601.22113v2#S3 "3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") reports the impact model calibration results and compares the performance of the RL agents against standard benchmarks. Section [4](https://arxiv.org/html/2601.22113v2#S4 "4 Discussion ‣ Diverse Approaches to Optimal Execution Schedule Generation") concludes with implications of our findings, limitations of the framework, and potential directions for future research.
 
 ## 2 Methods
 
@@ -171,7 +165,7 @@ The objective is to minimise the *implementation shortfall* (IS) relative to the
 
 where side∈{+1,−1}\mathrm{side}\in\{+1,-1\} indicates a buy or sell order, and qtq\_{t} is the signed quantity traded at time tt at the price ptfillp^{\text{fill}}\_{t}. This expression is equivalent to the realised VWAP of the executed order minus the benchmark price, scaled by trade direction.
 
-The realised fill price, in reality, is the volume weighted average price (VWAP) of the shares traded in the market. In simulation, ptfillp^{\mathrm{fill}}\_{t} incorporates both the prevailing historical market VWAP and the total price impact ItI\_{t} (immediate plus propagated) generated by the trade. Here ItI\_{t} is modelled through the transient propagator framework (Bouchaud,, [2010](https://arxiv.org/html/2601.22113v1#bib.bib3); Bouchaud et al.,, [2018](https://arxiv.org/html/2601.22113v1#bib.bib4)), detailed in Section [2.1.2](https://arxiv.org/html/2601.22113v1#S2.SS1.SSS2 "2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"). Incorporating such impact-adjusted fills is one of the key differentiators of this work to ensure realism when training our models.
+The realised fill price, in reality, is the volume weighted average price (VWAP) of the shares traded in the market. In simulation, ptfillp^{\mathrm{fill}}\_{t} incorporates both the prevailing historical market VWAP and the total price impact ItI\_{t} (immediate plus propagated) generated by the trade. Here ItI\_{t} is modelled through the transient propagator framework (Bouchaud,, [2010](https://arxiv.org/html/2601.22113v2#bib.bib3); Bouchaud et al.,, [2018](https://arxiv.org/html/2601.22113v2#bib.bib4)), detailed in Section [2.1.2](https://arxiv.org/html/2601.22113v2#S2.SS1.SSS2 "2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"). Incorporating such impact-adjusted fills is one of the key differentiators of this work to ensure realism when training our models.
 
 Since the arrival price is only a single point in time benchmark, to better measure our execution efficiency within the horizon HH, we also consider a second benchmark for robustness: slippage relative to market VWAP
 
@@ -183,7 +177,7 @@ where vtv\_{t} is traded volume and ptp\_{t} is the filled price at time tt.
 
 #### 2.1.2 Propagator Model (Transient Impact Model)
 
-As with all reinforcement learning policy optimisations, the realism of the simulation environment directly impacts the quality of the learned action policy. If the simulation dynamics diverge materially from the “physical laws” governing markets, then the resulting strategies will be suboptimal when deployed. While exchange microstructure rules can be simulated with reasonable fidelity, modelling the impact of incremental orders on market prices at one-minute granularity is far more challenging. Fortunately, thanks to the work of Bouchaud, ([2010](https://arxiv.org/html/2601.22113v1#bib.bib3)); Bouchaud et al., ([2018](https://arxiv.org/html/2601.22113v1#bib.bib4)); Obizhaeva and Wang, ([2013](https://arxiv.org/html/2601.22113v1#bib.bib19)); Gatheral et al., ([2012](https://arxiv.org/html/2601.22113v1#bib.bib10)), the *propagator model* provides a tractable framework to capture transient market impact. This formulation allows the impact of each executed trade to propagate forward in time with a decaying influence on prices. Given our one-minute granularity, where there may be intermittent gaps, we find the transient impact model with an *exponential decay kernel* to be the most suitable for simulation.
+As with all reinforcement learning policy optimisations, the realism of the simulation environment directly impacts the quality of the learned action policy. If the simulation dynamics diverge materially from the “physical laws” governing markets, then the resulting strategies will be suboptimal when deployed. While exchange microstructure rules can be simulated with reasonable fidelity, modelling the impact of incremental orders on market prices at one-minute granularity is far more challenging. Fortunately, thanks to the work of Bouchaud, ([2010](https://arxiv.org/html/2601.22113v2#bib.bib3)); Bouchaud et al., ([2018](https://arxiv.org/html/2601.22113v2#bib.bib4)); Obizhaeva and Wang, ([2013](https://arxiv.org/html/2601.22113v2#bib.bib19)); Gatheral et al., ([2012](https://arxiv.org/html/2601.22113v2#bib.bib10)), the *propagator model* provides a tractable framework to capture transient market impact. This formulation allows the impact of each executed trade to propagate forward in time with a decaying influence on prices. Given our one-minute granularity, where there may be intermittent gaps, we find the transient impact model with an *exponential decay kernel* to be the most suitable for simulation.
 
 ##### General formulation.
 
@@ -199,7 +193,7 @@ where G​(ℓ)G(\ell) is the propagator kernel describing how impact at lag ℓ
 decays over time, f​(q,V)f(q,V) is the instantaneous impact function, and ηt\eta\_{t}
 is exogenous noise.
 
-The cumulative transient impact ItI\_{t}, which shifts the fill prices in the execution simulator (cf. Section [2.1](https://arxiv.org/html/2601.22113v1#S2.SS1 "2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")), is then
+The cumulative transient impact ItI\_{t}, which shifts the fill prices in the execution simulator (cf. Section [2.1](https://arxiv.org/html/2601.22113v2#S2.SS1 "2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")), is then
 
 |  |  |  |
 | --- | --- | --- |
@@ -215,11 +209,11 @@ The instantaneous impact function scales as a power law in the participation rat
 
 where γ\gamma is a stock- and regime-dependent scale factor, and β\beta
 typically lies between 0.4 and 0.7 for equities.
-This concavity captures the empirically observed “square-root law” of market impact. At the shortest time scales, however, the impact function is often observed to be closer to linear. For example, Cont et al., ([2014](https://arxiv.org/html/2601.22113v1#bib.bib7)) show that short-horizon price changes are linearly related to order flow imbalance, Tóth et al., ([2011](https://arxiv.org/html/2601.22113v1#bib.bib28)) find an additive linear response kernel across traders, and Bucci et al., ([2019](https://arxiv.org/html/2601.22113v1#bib.bib5)) document a crossover regime between linear and square-root impact. In Section [3](https://arxiv.org/html/2601.22113v1#S3 "3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation"), we empirically compare both functional forms at the one-minute horizon, finding that the square-root law provides superior explanatory power (R2R^{2}) in our dataset.
+This concavity captures the empirically observed “square-root law” of market impact. At the shortest time scales, however, the impact function is often observed to be closer to linear. For example, Cont et al., ([2014](https://arxiv.org/html/2601.22113v2#bib.bib7)) show that short-horizon price changes are linearly related to order flow imbalance, Tóth et al., ([2011](https://arxiv.org/html/2601.22113v2#bib.bib28)) find an additive linear response kernel across traders, and Bucci et al., ([2019](https://arxiv.org/html/2601.22113v2#bib.bib5)) document a crossover regime between linear and square-root impact. In Section [3](https://arxiv.org/html/2601.22113v2#S3 "3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation"), we empirically compare both functional forms at the one-minute horizon, finding that the square-root law provides superior explanatory power (R2R^{2}) in our dataset.
 
 ##### Propagator kernel.
 
-As illustrated in Figure [2](https://arxiv.org/html/2601.22113v1#S2.F2 "Figure 2 ‣ Propagator kernel. ‣ 2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"), the choice of kernel G​(ℓ)G(\ell) determines how quickly past trades lose their influence on current prices. Empirical studies show that impact is neither permanent (constant G​(ℓ)G(\ell)) nor purely instantaneous (delta kernel), but decays gradually over time. Several functional forms have been proposed, including power-law kernels (Bouchaud,, [2010](https://arxiv.org/html/2601.22113v1#bib.bib3)) and stretched exponentials (Mastromatteo et al.,, [2014](https://arxiv.org/html/2601.22113v1#bib.bib16)).
+As illustrated in Figure [2](https://arxiv.org/html/2601.22113v2#S2.F2 "Figure 2 ‣ Propagator kernel. ‣ 2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"), the choice of kernel G​(ℓ)G(\ell) determines how quickly past trades lose their influence on current prices. Empirical studies show that impact is neither permanent (constant G​(ℓ)G(\ell)) nor purely instantaneous (delta kernel), but decays gradually over time. Several functional forms have been proposed, including power-law kernels (Bouchaud,, [2010](https://arxiv.org/html/2601.22113v2#bib.bib3)) and stretched exponentials (Mastromatteo et al.,, [2014](https://arxiv.org/html/2601.22113v2#bib.bib16)).
 
 In this work, we adopt the exponential kernel
 
@@ -250,25 +244,25 @@ which adjusts fill prices according to:
 |  | ptfill=ptVWAP​(1+side⋅It).p^{\mathrm{fill}}\_{t}=p^{\mathrm{VWAP}}\_{t}\,\bigl(1+\mathrm{side}\cdot I\_{t}\bigr). |  |
 
 This formulation arises naturally from resilience models
-(Obizhaeva and Wang,, [2013](https://arxiv.org/html/2601.22113v1#bib.bib19)), where impact decays as I˙​(t)=−1τ​I​(t)+κ​Q˙​(t)\dot{I}(t)=-\tfrac{1}{\tau}I(t)+\kappa\dot{Q}(t).
-Gatheral et al., ([2012](https://arxiv.org/html/2601.22113v1#bib.bib10)) showed that admissible (non-manipulable) kernels
+(Obizhaeva and Wang,, [2013](https://arxiv.org/html/2601.22113v2#bib.bib19)), where impact decays as I˙​(t)=−1τ​I​(t)+κ​Q˙​(t)\dot{I}(t)=-\tfrac{1}{\tau}I(t)+\kappa\dot{Q}(t).
+Gatheral et al., ([2012](https://arxiv.org/html/2601.22113v2#bib.bib10)) showed that admissible (non-manipulable) kernels
 must be completely monotone—i.e., mixtures of exponentials—further justifying
-this choice. While Bouchaud’s propagator framework (Bouchaud et al.,, [2018](https://arxiv.org/html/2601.22113v1#bib.bib4))
+this choice. While Bouchaud’s propagator framework (Bouchaud et al.,, [2018](https://arxiv.org/html/2601.22113v2#bib.bib4))
 often employs power-law kernels, the exponential form offers a tractable
 Markovian approximation that calibrates well at minute-bar horizons.
 
 ### 2.2 Reinforcement Learning Models
 
-We investigate several reinforcement learning (RL) approaches as candidates for improving execution performance beyond traditional benchmark methods such as TWAP, VWAP, and POV. Our analysis begins with variations of Proximal Policy Optimisation (PPO) (Schulman et al.,, [2017](https://arxiv.org/html/2601.22113v1#bib.bib24)), a widely adopted and robust policy-gradient algorithm that has become a standard baseline in sequential decision-making. Building on this foundation, we extend our study to a more exploratory direction: MAP-Elites (Mouret and Clune,, [2015](https://arxiv.org/html/2601.22113v1#bib.bib17)), a quality-diversity algorithm designed to promote behavioural diversity while retaining high-performing strategies. To the best of our knowledge, MAP-Elites has not previously been applied to optimal execution, making its evaluation in this setting a novel contribution of our work.
+We investigate several reinforcement learning (RL) approaches as candidates for improving execution performance beyond traditional benchmark methods such as TWAP, VWAP, and POV. Our analysis begins with variations of Proximal Policy Optimisation (PPO) (Schulman et al.,, [2017](https://arxiv.org/html/2601.22113v2#bib.bib24)), a widely adopted and robust policy-gradient algorithm that has become a standard baseline in sequential decision-making. Building on this foundation, we extend our study to a more exploratory direction: MAP-Elites (Mouret and Clune,, [2015](https://arxiv.org/html/2601.22113v2#bib.bib17)), a quality-diversity algorithm designed to promote behavioural diversity while retaining high-performing strategies. To the best of our knowledge, MAP-Elites has not previously been applied to optimal execution, making its evaluation in this setting a novel contribution of our work.
 
 #### 2.2.1 RL Fundamentals
 
 ![Refer to caption](x1.png)
 
 
-Figure 3: Classic RL Flow diagram, adapted from Sutton and Barto, ([2018](https://arxiv.org/html/2601.22113v1#bib.bib26)).
+Figure 3: Classic RL Flow diagram, adapted from Sutton and Barto, ([2018](https://arxiv.org/html/2601.22113v2#bib.bib26)).
 
-Reinforcement Learning (RL) is a framework for sequential decision-making in which an agent interacts with an environment in order to maximise cumulative reward (Sutton and Barto,, [2018](https://arxiv.org/html/2601.22113v1#bib.bib26)). As shown in Figure [3](https://arxiv.org/html/2601.22113v1#S2.F3 "Figure 3 ‣ 2.2.1 RL Fundamentals ‣ 2.2 Reinforcement Learning Models ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"), at each discrete time step tt, the environment is described by a *state* st∈𝒮s\_{t}\in\mathcal{S} that captures the relevant features observable by the agent. In the context of execution, this state might include remaining inventory, elapsed time, spreads, volatility, imbalance, recent trade volumes, prices, or other relevant market information.
+Reinforcement Learning (RL) is a framework for sequential decision-making in which an agent interacts with an environment in order to maximise cumulative reward (Sutton and Barto,, [2018](https://arxiv.org/html/2601.22113v2#bib.bib26)). As shown in Figure [3](https://arxiv.org/html/2601.22113v2#S2.F3 "Figure 3 ‣ 2.2.1 RL Fundamentals ‣ 2.2 Reinforcement Learning Models ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"), at each discrete time step tt, the environment is described by a *state* st∈𝒮s\_{t}\in\mathcal{S} that captures the relevant features observable by the agent. In the context of execution, this state might include remaining inventory, elapsed time, spreads, volatility, imbalance, recent trade volumes, prices, or other relevant market information.
 
 The agent selects an *action* at∈𝒜a\_{t}\in\mathcal{A}, which in execution corresponds to how much of the parent order to trade in the next step (for example, a fraction of the current market volume or a deviation from a baseline schedule). The environment responds by transitioning to a new state st+1s\_{t+1} and producing a scalar *reward* rt∈ℝr\_{t}\in\mathbb{R}, which evaluates the quality of the action taken. In execution, rewards are typically designed as the negative of slippage, transaction cost, or schedule deviation, so that higher returns correspond to better execution quality.
 
@@ -308,13 +302,13 @@ The *advantage function* refines this by comparing the value of a particular act
 
 In execution, the advantage can be interpreted as whether trading faster or slower than usual at a given state improves performance.
 
-A common challenge in estimating advantages is the high variance of Monte Carlo returns. To mitigate this, Schulman et al., ([2016](https://arxiv.org/html/2601.22113v1#bib.bib23)) introduced *Generalised Advantage Estimation (GAE)*, which mixes nn-step temporal-difference residuals with an exponentially decaying weight λ∈[0,1]\lambda\in[0,1]. GAE defines the advantage estimate as:
+A common challenge in estimating advantages is the high variance of Monte Carlo returns. To mitigate this, Schulman et al., ([2016](https://arxiv.org/html/2601.22113v2#bib.bib23)) introduced *Generalised Advantage Estimation (GAE)*, which mixes nn-step temporal-difference residuals with an exponentially decaying weight λ∈[0,1]\lambda\in[0,1]. GAE defines the advantage estimate as:
 
 |  |  |  |
 | --- | --- | --- |
 |  | A^tGAE​(γ,λ)=∑l=0∞(γ​λ)l​δt+lV,δtV=rt+γ​V​(st+1)−V​(st),\hat{A}\_{t}^{\mathrm{GAE}(\gamma,\lambda)}=\sum\_{l=0}^{\infty}(\gamma\lambda)^{l}\,\delta\_{t+l}^{V},\qquad\delta\_{t}^{V}=r\_{t}+\gamma V(s\_{t+1})-V(s\_{t}), |  |
 
-where δtV\delta\_{t}^{V} is the one-step temporal-difference (TD) error. Lower values of λ\lambda reduce variance by relying more on shorter-horizon TD estimates, while higher values reduce bias by incorporating longer returns. Proximal Policy Optimisation (PPO) (Schulman et al.,, [2017](https://arxiv.org/html/2601.22113v1#bib.bib24)) commonly employs GAE with λ≈0.95\lambda\approx 0.95 to stabilise training, providing a robust trade-off between bias and variance.
+where δtV\delta\_{t}^{V} is the one-step temporal-difference (TD) error. Lower values of λ\lambda reduce variance by relying more on shorter-horizon TD estimates, while higher values reduce bias by incorporating longer returns. Proximal Policy Optimisation (PPO) (Schulman et al.,, [2017](https://arxiv.org/html/2601.22113v2#bib.bib24)) commonly employs GAE with λ≈0.95\lambda\approx 0.95 to stabilise training, providing a robust trade-off between bias and variance.
 
 PPO belongs to the family of *actor-critic* methods, where two neural networks are trained jointly:
 
@@ -339,7 +333,7 @@ meaning it learns only from trajectories generated by its current policy.
 While this reduces sample efficiency, it provides more stable learning in
 non-stationary environments where market conditions shift. The clipped
 objective (detailed in
-Section [2.4.1](https://arxiv.org/html/2601.22113v1#S2.SS4.SSS1 "2.4.1 Proximal Policy Optimisation models (PPO) ‣ 2.4 Novel RL Approaches to Optimal Execution ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")) prevents destructively large policy updates that could catastrophically
+Section [2.4.1](https://arxiv.org/html/2601.22113v2#S2.SS4.SSS1 "2.4.1 Proximal Policy Optimisation models (PPO) ‣ 2.4 Novel RL Approaches to Optimal Execution ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")) prevents destructively large policy updates that could catastrophically
 degrade execution performance. For execution, where a bad policy update could
 mean significant losses if deployed, PPO’s conservative update mechanism is
 a significant advantage in ensuring stable progress towards an improved policy.
@@ -348,13 +342,13 @@ a significant advantage in ensuring stable progress towards an improved policy.
 
 #### 2.3.1 Data: Minute Bar Data
 
-Our back-testing environment is calibrated using minute-bar data from approximately 400 US equities sourced from Mana Tech (Mana Tech LLC,, [2025](https://arxiv.org/html/2601.22113v1#bib.bib15)) for the entirety of the year 2022. Each bar contains bid/ask/mid quotes and displayed depth, trade prices, sided and hidden volumes, among other features. For each symbol and trading day, the dataset provides the variables listed in Table [3](https://arxiv.org/html/2601.22113v1#A1.T3 "Table 3 ‣ A.1 Data Details ‣ Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation") (in Appendix [A](https://arxiv.org/html/2601.22113v1#A1 "Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+Our back-testing environment is calibrated using minute-bar data from approximately 400 US equities sourced from Mana Tech (Mana Tech LLC,, [2025](https://arxiv.org/html/2601.22113v2#bib.bib15)) for the entirety of the year 2022. Each bar contains bid/ask/mid quotes and displayed depth, trade prices, sided and hidden volumes, among other features. For each symbol and trading day, the dataset provides the variables listed in Table [3](https://arxiv.org/html/2601.22113v2#A1.T3 "Table 3 ‣ A.1 Data Details ‣ Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation") (in Appendix [A](https://arxiv.org/html/2601.22113v2#A1 "Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 
-Data cleaning steps include forward-filling missing quotes (at most one bar), excluding minute intervals with no reported trades when constructing returns, and filtering extreme return outliers. Stocks with more than 7% missing values were removed to avoid instability. Summary statistics of the resulting dataset are shown in Figure [15](https://arxiv.org/html/2601.22113v1#A1.F15 "Figure 15 ‣ A.1 Data Details ‣ Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation") (in Appendix [A](https://arxiv.org/html/2601.22113v1#A1 "Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+Data cleaning steps include forward-filling missing quotes (at most one bar), excluding minute intervals with no reported trades when constructing returns, and filtering extreme return outliers. Stocks with more than 7% missing values were removed to avoid instability. Summary statistics of the resulting dataset are shown in Figure [15](https://arxiv.org/html/2601.22113v2#A1.F15 "Figure 15 ‣ A.1 Data Details ‣ Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation") (in Appendix [A](https://arxiv.org/html/2601.22113v2#A1 "Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 
 #### 2.3.2 Daily Analytics
 
-From the one-minute level data we construct a set of daily statistics to be used by GEO and by the learning models. These include averages of daily trading volume, spreads, order book depth, and trade count, as well as Parkinson, ([1980](https://arxiv.org/html/2601.22113v1#bib.bib20)) high-low volatility estimates, defined as
+From the one-minute level data we construct a set of daily statistics to be used by GEO and by the learning models. These include averages of daily trading volume, spreads, order book depth, and trade count, as well as Parkinson, ([1980](https://arxiv.org/html/2601.22113v2#bib.bib20)) high-low volatility estimates, defined as
 
 |  |  |  |
 | --- | --- | --- |
@@ -362,7 +356,7 @@ From the one-minute level data we construct a set of daily statistics to be used
 
 over 1-, 2-, and 5-day windows, where intraday high-low ranges are used
 to provide robust volatility estimates less sensitive to bid-ask bounce than
-close-to-close returns. Detailed definitions of these features are provided in Appendix [A](https://arxiv.org/html/2601.22113v1#A1 "Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation"), Table LABEL:tab:daily\_features\_returned.
+close-to-close returns. Detailed definitions of these features are provided in Appendix [A](https://arxiv.org/html/2601.22113v2#A1 "Appendix A Appendix ‣ Diverse Approaches to Optimal Execution Schedule Generation"), Table LABEL:tab:daily\_features\_returned.
 
 #### 2.3.3 Environment Design and Gymnasium Integration
 
@@ -372,7 +366,7 @@ close-to-close returns. Detailed definitions of these features are provided in A
 Figure 4: Schematic overview of the GEO environment architecture, showing the
 interaction between agent, environment, and calibrated market impact model.
 
-The *GEO* backtest environment (Figure [4](https://arxiv.org/html/2601.22113v1#S2.F4 "Figure 4 ‣ 2.3.3 Environment Design and Gymnasium Integration ‣ 2.3 Gymnasium for Executing Optimally (GEO) ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")) is implemented as a custom Gymnasium environment that adheres to the Gymnasium API (Towers et al.,, [2024](https://arxiv.org/html/2601.22113v1#bib.bib27); Ray Team,, [2025](https://arxiv.org/html/2601.22113v1#bib.bib22); Stable-Baselines3 Developers,, [2025](https://arxiv.org/html/2601.22113v1#bib.bib25)), enabling seamless integration with a wide range of RL algorithms. The design follows three principles:
+The *GEO* backtest environment (Figure [4](https://arxiv.org/html/2601.22113v2#S2.F4 "Figure 4 ‣ 2.3.3 Environment Design and Gymnasium Integration ‣ 2.3 Gymnasium for Executing Optimally (GEO) ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")) is implemented as a custom Gymnasium environment that adheres to the Gymnasium API (Towers et al.,, [2024](https://arxiv.org/html/2601.22113v2#bib.bib27); Ray Team,, [2025](https://arxiv.org/html/2601.22113v2#bib.bib22); Stable-Baselines3 Developers,, [2025](https://arxiv.org/html/2601.22113v2#bib.bib25)), enabling seamless integration with a wide range of RL algorithms. The design follows three principles:
 
 1. (i)
 
@@ -384,7 +378,7 @@ The *GEO* backtest environment (Figure [4](https://arxiv.org/html/2601.22113v1#
 
    *compatibility*, ensuring adherence to Gym’s reset() and step() interface.
 
-Prior researchers have used Gymnasium in simulators such as *ABIDES* and *mbt\_gym*, though their focus has largely been on limit order book (LOB) dynamics (Jerome et al.,, [2023](https://arxiv.org/html/2601.22113v1#bib.bib13); Amrouni et al.,, [2022](https://arxiv.org/html/2601.22113v1#bib.bib2); Hafsi and Vittori,, [2024](https://arxiv.org/html/2601.22113v1#bib.bib11)). In contrast, our framework targets execution at the minute-bar horizon with transient market impact.
+Prior researchers have used Gymnasium in simulators such as *ABIDES* and *mbt\_gym*, though their focus has largely been on limit order book (LOB) dynamics (Jerome et al.,, [2023](https://arxiv.org/html/2601.22113v2#bib.bib13); Amrouni et al.,, [2022](https://arxiv.org/html/2601.22113v2#bib.bib2); Hafsi and Vittori,, [2024](https://arxiv.org/html/2601.22113v2#bib.bib11)). In contrast, our framework targets execution at the minute-bar horizon with transient market impact.
 
 The core environment extends Gymnasium’s Env class and supports vectorised execution for efficient parallel simulation of multiple orders, utilising multiple core CPU acceleration. Each episode corresponds to the execution of a single parent order over HH time steps, with each step representing one minute of market time.
 
@@ -407,7 +401,7 @@ Target rate with action:
 | --- | --- | --- |
 |  | ρtaction=ρttarget⋅(1+at),ρttarget=qtrem𝔼​[Vt,H],\rho^{\mathrm{action}}\_{t}=\rho^{\mathrm{target}}\_{t}\cdot(1+a\_{t}),\quad\rho^{\mathrm{target}}\_{t}=\frac{q^{\mathrm{rem}}\_{t}}{{\color[rgb]{0,0,0}\definecolor[named]{pgfstrokecolor}{rgb}{0,0,0}\pgfsys@color@gray@stroke{0}\pgfsys@color@gray@fill{0}\mathbb{E}}[V\_{t,H}]}, |  |
 
-where qtrem=Q0−∑i=0tqiq^{\mathrm{rem}}\_{t}=Q\_{0}-\sum\_{i=0}^{t}q\_{i} is the remaining inventory at step tt, and E​[Vt,H]E[V\_{t,H}] is the expected remaining market volume over the interval [t,H][t,H]. The executed quantity is then
+where qtrem=Q0−∑i=0tqiq^{\mathrm{rem}}\_{t}=Q\_{0}-\sum\_{i=0}^{t}q\_{i} is the remaining inventory at step tt, and 𝔼​[Vt,H]\mathbb{E}[V\_{t,H}] is the expected remaining market volume over the interval [t,H][t,H]. The executed quantity is then
 
 |  |  |  |
 | --- | --- | --- |
@@ -441,7 +435,7 @@ Orders are generated using an order generator inside GEO, which samples from his
 
 This sampling procedure produces a heterogeneous set of parent orders that vary in size, duration, and liquidity environment, thereby exposing the agent to a broad distribution of execution scenarios. The training dataset is drawn from a historical period strictly preceding the test dataset, ensuring that evaluation is performed under market conditions not encountered during training. This split allows a fair out-of-sample assessment of generalisation performance.
 
-In this project, we use nine months of trading data for training and three months for testing, across the universe in the minute bar dataset defined in Section [2.3.1](https://arxiv.org/html/2601.22113v1#S2.SS3.SSS1 "2.3.1 Data: Minute Bar Data ‣ 2.3 Gymnasium for Executing Optimally (GEO) ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"). An illustration of the resulting order size and horizon distributions is provided in Figure [5](https://arxiv.org/html/2601.22113v1#S2.F5 "Figure 5 ‣ 2.3.4 Order Generation ‣ 2.3 Gymnasium for Executing Optimally (GEO) ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation").
+In this project, we use nine months of trading data for training and three months for testing, across the universe in the minute bar dataset defined in Section [2.3.1](https://arxiv.org/html/2601.22113v2#S2.SS3.SSS1 "2.3.1 Data: Minute Bar Data ‣ 2.3 Gymnasium for Executing Optimally (GEO) ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation"). An illustration of the resulting order size and horizon distributions is provided in Figure [5](https://arxiv.org/html/2601.22113v2#S2.F5 "Figure 5 ‣ 2.3.4 Order Generation ‣ 2.3 Gymnasium for Executing Optimally (GEO) ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation").
 
 ![Refer to caption](images/order_plots.png)
 
@@ -453,7 +447,7 @@ Figure 5: Sample set of generated orders with impact and decay coefficients, str
 At each step tt, the agent selects an action ata\_{t} that scales the
 baseline participation rate to determine trade size qtq\_{t}, which is then
 executed at impact-adjusted prices using the transient impact framework
-(Section [2.1.2](https://arxiv.org/html/2601.22113v1#S2.SS1.SSS2 "2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+(Section [2.1.2](https://arxiv.org/html/2601.22113v2#S2.SS1.SSS2 "2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 
 The remaining inventory evolves as
 
@@ -478,7 +472,7 @@ The execution price is then determined using the propagator model. Specifically,
 where side∈{+1,−1}\mathrm{side}\in\{+1,-1\} indicates buy or sell.
 
 The environment records both the impact-adjusted execution price ptfillp^{\mathrm{fill}}\_{t} and the realised implementation shortfall at each step, enabling post-hoc analysis of execution quality and fair comparison across policies. Impact model parameters (γ,G0,τ)(\gamma,G\_{0},\tau) are pre-calibrated
-per stock (Section [3.1](https://arxiv.org/html/2601.22113v1#S3.SS1 "3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")) and assigned to orders
+per stock (Section [3.1](https://arxiv.org/html/2601.22113v2#S3.SS1 "3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")) and assigned to orders
 based on their symbol, ensuring consistent dynamics across training and evaluation.
 
 #### 2.3.6 Reward Function
@@ -544,13 +538,13 @@ At each minute draw ata\_{t} from the action set and set
 
 
 
-qtRAND=(1+at)​qtremE​[Vt,H]​Vt,qtrem=Q0−∑i=0t−1qi,q\_{t}^{\mathrm{RAND}}=(1+a\_{t})\,\frac{q^{\mathrm{rem}}\_{t}}{E[V\_{t,H}]}\,V\_{t},\quad q^{\mathrm{rem}}\_{t}=Q\_{0}-\sum\_{i=0}^{t-1}q\_{i},
+qtRAND=(1+at)​qtrem𝔼​[Vt,H]​Vt,qtrem=Q0−∑i=0t−1qi,q\_{t}^{\mathrm{RAND}}=(1+a\_{t})\,\frac{q^{\mathrm{rem}}\_{t}}{\mathbb{E}[V\_{t,H}]}\,V\_{t},\quad q^{\mathrm{rem}}\_{t}=Q\_{0}-\sum\_{i=0}^{t-1}q\_{i},
 so completion is still enforced by the target-rate scaffolding.
 
 All baselines are evaluated within the GEO environment using the same calibrated
 transient impact model and fill price mechanism as the RL agents, ensuring fair
 comparison. Each baseline executes orders according to its deterministic schedule,
-with fills adjusted for market impact via Equation ([1](https://arxiv.org/html/2601.22113v1#S2.E1 "In General formulation. ‣ 2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+with fills adjusted for market impact via Equation ([1](https://arxiv.org/html/2601.22113v2#S2.E1 "In General formulation. ‣ 2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 
 ### 2.4 Novel RL Approaches to Optimal Execution
 
@@ -612,13 +606,13 @@ running mean and standard deviation estimates maintained across vectorised
 environments (Stable-Baselines3 VecNormalize wrapper), ensuring numerical
 stability across assets and regimes.
 
-Hyperparameters follow standard PPO best practices (Schulman et al.,, [2017](https://arxiv.org/html/2601.22113v1#bib.bib24)) with
+Hyperparameters follow standard PPO best practices (Schulman et al.,, [2017](https://arxiv.org/html/2601.22113v2#bib.bib24)) with
 minor adjustments for the execution domain.
 
 Common PPO Settings
 
 Architecture: Shared feature extractor (256-dim); actor MLP [256, 256, 128]; critic MLP [256, 256, 128]; tanh activation.
-Optimiser: PPO with clipped surrogate loss LπL^{\pi}, value loss LVL^{V}, entropy bonus LHL^{H}, and KL penalty LK​LL^{KL} (Eq. [2](https://arxiv.org/html/2601.22113v1#S2.E2 "In 2.4.1 Proximal Policy Optimisation models (PPO) ‣ 2.4 Novel RL Approaches to Optimal Execution ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+Optimiser: PPO with clipped surrogate loss LπL^{\pi}, value loss LVL^{V}, entropy bonus LHL^{H}, and KL penalty LK​LL^{KL} (Eq. [2](https://arxiv.org/html/2601.22113v2#S2.E2 "In 2.4.1 Proximal Policy Optimisation models (PPO) ‣ 2.4 Novel RL Approaches to Optimal Execution ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 Key Hyperparameters:
 
 •
@@ -641,7 +635,7 @@ GAE: λ=0.95\lambda=0.95 for advantage estimation.
 
 #### 2.4.2 MAP-Elites: Quality-Diversity Optimisation
 
-Most reinforcement learning algorithms optimise for a single performance objective, aiming to find the policy πθ\pi\_{\theta} that maximises expected return. While this produces a single “best” solution under the training reward, it provides little insight into the diversity of alternative strategies or their robustness under changing market conditions. The *MAP-Elites* algorithm, introduced by Mouret and Clune, ([2015](https://arxiv.org/html/2601.22113v1#bib.bib17)), belongs to the class of *quality-diversity* (QD) methods. Rather than converging on a single optimum, MAP-Elites searches for a collection of high-performing yet behaviourally distinct solutions, yielding a repertoire of policies that together “illuminate” the range of possible strategies.
+Most reinforcement learning algorithms optimise for a single performance objective, aiming to find the policy πθ\pi\_{\theta} that maximises expected return. While this produces a single “best” solution under the training reward, it provides little insight into the diversity of alternative strategies or their robustness under changing market conditions. The *MAP-Elites* algorithm, introduced by Mouret and Clune, ([2015](https://arxiv.org/html/2601.22113v2#bib.bib17)), belongs to the class of *quality-diversity* (QD) methods. Rather than converging on a single optimum, MAP-Elites searches for a collection of high-performing yet behaviourally distinct solutions, yielding a repertoire of policies that together “illuminate” the range of possible strategies.
 
 MAP-Elites Algorithm (overview)
 
@@ -711,7 +705,7 @@ MAP-Elites offers potential advantages: it may enforce exploration of behavioura
 distinct strategies, produce an interpretable map of “what works where,” provide
 robustness through diverse repertoires, and remain agnostic to policy representation.
 In this work, we apply MAP-Elites to a PPO-based CNN policy using liquidity-volatility
-descriptors to structure the archive. However, as we show in Section [3](https://arxiv.org/html/2601.22113v1#S3 "3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation"),
+descriptors to structure the archive. However, as we show in Section [3](https://arxiv.org/html/2601.22113v2#S3 "3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation"),
 the practical benefits depend critically on descriptor choice, fitness function
 design, and computational budget.
 
@@ -744,14 +738,14 @@ Calibration is performed via constrained non-linear least squares with economica
 | --- | --- | --- |
 |  | G0≥0,τ∈[0.5,180].G\_{0}\geq 0,\qquad\tau\in[0.5,180]. |  |
 
-The necessity of these contraints is demonstrated in Figure [7](https://arxiv.org/html/2601.22113v1#S3.F7 "Figure 7 ‣ 3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation").
+The necessity of these contraints is demonstrated in Figure [7](https://arxiv.org/html/2601.22113v2#S3.F7 "Figure 7 ‣ 3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation").
 
 ![Refer to caption](images/tau_samples.png)
 
 
-Figure 7: Constraint necessity: without bounds, τ\tau can turn negative due to noise (Eq. [1](https://arxiv.org/html/2601.22113v1#S2.E1 "In General formulation. ‣ 2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")), implying explosion rather than decay.
+Figure 7: Constraint necessity: without bounds, τ\tau can turn negative due to noise (Eq. [1](https://arxiv.org/html/2601.22113v2#S2.E1 "In General formulation. ‣ 2.1.2 Propagator Model (Transient Impact Model) ‣ 2.1 Optimal Execution Problem Set-up ‣ 2 Methods ‣ Diverse Approaches to Optimal Execution Schedule Generation")), implying explosion rather than decay.
 
-Figure [8](https://arxiv.org/html/2601.22113v1#S3.F8 "Figure 8 ‣ 3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") presents a lagged regression study comparing R2R^{2} of linear and square-root forms at maximum lags LL of 5, 10, and 20 minutes. The square-root function dominates overall, especially for liquid names where concavity captures diminishing marginal impact (Figure [9](https://arxiv.org/html/2601.22113v1#S3.F9 "Figure 9 ‣ 3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+Figure [8](https://arxiv.org/html/2601.22113v2#S3.F8 "Figure 8 ‣ 3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") presents a lagged regression study comparing R2R^{2} of linear and square-root forms at maximum lags LL of 5, 10, and 20 minutes. The square-root function dominates overall, especially for liquid names where concavity captures diminishing marginal impact (Figure [9](https://arxiv.org/html/2601.22113v2#S3.F9 "Figure 9 ‣ 3.1 Transient Impact Model Calibration ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 
 ![Refer to caption](images/lag_study.png)
 
@@ -777,7 +771,7 @@ We benchmark PPO with multi-layer perceptron (MLP) and convolutional (CNN) featu
 
 #### 3.2.2 PPO Results and Findings
 
-Table [1](https://arxiv.org/html/2601.22113v1#S3.T1 "Table 1 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") summarises performance for the two PPO architectures compared to baseline strategies. Metrics are expressed in basis points (bps), with standard errors in parentheses.
+Table [1](https://arxiv.org/html/2601.22113v2#S3.T1 "Table 1 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") summarises performance for the two PPO architectures compared to baseline strategies. Metrics are expressed in basis points (bps), with standard errors in parentheses.
 
 | Agent | Count | Notional (Bln) | Arrival Slippage | Duration % | Return | Total Cost | Action % |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -797,7 +791,7 @@ The PPO-CNN model achieves the lowest arrival slippage of all strategies (2.13 b
 
 Figure 10: Aggregated mean action % ata\_{t} across order horizons, conditioned on price drift relative to order side. PPO agents exhibit front-loading consistent with Almgren-Chriss scheduling.
 
-Both PPO agents adopt a front-loaded pattern consistent with Almgren-Chriss intuition, mitigating holding costs by executing earlier. The CNN variant moderates this front-loading when returns are adverse, suggesting that the temporal structure enables a more nuanced response to price drift (Figures [10](https://arxiv.org/html/2601.22113v1#S3.F10 "Figure 10 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") and [11](https://arxiv.org/html/2601.22113v1#S3.F11 "Figure 11 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
+Both PPO agents adopt a front-loaded pattern consistent with Almgren-Chriss intuition, mitigating holding costs by executing earlier. The CNN variant moderates this front-loading when returns are adverse, suggesting that the temporal structure enables a more nuanced response to price drift (Figures [10](https://arxiv.org/html/2601.22113v2#S3.F10 "Figure 10 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") and [11](https://arxiv.org/html/2601.22113v2#S3.F11 "Figure 11 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")).
 
 ![Refer to caption](images/rl_costs.png)
 
@@ -810,7 +804,7 @@ Figure 11: Decomposition of costs across strategies. PPO agents internalise hold
 
 We conducted a preliminary investigation of MAP-Elites for generating regime-specialist
 policies. While quality-diversity approaches have shown promise in robotics
-(Mouret and Clune,, [2015](https://arxiv.org/html/2601.22113v1#bib.bib17)), their application to financial execution remains
+(Mouret and Clune,, [2015](https://arxiv.org/html/2601.22113v2#bib.bib17)), their application to financial execution remains
 largely unexplored. We implemented MAP-Elites over volatility (normalised Parkinson) and liquidity (normalised ADV) behavioural descriptors
 with a 3×33\times 3 grid, seeding policies from a baseline PPO-CNN model and
 evolving them via Gaussian parameter perturbations (σ=0.01\sigma=0.01). Initial
@@ -819,7 +813,7 @@ in-sample improvements but failed to generalise. We therefore scaled to 500
 iterations with 256 children per generation, evaluating 128,000 candidate policies
 over 5.5 hours on Apple M4 Max 64GB 16-core CPU.
 
-Table [2](https://arxiv.org/html/2601.22113v1#S3.T2 "Table 2 ‣ 3.3.1 Exploratory Application of MAP-Elites ‣ 3.3 MAP-Elites Results and Findings ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") presents phenotype-specific performance: each
+Table [2](https://arxiv.org/html/2601.22113v2#S3.T2 "Table 2 ‣ 3.3.1 Exploratory Application of MAP-Elites ‣ 3.3 MAP-Elites Results and Findings ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation") presents phenotype-specific performance: each
 specialist was evaluated exclusively on test orders matching its liquidity-volatility
 cell.
 Three cells achieved 8-10% improvements over baseline PPO within their
@@ -873,7 +867,7 @@ Within GEO, PPO-CNN achieved 2.13 bps arrival slippage, outperforming VWAP
 (5.23 bps) and TWAP (7.01 bps) by 59% and 70% respectively. Both PPO agents
 reduced total costs to 178 bps, roughly half TWAP’s 303 bps, primarily through
 front-loaded schedules that internalize holding costs.
-Figure [14](https://arxiv.org/html/2601.22113v1#S4.F14 "Figure 14 ‣ 4.1 GEO Environment and RL Performance ‣ 4 Discussion ‣ Diverse Approaches to Optimal Execution Schedule Generation") shows the “anatomy” of a single PPO-CNN order, illustrating how the propagator affects fill prices, how inventory is managed, and how costs accumulate. This integrated view demonstrates how the RL agent perceives state, chooses actions, and experiences costs under the transient impact model.
+Figure [14](https://arxiv.org/html/2601.22113v2#S4.F14 "Figure 14 ‣ 4.1 GEO Environment and RL Performance ‣ 4 Discussion ‣ Diverse Approaches to Optimal Execution Schedule Generation") shows the “anatomy” of a single PPO-CNN order, illustrating how the propagator affects fill prices, how inventory is managed, and how costs accumulate. This integrated view demonstrates how the RL agent perceives state, chooses actions, and experiences costs under the transient impact model.
 
 ![Refer to caption](images/anatomy_of_an_order2.png)
 
@@ -883,7 +877,7 @@ Figure 14: Anatomy of a PPO-CNN RL order showing propagator-driven fill prices, 
 The CNN’s advantage over MLP (3.78 bps) despite processing identical 13-dimensional
 observations demonstrates that architectural improvements yield measurable gains.
 The convolutional layers enable learning joint patterns between correlated features—price,
-volume, and inventory states—where the MLP treats each independently. Figure [10](https://arxiv.org/html/2601.22113v1#S3.F10 "Figure 10 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")
+volume, and inventory states—where the MLP treats each independently. Figure [10](https://arxiv.org/html/2601.22113v2#S3.F10 "Figure 10 ‣ 3.2.2 PPO Results and Findings ‣ 3.2 RL Performance Results ‣ 3 Results ‣ Diverse Approaches to Optimal Execution Schedule Generation")
 shows the CNN moderating front-loading during adverse price drift, suggesting
 context-dependent adaptation beyond the MLP’s static aggressiveness.
 
@@ -906,10 +900,10 @@ simple Gaussian parameter mutations over 500 iterations—a conservative approac
 that prioritizes interpretability over computational efficiency.
 
 Recent advances suggest substantial room for improvement. Parallelized quality-diversity
-(Lim et al.,, [2023](https://arxiv.org/html/2601.22113v1#bib.bib14)) could reduce the 5.5-hour runtime by orders of magnitude.
-Specialized mutation operators for neural networks (Faldor et al.,, [2025](https://arxiv.org/html/2601.22113v1#bib.bib8))
+(Lim et al.,, [2023](https://arxiv.org/html/2601.22113v2#bib.bib14)) could reduce the 5.5-hour runtime by orders of magnitude.
+Specialized mutation operators for neural networks (Faldor et al.,, [2025](https://arxiv.org/html/2601.22113v2#bib.bib8))
 may improve exploration efficiency beyond naive Gaussian noise. Methods designed
-for stochastic objectives (Flageat et al.,, [2025](https://arxiv.org/html/2601.22113v1#bib.bib9)) could better handle the
+for stochastic objectives (Flageat et al.,, [2025](https://arxiv.org/html/2601.22113v2#bib.bib9)) could better handle the
 inherent noisiness of financial data, where fitness evaluation on small order
 samples introduces high variance.
 

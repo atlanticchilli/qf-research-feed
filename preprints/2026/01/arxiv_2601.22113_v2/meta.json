@@ -1,15 +1,15 @@
 {
-  "doc_id": "arxiv:2601.22113v1",
+  "doc_id": "arxiv:2601.22113v2",
   "family_id": "arxiv:2601.22113",
   "title": "Diverse Approaches to Optimal Execution Schedule Generation",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2026,
   "authors": [
     "Robert de Witt",
     "Mikko S. Pakkanen"
   ],
-  "url_abs": "http://arxiv.org/abs/2601.22113v1",
-  "url_html": "https://arxiv.org/html/2601.22113v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2601.22113v2",
+  "url_html": "https://arxiv.org/html/2601.22113v2",
+  "is_current": true
 }
