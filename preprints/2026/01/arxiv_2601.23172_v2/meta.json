@@ -1,0 +1,17 @@
+{
+  "doc_id": "arxiv:2601.23172v2",
+  "family_id": "arxiv:2601.23172",
+  "title": "A unified theory of order flow, market impact, and volatility1footnote 11footnote 1Youssef Ouazzani Chahdi, Mathieu Rosenbaum and Gr\u00e9goire Szymanski gratefully acknowledge support from the ILB Chair Artificial Intelligence and Quantitative Methods for Finance at University Paris Dauphine-PSL. The authors thank Pavel Chigansky and Marina Kleptsyna for key input on mixed fractional Brownian motion. They are also grateful to Jean-Philippe Bouchaud and Kevin Webster for inspiring discussions on order flow modeling, and thank BMLL Technologies for providing the historical market data used in this study.",
+  "venue": "arXiv q-fin",
+  "version": 2,
+  "year": 2026,
+  "authors": [
+    "Johannes Muhle-Karbe",
+    "Youssef Ouazzani Chahdi",
+    "Mathieu Rosenbaum",
+    "Gr\u00e9goire Szymanski"
+  ],
+  "url_abs": "http://arxiv.org/abs/2601.23172v2",
+  "url_html": "https://arxiv.org/html/2601.23172v2",
+  "is_current": true
+}

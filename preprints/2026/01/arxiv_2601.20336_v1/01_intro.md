@@ -3,7 +3,7 @@ authors:
 - Murad Farzulla
 doc_id: arxiv:2601.20336v1
 family_id: arxiv:2601.20336
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -17,7 +17,6 @@ venue: arXiv q-fin
 version: 1
 year: 2026
 ---
-
 
 Murad Farzulla1
   

@@ -1,0 +1,15 @@
+{
+  "doc_id": "arxiv:2602.00133v1",
+  "family_id": "arxiv:2602.00133",
+  "title": "PredictionMarketBench: A SWE-bench-Style Framework for Backtesting Trading Agents on Prediction Markets",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Avi Arora",
+    "Ritesh Malpani"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.00133v1",
+  "url_html": "https://arxiv.org/html/2602.00133v1",
+  "is_current": true
+}

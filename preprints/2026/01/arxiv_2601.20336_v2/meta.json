@@ -1,14 +1,14 @@
 {
-  "doc_id": "arxiv:2601.20336v1",
+  "doc_id": "arxiv:2601.20336v2",
   "family_id": "arxiv:2601.20336",
   "title": "Do Whitepaper Claims Predict Market Behavior? Evidence from Cryptocurrency Factor Analysis",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2026,
   "authors": [
     "Murad Farzulla"
   ],
-  "url_abs": "http://arxiv.org/abs/2601.20336v1",
-  "url_html": "https://arxiv.org/html/2601.20336v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2601.20336v2",
+  "url_html": "https://arxiv.org/html/2601.20336v2",
+  "is_current": true
 }
