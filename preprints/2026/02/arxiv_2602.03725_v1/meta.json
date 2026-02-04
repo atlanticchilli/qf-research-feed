@@ -1,0 +1,21 @@
+{
+  "doc_id": "arxiv:2602.03725v1",
+  "family_id": "arxiv:2602.03725",
+  "title": "[2602.03725v1] Quantum Speedups for Derivative Pricing Beyond Black-Scholes",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Dylan Herman",
+    "Yue Sun",
+    "Jin-Peng Liu",
+    "Marco Pistoia",
+    "Charlie Che",
+    "Rob Otter",
+    "Shouvanik Chakrabarti",
+    "Aram Harrow"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.03725v1",
+  "url_html": "https://ar5iv.org/html/2602.03725v1",
+  "is_current": true
+}
