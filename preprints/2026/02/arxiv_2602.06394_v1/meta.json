@@ -1,0 +1,18 @@
+{
+  "doc_id": "arxiv:2602.06394v1",
+  "family_id": "arxiv:2602.06394",
+  "title": "Unlocking Noisy Real-World Corpora for Foundation Model Pre-Training via Quality-Aware Tokenization",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Arvid E. Gollwitzer",
+    "Paridhi Latawa",
+    "David de Gruijl",
+    "Deepak A. Subramanian",
+    "Adri\u00e1n Noriega de la Colina"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.06394v1",
+  "url_html": "https://arxiv.org/html/2602.06394v1",
+  "is_current": true
+}
