@@ -1,0 +1,15 @@
+{
+  "doc_id": "arxiv:2602.08182v1",
+  "family_id": "arxiv:2602.08182",
+  "title": "NANSDE-Net: A NEURAL SDE FRAMEWORK FOR GENERATING TIME SERIES WITH MEMORY",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Hiromu Ozai",
+    "Kei Nakagawa"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.08182v1",
+  "url_html": "https://arxiv.org/html/2602.08182v1",
+  "is_current": true
+}
