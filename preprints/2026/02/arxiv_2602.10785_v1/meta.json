@@ -1,0 +1,15 @@
+{
+  "doc_id": "arxiv:2602.10785v1",
+  "family_id": "arxiv:2602.10785",
+  "title": "A novel approach to trading strategy parameter optimization, using double out-of-sample data and walk-forward techniquesThe associated GitHub repository covering all calculations presented in this paper can be found at: https://github.com/tmr-crypto/wf_optim_crypto_analysis",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Tomasz Mroziewicz",
+    "Robert \u015alepaczuk"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.10785v1",
+  "url_html": "https://arxiv.org/html/2602.10785v1",
+  "is_current": true
+}
