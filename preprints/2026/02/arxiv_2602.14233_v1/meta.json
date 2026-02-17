@@ -1,0 +1,23 @@
+{
+  "doc_id": "arxiv:2602.14233v1",
+  "family_id": "arxiv:2602.14233",
+  "title": "Evaluating LLMs in Finance Requires Explicit Bias Consideration",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Yaxuan Kong",
+    "Hoyoung Lee",
+    "Yoontae Hwang",
+    "Alejandro Lopez-Lira",
+    "Bradford Levy",
+    "Dhagash Mehta",
+    "Qingsong Wen",
+    "Chanyeol Choi",
+    "Yongjae Lee",
+    "Stefan Zohren"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.14233v1",
+  "url_html": "https://arxiv.org/html/2602.14233v1",
+  "is_current": true
+}

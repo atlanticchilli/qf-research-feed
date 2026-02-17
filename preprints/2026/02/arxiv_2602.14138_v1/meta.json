@@ -1,0 +1,14 @@
+{
+  "doc_id": "arxiv:2602.14138v1",
+  "family_id": "arxiv:2602.14138",
+  "title": "Factor Engine: A Python Library for Systematic Financial Factor Computation and Analysis",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Ata Keskin"
+  ],
+  "url_abs": "http://arxiv.org/abs/2602.14138v1",
+  "url_html": "https://arxiv.org/html/2602.14138v1",
+  "is_current": true
+}
