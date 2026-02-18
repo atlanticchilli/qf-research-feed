@@ -4,7 +4,7 @@ authors:
 - Jiaqi Liu
 doc_id: arxiv:2602.14754v1
 family_id: arxiv:2602.14754
-is_current: true
+is_current: false
 taxonomy:
   alpha_families: []
   asset_classes: []
@@ -17,7 +17,6 @@ venue: arXiv q-fin
 version: 1
 year: 2026
 ---
-
 
 Chen Tang
   
