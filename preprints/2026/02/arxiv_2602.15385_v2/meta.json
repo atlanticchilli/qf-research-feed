@@ -1,15 +1,15 @@
 {
-  "doc_id": "arxiv:2602.15385v1",
+  "doc_id": "arxiv:2602.15385v2",
   "family_id": "arxiv:2602.15385",
   "title": "From Chain-Ladder to Individual Claims Reserving",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2026,
   "authors": [
     "Ronald Richman",
     "Mario V. W\u00fcthrich"
   ],
-  "url_abs": "http://arxiv.org/abs/2602.15385v1",
-  "url_html": "https://arxiv.org/html/2602.15385v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2602.15385v2",
+  "url_html": "https://arxiv.org/html/2602.15385v2",
+  "is_current": true
 }
