@@ -1,16 +1,16 @@
 {
-  "doc_id": "arxiv:2602.20552v1",
+  "doc_id": "arxiv:2602.20552v2",
   "family_id": "arxiv:2602.20552",
   "title": "Stochastic Control Problems with Infinite Horizon and Regime Switching Arising in Optimal Liquidation with Semimartingale Strategies",
   "venue": "arXiv q-fin",
-  "version": 1,
+  "version": 2,
   "year": 2026,
   "authors": [
     "Xinman Cheng",
     "Guanxing Fu",
     "Xiaonyu Xia"
   ],
-  "url_abs": "http://arxiv.org/abs/2602.20552v1",
-  "url_html": "https://arxiv.org/html/2602.20552v1",
-  "is_current": false
+  "url_abs": "http://arxiv.org/abs/2602.20552v2",
+  "url_html": "https://arxiv.org/html/2602.20552v2",
+  "is_current": true
 }
