@@ -1,0 +1,22 @@
+{
+  "doc_id": "arxiv:2603.01298v1",
+  "family_id": "arxiv:2603.01298",
+  "title": "Single-Asset Adaptive Leveraged Volatility Control",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Nikhil Devanathan",
+    "Dylan Rueter",
+    "Stephen Boyd",
+    "Emmanuel Cand\u00e8s",
+    "Trevor Hastie",
+    "Mykel J. Kochenderfer",
+    "Arpit Apoorv",
+    "David Soronow",
+    "Igor Zamkovsky"
+  ],
+  "url_abs": "http://arxiv.org/abs/2603.01298v1",
+  "url_html": "https://arxiv.org/html/2603.01298v1",
+  "is_current": true
+}
