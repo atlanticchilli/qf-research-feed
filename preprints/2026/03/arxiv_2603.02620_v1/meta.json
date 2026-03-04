@@ -1,0 +1,18 @@
+{
+  "doc_id": "arxiv:2603.02620v1",
+  "family_id": "arxiv:2603.02620",
+  "title": "Same Error, Different Function: The Optimizer as an Implicit Prior in Financial Time Series",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Federico Vittorio Cortesi",
+    "Giuseppe Iannone",
+    "Giulia Crippa",
+    "Tomaso Poggio",
+    "Pierfrancesco Beneventano"
+  ],
+  "url_abs": "http://arxiv.org/abs/2603.02620v1",
+  "url_html": "https://arxiv.org/html/2603.02620v1",
+  "is_current": true
+}

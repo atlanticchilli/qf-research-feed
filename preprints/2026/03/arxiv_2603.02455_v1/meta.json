@@ -1,0 +1,14 @@
+{
+  "doc_id": "arxiv:2603.02455v1",
+  "family_id": "arxiv:2603.02455",
+  "title": "1 Figure 1. Identification Frontier \u03a3 is the posterior covariance matrix. I consider the -log det \u03a3 a function of \u03a3\u2019s condition number, \ud835\udf05. I project -log det \u03a3 onto log \ud835\udf05 to obtain the slope \ud835\udc5a. I construct the second derivative with respect to \ud835\udf05 as {-\ud835\udc5a}/\ud835\udf05\u00b2. This information deceleration is the vertical axis in this figure. I use a KNEEDLE method to identify \ud835\udf06^\u2217. This is for the case of the 240 months ending in December 1996, and log utility.",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Christopher G. Lamoureux"
+  ],
+  "url_abs": "http://arxiv.org/abs/2603.02455v1",
+  "url_html": "https://arxiv.org/html/2603.02455v1",
+  "is_current": true
+}
