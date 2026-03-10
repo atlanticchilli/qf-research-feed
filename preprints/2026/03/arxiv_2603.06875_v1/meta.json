@@ -1,0 +1,15 @@
+{
+  "doc_id": "arxiv:2603.06875v1",
+  "family_id": "arxiv:2603.06875",
+  "title": "Stochastic Attention via Langevin Dynamics on the Modern Hopfield EnergyRepository: https://github.com/varnerlab/stochastic-attention-study-paper.git.",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Abdulrahman Alswaidan",
+    "Jeffrey D. Varner"
+  ],
+  "url_abs": "http://arxiv.org/abs/2603.06875v1",
+  "url_html": "https://arxiv.org/html/2603.06875v1",
+  "is_current": true
+}
