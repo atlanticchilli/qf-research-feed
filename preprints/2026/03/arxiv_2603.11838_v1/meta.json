@@ -1,0 +1,18 @@
+{
+  "doc_id": "arxiv:2603.11838v1",
+  "family_id": "arxiv:2603.11838",
+  "title": "DatedGPT: Preventing Lookahead Bias in Large Language Models with Time-Aware Pretraining",
+  "venue": "arXiv q-fin",
+  "version": 1,
+  "year": 2026,
+  "authors": [
+    "Yutong Yan",
+    "Raphael Tang",
+    "Zhenyu Gao",
+    "Wenxi Jiang",
+    "Yao Lu"
+  ],
+  "url_abs": "http://arxiv.org/abs/2603.11838v1",
+  "url_html": "https://arxiv.org/html/2603.11838v1",
+  "is_current": true
+}

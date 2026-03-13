@@ -3,22 +3,23 @@ authors:
 - Yang Liu
 - Yunran Wei
 - Xintao Ye
-doc_id: arxiv:2603.10327v1
+doc_id: arxiv:2603.10327v2
 family_id: arxiv:2603.10327
-is_current: false
+is_current: true
 taxonomy:
   alpha_families: []
   asset_classes: []
   horizons: []
   themes: []
-title: 'Weighted Generalized Risk Measure and Risk Quandrangle: Characterization,
-  Optimization and Application'
-url_abs: http://arxiv.org/abs/2603.10327v1
-url_html: https://arxiv.org/html/2603.10327v1
+title: 'Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization
+  and Application'
+url_abs: http://arxiv.org/abs/2603.10327v2
+url_html: https://arxiv.org/html/2603.10327v2
 venue: arXiv q-fin
-version: 1
+version: 2
 year: 2026
 ---
+
 
 Yang Liu
 School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), China. Email: yangliu16@cuhk.edu.cn
@@ -33,7 +34,7 @@ Corresponding Author. School of Mathematics, Shandong University, China. Email: 
 
 Various financial market scenarios may cause heterogeneous risk assessments among analysts, which motivates the usage of the Generalized Risk Measure in Fadina et al. ([2024](#bib.bib15 "A framework for measures of risk under uncertainty")). Effectively synthesizing these diverse assessments avoids over-relying on a single, potentially flawed or conservative forecast and promotes more robust decision-making. Motivated by this, we establish analytical characterizations of the Weighted Generalized Risk Measure (WGRM) under both discrete and continuous settings. Building upon the WGRM, we incorporate the Fundamental Risk Quadrangle (FRQ) in Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")) into the Weighted Risk Quadrangle (WRQ) and show that the intrinsic relationships among risk, deviation, regret, error, and statistics in FRQ are preserved under weighted aggregation across scenarios. Moreover, we demonstrate that certain complex risk optimization problems under the WGRM can be reformulated as tractable linear programs through the WRQ structure, thus ensuring computational feasibility. Finally, the WGRM and WRQ framework is applied to empirical analyses using constituents of the NASDAQ 100 and S&P 500 indices across recession and expansion regimes, which validates that WGRM-based portfolios exhibit superior risk-adjusted performance and enhanced downside resilience and effectively mitigate losses arising from erroneous single-scenario judgments.
 
-Keywords: Financial Risk Management, Weighted Generalized Risk Measure, Weighted Risk Quandrangle, Portfolio Optimization, Empirical Validation.
+Keywords: Financial Risk Management, Weighted Generalized Risk Measure, Weighted Risk Quadrangle, Portfolio Optimization, Empirical Validation.
 
 Mathematics Subject Classification (2020): 91G70, 91G10
 
@@ -70,19 +71,19 @@ If 𝒬\mathcal{Q} is a discrete set, then μ𝒬\mu\_{\mathcal{Q}} reduces to d
 | --- | --- | --- | --- |
 |  | (discrete)Ψ​(X|𝒬)=∑P∈𝒬Ψ​(X|P)⋅μ𝒬​(P),X∈𝒳,𝒬∈2𝒫.\text{(discrete)}\quad\quad\Psi(X|\mathcal{Q})=\sum\_{P\in\mathcal{Q}}\Psi(X|P)\cdot\mu\_{\mathcal{Q}}(P),\quad X\in\mathcal{X},\ \mathcal{Q}\in 2^{\mathcal{P}}. |  | (2) |
 
-Subsequently, building on the WGRM model, we further extend the Fundamental Risk Quadrangle (FRQ), which is a framework combining optimization and estimation in risk management proposed by Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")). We use Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") to briefly illustrate the FRQ with details postponed to Section [3](#S3 "3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"). By leveraging the weight structure derived from WGRM, we perform a weighted aggregation of the single-probability-measure risk quadrangle to develop the Weighted Risk Quadrangle (WRQ).
+Subsequently, building on the WGRM model, we further extend the Fundamental Risk Quadrangle (FRQ), which is a framework combining optimization and estimation in risk management proposed by Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")). We use Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") to briefly illustrate the FRQ with details postponed to Section [3](#S3 "3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"). By leveraging the weight structure derived from WGRM, we perform a weighted aggregation of the single-probability-measure risk quadrangle to develop the Weighted Risk Quadrangle (WRQ).
 
 Risk ℛ\mathcal{R}Deviation 𝒟\mathcal{D}Regret 𝒱\mathcal{V}Error ℰ\mathcal{E}Statistic 𝒮\mathcal{S}OptimizationEstimation
 
 
 Figure 1: Fundamental Risk Quadrangle in Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")).
 
-![Refer to caption](2603.10327v1/Flowchart.png)
+![Refer to caption](2603.10327v2/Flowchart.png)
 
 
 Figure 2: A Schematic Procedure for Department Managers to Aggregate Heterogeneous Risk Assessments.
 
-Before elaborating on the theoretical framework, Figure [2](#S1.F2 "Figure 2 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") presents a specific application. Consider a department manager allocating capital across assets based on the assessments from multiple risk analysts. Even when applying a common metric like ES0.95\text{ES}\_{0.95}, analysts typically report divergent estimates due to distinct modeling choices and stress scenarios. These differences reflect distinct subjective probability measures PP each analyst adopts, collectively forming a family of probability measures 𝒬\mathcal{Q}. Crucially, relying on a single analyst’s estimate may expose the portfolio to idiosyncratic model bias, but also not fully make use of others’ effort and expertise.
+Before elaborating on the theoretical framework, Figure [2](#S1.F2 "Figure 2 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") presents a specific application. Consider a department manager allocating capital across assets based on the assessments from multiple risk analysts. Even when applying a common metric like ES0.95\text{ES}\_{0.95}, analysts typically report divergent estimates due to distinct modeling choices and stress scenarios. These differences reflect distinct subjective probability measures PP each analyst adopts, collectively forming a family of probability measures 𝒬\mathcal{Q}. Crucially, relying on a single analyst’s estimate may expose the portfolio to idiosyncratic model bias, but also not fully make use of others’ effort and expertise.
 Thus, the WGRM framework serves as a structural defense to perform a weighted aggregation of the analysts’ heterogeneous assessments. The weights assigned to each analyst can be based on their historical prediction accuracy, professional competence, or other relevant criteria. Such process corresponds to assigning a weight μ𝒬​(P)\mu\_{\mathcal{Q}}(P) to each probability measure P∈𝒬P\in\mathcal{Q}.
 The manager then aims to minimize the aggregated risk while ensuring a predefined level of expected return. Thus, the obtained risk measure by the WGRM can be used as the objective function, which is then integrated into the WRQ. By defining relevant constraints (e.g., expected return targets, position limits) and solving the optimization problem, the manager ultimately obtains a robust asset allocation strategy. By design, this WRQ-based portfolio is inherently resilient, dampening the adverse financial consequences that would arise from relying on an isolated, incorrect market outlook.
 
@@ -96,14 +97,14 @@ Other similar weighted aggregation frameworks appear in Klibanoff et al. ([2005]
 
 For recent advances in risk measure theory, we refer to Bellini and Bernardino ([2017](#bib.bib7 "Risk management with expectiles")); Wang and Zitikis ([2021](#bib.bib38 "An axiomatic foundation for the expected shortfall")); Fissler and Pesenti ([2023](#bib.bib16 "Sensitivity measures based on scoring functions")); Bernard et al. ([2024](#bib.bib8 "Robust distortion risk measures")); La Torre and Rocca ([2024](#bib.bib28 "Distributionally robust multiobjective optimization with application to risk measure theory")); Gomez et al. ([2024](#bib.bib21 "Multi-period portfolio selection with interval-based conditional Value-at-Risk")); Battiston and Rimella ([2025](#bib.bib4 "Disclosure risk assessment with bayesian non-parametric hierarchical modelling")); Cai et al. ([2025](#bib.bib10 "Distributionally robust optimization under distorted expectations")). Our goal is to provide a comprehensive discussion of the weight structure inherent to the GRM framework; as such, this work may enable further synergistic integration with the aforementioned strands of research, laying groundwork for more comprehensive and context-aware risk management paradigms.
 
-The contributions of this paper include the following aspects. Our primary contribution is that, building upon the foundational work of Kou et al. ([2013](#bib.bib25 "External risk measures and basel accords")); Kou and Peng ([2016](#bib.bib26 "On the measurement of economic tail risk")), Section [2](#S2 "2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") establishes analytical characterization of the WGRM framework under both discrete and continuous scenario settings. This dual formulation accommodates the diverse analytical demands of real-world risk management applications. This work represents a crucial deepening of the GRM theory, complementing the worst-case structure that the GRM initially focuses on. Furthermore, we analyze the specific conditions under which the aggregation weights can be uniquely determined. By focusing on the weighting structure itself, the WGRM achieves broad generality, seamlessly adapting to the heterogeneous individual risk measures utilized in the aggregation process.
+The contributions of this paper include the following aspects. Our primary contribution is that, building upon the foundational work of Kou et al. ([2013](#bib.bib25 "External risk measures and basel accords")); Kou and Peng ([2016](#bib.bib26 "On the measurement of economic tail risk")), Section [2](#S2 "2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") establishes analytical characterization of the WGRM framework under both discrete and continuous scenario settings. This dual formulation accommodates the diverse analytical demands of real-world risk management applications. This work represents a crucial deepening of the GRM theory, complementing the worst-case structure that the GRM initially focuses on. Furthermore, we analyze the specific conditions under which the aggregation weights can be uniquely determined. By focusing on the weighting structure itself, the WGRM achieves broad generality, seamlessly adapting to the heterogeneous individual risk measures utilized in the aggregation process.
 
 It must be emphasized that the weighted aggregation of separate risk assessments is distinct from evaluating a single risk measure under a pre-aggregated probability distribution. The latter excessively smooths inherent risk volatility, an information loss that adjusting quantile parameters or other ad hoc modifications cannot adequately offset.
 
-Our second key contribution, detailed in Section [3](#S3 "3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), is to introduce the WRQ by extending the FRQ via the proposed WGRM weighting structure. This extension provides an integrated framework that theoretically unifies risk management, optimization, and statistical estimation in multi-scenario settings. While existing literature typically enhances FRQ by aggregating single-measure components with varying parameters, as noted earlier, heterogeneity across distinct scenarios and probability measures remains a more critical dimension to address for practical risk management.
-WRQ inherently integrates risk management and portfolio optimization in a cohesive, theoretically consistent manner. Accordingly, in Section [4](#S4 "4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), we elaborate on the embedded optimization problems within WRQ, as well as how to transform complex risk-minimization problems using WRQ’s components.
+Our second key contribution, detailed in Section [3](#S3 "3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), is to introduce the WRQ by extending the FRQ via the proposed WGRM weighting structure. This extension provides an integrated framework that theoretically unifies risk management, optimization, and statistical estimation in multi-scenario settings. While existing literature typically enhances FRQ by aggregating single-measure components with varying parameters, as noted earlier, heterogeneity across distinct scenarios and probability measures remains a more critical dimension to address for practical risk management.
+WRQ inherently integrates risk management and portfolio optimization in a cohesive, theoretically consistent manner. Accordingly, in Section [4](#S4 "4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), we elaborate on the embedded optimization problems within WRQ, as well as how to transform complex risk-minimization problems using WRQ’s components.
 
-Finally, an empirical validation is provided in Section [5](#S5 "5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), where we use NASDAQ 100 and S&P 500 data to compare portfolio performance with and without WGRM (and WRQ) across expansion and recession regimes, and conduct sensitivity analyses. Our results validate that WGRM-based portfolios exhibit superior risk-adjusted performance and pronounced downside resilience, effectively mitigating adverse consequences caused by isolated, erroneous market judgments.
+Finally, an empirical validation is provided in Section [5](#S5 "5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), where we use NASDAQ 100 and S&P 500 data to compare portfolio performance with and without WGRM (and WRQ) across expansion and recession regimes, and conduct sensitivity analyses. Our results validate that WGRM-based portfolios exhibit superior risk-adjusted performance and pronounced downside resilience, effectively mitigating adverse consequences caused by isolated, erroneous market judgments.
 
 ## 2 Weighted Generalized Risk Measures
 
@@ -195,7 +196,7 @@ where Φ𝒬,Xq:=(Ψ​(X|P(1)),Ψ​(X|P(2)),…,Ψ​(X|P(n)))T\Phi\_{\mathcal
 
 ###### Remark 4.
 
-The key distinction between Parts (1) and (2) in Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") lies in the origin of convexity. Under full sub-additivity, the aggregation function ff inherently possesses convexity, whereas under comonotonic sub-additivity, convexity is induced by restricting the domain to 𝒞\mathcal{C} due to δ(⋅|𝒞)\delta(\cdot|\mathcal{C}). Specifically, considering the setting in Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), for any Φ𝒬,Xq∈int​𝒞\Phi\_{\mathcal{Q},X}^{q}\in\text{int}\mathcal{C} with components Ψ​(X|P1)<Ψ​(X|P2)<⋯<Ψ​(X|Pn)\Psi(X|P\_{1})<\Psi(X|P\_{2})<\dots<\Psi(X|P\_{n}), the closed and convex nature of 𝒲1\mathcal{W}\_{1} guarantees the existence of a weight vector μ1∈𝒲1\mu\_{1}\in\mathcal{W}\_{1} that achieves the supremum of f​(Φ𝒬,Xq)f(\Phi\_{\mathcal{Q},X}^{q}). If we suppose μ1\mu\_{1} is not non-decreasing, then there exist indices 1⩽j<k⩽n1\leqslant j<k\leqslant n such that μ1​j>μ1​k\mu\_{1j}>\mu\_{1k}. Define μ2\mu\_{2} as the weight vector obtained by swapping the jj-th and kk-th components of μ1\mu\_{1}. Clearly, μ2\mu\_{2} still belongs to 𝒟\mathcal{D}. However, direct calculation yields
+The key distinction between Parts (1) and (2) in Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") lies in the origin of convexity. Under full sub-additivity, the aggregation function ff inherently possesses convexity, whereas under comonotonic sub-additivity, convexity is induced by restricting the domain to 𝒞\mathcal{C} due to δ(⋅|𝒞)\delta(\cdot|\mathcal{C}). Specifically, considering the setting in Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), for any Φ𝒬,Xq∈int​𝒞\Phi\_{\mathcal{Q},X}^{q}\in\text{int}\mathcal{C} with components Ψ​(X|P1)<Ψ​(X|P2)<⋯<Ψ​(X|Pn)\Psi(X|P\_{1})<\Psi(X|P\_{2})<\dots<\Psi(X|P\_{n}), the closed and convex nature of 𝒲1\mathcal{W}\_{1} guarantees the existence of a weight vector μ1∈𝒲1\mu\_{1}\in\mathcal{W}\_{1} that achieves the supremum of f​(Φ𝒬,Xq)f(\Phi\_{\mathcal{Q},X}^{q}). If we suppose μ1\mu\_{1} is not non-decreasing, then there exist indices 1⩽j<k⩽n1\leqslant j<k\leqslant n such that μ1​j>μ1​k\mu\_{1j}>\mu\_{1k}. Define μ2\mu\_{2} as the weight vector obtained by swapping the jj-th and kk-th components of μ1\mu\_{1}. Clearly, μ2\mu\_{2} still belongs to 𝒟\mathcal{D}. However, direct calculation yields
 
 |  |  |  |
 | --- | --- | --- |
@@ -276,11 +277,11 @@ Similar to the discrete case, we can also transform (C3) comonotonic sub-additiv
 
 (C3’) Full sub-additivity: f​(φX+φY)⩽f​(φX)+f​(φY)f(\varphi\_{X}+\varphi\_{Y})\leqslant f(\varphi\_{X})+f(\varphi\_{Y}), for any φX,φY∈L∞​([0,1])\varphi\_{X},\varphi\_{Y}\in L^{\infty}([0,1]).
 
-But unfortunately, relying solely on conditions (C1)-(C4) does not directly yield the infinite-dimensional extension of Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"). While these parallel properties ensure a reasonable behavior for standard risks, they fail to exclude pathological functionals known as Banach limits (purely finitely additive measures). Consequently, we propose introducing a non-trivial condition to filter out these pathological instances.
+But unfortunately, relying solely on conditions (C1)-(C4) does not directly yield the infinite-dimensional extension of Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"). While these parallel properties ensure a reasonable behavior for standard risks, they fail to exclude pathological functionals known as Banach limits (purely finitely additive measures). Consequently, we propose introducing a non-trivial condition to filter out these pathological instances.
 
 (C5) Fatou property: For any sequence {φXn}⊂L∞​([0,1])\{\varphi\_{X\_{n}}\}\subset L^{\infty}([0,1]) such that φXn→a.e.φX∈L∞​([0,1])\varphi\_{X\_{n}}\xrightarrow{a.e.}\varphi\_{X}\in L^{\infty}([0,1]), we have f​(φX)⩽lim infn→∞f​(φXn)f(\varphi\_{X})\leqslant\liminf\_{n\to\infty}f(\varphi\_{X\_{n}}).
 
-In Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") below, condition (C5) is explicitly invoked in Part (1) but omitted in Part (2), since the Fatou property is automatically satisfied under the assumptions of Part (2) (see Theorem 2.2, Jouini et al. ([2006](#bib.bib23 "Law invariant risk measures have the fatou property"))). Based on these considerations, we formally state the following theorem.
+In Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") below, condition (C5) is explicitly invoked in Part (1) but omitted in Part (2), since the Fatou property is automatically satisfied under the assumptions of Part (2) (see Theorem 2.2, Jouini et al. ([2006](#bib.bib23 "Law invariant risk measures have the fatou property"))). Based on these considerations, we formally state the following theorem.
 
 ###### Theorem 2.
 
@@ -296,7 +297,7 @@ In Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting 
 | --- | --- | --- | --- |
 |  | Ψ​(X|𝒬)=f​(φX)=supν∈𝒲4∫01φXq​(t)​ν​(t)​dt,∀φX∈L∞​([0,1]).\displaystyle\Psi(X|\mathcal{Q})=f(\varphi\_{X})=\sup\limits\_{\nu\in\mathcal{W}\_{4}}\int\_{0}^{1}\varphi\_{X}^{q}(t)\nu(t)\mathrm{d}t,\quad\forall\,\varphi\_{X}\in L^{\infty}([0,1]). |  | (8) |
 
-One may question the expressions in Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") differ from our original definition in Eq.([1](#S1.E1 "In Definition 2. ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")). Despite formal differences, they are essentially equivalent. For any density function ν∈L1​([0,1])\nu\in L^{1}([0,1]) with ν⩾0\nu\geqslant 0 a.e. and ∫01ν​(t)​dt=1\int\_{0}^{1}\nu(t)\,\mathrm{d}t=1, we can define an absolutely continuous probability measure μν\mu\_{\nu} on [0,1][0,1] by
+One may question the expressions in Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") differ from our original definition in Eq.([1](#S1.E1 "In Definition 2. ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")). Despite formal differences, they are essentially equivalent. For any density function ν∈L1​([0,1])\nu\in L^{1}([0,1]) with ν⩾0\nu\geqslant 0 a.e. and ∫01ν​(t)​dt=1\int\_{0}^{1}\nu(t)\,\mathrm{d}t=1, we can define an absolutely continuous probability measure μν\mu\_{\nu} on [0,1][0,1] by
 
 |  |  |  |
 | --- | --- | --- |
@@ -335,7 +336,7 @@ Then for any ν∈𝒲3\nu\in\mathcal{W}\_{3} or 𝒲4\mathcal{W}\_{4}, and for 
 | --- | --- | --- |
 |  | ∫01g​(t)​ν​(t)​dt=∫01g​(t)​dμν​(t).\displaystyle\int\_{0}^{1}g(t)\,\nu(t)\,\mathrm{d}t=\int\_{0}^{1}g(t)\,\mathrm{d}\mu\_{\nu}(t). |  |
 
-This allows us to reformulate Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") within the framework of measure-theoretic integration.
+This allows us to reformulate Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") within the framework of measure-theoretic integration.
 
 ###### Proposition 2.
 
@@ -355,7 +356,7 @@ Recall that in the discrete setting, replacing (comonotonic) sub-additivity with
 
 To secure uniqueness within the L∞L^{\infty} framework, one would typically need to impose additional constraints—such as L1L^{1}-continuity (see property (D5) below)—to force the functional to behave like an L1L^{1} functional, thereby allowing it to be extended to the L1L^{1} space. However, rather than navigating this circuitous route of constraining an L∞L^{\infty} functional to mimic the L1L^{1} behavior, we find it more mathematically natural to directly shift the underlying domain to L1​([0,1])L^{1}([0,1]). This approach may be of greater interest as L1​([0,1])L^{1}([0,1]) accommodates a broader class of risk profiles.
 
-Define the set 𝒞^={g:[0,1]→ℝ∣g​is non-decreasing and left-continuous}⊆L1​([0,1])\hat{\mathcal{C}}=\{g:[0,1]\to\mathbb{R}\mid g\ \text{is non-decreasing and left-continuous}\}\subseteq L^{1}([0,1]). For any φX∈L1​([0,1])\varphi\_{X}\in L^{1}([0,1]), its quantile function is defined as in Eq.([6](#S2.E6 "In 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")). We examine the following properties under this new setup.
+Define the set 𝒞^={g:[0,1]→ℝ∣g​is non-decreasing and left-continuous}⊆L1​([0,1])\hat{\mathcal{C}}=\{g:[0,1]\to\mathbb{R}\mid g\ \text{is non-decreasing and left-continuous}\}\subseteq L^{1}([0,1]). For any φX∈L1​([0,1])\varphi\_{X}\in L^{1}([0,1]), its quantile function is defined as in Eq.([6](#S2.E6 "In 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")). We examine the following properties under this new setup.
 
 (D1) Affine invariance: f​(a​φX+b​𝟏[0,1])=a​f​(φX)+bf(a\varphi\_{X}+b\mathbf{1}\_{[0,1]})=af(\varphi\_{X})+b for all φX∈L1​([0,1])\varphi\_{X}\in L^{1}([0,1]), a⩾0a\geqslant 0, b∈ℝb\in\mathbb{R}, where 𝟏[0,1]\mathbf{1}\_{[0,1]} is an indicator function over interval [0,1][0,1].
 
@@ -401,11 +402,11 @@ which implies ν∗​(t)≡1\nu^{\*}(t)\equiv 1 almost everywhere on [0,1][0,1]
 
 ## 3 Weighted Risk Quadrangle
 
-WGRM offers a wide range of potential applications. In this section, however, we concentrate specifically on how it extends the Fundamental Risk Quadrangle framework introduced in Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")). We begin with a detailed explanation of this foundational quadrangle. Several examples are then provided to illustrate the form and implications of WGRM within the expanded quadrangle framework. Although slight notational or presentational variations may occur across different settings, for consistency we adopt the expression given in Eq.([1](#S1.E1 "In Definition 2. ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) throughout this section, regardless of the discreteness or continuity of the scenario or the uniqueness of the weighting measure μ𝒬\mu\_{\mathcal{Q}}.
+WGRM offers a wide range of potential applications. In this section, however, we concentrate specifically on how it extends the Fundamental Risk Quadrangle framework introduced in Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")). We begin with a detailed explanation of this foundational quadrangle. Several examples are then provided to illustrate the form and implications of WGRM within the expanded quadrangle framework. Although slight notational or presentational variations may occur across different settings, for consistency we adopt the expression given in Eq.([1](#S1.E1 "In Definition 2. ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) throughout this section, regardless of the discreteness or continuity of the scenario or the uniqueness of the weighting measure μ𝒬\mu\_{\mathcal{Q}}.
 
 ### 3.1 Fundamental Risk Quadrangle Overview
 
-Recall that an overview of the FRQ is illustrated in Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"). Starting from the upper-left corner of the quadrangle, ℛ\mathcal{R} denotes a measure of risk, which quantifies the overall risk inherent in a random variable XX (representing loss or cost) by assigning it a numerical value. Such measures are frequently employed in the constraints of optimization problems or used as the objective function. For a constant c∈ℝc\in\mathbb{R}, the implicit constraint implied by the uncertain condition X⩽cX\leqslant c can be replaced by the explicit inequality ℛ​(X)⩽c\mathcal{R}(X)\leqslant c. This substitution leverages a concrete numerical metric ℛ​(X)\mathcal{R}(X) to offset the uncertain outcomes, thereby eliminating the uncertainty associated with XX and yielding a well-defined constraint.
+Recall that an overview of the FRQ is illustrated in Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"). Starting from the upper-left corner of the quadrangle, ℛ\mathcal{R} denotes a measure of risk, which quantifies the overall risk inherent in a random variable XX (representing loss or cost) by assigning it a numerical value. Such measures are frequently employed in the constraints of optimization problems or used as the objective function. For a constant c∈ℝc\in\mathbb{R}, the implicit constraint implied by the uncertain condition X⩽cX\leqslant c can be replaced by the explicit inequality ℛ​(X)⩽c\mathcal{R}(X)\leqslant c. This substitution leverages a concrete numerical metric ℛ​(X)\mathcal{R}(X) to offset the uncertain outcomes, thereby eliminating the uncertainty associated with XX and yielding a well-defined constraint.
 
 Formally, we define ℛ\mathcal{R} as a regular measure of risk if ℛ\mathcal{R} is a closed convex functional with values in (−∞,∞](-\infty,\infty]; for any constant c∈ℝc\in\mathbb{R}, we have ℛ​(c)=c\mathcal{R}(c)=c, i.e., the risk of a deterministic cost cc equals cc itself; for any non-constant random variable XX, we have ℛ​(X)>𝔼​[X]\mathcal{R}(X)>\mathbb{E}[X], i.e., the risk measure exhibits risk aversion by assigning a value greater than the expected loss of a non-deterministic XX.
 
@@ -433,19 +434,19 @@ In estimation problems, particularly in regression where a loss random variable 
 | --- | --- | --- | --- | --- |
 |  | arg⁡minc\displaystyle\arg\min\_{c} | {c+𝒱​(X−c)}=𝒮​(X)=arg⁡minc⁡{ℰ​(X−c)}.\displaystyle\{c+\mathcal{V}(X-c)\}=\mathcal{S}(X)=\arg\min\_{c}\{\mathcal{E}(X-c)\}. |  | (12) |
 
-The four corner elements of the quadrangle are not independent; rather, they interact and are interconnected through Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")). Specifically, it is noted in Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") that bidirectional arrows connect the risk measure ℛ\mathcal{R} to the deviation measure 𝒟\mathcal{D}, and the regret measure 𝒱\mathcal{V} to the error measure ℰ\mathcal{E}—their conversion relations are given by Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) and ([10](#S3.E10 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), respectively. In contrast, there is no direct equivalent conversion relation between ℛ\mathcal{R} and 𝒱\mathcal{V}, nor between 𝒟\mathcal{D} and ℰ\mathcal{E}; instead, these pairs are linked through 𝒮\mathcal{S}, the statistic located at the center of the quadrangle.
+The four corner elements of the quadrangle are not independent; rather, they interact and are interconnected through Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")). Specifically, it is noted in Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") that bidirectional arrows connect the risk measure ℛ\mathcal{R} to the deviation measure 𝒟\mathcal{D}, and the regret measure 𝒱\mathcal{V} to the error measure ℰ\mathcal{E}—their conversion relations are given by Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) and ([10](#S3.E10 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), respectively. In contrast, there is no direct equivalent conversion relation between ℛ\mathcal{R} and 𝒱\mathcal{V}, nor between 𝒟\mathcal{D} and ℰ\mathcal{E}; instead, these pairs are linked through 𝒮\mathcal{S}, the statistic located at the center of the quadrangle.
 
-Concretely, for a given error measure ℰ\mathcal{E} and random variable XX, we seek a constant c∈ℝc\in\mathbb{R} that minimizes ℰ​(X−c)\mathcal{E}(X-c). The minimum value attained by this error measure is exactly the deviation measure 𝒟​(X)\mathcal{D}(X) of XX, and the constant cc that achieves this minimum is precisely the statistic 𝒮​(X)\mathcal{S}(X) of XX, with 𝒮​(X+d)=𝒮​(X)+d\mathcal{S}(X+d)=\mathcal{S}(X)+d for any d∈ℝd\in\mathbb{R}. This relationship is reflected in the right-hand segments of Eqs.([11](#S3.E11 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) and ([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")). The relationship between ℛ\mathcal{R} and 𝒱\mathcal{V} follows the same logic, as illustrated in the left-hand segments of Eqs.([11](#S3.E11 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) and ([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")).
+Concretely, for a given error measure ℰ\mathcal{E} and random variable XX, we seek a constant c∈ℝc\in\mathbb{R} that minimizes ℰ​(X−c)\mathcal{E}(X-c). The minimum value attained by this error measure is exactly the deviation measure 𝒟​(X)\mathcal{D}(X) of XX, and the constant cc that achieves this minimum is precisely the statistic 𝒮​(X)\mathcal{S}(X) of XX, with 𝒮​(X+d)=𝒮​(X)+d\mathcal{S}(X+d)=\mathcal{S}(X)+d for any d∈ℝd\in\mathbb{R}. This relationship is reflected in the right-hand segments of Eqs.([11](#S3.E11 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) and ([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")). The relationship between ℛ\mathcal{R} and 𝒱\mathcal{V} follows the same logic, as illustrated in the left-hand segments of Eqs.([11](#S3.E11 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) and ([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")).
 
-For expositional brevity, we refer to the five quantities (i.e., ℛ\mathcal{R}, 𝒟\mathcal{D}, 𝒱\mathcal{V}, ℰ\mathcal{E}, and 𝒮\mathcal{S}) in Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") that satisfy Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) a quadrangle quartet (ℛ,𝒟,𝒱,ℰ)(\mathcal{R},\mathcal{D},\mathcal{V},\mathcal{E}) associated with the statistic 𝒮\mathcal{S}. If the four measures (i.e., ℛ\mathcal{R}, 𝒟\mathcal{D}, 𝒱\mathcal{V}, and ℰ\mathcal{E}) within this quartet are all regular, we term this structure a regular quadrangle quartet. In what follows, our primary focus will be on regular quadrangle quartets.
+For expositional brevity, we refer to the five quantities (i.e., ℛ\mathcal{R}, 𝒟\mathcal{D}, 𝒱\mathcal{V}, ℰ\mathcal{E}, and 𝒮\mathcal{S}) in Figure [1](#S1.F1 "Figure 1 ‣ 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") that satisfy Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) a quadrangle quartet (ℛ,𝒟,𝒱,ℰ)(\mathcal{R},\mathcal{D},\mathcal{V},\mathcal{E}) associated with the statistic 𝒮\mathcal{S}. If the four measures (i.e., ℛ\mathcal{R}, 𝒟\mathcal{D}, 𝒱\mathcal{V}, and ℰ\mathcal{E}) within this quartet are all regular, we term this structure a regular quadrangle quartet. In what follows, our primary focus will be on regular quadrangle quartets.
 
 ### 3.2 Weighted Risk Quadrangle
 
 While the quadrangle framework ingeniously integrates the five quantities into a unified structure, it suffers from a notable limitation that it is confined to various measures defined under a single probability measure. With the advancement of risk management technologies and the growing complexity of real-world stochastic environments, this single-measure setting has become restrictive. Thus, in this subsection, we build on the WGRM proposed earlier to further expand this quadrangle framework, which is denoted as Weighted Risk Quadrangle (WRQ), enabling it to accommodate multi-measure and multi-scenario risk modeling.
 
-To avoid notational confusion, we denote the measures of the original FRQ under a single probability measure as ℛP,𝒟P,𝒱P,ℰP,𝒮P\mathcal{R}\_{P},\mathcal{D}\_{P},\mathcal{V}\_{P},\mathcal{E}\_{P},\mathcal{S}\_{P}, while using ℛ𝒬,𝒟𝒬,𝒱𝒬,ℰ𝒬,𝒮𝒬\mathcal{R}\_{\mathcal{Q}},\mathcal{D}\_{\mathcal{Q}},\mathcal{V}\_{\mathcal{Q}},\mathcal{E}\_{\mathcal{Q}},\mathcal{S}\_{\mathcal{Q}} to represent the corresponding measures within WRQ under a family of probability measures. Leveraging the results from Section [2](#S2 "2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), we naturally adopt the proposed WGRM as the risk measure in the WRQ. Specifically, ℛ𝒬​(X)=Ψ​(X|𝒬)=∫𝒬Ψ​(X|P)​dμ𝒬​(P)\mathcal{R}\_{\mathcal{Q}}(X)=\Psi(X|\mathcal{Q})=\int\_{\mathcal{Q}}\Psi(X|P)\,\mathrm{d}\mu\_{\mathcal{Q}}(P). Under the weight μ𝒬\mu\_{\mathcal{Q}} defined, the risk quadrangle can be extended to a multi-scenario setting.
+To avoid notational confusion, we denote the measures of the original FRQ under a single probability measure as ℛP,𝒟P,𝒱P,ℰP,𝒮P\mathcal{R}\_{P},\mathcal{D}\_{P},\mathcal{V}\_{P},\mathcal{E}\_{P},\mathcal{S}\_{P}, while using ℛ𝒬,𝒟𝒬,𝒱𝒬,ℰ𝒬,𝒮𝒬\mathcal{R}\_{\mathcal{Q}},\mathcal{D}\_{\mathcal{Q}},\mathcal{V}\_{\mathcal{Q}},\mathcal{E}\_{\mathcal{Q}},\mathcal{S}\_{\mathcal{Q}} to represent the corresponding measures within WRQ under a family of probability measures. Leveraging the results from Section [2](#S2 "2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), we naturally adopt the proposed WGRM as the risk measure in the WRQ. Specifically, ℛ𝒬​(X)=Ψ​(X|𝒬)=∫𝒬Ψ​(X|P)​dμ𝒬​(P)\mathcal{R}\_{\mathcal{Q}}(X)=\Psi(X|\mathcal{Q})=\int\_{\mathcal{Q}}\Psi(X|P)\,\mathrm{d}\mu\_{\mathcal{Q}}(P). Under the weight μ𝒬\mu\_{\mathcal{Q}} defined, the risk quadrangle can be extended to a multi-scenario setting.
 
-Prior to this extension, we first observe that the relationships in Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) also need to be extended to a multi-scenario context. In the original framework, the expectation operator 𝔼​[X]\mathbb{E}[X] plays a crucial bridging role. However, in the multi-scenario setting, this operator should also be extended to a multi-scenario expectation, defined as 𝔼𝒬​[X]=∫𝒬𝔼P​[X]​dμ𝒬​(P)\mathbb{E}\_{\mathcal{Q}}[X]=\int\_{\mathcal{Q}}\mathbb{E}\_{P}[X]\mathrm{d}\mu\_{\mathcal{Q}}(P). Then we can carry out a parallel generalization of Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) in the multi-scenario context as follows.
+Prior to this extension, we first observe that the relationships in Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) also need to be extended to a multi-scenario context. In the original framework, the expectation operator 𝔼​[X]\mathbb{E}[X] plays a crucial bridging role. However, in the multi-scenario setting, this operator should also be extended to a multi-scenario expectation, defined as 𝔼𝒬​[X]=∫𝒬𝔼P​[X]​dμ𝒬​(P)\mathbb{E}\_{\mathcal{Q}}[X]=\int\_{\mathcal{Q}}\mathbb{E}\_{P}[X]\mathrm{d}\mu\_{\mathcal{Q}}(P). Then we can carry out a parallel generalization of Eqs.([9](#S3.E9 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([12](#S3.E12 "In 3.1 Fundamental Risk Quadrangle Overview ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) in the multi-scenario context as follows.
 
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
@@ -460,7 +461,7 @@ Prior to this extension, we first observe that the relationships in Eqs.([9](#S3
 | --- | --- | --- | --- | --- |
 |  | arg⁡minc\displaystyle\arg\min\_{c} | {c+𝒱𝒬​(X−c)}=𝒮𝒬​(X)=arg⁡minc⁡{ℰ𝒬​(X−c)}.\displaystyle\{c+\mathcal{V}\_{\mathcal{Q}}(X-c)\}=\mathcal{S}\_{\mathcal{Q}}(X)=\arg\min\_{c}\{\mathcal{E}\_{\mathcal{Q}}(X-c)\}. |  | (16) |
 
-The expansion implied by Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) requires theoretical justifications. Inspired by the Mixing Theorem by Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")), we further propose the following theorem.
+The expansion implied by Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) requires theoretical justifications. Inspired by the Mixing Theorem by Rockafellar and Uryasev ([2013](#bib.bib34 "The fundamental risk quadrangle in risk management, optimization and statistical estimation")), we further propose the following theorem.
 
 ###### Theorem 3.
 
@@ -476,11 +477,11 @@ Under the weighting measure μ𝒬\mu\_{\mathcal{Q}} defined within ℛ𝒬​(X
 
 where b​(⋅)b(\cdot) is a functional on 𝒬\mathcal{Q}.
 
-So far, we have presented the theorem formulation of the WRQ. Next, we provide several relevant examples. Notably, due to the equivalent conversion relationships in Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) and ([14](#S3.E14 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), as long as we know one of ℛ𝒬\mathcal{R}\_{\mathcal{Q}} and 𝒟𝒬\mathcal{D}\_{\mathcal{Q}}, and one of 𝒱𝒬\mathcal{V}\_{\mathcal{Q}} and ℰ𝒬\mathcal{E}\_{\mathcal{Q}}, we can derive the entire quartet (ℛ𝒬,𝒟𝒬,𝒱𝒬,ℰ𝒬)(\mathcal{R}\_{\mathcal{Q}},\mathcal{D}\_{\mathcal{Q}},\mathcal{V}\_{\mathcal{Q}},\mathcal{E}\_{\mathcal{Q}}). We can then further obtain 𝒮\mathcal{S} via Eq.([15](#S3.E15 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), thereby constructing the complete quadrangle.
+So far, we have presented the theorem formulation of the WRQ. Next, we provide several relevant examples. Notably, due to the equivalent conversion relationships in Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) and ([14](#S3.E14 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), as long as we know one of ℛ𝒬\mathcal{R}\_{\mathcal{Q}} and 𝒟𝒬\mathcal{D}\_{\mathcal{Q}}, and one of 𝒱𝒬\mathcal{V}\_{\mathcal{Q}} and ℰ𝒬\mathcal{E}\_{\mathcal{Q}}, we can derive the entire quartet (ℛ𝒬,𝒟𝒬,𝒱𝒬,ℰ𝒬)(\mathcal{R}\_{\mathcal{Q}},\mathcal{D}\_{\mathcal{Q}},\mathcal{V}\_{\mathcal{Q}},\mathcal{E}\_{\mathcal{Q}}). We can then further obtain 𝒮\mathcal{S} via Eq.([15](#S3.E15 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), thereby constructing the complete quadrangle.
 
 ###### Example 1.
 
-Value-at-Risk (VaR, or quantile) and Expected Shortfall (ES, or Conditional VaR/CVaR) are both common tail-based risk metrics that have gained substantial significance in modern risk management frameworks (Basel Committee on Banking Supervision, [2019](#bib.bib5 "Minimum capital requirements for market risk"); McNeil et al., [2015](#bib.bib30 "Quantitative risk management: concepts, techniques and tools")). However, the latter is often preferred over the former because it accounts for tail risk and satisfies coherency. Thus, in this example, for each P∈𝒬P\in\mathcal{Q}, we set ℛP​(X)=ESαP​(X)\mathcal{R}\_{P}(X)=\text{ES}\_{\alpha}^{P}(X), where ESαP​(X)\text{ES}\_{\alpha}^{P}(X) denotes the α\alpha-level Expected Shortfall of XX under probability measure PP. For the error measure, we adopt the Koenker-Bassett error with appropriate adjustments to ensure that it projects to the desired 𝒟P​(X)\mathcal{D}\_{P}(X). Specifically, we define ℰP​(X)=𝔼P​[α1−α​X++X−]\mathcal{E}\_{P}(X)=\mathbb{E}\_{P}\left[\frac{\alpha}{1-\alpha}X\_{+}+X\_{-}\right], where X+=max⁡{0,X}X\_{+}=\max\{0,X\} and X−=max⁡{0,−X}X\_{-}=\max\{0,-X\}. Using the conversion relations in Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), we can derive the remaining quantities of the single-measure quadrangle: 𝒟P​(X)=ESαP​(X−𝔼P​[X])\mathcal{D}\_{P}(X)=\text{ES}\_{\alpha}^{P}(X-\mathbb{E}\_{P}[X]), 𝒱P​(X)=11−α​𝔼P​[X+]\mathcal{V}\_{P}(X)=\frac{1}{1-\alpha}\mathbb{E}\_{P}[X\_{+}], and 𝒮P​(X)=VaRαP​(X)\mathcal{S}\_{P}(X)=\text{VaR}\_{\alpha}^{P}(X). Leveraging Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), we immediately obtain the corresponding WRQ:
+Value-at-Risk (VaR, or quantile) and Expected Shortfall (ES, or Conditional VaR/CVaR) are both common tail-based risk metrics that have gained substantial significance in modern risk management frameworks (Basel Committee on Banking Supervision, [2019](#bib.bib5 "Minimum capital requirements for market risk"); McNeil et al., [2015](#bib.bib30 "Quantitative risk management: concepts, techniques and tools")). However, the latter is often preferred over the former because it accounts for tail risk and satisfies coherency. Thus, in this example, for each P∈𝒬P\in\mathcal{Q}, we set ℛP​(X)=ESαP​(X)\mathcal{R}\_{P}(X)=\text{ES}\_{\alpha}^{P}(X), where ESαP​(X)\text{ES}\_{\alpha}^{P}(X) denotes the α\alpha-level Expected Shortfall of XX under probability measure PP. For the error measure, we adopt the Koenker-Bassett error with appropriate adjustments to ensure that it projects to the desired 𝒟P​(X)\mathcal{D}\_{P}(X). Specifically, we define ℰP​(X)=𝔼P​[α1−α​X++X−]\mathcal{E}\_{P}(X)=\mathbb{E}\_{P}\left[\frac{\alpha}{1-\alpha}X\_{+}+X\_{-}\right], where X+=max⁡{0,X}X\_{+}=\max\{0,X\} and X−=max⁡{0,−X}X\_{-}=\max\{0,-X\}. Using the conversion relations in Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), we can derive the remaining quantities of the single-measure quadrangle: 𝒟P​(X)=ESαP​(X−𝔼P​[X])\mathcal{D}\_{P}(X)=\text{ES}\_{\alpha}^{P}(X-\mathbb{E}\_{P}[X]), 𝒱P​(X)=11−α​𝔼P​[X+]\mathcal{V}\_{P}(X)=\frac{1}{1-\alpha}\mathbb{E}\_{P}[X\_{+}], and 𝒮P​(X)=VaRαP​(X)\mathcal{S}\_{P}(X)=\text{VaR}\_{\alpha}^{P}(X). Leveraging Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), we immediately obtain the corresponding WRQ:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -502,12 +503,12 @@ For appropriately chosen values of the α\alpha-level, each individual quadrangl
 
 ###### Remark 5.
 
-Notably, in Example [1](#Thmexample1 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), neither 𝒟𝒬​(X)\mathcal{D}\_{\mathcal{Q}}(X) nor ℰ𝒬​(X)\mathcal{E}\_{\mathcal{Q}}(X) is necessarily symmetric. This asymmetry inherits from the single-measure components. The ESαP\text{ES}\_{\alpha}^{P} operator in 𝒟P\mathcal{D}\_{P} preserves the asymmetry of asymmetric distributions. For any random variable XX , it holds that ESαP​(−X)=𝔼P​[−X∣−X⩾VaRαP​(−X)]=−𝔼P​[X∣X⩽VaR1−αP​(X)]\text{ES}\_{\alpha}^{P}(-X)=\mathbb{E}\_{P}\left[-X\mid-X\geqslant\text{VaR}\_{\alpha}^{P}(-X)\right]=-\mathbb{E}\_{P}\left[X\mid X\leqslant\text{VaR}\_{1-\alpha}^{P}(X)\right], which shows that ESαP​(−X)≠−ESαP​(X)\text{ES}\_{\alpha}^{P}(-X)\neq-\text{ES}\_{\alpha}^{P}(X) in general, thus directly introducing asymmetry into 𝒟P\mathcal{D}\_{P}. Additionally, the single-measure error measure ℰP​(X)\mathcal{E}\_{P}(X) assigns distinct weights to the positive and negative parts of XX; specifically, a weight of α1−α\frac{\alpha}{1-\alpha} to X+X\_{+} and a weight of 11 to X−X\_{-}. This weighted distinction between X+X\_{+} and X−X\_{-} inherently makes ℰP​(X)\mathcal{E}\_{P}(X) asymmetric. Crucially, this asymmetry carries over to the weighted aggregation.
+Notably, in Example [1](#Thmexample1 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), neither 𝒟𝒬​(X)\mathcal{D}\_{\mathcal{Q}}(X) nor ℰ𝒬​(X)\mathcal{E}\_{\mathcal{Q}}(X) is necessarily symmetric. This asymmetry inherits from the single-measure components. The ESαP\text{ES}\_{\alpha}^{P} operator in 𝒟P\mathcal{D}\_{P} preserves the asymmetry of asymmetric distributions. For any random variable XX , it holds that ESαP​(−X)=𝔼P​[−X∣−X⩾VaRαP​(−X)]=−𝔼P​[X∣X⩽VaR1−αP​(X)]\text{ES}\_{\alpha}^{P}(-X)=\mathbb{E}\_{P}\left[-X\mid-X\geqslant\text{VaR}\_{\alpha}^{P}(-X)\right]=-\mathbb{E}\_{P}\left[X\mid X\leqslant\text{VaR}\_{1-\alpha}^{P}(X)\right], which shows that ESαP​(−X)≠−ESαP​(X)\text{ES}\_{\alpha}^{P}(-X)\neq-\text{ES}\_{\alpha}^{P}(X) in general, thus directly introducing asymmetry into 𝒟P\mathcal{D}\_{P}. Additionally, the single-measure error measure ℰP​(X)\mathcal{E}\_{P}(X) assigns distinct weights to the positive and negative parts of XX; specifically, a weight of α1−α\frac{\alpha}{1-\alpha} to X+X\_{+} and a weight of 11 to X−X\_{-}. This weighted distinction between X+X\_{+} and X−X\_{-} inherently makes ℰP​(X)\mathcal{E}\_{P}(X) asymmetric. Crucially, this asymmetry carries over to the weighted aggregation.
 
 ## 4 Optimization under WGRM and WRQ
 
 This section presents a discussion on the connection between the WGRM, the WRQ, and optimization problems. In a typical optimization setting, the random variable XX, representing loss, generally depends on a decision vector 𝐱∈𝒢⊆ℝm\mathbf{x}\in\mathcal{G}\subseteq\mathbb{R}^{m}, where 𝒢\mathcal{G} denotes the feasible region. The objective is to determine an optimal decision vector 𝐱=(x1,…,xm)T\mathbf{x}=(x\_{1},\dots,x\_{m})^{T} within 𝒢\mathcal{G} that optimizes an objective function involving X​(𝐱)X(\mathbf{x}).
-While the above theoretical framework accommodates both discrete and continuous scenarios, discrete scenarios are predominant in most practical optimization applications. Consequently, Eq.([17](#S3.E17 "In Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) can be reformulated for a discrete set 𝒬={Pi∈𝒫∣i=1,…,n}\mathcal{Q}=\{P\_{i}\in\mathcal{P}\mid i=1,\dots,n\} as follows.
+While the above theoretical framework accommodates both discrete and continuous scenarios, discrete scenarios are predominant in most practical optimization applications. Consequently, Eq.([17](#S3.E17 "In Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) can be reformulated for a discrete set 𝒬={Pi∈𝒫∣i=1,…,n}\mathcal{Q}=\{P\_{i}\in\mathcal{P}\mid i=1,\dots,n\} as follows.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -526,7 +527,7 @@ While the above theoretical framework accommodates both discrete and continuous 
 |  | ℰ𝒬​(X​(𝐱))\displaystyle\mathcal{E}\_{\mathcal{Q}}(X(\mathbf{x})) | =min{b​(Pi)}i=1n⁡{∑i=1nℰPi​(X​(𝐱)−b​(Pi))⋅μ𝒬​(Pi)|∑i=1nb​(Pi)⋅μ𝒬​(Pi)=0}.\displaystyle=\min\_{\{b(P\_{i})\}\_{i=1}^{n}}\left\{\sum\_{i=1}^{n}\mathcal{E}\_{P\_{i}}(X(\mathbf{x})-b(P\_{i}))\cdot\mu\_{\mathcal{Q}}(P\_{i})\ \middle|\ \sum\_{i=1}^{n}b(P\_{i})\cdot\mu\_{\mathcal{Q}}(P\_{i})=0\right\}. |  |
 
 A straightforward observation is that the expressions for 𝒱𝒬\mathcal{V}\_{\mathcal{Q}} and ℰ𝒬\mathcal{E}\_{\mathcal{Q}} are inherently minimization problems.
-While the proof of Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") directly indicates that b​(Pi)=𝒮Pi​(X​(𝐱))−∑j=1n𝒮Pj​(X​(𝐱))⋅μ𝒬​(Pj)b(P\_{i})=\mathcal{S}\_{P\_{i}}(X(\mathbf{x}))-\sum\_{j=1}^{n}\mathcal{S}\_{P\_{j}}(X(\mathbf{x}))\cdot\mu\_{\mathcal{Q}}(P\_{j}), which in turn allows us to derive an explicit expression for 𝒱𝒬​(X​(𝐱))\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})), practical implementation may favor numerical solutions via linear programming. This is particularly advantageous when confronting issues such as the complexity and nonlinearity of the individual functional 𝒱Pi\mathcal{V}\_{P\_{i}}, which makes linear programming more computationally tractable. Specifically, under a regular WRQ, each 𝒱Pi\mathcal{V}\_{P\_{i}} is a closed convex functional. Then there exists a family of linear functions ϕi​k\phi\_{ik}, where k∈Kik\in K\_{i} and KiK\_{i} denotes an index set, such that 𝒱Pi​(X​(𝐱))=supk∈Kiϕi​k​(X​(𝐱))\mathcal{V}\_{P\_{i}}(X(\mathbf{x}))=\sup\limits\_{k\in K\_{i}}\phi\_{ik}(X(\mathbf{x})). Thus, when X​(𝐱)X(\mathbf{x}) is linear in 𝐱\mathbf{x}, by introducing auxiliary variables tit\_{i}, the optimization problem in 𝒱𝒬​(X​(𝐱))\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})) can be transformed into the following linear program:
+While the proof of Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") directly indicates that b​(Pi)=𝒮Pi​(X​(𝐱))−∑j=1n𝒮Pj​(X​(𝐱))⋅μ𝒬​(Pj)b(P\_{i})=\mathcal{S}\_{P\_{i}}(X(\mathbf{x}))-\sum\_{j=1}^{n}\mathcal{S}\_{P\_{j}}(X(\mathbf{x}))\cdot\mu\_{\mathcal{Q}}(P\_{j}), which in turn allows us to derive an explicit expression for 𝒱𝒬​(X​(𝐱))\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})), practical implementation may favor numerical solutions via linear programming. This is particularly advantageous when confronting issues such as the complexity and nonlinearity of the individual functional 𝒱Pi\mathcal{V}\_{P\_{i}}, which makes linear programming more computationally tractable. Specifically, under a regular WRQ, each 𝒱Pi\mathcal{V}\_{P\_{i}} is a closed convex functional. Then there exists a family of linear functions ϕi​k\phi\_{ik}, where k∈Kik\in K\_{i} and KiK\_{i} denotes an index set, such that 𝒱Pi​(X​(𝐱))=supk∈Kiϕi​k​(X​(𝐱))\mathcal{V}\_{P\_{i}}(X(\mathbf{x}))=\sup\limits\_{k\in K\_{i}}\phi\_{ik}(X(\mathbf{x})). Thus, when X​(𝐱)X(\mathbf{x}) is linear in 𝐱\mathbf{x}, by introducing auxiliary variables tit\_{i}, the optimization problem in 𝒱𝒬​(X​(𝐱))\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})) can be transformed into the following linear program:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -541,7 +542,7 @@ While the proof of Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Qu
 | --- | --- | --- | --- |
 |  |  | b​(Pi)∈ℝ,∀i=1,…,n.\displaystyle b(P\_{i})\in\mathbb{R},\quad\forall\,i=1,\dots,n. |  |
 
-Another set of optimization problems inherent to the WRQ is encapsulated in Eq.([15](#S3.E15 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")). Taking the relationship between ℛ𝒬\mathcal{R}\_{\mathcal{Q}} and 𝒱𝒬\mathcal{V}\_{\mathcal{Q}} as an example, a typical risk management optimization problem might aim to minimize ℛ𝒬​(X​(𝐱))\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x})) with respect to the decision vector 𝐱\mathbf{x}. Notably, leveraging the key relation ℛ𝒬​(X​(𝐱))=minc∈ℝ⁡{c+𝒱𝒬​(X​(𝐱)−c)}\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x}))=\min\limits\_{c\in\mathbb{R}}\left\{c+\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})-c)\right\}, the constraint ℛ𝒬​(X​(𝐱))⩽d\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x}))\leqslant d for any d∈ℝd\in\mathbb{R} is equivalent to the existence of some c0∈ℝc\_{0}\in\mathbb{R} such that c0+𝒱𝒬​(X​(𝐱)−c0)⩽dc\_{0}+\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})-c\_{0})\leqslant d.
+Another set of optimization problems inherent to the WRQ is encapsulated in Eq.([15](#S3.E15 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")). Taking the relationship between ℛ𝒬\mathcal{R}\_{\mathcal{Q}} and 𝒱𝒬\mathcal{V}\_{\mathcal{Q}} as an example, a typical risk management optimization problem might aim to minimize ℛ𝒬​(X​(𝐱))\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x})) with respect to the decision vector 𝐱\mathbf{x}. Notably, leveraging the key relation ℛ𝒬​(X​(𝐱))=minc∈ℝ⁡{c+𝒱𝒬​(X​(𝐱)−c)}\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x}))=\min\limits\_{c\in\mathbb{R}}\left\{c+\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})-c)\right\}, the constraint ℛ𝒬​(X​(𝐱))⩽d\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x}))\leqslant d for any d∈ℝd\in\mathbb{R} is equivalent to the existence of some c0∈ℝc\_{0}\in\mathbb{R} such that c0+𝒱𝒬​(X​(𝐱)−c0)⩽dc\_{0}+\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})-c\_{0})\leqslant d.
 Consequently, the original objective function min𝐱⁡ℛ𝒬​(X​(𝐱))\min\limits\_{\mathbf{x}}\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x})) is equivalent to min𝐱,c⁡{c+𝒱𝒬​(X​(𝐱)−c)}\min\limits\_{\mathbf{x},c}\left\{c+\mathcal{V}\_{\mathcal{Q}}(X(\mathbf{x})-c)\right\}, which can be further transformed using the linear programming result above. Namely:
 
 |  |  |  |  |
@@ -550,15 +551,15 @@ Consequently, the original objective function min𝐱⁡ℛ𝒬​(X​(𝐱))\m
 
 ###### Example 2.
 
-We present here an application of Eq.([18](#S4.E18 "In 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) in portfolio management (Zhu and Fukushima, [2009](#bib.bib39 "Worst-case conditional value-at-risk with application to robust portfolio management"); Behera and Kumar, [2025](#bib.bib6 "Optimizing mean conditional value-at-risk portfolios through deep neural network stock prediction")). It is assumed that there are mm financial assets in the market, with their returns denoted by random variables RjR\_{j} (j=1,…,mj=1,\dots,m) and corresponding expected values θj\theta\_{j}. We can thus use −Rj-R\_{j} to represent their potential losses. Our goal is to determine the optimal investment weights 𝐱=(x1,…,xm)T\mathbf{x}=(x\_{1},\dots,x\_{m})^{T} for each assest by incorporating the heterogeneous assessments of nn analysts on mm financial assets. The total loss of the portfolio can be expressed as X​(𝐱)=∑j=1m−xj​RjX(\mathbf{x})=\sum\limits\_{j=1}^{m}-x\_{j}R\_{j}.
+We present here an application of Eq.([18](#S4.E18 "In 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) in portfolio management (Zhu and Fukushima, [2009](#bib.bib39 "Worst-case conditional value-at-risk with application to robust portfolio management"); Behera and Kumar, [2025](#bib.bib6 "Optimizing mean conditional value-at-risk portfolios through deep neural network stock prediction")). It is assumed that there are mm financial assets in the market, with their returns denoted by random variables RjR\_{j} (j=1,…,mj=1,\dots,m) and corresponding expected values θj\theta\_{j}. We can thus use −Rj-R\_{j} to represent their potential losses. Our goal is to determine the optimal investment weights 𝐱=(x1,…,xm)T\mathbf{x}=(x\_{1},\dots,x\_{m})^{T} for each assest by incorporating the heterogeneous assessments of nn analysts on mm financial assets. The total loss of the portfolio can be expressed as X​(𝐱)=∑j=1m−xj​RjX(\mathbf{x})=\sum\limits\_{j=1}^{m}-x\_{j}R\_{j}.
 
-Following the approach in Example [1](#Thmexample1 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), we adopt ESα\text{ES}\_{\alpha} as the portfolio risk metric (see Basel Committee on Banking Supervision ([2019](#bib.bib5 "Minimum capital requirements for market risk"))). Each analyst forms a view on the probability distribution of X​(𝐱)X(\mathbf{x}) based on their own insight, leading to the individual risk measure ℛPi​(X​(𝐱))=ESαPi​(X​(𝐱))=ESαPi​(∑j=1m−xj​Rj)\mathcal{R}\_{P\_{i}}(X(\mathbf{x}))=\text{ES}\_{\alpha}^{P\_{i}}(X(\mathbf{x}))=\text{ES}\_{\alpha}^{P\_{i}}\left(\sum\limits\_{j=1}^{m}-x\_{j}R\_{j}\right). Due to differences in analysts’ experience, professional competence, historical performance, and other factors, their perspectives are assigned different weights μ𝒬​(Pi)\mu\_{\mathcal{Q}}(P\_{i}) by the department manager. The corresponding optimization problem is therefore to select the optimal asset allocation weights that minimize the portfolio’s ES, given a target expected portfolio return (denoted by θ0\theta\_{0}). The objective function of this problem can be written as:
+Following the approach in Example [1](#Thmexample1 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), we adopt ESα\text{ES}\_{\alpha} as the portfolio risk metric (see Basel Committee on Banking Supervision ([2019](#bib.bib5 "Minimum capital requirements for market risk"))). Each analyst forms a view on the probability distribution of X​(𝐱)X(\mathbf{x}) based on their own insight, leading to the individual risk measure ℛPi​(X​(𝐱))=ESαPi​(X​(𝐱))=ESαPi​(∑j=1m−xj​Rj)\mathcal{R}\_{P\_{i}}(X(\mathbf{x}))=\text{ES}\_{\alpha}^{P\_{i}}(X(\mathbf{x}))=\text{ES}\_{\alpha}^{P\_{i}}\left(\sum\limits\_{j=1}^{m}-x\_{j}R\_{j}\right). Due to differences in analysts’ experience, professional competence, historical performance, and other factors, their perspectives are assigned different weights μ𝒬​(Pi)\mu\_{\mathcal{Q}}(P\_{i}) by the department manager. The corresponding optimization problem is therefore to select the optimal asset allocation weights that minimize the portfolio’s ES, given a target expected portfolio return (denoted by θ0\theta\_{0}). The objective function of this problem can be written as:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 |  | min𝐱⁡ℛ𝒬​(X​(𝐱))=min{xj}j=1m​∑i=1nESαPi​(∑j=1m−xj​Rj)⋅μ𝒬​(Pi).\displaystyle\min\limits\_{\mathbf{x}}\mathcal{R}\_{\mathcal{Q}}(X(\mathbf{x}))=\min\limits\_{\{x\_{j}\}\_{j=1}^{m}}\sum\limits\_{i=1}^{n}\text{ES}\_{\alpha}^{P\_{i}}\left(\sum\limits\_{j=1}^{m}-x\_{j}R\_{j}\right)\cdot\mu\_{\mathcal{Q}}(P\_{i}). |  | (19) |
 
-However, directly solving ([19](#S4.E19 "In Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) using the relation ESαPi​(X)=11−α​∫α1VaRβPi​(X)​dβ\text{ES}\_{\alpha}^{P\_{i}}(X)=\frac{1}{1-\alpha}\int\_{\alpha}^{1}\text{VaR}\_{\beta}^{P\_{i}}(X)\mathrm{d}\beta requires a complete estimation of the cumulative distribution function, which is generally unavailable. Notably, within the risk quadrangle, the regret measure corresponding to the risk measure ℛPi​(X)=ESαPi​(X)\mathcal{R}\_{P\_{i}}(X)=\text{ES}\_{\alpha}^{P\_{i}}(X) is 𝒱Pi​(X)=11−α​𝔼Pi​[X+]\mathcal{V}\_{P\_{i}}(X)=\frac{1}{1-\alpha}\mathbb{E}^{P\_{i}}[X\_{+}]. This regret measure, for each Analyst ii, can be estimated using a series of historical data Xi​kX\_{ik} (k=1,…,Tik=1,\dots,T\_{i}), specifically as 11−α⋅1Ti​∑k=1Ti(Xi​k)+\frac{1}{1-\alpha}\cdot\frac{1}{T\_{i}}\sum\limits\_{k=1}^{T\_{i}}(X\_{ik})\_{+}. Thus, by introducing auxiliary variables ti​kt\_{ik}, this optimization problem can be transformed into the following linear program:
+However, directly solving ([19](#S4.E19 "In Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) using the relation ESαPi​(X)=11−α​∫α1VaRβPi​(X)​dβ\text{ES}\_{\alpha}^{P\_{i}}(X)=\frac{1}{1-\alpha}\int\_{\alpha}^{1}\text{VaR}\_{\beta}^{P\_{i}}(X)\mathrm{d}\beta requires a complete estimation of the cumulative distribution function, which is generally unavailable. Notably, within the risk quadrangle, the regret measure corresponding to the risk measure ℛPi​(X)=ESαPi​(X)\mathcal{R}\_{P\_{i}}(X)=\text{ES}\_{\alpha}^{P\_{i}}(X) is 𝒱Pi​(X)=11−α​𝔼Pi​[X+]\mathcal{V}\_{P\_{i}}(X)=\frac{1}{1-\alpha}\mathbb{E}^{P\_{i}}[X\_{+}]. This regret measure, for each Analyst ii, can be estimated using a series of historical data Xi​kX\_{ik} (k=1,…,Tik=1,\dots,T\_{i}), specifically as 11−α⋅1Ti​∑k=1Ti(Xi​k)+\frac{1}{1-\alpha}\cdot\frac{1}{T\_{i}}\sum\limits\_{k=1}^{T\_{i}}(X\_{ik})\_{+}. Thus, by introducing auxiliary variables ti​kt\_{ik}, this optimization problem can be transformed into the following linear program:
 
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
@@ -571,12 +572,12 @@ However, directly solving ([19](#S4.E19 "In Example 2. ‣ 4 Optimization under 
 
 ###### Remark 6.
 
-It is worth noting that in Example [2](#Thmexample2 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), the specific reflection of each analyst’s subjective probability measure PiP\_{i} lies in the selection of historical data when estimating 𝔼Pi​[(−∑j=1mrj​xj−c−b​(Pi))+]\mathbb{E}\_{P\_{i}}\left[\left(-\sum\_{j=1}^{m}r\_{j}x\_{j}-c-b(P\_{i})\right)\_{+}\right]. This estimation 1Ti​∑k=1Ti(∑j=1m−xj​rj​k−c−b​(Pi))+\frac{1}{T\_{i}}\sum\_{k=1}^{T\_{i}}\left(\sum\_{j=1}^{m}-x\_{j}r\_{jk}-c-b(P\_{i})\right)\_{+} relies on empirical average, where the choice of historical data encodes the analysts’ perspectives on future market dynamics.
+It is worth noting that in Example [2](#Thmexample2 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), the specific reflection of each analyst’s subjective probability measure PiP\_{i} lies in the selection of historical data when estimating 𝔼Pi​[(−∑j=1mrj​xj−c−b​(Pi))+]\mathbb{E}\_{P\_{i}}\left[\left(-\sum\_{j=1}^{m}r\_{j}x\_{j}-c-b(P\_{i})\right)\_{+}\right]. This estimation 1Ti​∑k=1Ti(∑j=1m−xj​rj​k−c−b​(Pi))+\frac{1}{T\_{i}}\sum\_{k=1}^{T\_{i}}\left(\sum\_{j=1}^{m}-x\_{j}r\_{jk}-c-b(P\_{i})\right)\_{+} relies on empirical average, where the choice of historical data encodes the analysts’ perspectives on future market dynamics.
 Particularly, the length of the time horizon TiT\_{i} reflects Analyst ii’s view on the differences between historical and future market conditions. A longer TiT\_{i} indicates a belief that historical patterns are more representative of future trends without much structural change, while a shorter TiT\_{i} signals a perception of greater market divergence from the past. Meanwhile, the selection of specific historical return data rj​kr\_{jk} embodies an analyst’s judgment on potential future market cycles (e.g., expansion, recession, or stability). For instance, if an analyst believes the future will be characterized by high growth and low inflation without huge structural changes to fundamental market conditions, they will select return data from historical periods with similar macroeconomic contexts and adopt a longer time horizon.
 
 ## 5 Empirical Study
 
-In this section, we illustrate the methodology introduced in Example [2](#Thmexample2 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") and apply it to the stock market. Using real-world examples, we conduct a discussion on the advantages and limitations of portfolio optimization leveraging the WGRM and WRQ. Specifically, we select constituent stocks of the NASDAQ 100 Index as the underlying assets, compare portfolio returns under different optimization methods with the index return across both expansion and recession market conditions, and subsequently perform sensitivity analysis by varying model parameters. The data used in this study are publicly available and were retrieved from <https://finance.yahoo.com>.
+In this section, we illustrate the methodology introduced in Example [2](#Thmexample2 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") and apply it to the stock market. Using real-world examples, we conduct a discussion on the advantages and limitations of portfolio optimization leveraging the WGRM and WRQ. Specifically, we select constituent stocks of the NASDAQ 100 Index as the underlying assets, compare portfolio returns under different optimization methods with the index return across both expansion and recession market conditions, and subsequently perform sensitivity analysis by varying model parameters. The data used in this study are publicly available and were retrieved from <https://finance.yahoo.com>.
 
 ### 5.1 Empirical Setup
 
@@ -592,7 +593,7 @@ Analyst 3 and Analyst 4 focus primarily on inflation, emphasizing the impact of 
 |  |  | ∑j=1mxj​θji⩾θ0,\displaystyle\sum\_{j=1}^{m}x\_{j}\theta^{i}\_{j}\geqslant\theta\_{0}, |  |
 |  |  | ∑j=1mxj=1, 0⩽xj<1,∀j=1,…,m.\displaystyle\sum\_{j=1}^{m}x\_{j}=1,0\leqslant x\_{j}<1,\forall\,\ j=1,\dots,m. |  |
 
-The manager integrates the four analysts’ assessments, so their expected stock returns are a weighted aggregation of the analysts’ estimates, i.e., θj=∑i=14μ𝒬​(Pi)​θji\theta\_{j}=\sum\limits\_{i=1}^{4}\mu\_{\mathcal{Q}}(P\_{i})\theta^{i}\_{j}. For simplicity, we assign equal weights to each analyst’s perspective, i.e., μ𝒬​(Pi)=14\mu\_{\mathcal{Q}}(P\_{i})=\frac{1}{4}, adopting a purely synthetic lens to evaluate the framework. Thus, the manager’s optimization problem is exactly the one formulated in Eq.([20](#S4.E20 "In Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")).
+The manager integrates the four analysts’ assessments, so their expected stock returns are a weighted aggregation of the analysts’ estimates, i.e., θj=∑i=14μ𝒬​(Pi)​θji\theta\_{j}=\sum\limits\_{i=1}^{4}\mu\_{\mathcal{Q}}(P\_{i})\theta^{i}\_{j}. For simplicity, we assign equal weights to each analyst’s perspective, i.e., μ𝒬​(Pi)=14\mu\_{\mathcal{Q}}(P\_{i})=\frac{1}{4}, adopting a purely synthetic lens to evaluate the framework. Thus, the manager’s optimization problem is exactly the one formulated in Eq.([20](#S4.E20 "In Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")).
 
 To conduct a comprehensive assessment, we examine two distinct market regimes, recession and expansion respectively, to evaluate how the manager using the integrated multi-scenario approach performs compared to individual analysts relying on single-scenario frameworks. For the ES metric, we adopt the commonly used level α=0.95\alpha=0.95. During February and March 2025, the NASDAQ 100 Index experienced a sharp decline, with a cumulative two-month return of −11.86%-11.86\%. Although this episode reflects market turbulence rather than a macroeconomic recession, we refer to it as a recession regime for terminological convenience. For this scenario, we use a total time window of T=150T=150 trading days, spanning from August 23, 2024, to March 31, 2025, and split the data into a training set and a backtesting set using February 1, 2025, as the cutoff date. The target return θ0\theta\_{0} is set to the average daily return of January 2025, calculated as θ0=1.64%/20\theta\_{0}=1.64\%/20. We construct portfolios using weights estimated from the training set, evaluate their performance using backtesting set data, and compare the results to the actual NASDAQ 100 Index return.
 
@@ -604,7 +605,7 @@ Intuitively, since ES explicitly accounts for tail risks, ES-based portfolios ex
 
 ### 5.2 Baseline Results
 
-Table [1](#S5.T1 "Table 1 ‣ 5.2 Baseline Results ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") presents the baseline results. During the recession regime, all ES-based portfolios demonstrate excellent downside resilience by delivering positive returns despite a substantial index decline. Although Analyst 1 achieves the highest raw return, the manager’s portfolio yields the highest annualized Sharpe and Sortino ratios, generating the highest risk-adjusted return per unit of risk. This indicates the robustness of the WGRM-based portfolios during market distress.
+Table [1](#S5.T1 "Table 1 ‣ 5.2 Baseline Results ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") presents the baseline results. During the recession regime, all ES-based portfolios demonstrate excellent downside resilience by delivering positive returns despite a substantial index decline. Although Analyst 1 achieves the highest raw return, the manager’s portfolio yields the highest annualized Sharpe and Sortino ratios, generating the highest risk-adjusted return per unit of risk. This indicates the robustness of the WGRM-based portfolios during market distress.
 In the expansion regime, the inherent conservatism of ES optimization causes all portfolios to underperform the strongly rallying index. Crucially, however, while Analyst 1’s isolated forecast results in a negative return, the manager’s portfolio maintains moderate profitability and mid-tier risk-adjusted performance.
 This outcome directly underscores the method’s inherent trade-off: while the WGRM-based approach may lag during aggressive market expansions, it excels in distressed markets by providing robust downside protection and structurally buffering against the idiosyncratic risk of a single erroneous forecast.
 
@@ -698,14 +699,14 @@ Index two-month return
 
 10.58%
 
-Figure [3](#S5.F3 "Figure 3 ‣ 5.2 Baseline Results ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") visualizes the daily portfolio returns across both market regimes. The manager’s portfolio exhibits lower volatility than any single analyst’s strategy. By avoiding extreme return fluctuations and structurally reducing both the frequency and magnitude of deep drawdowns, the WGRM-based method confirms its distinctly conservative and downside-protective risk profile.
+Figure [3](#S5.F3 "Figure 3 ‣ 5.2 Baseline Results ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") visualizes the daily portfolio returns across both market regimes. The manager’s portfolio exhibits lower volatility than any single analyst’s strategy. By avoiding extreme return fluctuations and structurally reducing both the frequency and magnitude of deep drawdowns, the WGRM-based method confirms its distinctly conservative and downside-protective risk profile.
 
-![Refer to caption](2603.10327v1/NASDAQ_Bad_150.png)
+![Refer to caption](2603.10327v2/NASDAQ_Bad_150.png)
 
 
 (a) Recession regime
 
-![Refer to caption](2603.10327v1/NASDAQ_Good_150.png)
+![Refer to caption](2603.10327v2/NASDAQ_Good_150.png)
 
 
 (b) Expansion regime
@@ -714,7 +715,7 @@ Figure 3: Baseline Portfolio Daily Return.
 
 ### 5.3 Sensitivity Analysis
 
-In this subsection, we conduct a sensitivity analysis to ensure our baseline findings are not artifacts of specific parameter choices. Table [2](#S5.T2 "Table 2 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") reports portfolio performance under alternative time windows (T=120T=120 and T=180T=180). During the recession regime, the manager’s portfolio is more noticeably dragged down by Analyst 2’s misjudgment than in the baseline; crucially, however, it still significantly outperforms Analyst 2’s isolated strategy. In the expansion regime, the integrated portfolio maintains mid-tier performance similar to the baseline case at T=120T=120 but underperforms at T=180T=180.
+In this subsection, we conduct a sensitivity analysis to ensure our baseline findings are not artifacts of specific parameter choices. Table [2](#S5.T2 "Table 2 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") reports portfolio performance under alternative time windows (T=120T=120 and T=180T=180). During the recession regime, the manager’s portfolio is more noticeably dragged down by Analyst 2’s misjudgment than in the baseline; crucially, however, it still significantly outperforms Analyst 2’s isolated strategy. In the expansion regime, the integrated portfolio maintains mid-tier performance similar to the baseline case at T=120T=120 but underperforms at T=180T=180.
 
 ###### Remark 7.
 
@@ -850,7 +851,7 @@ Manager
 -0.913
 -1.292
 
-Table [3](#S5.T3 "Table 3 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") reports the results when the ES level is adjusted to α=0.90\alpha=0.90 and α=0.99\alpha=0.99. The manager’s portfolio performs consistently with the baseline, except for notable underperformance during the expansion regime at α=0.99\alpha=0.99. The observed underperformance might be attributed to excessive conservatism. This heightened risk aversion likely leads the optimization process to over-allocate to low-volatility, defensive assets. Such assets tend to underperform in bull markets, as they fail to capture the strong upward momentum typically associated with growth-oriented stocks during economic expansions.
+Table [3](#S5.T3 "Table 3 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") reports the results when the ES level is adjusted to α=0.90\alpha=0.90 and α=0.99\alpha=0.99. The manager’s portfolio performs consistently with the baseline, except for notable underperformance during the expansion regime at α=0.99\alpha=0.99. The observed underperformance might be attributed to excessive conservatism. This heightened risk aversion likely leads the optimization process to over-allocate to low-volatility, defensive assets. Such assets tend to underperform in bull markets, as they fail to capture the strong upward momentum typically associated with growth-oriented stocks during economic expansions.
 
 Table 3: Change Level.
 
@@ -981,7 +982,7 @@ Manager
 -1.471
 -2.618
 
-Table [4](#S5.T4 "Table 4 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") displays the results with target returns scaled by 0.5 and 2. The manager’s portfolio aligns with the baseline except during the expansion regime with a doubled target, unexpectedly posting a negative return while all individual analysts remain profitable. This counterintuitive result highlights the tension between aggressive return targets and the WGRM framework’s mandate for risk mitigation. Pressured to pursue outsized gains in a market already exceeding historical averages, the integrated method’s requirement to balance heterogeneous assessments structurally prevents over concentration in high-momentum assets. Consequently, the optimizer defaults to less volatile, value-oriented stocks, which inherently lag in a momentum-driven bull market.
+Table [4](#S5.T4 "Table 4 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") displays the results with target returns scaled by 0.5 and 2. The manager’s portfolio aligns with the baseline except during the expansion regime with a doubled target, unexpectedly posting a negative return while all individual analysts remain profitable. This counterintuitive result highlights the tension between aggressive return targets and the WGRM framework’s mandate for risk mitigation. Pressured to pursue outsized gains in a market already exceeding historical averages, the integrated method’s requirement to balance heterogeneous assessments structurally prevents over concentration in high-momentum assets. Consequently, the optimizer defaults to less volatile, value-oriented stocks, which inherently lag in a momentum-driven bull market.
 
 Table 4: Change Target Return.
 
@@ -1112,7 +1113,7 @@ Manager
 3.814
 6.165
 
-Table [5](#S5.T5 "Table 5 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application") replicates the baseline and sensitivity analyses using S&P 500 constituents. Outcomes consistently match, and occasionally surpass, the initial findings. In several cases (e.g., Panels A, D, E, and G), during the recession regime, the manager’s portfolio maintains a positive return even in instances where every individual analyst’s strategy incurs losses. This demonstrates the resilience of the WGRM framework across different asset universes. Furthermore, compared to the tech-heavy NASDAQ 100, the broader sectoral coverage of the S&P 500 inherently introduces more defensive and value-oriented stocks. This expanded asset base provides more options for diversification, and also confirms that the WGRM method’s structural robustness is not asset-specific, highlighting its superior adaptability to diverse market segments.
+Table [5](#S5.T5 "Table 5 ‣ 5.3 Sensitivity Analysis ‣ 5 Empirical Study ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application") replicates the baseline and sensitivity analyses using S&P 500 constituents. Outcomes consistently match, and occasionally surpass, the initial findings. In several cases (e.g., Panels A, D, E, and G), during the recession regime, the manager’s portfolio maintains a positive return even in instances where every individual analyst’s strategy incurs losses. This demonstrates the resilience of the WGRM framework across different asset universes. Furthermore, compared to the tech-heavy NASDAQ 100, the broader sectoral coverage of the S&P 500 inherently introduces more defensive and value-oriented stocks. This expanded asset base provides more options for diversification, and also confirms that the WGRM method’s structural robustness is not asset-specific, highlighting its superior adaptability to diverse market segments.
 
 Table 5: Change Underlying Assets.
 
@@ -1473,147 +1474,147 @@ YW thanks The Chinese University of Hong Kong (Shenzhen) for the kind hospitalit
   American Economic Review 106 (7),  pp. 1705–41.
   External Links: [Document](https://dx.doi.org/10.1257/aer.20120555),
   [Link](https://www.aeaweb.org/articles?id=10.1257/aer.20120555)
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * S. Ahmed, D. Filipović, and G. Svindland (2008)
   A note on natural risk statistics.
   Operations Research Letters 36 (6),  pp. 662–664.
   External Links: ISSN 0167-6377,
   [Document](https://dx.doi.org/https%3A//doi.org/10.1016/j.orl.2008.06.009),
   [Link](https://www.sciencedirect.com/science/article/pii/S0167637708000874)
-  Cited by: [§2.2](#S2.SS2.p11.1 "2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§2.2](#S2.SS2.p11.1 "2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * P. Artzner, F. Delbaen, J. Eber, and D. Heath (1999)
   Coherent measures of risk.
   Mathematical Finance 9 (3),  pp. 203–228.
   External Links: [Document](https://dx.doi.org/https%3A//doi.org/10.1111/1467-9965.00068),
   [Link](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9965.00068),
   https://onlinelibrary.wiley.com/doi/pdf/10.1111/1467-9965.00068
-  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * Basel Committee on Banking Supervision (2019)
   Minimum capital requirements for market risk.
   Standard
    Bank for International Settlements, Basel, Switzerland (en).
   External Links: [Link](https://www.bis.org/bcbs/publ/d457.htm)
-  Cited by: [Example 1](#Thmexample1.p1.13 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [Example 2](#Thmexample2.p2.5 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [Example 1](#Thmexample1.p1.13 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [Example 2](#Thmexample2.p2.5 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * M. Battiston and L. Rimella (2025)
   Disclosure risk assessment with bayesian non-parametric hierarchical modelling.
   Statistics and Computing 35 (5),  pp. 158.
   External Links: ISSN 1573-1375,
   [Document](https://dx.doi.org/10.1007/s11222-025-10693-9),
   [Link](https://doi.org/10.1007/s11222-025-10693-9)
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * J. Behera and P. Kumar (2025)
   Optimizing mean conditional value-at-risk portfolios through deep neural network stock prediction.
   Engineering Applications of Artificial Intelligence 161,  pp. 112198.
   External Links: ISSN 0952-1976,
   [Document](https://dx.doi.org/https%3A//doi.org/10.1016/j.engappai.2025.112198),
   [Link](https://www.sciencedirect.com/science/article/pii/S0952197625022067)
-  Cited by: [Example 2](#Thmexample2.p1.9 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [Example 2](#Thmexample2.p1.9 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * F. Bellini and E. D. Bernardino (2017)
   Risk management with expectiles.
   European Journal of Finance 23 (6),  pp. 487–506.
   External Links: [Document](https://dx.doi.org/10.1080/1351847X.2015.1052150),
   [Link](https://doi.org/10.1080/1351847X.2015.1052150),
   https://doi.org/10.1080/1351847X.2015.1052150
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * C. Bernard, S. M. Pesenti, and S. Vanduffel (2024)
   Robust distortion risk measures.
   Mathematical Finance 34 (3),  pp. 774–818.
   External Links: [Document](https://dx.doi.org/https%3A//doi.org/10.1111/mafi.12414),
   [Link](https://onlinelibrary.wiley.com/doi/abs/10.1111/mafi.12414),
   https://onlinelibrary.wiley.com/doi/pdf/10.1111/mafi.12414
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * J. Blanchet, H. Lam, Y. Liu, and R. Wang (2025)
   Convolution bounds on quantile aggregation.
   Operations Research 73 (5),  pp. 2761–2781.
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * M. Brutti Righi (2018)
   A theory for combinations of risk measures.
   arXiv e-prints,  pp. arXiv:1807.01977.
   External Links: [Document](https://dx.doi.org/10.48550/arXiv.1807.01977),
   1807.01977
-  Cited by: [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * J. Cai, J. Y. Li, and T. Mao (2025)
   Distributionally robust optimization under distorted expectations.
   Operations Research 73 (2),  pp. 969–985.
   External Links: [Document](https://dx.doi.org/10.1287/opre.2020.0685),
   [Link](https://doi.org/10.1287/opre.2020.0685),
   https://doi.org/10.1287/opre.2020.0685
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * E. Castagnoli, G. Cattelan, F. Maccheroni, C. Tebaldi, and R. Wang (2022)
   Star-shaped risk measures.
   Operations Research 70 (5),  pp. 2637–2654.
   External Links: [Document](https://dx.doi.org/10.1287/opre.2022.2303),
   [Link](https://doi.org/10.1287/opre.2022.2303),
   https://doi.org/10.1287/opre.2022.2303
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * Y. Chen, P. Liu, Y. Liu, and R. Wang (2022)
   Ordering and inequalities of mixtures on risk aggregation.
   Mathematical Finance 32 (1),  pp. 421–451.
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * R. Cont, R. Deguest, and G. Scandolo (2010)
   Robustness and sensitivity analysis of risk measurement procedures.
   Quantitative Finance 10 (6),  pp. 593–606.
   External Links: [Document](https://dx.doi.org/10.1080/14697681003685597),
   [Link](https://doi.org/10.1080/14697681003685597),
   https://doi.org/10.1080/14697681003685597
-  Cited by: [§1.1](#S1.SS1.p1.1 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.1](#S1.SS1.p1.1 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * P. Embrechts, B. Wang, and R. Wang (2015)
   Aggregation-robustness and model uncertainty of regulatory risk measures.
   Finance and Stochastics 19 (4),  pp. 763–790.
   External Links: [Document](https://dx.doi.org/10.1007/s00780-015-0273-z),
   [Link](https://link.springer.com/article/10.1007/s00780-015-0273-z)
-  Cited by: [§1.1](#S1.SS1.p1.1 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.1](#S1.SS1.p1.1 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * T. Fadina, Y. Liu, and R. Wang (2024)
   A framework for measures of risk under uncertainty.
   Finance and Stochastics 28 (2),  pp. 363–390.
   External Links: ISSN 1432-1122,
   [Document](https://dx.doi.org/10.1007/s00780-024-00528-2),
   [Link](https://doi.org/10.1007/s00780-024-00528-2)
-  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§1.1](#S1.SS1.p3.6 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§1.1](#S1.SS1.p4.7 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§2.1](#S2.SS1.p1.2 "2.1 Properties and Technical Discussions ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§1.1](#S1.SS1.p3.6 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§1.1](#S1.SS1.p4.7 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§2.1](#S2.SS1.p1.2 "2.1 Properties and Technical Discussions ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * T. Fissler and S. M. Pesenti (2023)
   Sensitivity measures based on scoring functions.
   European Journal of Operational Research 307 (3),  pp. 1408–1423.
   External Links: ISSN 0377-2217,
   [Document](https://dx.doi.org/https%3A//doi.org/10.1016/j.ejor.2022.10.002),
   [Link](https://www.sciencedirect.com/science/article/pii/S0377221722007718)
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * H. Föllmer and A. Schied (2002)
   Convex measures of risk and trading constraints.
   Finance and Stochastics 6 (4),  pp. 429–447.
   External Links: ISSN 0949-2984,
   [Document](https://dx.doi.org/10.1007/s007800200072),
   [Link](https://doi.org/10.1007/s007800200072)
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * M. Frittelli and E. Rosazza Gianin (2002)
   Putting order in risk measures.
   Journal of Banking & Finance 26 (7),  pp. 1473–1486.
   External Links: ISSN 0378-4266,
   [Document](https://dx.doi.org/https%3A//doi.org/10.1016/S0378-4266%2802%2900270-4),
   [Link](https://www.sciencedirect.com/science/article/pii/S0378426602002704)
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * I. Gilboa and D. Schmeidler (1989)
   Maxmin expected utility with a non-unique prior.
   Journal of Mathematical Economics 18,  pp. 141–153.
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * A. A. Gomez, G. Consigli, and J. Liu (2024)
   Multi-period portfolio selection with interval-based conditional Value-at-Risk.
   Annals of Operations Research.
   External Links: ISSN 1572-9338,
   [Document](https://dx.doi.org/10.1007/s10479-024-05913-w),
   [Link](https://doi.org/10.1007/s10479-024-05913-w)
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * V. Jokhadze and W. M. Schmidt (2020)
   Measuring model risk in financial risk management and pricing.
   International Journal of Theoretical and Applied Finance 23 (02),  pp. 2050012.
   External Links: [Document](https://dx.doi.org/10.1142/S0219024920500120),
   [Link](https://doi.org/10.1142/S0219024920500120),
   https://doi.org/10.1142/S0219024920500120
-  Cited by: [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * E. Jouini, W. Schachermayer, and N. Touzi (2006)
   Law invariant risk measures have the fatou property.
   In Advances in Mathematical Economics,
@@ -1621,103 +1622,103 @@ YW thanks The Chinese University of Hong Kong (Shenzhen) for the kind hospitalit
   External Links: ISBN 978-4-431-34342-4,
   [Document](https://dx.doi.org/10.1007/4-431-34342-3%5F4),
   [Link](https://doi.org/10.1007/4-431-34342-3_4)
-  Cited by: [Proof of Theorem 2.](#Ax1.24.p10.2 "Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§2.3](#S2.SS3.p13.1 "2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [Proof of Theorem 2.](#Ax1.24.p10.2 "Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§2.3](#S2.SS3.p13.1 "2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * P. Klibanoff, M. Marinacci, and S. Mukerji (2005)
   A smooth model of decision making under uncertainty.
   Econometrica 73 (3),  pp. 1849–1892.
-  Cited by: [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * S. Kou, X. Peng, and C. C. Heyde (2013)
   External risk measures and basel accords.
   Mathematics of Operations Research 38 (3),  pp. 393–417.
   External Links: [Document](https://dx.doi.org/10.1287/moor.1120.0577),
   [Link](https://doi.org/10.1287/moor.1120.0577),
   https://doi.org/10.1287/moor.1120.0577
-  Cited by: [§1.2](#S1.SS2.p4.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§2.2](#S2.SS2.p3.3 "2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p4.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§2.2](#S2.SS2.p3.3 "2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * S. Kou and X. Peng (2016)
   On the measurement of economic tail risk.
   Operations Research 64 (5),  pp. 1056–1072.
   External Links: [Document](https://dx.doi.org/10.1287/opre.2016.1539),
   [Link](https://doi.org/10.1287/opre.2016.1539),
   https://doi.org/10.1287/opre.2016.1539
-  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§1.2](#S1.SS2.p4.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§2.2](#S2.SS2.p3.3 "2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§1.2](#S1.SS2.p4.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§2.2](#S2.SS2.p3.3 "2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * D. La Torre and M. Rocca (2024)
   Distributionally robust multiobjective optimization with application to risk measure theory.
   Annals of Operations Research.
   External Links: ISSN 1572-9338,
   [Document](https://dx.doi.org/10.1007/s10479-024-06401-x),
   [Link](https://doi.org/10.1007/s10479-024-06401-x)
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * F. Liu and R. Wang (2021)
   A theory for measures of tail risk.
   Mathematics of Operations Research 46 (3),  pp. 1109–1128.
   External Links: [Document](https://dx.doi.org/10.1287/moor.2020.1072),
   [Link](https://doi.org/10.1287/moor.2020.1072),
   https://doi.org/10.1287/moor.2020.1072
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * A. J. McNeil, R. Frey, and P. Embrechts (2015)
   Quantitative risk management: concepts, techniques and tools.
   Revised edition edition, Princeton series in finance, Princeton University Press, Princeton Oxford (eng).
   External Links: ISBN 9780691166278
-  Cited by: [Example 1](#Thmexample1.p1.13 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [Example 1](#Thmexample1.p1.13 "Example 1. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * R. T. Rockafellar and S. Uryasev (2013)
   The fundamental risk quadrangle in risk management, optimization and statistical estimation.
   Surveys in Operations Research and Management Science 18 (1),  pp. 33–53.
   External Links: ISSN 1876-7354,
   [Document](https://dx.doi.org/https%3A//doi.org/10.1016/j.sorms.2013.03.001)
-  Cited by: [Figure 1](#S1.F1 "In 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [Figure 1](#S1.F1.3.2 "In 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§1.1](#S1.SS1.p5.1 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§3.2](#S3.SS2.p4.1 "3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§3](#S3.p1.1 "3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [Figure 1](#S1.F1 "In 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [Figure 1](#S1.F1.3.2 "In 1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§1.1](#S1.SS1.p5.1 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§3.2](#S3.SS2.p4.1 "3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§3](#S3.p1.1 "3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * R. T. Rockafellar (1970)
   Convex analysis.
    Princeton University Press, Princeton.
   External Links: [Link](https://doi.org/10.1515/9781400873173),
   [Document](https://dx.doi.org/doi%3A10.1515/9781400873173),
   ISBN 9781400873173
-  Cited by: [Proof of Theorem 2.](#Ax1.16.p4.1 "Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [Proof of Theorem 1.](#Ax1.2.p2.20 "Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [Proof of Theorem 2.](#Ax1.16.p4.1 "Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [Proof of Theorem 1.](#Ax1.2.p2.20 "Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * P. P. Wakker (2010)
   Prospect theory: for risk and ambiguity.
    Cambridge University Press.
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * R. Wang and J. F. Ziegel (2021)
   Scenario-based risk evaluation.
   Finance and Stochastics 25 (4),  pp. 725–756.
   External Links: ISSN 1432-1122,
   [Document](https://dx.doi.org/10.1007/s00780-021-00460-9),
   [Link](https://doi.org/10.1007/s00780-021-00460-9)
-  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.1](#S1.SS1.p2.2 "1.1 Background and Motivation ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [§1.2](#S1.SS2.p2.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * R. Wang and R. Zitikis (2021)
   An axiomatic foundation for the expected shortfall.
   Management Science 67 (3),  pp. 1413–1429.
   External Links: [Document](https://dx.doi.org/10.1287/mnsc.2020.3617),
   [Link](https://doi.org/10.1287/mnsc.2020.3617),
   https://doi.org/10.1287/mnsc.2020.3617
-  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p3.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * S. Zhu and M. Fukushima (2009)
   Worst-case conditional value-at-risk with application to robust portfolio management.
   Operations Research 57 (5),  pp. 1155–1168.
   External Links: [Document](https://dx.doi.org/10.1287/opre.1080.0684),
   [Link](https://doi.org/10.1287/opre.1080.0684),
   https://doi.org/10.1287/opre.1080.0684
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"),
-  [Example 2](#Thmexample2.p1.9 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"),
+  [Example 2](#Thmexample2.p1.9 "Example 2. ‣ 4 Optimization under WGRM and WRQ ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 * S. Zymler, D. Kuhn, and B. Rustem (2013)
   Worst-case value at risk of nonlinear portfolios.
   Management Science 59 (1),  pp. 172–188.
   External Links: ISSN 00251909, 15265501,
   [Link](http://www.jstor.org/stable/23359612)
-  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+  Cited by: [§1.2](#S1.SS2.p1.1 "1.2 Connection to Other Frameworks and Contribution ‣ 1 Introduction ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 
 ## Appendix: Proofs
 
-###### Proof of Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+###### Proof of Theorem [1](#Thmtheorem1 "Theorem 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 
 The “if” statement can be checked directly. We only focus on the “only if” statement.
 
@@ -1731,7 +1732,7 @@ The “if” statement can be checked directly. We only focus on the “only if�
 |  | δ​(Φ𝒬,X|𝒞)\displaystyle\delta(\Phi\_{\mathcal{Q},X}|\mathcal{C}) | ={0,if​Φ𝒬,X∈𝒞,∞,if​Φ𝒬,X∉𝒞.\displaystyle=\begin{cases}0,&\text{if}\,\,\Phi\_{\mathcal{Q},X}\in\mathcal{C},\\ \infty,&\text{if}\,\,\Phi\_{\mathcal{Q},X}\notin\mathcal{C}.\end{cases} |  | (23) |
 
 Obviously, g​(Φ𝒬,X)=f​(Φ𝒬,X)g(\Phi\_{\mathcal{Q},X})=f(\Phi\_{\mathcal{Q},X}) on 𝒞\mathcal{C}. Since f​(Φ𝒬,X)f(\Phi\_{\mathcal{Q},X}) satisfies (B1)-(B2), it is easy to verify that g​(Φ𝒬,X)g(\Phi\_{\mathcal{Q},X}) also satisfies positive homogeneity, translation invariance, and monotonicity.
-Moreover, we can further verify that g​(Φ𝒬,X)g(\Phi\_{\mathcal{Q},X}) is also sub-additive, i.e., g​(Φ𝒬,X+Φ𝒬,Y)⩽g​(Φ𝒬,X)+g​(Φ𝒬,Y)g(\Phi\_{\mathcal{Q},X}+\Phi\_{\mathcal{Q},Y})\leqslant g(\Phi\_{\mathcal{Q},X})+g(\Phi\_{\mathcal{Q},Y}), for any Φ𝒬,X,Φ𝒬,Y∈ℝn\Phi\_{\mathcal{Q},X},\Phi\_{\mathcal{Q},Y}\in\mathbb{R}^{n}. Note that if Φ𝒬,X,Φ𝒬,Y∈𝒞\Phi\_{\mathcal{Q},X},\Phi\_{\mathcal{Q},Y}\in\mathcal{C}, then the inequality is valid by the comonotonic sub-additivity of ff. If Φ𝒬,X\Phi\_{\mathcal{Q},X} or Φ𝒬,Y∉𝒞\Phi\_{\mathcal{Q},Y}\notin\mathcal{C}, then the right-hand side of Eq.([22](#Ax1.E22 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) goes to infinity due to δ​(Φ𝒬,X|𝒞)\delta(\Phi\_{\mathcal{Q},X}|\mathcal{C}). The positive homogeneity and sub-additivity indicate convexity of gg.
+Moreover, we can further verify that g​(Φ𝒬,X)g(\Phi\_{\mathcal{Q},X}) is also sub-additive, i.e., g​(Φ𝒬,X+Φ𝒬,Y)⩽g​(Φ𝒬,X)+g​(Φ𝒬,Y)g(\Phi\_{\mathcal{Q},X}+\Phi\_{\mathcal{Q},Y})\leqslant g(\Phi\_{\mathcal{Q},X})+g(\Phi\_{\mathcal{Q},Y}), for any Φ𝒬,X,Φ𝒬,Y∈ℝn\Phi\_{\mathcal{Q},X},\Phi\_{\mathcal{Q},Y}\in\mathbb{R}^{n}. Note that if Φ𝒬,X,Φ𝒬,Y∈𝒞\Phi\_{\mathcal{Q},X},\Phi\_{\mathcal{Q},Y}\in\mathcal{C}, then the inequality is valid by the comonotonic sub-additivity of ff. If Φ𝒬,X\Phi\_{\mathcal{Q},X} or Φ𝒬,Y∉𝒞\Phi\_{\mathcal{Q},Y}\notin\mathcal{C}, then the right-hand side of Eq.([22](#Ax1.E22 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) goes to infinity due to δ​(Φ𝒬,X|𝒞)\delta(\Phi\_{\mathcal{Q},X}|\mathcal{C}). The positive homogeneity and sub-additivity indicate convexity of gg.
 Furthermore, since f​(⋅)<∞f(\cdot)<\infty, we have dom​g:={Φ𝒬,X∈ℝn∣g​(Φ𝒬,X)<∞}≠∅\text{dom}\,g:=\{\Phi\_{\mathcal{Q},X}\in\mathbb{R}^{n}\mid g(\Phi\_{\mathcal{Q},X})<\infty\}\neq\emptyset, i.e., g​(⋅)g(\cdot) is proper. From the fact that f​(⋅)f(\cdot) is Lipschitz continuous with respect to the maximum-norm ∥⋅∥∞\|\cdot\|\_{\infty} and 𝒞\mathcal{C} is a closed convex set, g​(⋅)g(\cdot) is lower semi-continuous (l.s.c.). By Fenchel-Moreau Biconjugation Theorem (Chapter 12, Rockafellar ([1970](#bib.bib33 "Convex analysis"))), it holds that
 
 |  |  |  |  |
@@ -1762,19 +1763,19 @@ for arbitrary a⩾0a\geqslant 0. This indicates that if g∗​(μ𝒬)<∞g^{\*
 | --- | --- | --- | --- |
 |  | g∗(μ𝒬)=δ(⋅|domg∗)andg(Φ𝒬,X)=supμ𝒬∈dom​g∗⟨μ𝒬,Φ𝒬,X⟩,\displaystyle g^{\*}(\mu\_{\mathcal{Q}})=\delta(\cdot|\text{dom}\,g^{\*})\quad\text{and}\quad g(\Phi\_{\mathcal{Q},X})=\sup\limits\_{\mu\_{\mathcal{Q}}\in\text{dom}\,g^{\*}}\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}\right\rangle, |  | (25) |
 
-where the second equation of ([25](#Ax1.E25 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) yields from the fact that, when μ𝒬∉dom​g∗\mu\_{\mathcal{Q}}\notin\text{dom}\,g^{\*}, we have g∗​(μ𝒬)=∞g^{\*}(\mu\_{\mathcal{Q}})=\infty, implying that g​(Φ𝒬,X)=−∞g(\Phi\_{\mathcal{Q},X})=-\infty.
+where the second equation of ([25](#Ax1.E25 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) yields from the fact that, when μ𝒬∉dom​g∗\mu\_{\mathcal{Q}}\notin\text{dom}\,g^{\*}, we have g∗​(μ𝒬)=∞g^{\*}(\mu\_{\mathcal{Q}})=\infty, implying that g​(Φ𝒬,X)=−∞g(\Phi\_{\mathcal{Q},X})=-\infty.
 
-Define the set of maximizers at Φ𝒬,X\Phi\_{\mathcal{Q},X} of Eq.([24](#Ax1.E24 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) as ∂g​(Φ𝒬,X)\partial g(\Phi\_{\mathcal{Q},X}), i.e., ∂g​(Φ𝒬,X):={μ𝒬∈dom​g∗∣g​(Φ𝒬,X)+g∗​(μ𝒬)=⟨μ𝒬,Φ𝒬,X⟩}\partial g(\Phi\_{\mathcal{Q},X}):=\{\mu\_{\mathcal{Q}}\in\text{dom}\,g^{\*}\mid g(\Phi\_{\mathcal{Q},X})+g^{\*}(\mu\_{\mathcal{Q}})=\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}\right\rangle\}.
+Define the set of maximizers at Φ𝒬,X\Phi\_{\mathcal{Q},X} of Eq.([24](#Ax1.E24 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) as ∂g​(Φ𝒬,X)\partial g(\Phi\_{\mathcal{Q},X}), i.e., ∂g​(Φ𝒬,X):={μ𝒬∈dom​g∗∣g​(Φ𝒬,X)+g∗​(μ𝒬)=⟨μ𝒬,Φ𝒬,X⟩}\partial g(\Phi\_{\mathcal{Q},X}):=\{\mu\_{\mathcal{Q}}\in\text{dom}\,g^{\*}\mid g(\Phi\_{\mathcal{Q},X})+g^{\*}(\mu\_{\mathcal{Q}})=\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}\right\rangle\}.
 It can be shown that ∀Φ𝒬,X∈int​𝒞\forall\,\Phi\_{\mathcal{Q},X}\in\text{int}\mathcal{C}, ∂g​(Φ𝒬,X)≠∅\partial g(\Phi\_{\mathcal{Q},X})\neq\emptyset.
 Now, fix any Φ𝒬,X∈int​𝒞\Phi\_{\mathcal{Q},X}\in\text{int}\mathcal{C} and let μ𝒬∈∂g​(Φ𝒬,X)\mu\_{\mathcal{Q}}\in\partial g(\Phi\_{\mathcal{Q},X}).
-From Eq.([25](#Ax1.E25 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), we know that g​(Φ𝒬,X)=⟨μ𝒬,Φ𝒬,X⟩g(\Phi\_{\mathcal{Q},X})=\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}\right\rangle holds. Let 𝐞1,𝐞2,…,𝐞n\mathbf{e}\_{1},\mathbf{e}\_{2},\dots,\mathbf{e}\_{n} be the canonical basis of ℝn\mathbb{R}^{n}.
+From Eq.([25](#Ax1.E25 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), we know that g​(Φ𝒬,X)=⟨μ𝒬,Φ𝒬,X⟩g(\Phi\_{\mathcal{Q},X})=\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}\right\rangle holds. Let 𝐞1,𝐞2,…,𝐞n\mathbf{e}\_{1},\mathbf{e}\_{2},\dots,\mathbf{e}\_{n} be the canonical basis of ℝn\mathbb{R}^{n}.
 Since Φ𝒬,X∈int​𝒞\Phi\_{\mathcal{Q},X}\in\text{int}\mathcal{C}, for each ii, there exists an ε>0\varepsilon>0 small enough such that Φ𝒬,X−ε​𝐞i∈𝒞\Phi\_{\mathcal{Q},X}-\varepsilon\mathbf{e}\_{i}\in\mathcal{C}. Note that μ𝒬\mu\_{\mathcal{Q}} is an element of ∂g​(Φ𝒬,X)\partial g(\Phi\_{\mathcal{Q},X}), but it does not necessarily indicate μ𝒬∈∂g​(Φ𝒬,X−ε​𝐞i)\mu\_{\mathcal{Q}}\in\partial g(\Phi\_{\mathcal{Q},X}-\varepsilon\mathbf{e}\_{i}) as well. Therefore, we have
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 |  | ⟨μ𝒬,Φ𝒬,X−ε​𝐞i⟩⩽g​(Φ𝒬,X−ε​𝐞i)⩽g​(Φ𝒬,X)=⟨μ𝒬,Φ𝒬,X⟩,\displaystyle\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}-\varepsilon\mathbf{e}\_{i}\right\rangle\leqslant g(\Phi\_{\mathcal{Q},X}-\varepsilon\mathbf{e}\_{i})\leqslant g(\Phi\_{\mathcal{Q},X})=\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}\right\rangle, |  | (26) |
 
-where the second inequality of ([26](#Ax1.E26 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) results from monotonicity of gg. Equivalently, ⟨μ𝒬,−ε​𝐞i⟩⩽0\left\langle\mu\_{\mathcal{Q}},-\varepsilon\mathbf{e}\_{i}\right\rangle\leqslant 0, i.e., −𝐞i​μi⩽0-\mathbf{e}\_{i}\mu\_{i}\leqslant 0, μi⩾0\mu\_{i}\geqslant 0, which indicates that all coordinates of μ𝒬\mu\_{\mathcal{Q}} are non-negative. Since g∗g^{\*} is l.s.c. (as gg is l.s.c.), the set 𝒲1:=dom ​g∗⊆𝒟\mathcal{W}\_{1}:=\text{dom\,}g^{\*}\subseteq\mathcal{D} is closed and convex. To sum up, so far we have obtained that
+where the second inequality of ([26](#Ax1.E26 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) results from monotonicity of gg. Equivalently, ⟨μ𝒬,−ε​𝐞i⟩⩽0\left\langle\mu\_{\mathcal{Q}},-\varepsilon\mathbf{e}\_{i}\right\rangle\leqslant 0, i.e., −𝐞i​μi⩽0-\mathbf{e}\_{i}\mu\_{i}\leqslant 0, μi⩾0\mu\_{i}\geqslant 0, which indicates that all coordinates of μ𝒬\mu\_{\mathcal{Q}} are non-negative. Since g∗g^{\*} is l.s.c. (as gg is l.s.c.), the set 𝒲1:=dom ​g∗⊆𝒟\mathcal{W}\_{1}:=\text{dom\,}g^{\*}\subseteq\mathcal{D} is closed and convex. To sum up, so far we have obtained that
 
 |  |  |  |
 | --- | --- | --- |
@@ -1806,10 +1807,10 @@ and dom ​f∗⊆𝒟\text{dom\,}f^{\*}\subseteq\mathcal{D}. We first note tha
 | --- | --- | --- | --- |
 |  | f∗​(μ𝒬π)=supΦ𝒬,X∈ℝn{⟨μ𝒬π,Φ𝒬,X⟩−f​(Φ𝒬,X)}=supΦ𝒬,Xπ−1∈ℝn{⟨μ𝒬,Φ𝒬,Xπ−1⟩−f​(Φ𝒬,Xπ−1)}=f∗​(μ𝒬).\displaystyle f^{\*}(\mu\_{\mathcal{Q}}^{\pi})=\sup\limits\_{\Phi\_{\mathcal{Q},X}\in\mathbb{R}^{n}}\left\{\left\langle\mu\_{\mathcal{Q}}^{\pi},\Phi\_{\mathcal{Q},X}\right\rangle-f(\Phi\_{\mathcal{Q},X})\right\}=\sup\limits\_{\Phi\_{\mathcal{Q},X}^{\pi^{-1}}\in\mathbb{R}^{n}}\left\{\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}^{\pi^{-1}}\right\rangle-f(\Phi\_{\mathcal{Q},X}^{\pi^{-1}})\right\}=f^{\*}(\mu\_{\mathcal{Q}}). |  | (27) |
 
-The second equality of ([27](#Ax1.E27 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) is valid due to the permutation invariance of f​(Φ𝒬,X)f(\Phi\_{\mathcal{Q},X}), i.e., f​(Φ𝒬,X)=f​(Φ𝒬,Xπ−1)f(\Phi\_{\mathcal{Q},X})=f(\Phi\_{\mathcal{Q},X}^{\pi^{-1}}). The above relationship implies that dom​g∗\text{dom}\,g^{\*} is also permutation invariant. Moreover, since f​(Φ𝒬,X)=supμ𝒬∈𝒲1⟨μ𝒬,Φ𝒬,Xq⟩f(\Phi\_{\mathcal{Q},X})=\sup\limits\_{\mu\_{\mathcal{Q}}\in\mathcal{W}\_{1}}\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}^{q}\right\rangle, where Φ𝒬,Xq\Phi\_{\mathcal{Q},X}^{q} is non-decreasingly ordered, the Rearrangement Inequality implies that the supremum would be attained when μ𝒬\mu\_{\mathcal{Q}} is also non-decreasingly ordered. Therefore, 𝒲2⊆𝒟∩𝒞\mathcal{W}\_{2}\subseteq\mathcal{D}\,\cap\,\mathcal{C}.
+The second equality of ([27](#Ax1.E27 "In Proof of Theorem 1. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) is valid due to the permutation invariance of f​(Φ𝒬,X)f(\Phi\_{\mathcal{Q},X}), i.e., f​(Φ𝒬,X)=f​(Φ𝒬,Xπ−1)f(\Phi\_{\mathcal{Q},X})=f(\Phi\_{\mathcal{Q},X}^{\pi^{-1}}). The above relationship implies that dom​g∗\text{dom}\,g^{\*} is also permutation invariant. Moreover, since f​(Φ𝒬,X)=supμ𝒬∈𝒲1⟨μ𝒬,Φ𝒬,Xq⟩f(\Phi\_{\mathcal{Q},X})=\sup\limits\_{\mu\_{\mathcal{Q}}\in\mathcal{W}\_{1}}\left\langle\mu\_{\mathcal{Q}},\Phi\_{\mathcal{Q},X}^{q}\right\rangle, where Φ𝒬,Xq\Phi\_{\mathcal{Q},X}^{q} is non-decreasingly ordered, the Rearrangement Inequality implies that the supremum would be attained when μ𝒬\mu\_{\mathcal{Q}} is also non-decreasingly ordered. Therefore, 𝒲2⊆𝒟∩𝒞\mathcal{W}\_{2}\subseteq\mathcal{D}\,\cap\,\mathcal{C}.
 ∎
 
-###### Proof of Proposition [1](#Thmproposition1 "Proposition 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+###### Proof of Proposition [1](#Thmproposition1 "Proposition 1. ‣ 2.2 WGRM under a Discrete Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 
 The “if” statement is direct. We only focus on the “only if” statement.
 
@@ -1834,7 +1835,7 @@ For this equality to hold for all Φ𝒬,X∈ℝn\Phi\_{\mathcal{Q},X}\in\mathbb
 
 ∎
 
-###### Proof of Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+###### Proof of Theorem [2](#Thmtheorem2 "Theorem 2. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 
 The “if” statement can be checked directly. We only focus on the “only if” statement.
 
@@ -1934,7 +1935,7 @@ For any φX∈𝒞~0\varphi\_{X}\in\tilde{\mathcal{C}}\_{0} and any ν∈∂g​
 
 ###### Proof.
 
-Let φX∈𝒞~0\varphi\_{X}\in\tilde{\mathcal{C}}\_{0} with minimum slope δ>0\delta>0. Fix any interval [c,d]⊆(0,1)[c,d]\subseteq(0,1), and let ϕ⩾0\phi\geqslant 0 be a smooth function supported on [c,d][c,d] with ∥ϕ′∥∞⩽Kϕ\|\phi\prime\|\_{\infty}\leqslant K\_{\phi}. For ε<δ/Kϕ\varepsilon<\delta/K\_{\phi}, we define φε=φX−ε​ϕ\varphi^{\varepsilon}=\varphi\_{X}-\varepsilon\phi. By Lemma [1](#Thmlemma1 "Lemma 1. ‣ Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), we have φε∈𝒞~\varphi^{\varepsilon}\in\tilde{\mathcal{C}}. Since ν∈∂g​(φX)\nu\in\partial g(\varphi\_{X}), the subdifferential inequality in ([28](#Ax1.E28 "In Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) gives
+Let φX∈𝒞~0\varphi\_{X}\in\tilde{\mathcal{C}}\_{0} with minimum slope δ>0\delta>0. Fix any interval [c,d]⊆(0,1)[c,d]\subseteq(0,1), and let ϕ⩾0\phi\geqslant 0 be a smooth function supported on [c,d][c,d] with ∥ϕ′∥∞⩽Kϕ\|\phi\prime\|\_{\infty}\leqslant K\_{\phi}. For ε<δ/Kϕ\varepsilon<\delta/K\_{\phi}, we define φε=φX−ε​ϕ\varphi^{\varepsilon}=\varphi\_{X}-\varepsilon\phi. By Lemma [1](#Thmlemma1 "Lemma 1. ‣ Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), we have φε∈𝒞~\varphi^{\varepsilon}\in\tilde{\mathcal{C}}. Since ν∈∂g​(φX)\nu\in\partial g(\varphi\_{X}), the subdifferential inequality in ([28](#Ax1.E28 "In Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) gives
 
 |  |  |  |
 | --- | --- | --- |
@@ -1950,7 +1951,7 @@ which implies ε​∫01ϕ​(t)​ν​(t)​dt⩾0\varepsilon\int^{1}\_{0}\phi
 ∎
 
 Step 3: Extension to the boundary and final representation.
-Since g∗g^{\*} is l.s.c. (as gg is σ​(L∞,L1)\sigma(L^{\infty},L^{1})-lower semi-continuous), the set 𝒲3:=dom ​g∗⊆{ν∈L1​([0,1])|∫01ν​(t)​dt=1,ν​(t)⩾0​a.e.}\mathcal{W}\_{3}:=\text{dom\,}g^{\*}\subseteq\{\nu\in L^{1}([0,1])|\int^{1}\_{0}\nu(t)\mathrm{d}t=1,\nu(t)\geqslant 0\ \text{a.e.}\} is closed and convex. By Lemma [2](#Thmlemma2 "Lemma 2. ‣ Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"), we immediately have
+Since g∗g^{\*} is l.s.c. (as gg is σ​(L∞,L1)\sigma(L^{\infty},L^{1})-lower semi-continuous), the set 𝒲3:=dom ​g∗⊆{ν∈L1​([0,1])|∫01ν​(t)​dt=1,ν​(t)⩾0​a.e.}\mathcal{W}\_{3}:=\text{dom\,}g^{\*}\subseteq\{\nu\in L^{1}([0,1])|\int^{1}\_{0}\nu(t)\mathrm{d}t=1,\nu(t)\geqslant 0\ \text{a.e.}\} is closed and convex. By Lemma [2](#Thmlemma2 "Lemma 2. ‣ Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"), we immediately have
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1963,7 +1964,7 @@ For any function outside 𝒞~0\tilde{\mathcal{C}}\_{0}, i.e., φX∈𝒞~∖�
 |  | f​(φX)⩽f​(φXk)⩽f​(φX)+f​(id)k,\displaystyle f(\varphi\_{X})\leqslant f(\varphi\_{X\_{k}})\leqslant f(\varphi\_{X})+\frac{f(\text{id})}{k}, |  |
 
 we have f​(φXk)→f​(φX)f(\varphi\_{X\_{k}})\to f(\varphi\_{X}) when k→∞k\to\infty.
-Then the relationship Eq.([29](#Ax1.E29 "In Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) is valid in the entire C~\tilde{C}.
+Then the relationship Eq.([29](#Ax1.E29 "In Proof of Theorem 2. ‣ Appendix: Proofs ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) is valid in the entire C~\tilde{C}.
 
 Finally, by the (C4) strong permutation invariance, we can extend the result outside 𝒞~\tilde{\mathcal{C}}:
 
@@ -1997,7 +1998,7 @@ The second equality is valid due to the strong permutation invariance of ff. The
 
 ∎
 
-###### Proof of Proposition [3](#Thmproposition3 "Proposition 3. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+###### Proof of Proposition [3](#Thmproposition3 "Proposition 3. ‣ 2.3 WGRM under a Continuous Setting ‣ 2 Weighted Generalized Risk Measures ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 
 The “if” statement is direct. We only focus on the “only if” statement.
 
@@ -2037,10 +2038,10 @@ Combining with the result from (1), we obtain f​(φX)=∫01φXq​(t)​ν∗�
 
 ∎
 
-###### Proof of Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application").
+###### Proof of Theorem [3](#Thmtheorem3 "Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application").
 
-We first prove that the measures in Eq.([17](#S3.E17 "In Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) satisfy Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application"))–([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")).
-For Eq.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), we have
+We first prove that the measures in Eq.([17](#S3.E17 "In Theorem 3. ‣ 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) satisfy Eqs.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application"))–([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")).
+For Eq.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), we have
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -2056,7 +2057,7 @@ For Eq.([13](#S3.E13 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadra
 | --- | --- | --- | --- |
 |  |  | =∫𝒬𝒟P​(X)​dμ𝒬​(P)=𝒟𝒬​(X).\displaystyle=\int\_{\mathcal{Q}}\mathcal{D}\_{P}(X)\mathrm{d}\mu\_{\mathcal{Q}}(P)=\mathcal{D}\_{\mathcal{Q}}(X). |  |
 
-For Eq.([14](#S3.E14 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")), we have
+For Eq.([14](#S3.E14 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")), we have
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -2090,7 +2091,7 @@ For Eq.([14](#S3.E14 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadra
 | --- | --- | --- | --- |
 |  |  | =ℰ𝒬​(X).\displaystyle=\mathcal{E}\_{\mathcal{Q}}(X). |  |
 
-Then we move on Eqs.([15](#S3.E15 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")) and ([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quandrangle: Characterization, Optimization and Application")). We observe that
+Then we move on Eqs.([15](#S3.E15 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")) and ([16](#S3.E16 "In 3.2 Weighted Risk Quadrangle ‣ 3 Weighted Risk Quadrangle ‣ Weighted Generalized Risk Measure and Risk Quadrangle: Characterization, Optimization and Application")). We observe that
 
 |  |  |  |  |
 | --- | --- | --- | --- |
